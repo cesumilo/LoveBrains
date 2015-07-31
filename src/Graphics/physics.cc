@@ -5,13 +5,16 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Wed Jul 22 15:14:26 2015 Guillaume ROBIN
-// Last update Thu Jul 30 17:11:57 2015 Guillaume ROBIN
+// Last update Fri Jul 31 18:27:14 2015 Guillaume ROBIN
 //
 
 #include <iostream>
+#include <type_traits>
 
 #include "Graphics/physics.h"
 #include "Graphics/graphics_const.h"
+#include "GANN/gann.h"
+#include "Graphics/i_brain.h"
 
 namespace Graphics
 {
@@ -137,7 +140,7 @@ namespace Graphics
 	if (*it)
 	  {
 	    key = (*it)->getType();
-	    if (key != DEF_IA_TYPE && (*it)->isDead() && _cur_settings[key] < _env_settings[key])
+	    if (!(*it)->hasBrain() && (*it)->isDead() && _cur_settings[key] < _env_settings[key])
 	      {
 		it = env.erase(it);
 		if (_gen_settings[key])
@@ -193,6 +196,33 @@ namespace Graphics
 	  {
 	    if (*it && _sensors[i] && _sensors[i]->isValid(*it))
 	      _sensors[i]->Update(*it, env);
+	  }
+      }
+  }
+
+  void	       	Physics::GenerateEnvironment(std::list<IObject *>& env,
+					     std::list<GA::IDNA *>& brains)
+  {
+    IObject    	*ptr;
+    std::list<GA::IDNA *>::iterator	br = brains.begin();
+
+    for (std::list<IObject *>::iterator it = env.begin(); it != env.end(); ++it)
+      delete(*it);
+    env.clear();
+    for (std::map<std::string, int>::iterator it = _env_settings.begin();
+	 it != _env_settings.end(); ++it)
+      {
+	for (int i = 0; i < it->second; ++i)
+	  {
+	    if ((ptr = _factory.Create(it->first)))
+	      {
+		if (ptr->hasBrain() && dynamic_cast<IBrain *>(ptr) && br != brains.end())
+		  {
+		    ((IBrain *)ptr)->setBrain(((GANN::GANN *)(*br))->getGenes());
+		    ++br;
+		  }
+		env.push_back(ptr);
+	      }
 	  }
       }
   }

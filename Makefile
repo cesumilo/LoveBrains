@@ -5,7 +5,7 @@
 ## Login   <robin_f@epitech.eu>
 ## 
 ## Started on  Wed Jul 22 09:52:28 2015 Guillaume ROBIN
-## Last update Thu Jul 30 17:04:39 2015 Guillaume ROBIN
+## Last update Fri Jul 31 13:32:23 2015 Guillaume ROBIN
 ##
 
 CC	= g++ -g3
@@ -30,6 +30,11 @@ SRCS	+= src/Simulator/simulator_exception.cc \
 
 SRCS	+= src/Plugin/plugin_manager.cc \
 	   src/Plugin/plugin_exception.cc
+
+SRCS	+= src/App/config_getter.cc \
+	   src/App/config_manager.cc \
+	   src/App/app.cc \
+	   src/App/app_exception.cc
 
 SRCS	+= src/main.cc
 

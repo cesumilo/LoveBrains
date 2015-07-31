@@ -5,7 +5,7 @@
 ** Login   <robin_f@epitech.eu>
 ** 
 ** Started on  Thu Jul 30 16:11:49 2015 Guillaume ROBIN
-** Last update Thu Jul 30 18:39:26 2015 Guillaume ROBIN
+** Last update Fri Jul 31 16:00:33 2015 Guillaume ROBIN
 */
 
 #ifndef TRAP_H_
@@ -24,6 +24,7 @@ public:
   ** Getters.
   */
   bool				isDead(void) const;
+  bool				hasBrain(void) const;
   std::string			getType(void) const;
   sf::CircleShape const&	getShape(void) const;
   sf::Vector2f const&		getPosition(void) const;

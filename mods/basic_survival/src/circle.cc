@@ -5,7 +5,7 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Thu Jul 30 16:11:24 2015 Guillaume ROBIN
-// Last update Thu Jul 30 18:39:11 2015 Guillaume ROBIN
+// Last update Fri Jul 31 17:37:00 2015 Guillaume ROBIN
 //
 
 #include "ANN/tools.h"
@@ -43,6 +43,11 @@ Circle::~Circle(void)
 bool	Circle::isDead(void) const
 {
   return (_dead);
+}
+
+bool	Circle::hasBrain(void) const
+{
+  return (true);
 }
 
 std::string	Circle::getType(void) const

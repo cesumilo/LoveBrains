@@ -5,7 +5,7 @@
 ** Login   <robin_f@epitech.eu>
 ** 
 ** Started on  Wed Jul 22 12:05:50 2015 Guillaume ROBIN
-** Last update Thu Jul 30 18:30:33 2015 Guillaume ROBIN
+** Last update Fri Jul 31 15:50:16 2015 Guillaume ROBIN
 */
 
 #ifndef I_OBJECT_H_
@@ -26,6 +26,7 @@ namespace Graphics
     ** Getters.
     */
     virtual bool	       	isDead(void) const = 0;
+    virtual bool		hasBrain(void) const = 0;
     virtual std::string		getType(void) const = 0;
 
     /*

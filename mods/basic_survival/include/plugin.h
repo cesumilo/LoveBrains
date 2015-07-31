@@ -5,13 +5,14 @@
 ** Login   <robin_f@epitech.eu>
 ** 
 ** Started on  Thu Jul 30 16:16:31 2015 Guillaume ROBIN
-** Last update Thu Jul 30 18:41:02 2015 Guillaume ROBIN
+** Last update Fri Jul 31 16:36:59 2015 Guillaume ROBIN
 */
 
 #ifndef PLUGIN_H_
 # define PLUGIN_H_
 
 # include "circle.h"
+# include "ia.h"
 # include "Plugin/i_plugin.h"
 
 class MyPlugin : public Plugin::IPlugin

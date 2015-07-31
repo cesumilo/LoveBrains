@@ -5,7 +5,7 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Thu Jul 23 11:41:41 2015 Guillaume ROBIN
-// Last update Thu Jul 30 19:50:50 2015 Guillaume ROBIN
+// Last update Fri Jul 31 17:52:33 2015 Guillaume ROBIN
 //
 
 #include <iostream>
@@ -49,6 +49,11 @@ namespace Graphics
     return (_env);
   }
 
+  std::list<IObject *>&	Environment::getObjects(void)
+  {
+    return (_env);
+  }
+
   Physics const&	Environment::getPhysics(void) const
   {
     return (_physics);
@@ -75,7 +80,8 @@ namespace Graphics
       {
 	if ((line[i] < DEF_ENV_MINCHAR || line[i] > DEF_ENV_MAXCHAR)
 	    && (line[i] < DEF_ENV_MINNUM || line[i] > DEF_ENV_MAXNUM)
-	    && line[i] != DEF_ENV_DELIMCHAR && line[i] != DEF_ENV_SPACECHAR)
+	    && line[i] != DEF_ENV_DELIMCHAR && line[i] != DEF_ENV_SPACECHAR
+	    && line[i] != DEF_ENV_UNDERCHAR && line[i] != DEF_ENV_DASHCHAR)
 	  return (false);
 	i++;
       }
@@ -188,12 +194,25 @@ namespace Graphics
     _window.display();
   }
 
-  void		Environment::Run(void)
+  static unsigned int	countBrainAlive(std::list<IObject *>& env)
+  {
+    unsigned int	count = 0;
+
+    for (std::list<IObject *>::iterator it = env.begin(); it != env.end(); ++it)
+      {
+	if ((*it)->hasBrain() && !(*it)->isDead())
+	  ++count;
+      }
+    return (count);
+  }
+
+  void		Environment::Run(std::list<GA::IDNA *>& brains)
   {
     sf::Clock	clock;
     sf::Event	event;
 
-    while (_window.isOpen())
+    _physics.GenerateEnvironment(_env, brains);
+    while (_window.isOpen() && countBrainAlive(_env) > 0)
       {
 	while (_window.pollEvent(event))
 	  {
@@ -203,5 +222,7 @@ namespace Graphics
 	Update(clock.restart());
 	Draw();
       }
+    if (!_window.isOpen())
+      Notify(GA::AObserver::States::QUIT);
   }
 }

@@ -5,7 +5,7 @@
 ** Login   <robin_f@epitech.eu>
 ** 
 ** Started on  Wed Jul 22 14:41:22 2015 Guillaume ROBIN
-** Last update Thu Jul 30 17:09:59 2015 Guillaume ROBIN
+** Last update Fri Jul 31 14:24:49 2015 Guillaume ROBIN
 */
 
 #ifndef PHYSICS_H_
@@ -17,6 +17,7 @@
 # include "Graphics/factory_object.h"
 # include "Graphics/i_collider.h"
 # include "Graphics/i_sensor.h"
+# include "GA/i_dna.h"
 
 namespace Graphics
 {
@@ -50,6 +51,7 @@ namespace Graphics
     void	UpdateEnvironment(std::list<IObject *>& env);
     void	UpdateColliders(std::list<IObject *>& env) const;
     void	UpdateSensors(std::list<IObject *>& env) const;
+    void	GenerateEnvironment(std::list<IObject *>& env, std::list<GA::IDNA *>& brains);
 
     /*
     ** Overload.

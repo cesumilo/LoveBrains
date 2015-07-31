@@ -5,7 +5,7 @@
 ** Login   <robin_f@epitech.eu>
 ** 
 ** Started on  Wed Jul 22 14:11:24 2015 Guillaume ROBIN
-** Last update Wed Jul 29 16:00:16 2015 Guillaume ROBIN
+** Last update Fri Jul 31 16:54:37 2015 Guillaume ROBIN
 */
 
 #ifndef GRAPHICS_CONST_H_
@@ -40,6 +40,8 @@
 # define DEF_ENV_MINNUM		(char)'0'
 # define DEF_ENV_MAXNUM		(char)'9'
 # define DEF_ENV_SPACECHAR	(char)' '
+# define DEF_ENV_UNDERCHAR	(char)'_'
+# define DEF_ENV_DASHCHAR	(char)'-'
 # define DEF_ENV_BOOLEAN	(const char *)"true"
 
 #endif /* !GRAPHICS_CONST_H_ */

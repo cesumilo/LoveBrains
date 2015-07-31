@@ -5,7 +5,7 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Thu Jul 23 12:19:26 2015 Guillaume ROBIN
-// Last update Thu Jul 30 19:45:37 2015 Guillaume ROBIN
+// Last update Fri Jul 31 17:24:41 2015 Guillaume ROBIN
 //
 
 #include <iostream>
@@ -56,6 +56,16 @@ namespace Simulator
     return (_config);
   }
 
+  std::list<Graphics::IObject *>&	Simulator::getObjects(void) throw()
+  {
+    return (_env->getObjects());
+  }
+
+  Graphics::Physics&	Simulator::getPhysicsEngine(void) throw()
+  {
+    return (_env->getPhysics());
+  }
+
   /*
   ** Overload.
   */
@@ -70,11 +80,16 @@ namespace Simulator
   /*
   ** Methods.
   */
-  void	Simulator::Init(SConfig const& config, const char *file)
+  void	Simulator::InitEnvironment(SConfig const& config)
   {
     _env = new Graphics::Environment(config.getEnvironmentWidth(), config.getEnvironmentHeight());
     if (!_env)
       throw (SimulatorException(ERR_SIMULATOR_ENV));
+    _env->addObserver(&(_engine.getGAEngine()));
+  }
+
+  void	Simulator::Init(SConfig const& config, const char *file)
+  {
     _env->LoadFromFile(file);
     _config = _engine.getGAConfig();
     _generator.init(config.getANNInfos(), config.getCrossingRate());
@@ -104,9 +119,20 @@ namespace Simulator
       }
   }
 
+  void	Simulator::Run(void)
+  {
+    try
+      {
+	_engine.StartSimulation(true);
+      }
+    catch (GANN::GANNException const& e)
+      {
+	throw (SimulatorException(e.what()));
+      }
+  }
+
   void	Simulator::Evaluate(std::list<GA::IDNA *>& brains)
   {
-    std::cout << "Size: " << brains.size() << std::endl;
-    _env->Run();
+    _env->Run(brains);
   }
 }
