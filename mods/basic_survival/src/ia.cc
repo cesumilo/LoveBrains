@@ -5,7 +5,7 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Fri Jul 31 16:15:45 2015 Guillaume ROBIN
-// Last update Fri Jul 31 16:44:01 2015 Guillaume ROBIN
+// Last update Fri Jul 31 18:43:07 2015 Guillaume ROBIN
 //
 
 #include "ia.h"
@@ -75,7 +75,8 @@ void	BasicIA::setFitness(double fitness)
 
 void	BasicIA::setBrain(GANN::ANN const& brain)
 {
-  _inputs = GANN::Matrix<double>(brain.getInfos()[0], 1, 0);
+  if (brain.getInfos().size() > 0)
+    _inputs = GANN::Matrix<double>(brain.getInfos()[0], 1, 0);
   _brain = brain;
 }
 
