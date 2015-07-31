@@ -1,4 +1,8 @@
 # LoveBrains
+
+# Description
+At the beginning, I have developed a little experiment with neural networks and genetic algorithms in order to make an artificial intelligence that will be able to survive in its environment. It works well then I decided to share my experiment and, maybe, improve it. The final result is this program. You will be able to create plugins to add a lot of objects in your simulation. You can add what ever you want, like new artificial intelligences.
+
 Work in progress...
 
 # Licence
