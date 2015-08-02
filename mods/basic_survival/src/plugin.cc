@@ -1,41 +1,55 @@
 //
-// start_plugin.cc for Basic_Survival in /home/robin_f/Programming/Git/CPP/LoveBrains/test/mod_basic_survival
+// plugin.cc for Basic survival plugin in /home/robin_f/Programming/Git/CPP/LoveBrains/mods/basic_survival
 // 
 // Made by Guillaume ROBIN
 // Login   <robin_f@epitech.eu>
 // 
-// Started on  Thu Jul 30 16:15:34 2015 Guillaume ROBIN
-// Last update Fri Jul 31 16:36:46 2015 Guillaume ROBIN
+// Started on  Sat Aug  1 11:58:27 2015 Guillaume ROBIN
+// Last update Sat Aug  1 14:34:26 2015 Guillaume ROBIN
 //
 
 #include "plugin.h"
+#include "basic_ia.h"
+#include "food.h"
+#include "ai_food_collider.h"
 
-MyPlugin::MyPlugin(void)
+/*
+** Constructor & Destructor.
+*/
+BasicSurvival::BasicSurvival(void)
 {
-  Graphics::IObject	*obj;
+  Graphics::IObject	*ptr;
+  Graphics::ICollider	*coll;
 
-  if ((obj = new Circle()))
-    _objs.push_back(obj);
-  if ((obj = new BasicIA()))
-    _objs.push_back(obj);
+  // TODO: Add objects, colliders and sensors.
+  if ((ptr = new BasicFood()))
+    _objects.push_back(ptr);
+  if ((ptr = new BasicAI()))
+    _objects.push_back(ptr);
+
+  if ((coll = new ColliderAIAndFood()))
+    _colliders.push_back(coll);
 }
 
-/* Don't need to free memory. The physics engine will do it. */
-MyPlugin::~MyPlugin(void)
+BasicSurvival::~BasicSurvival(void)
 {
+  // TODO: Nothing to do. LoveBrains will do the job.
 }
 
-std::vector<Graphics::IObject *>&	MyPlugin::getObjects(void)
+/*
+** Methods.
+*/
+std::vector<Graphics::IObject *>&	BasicSurvival::getObjects(void)
 {
-  return (_objs);
+  return (_objects);
 }
 
-std::vector<Graphics::ICollider *>&	MyPlugin::getColliders(void)
+std::vector<Graphics::ICollider *>&	BasicSurvival::getColliders(void)
 {
-  return (_colls);
+  return (_colliders);
 }
 
-std::vector<Graphics::ISensor *>&	MyPlugin::getSensors(void)
+std::vector<Graphics::ISensor *>&	BasicSurvival::getSensors(void)
 {
   return (_sensors);
 }
@@ -44,6 +58,6 @@ extern "C"
 {
   Plugin::IPlugin	*CreatePlugin(void)
   {
-    return (new MyPlugin());
+    return (new BasicSurvival());
   }
 }

@@ -1,25 +1,23 @@
 /*
-** plugin.h for Basic_Survival in /home/robin_f/Programming/Git/CPP/LoveBrains/test/mod_basic_survival
+** plugin.h for Basic survival plugin in /home/robin_f/Programming/Git/CPP/LoveBrains/mods/basic_survival
 ** 
 ** Made by Guillaume ROBIN
 ** Login   <robin_f@epitech.eu>
 ** 
-** Started on  Thu Jul 30 16:16:31 2015 Guillaume ROBIN
-** Last update Fri Jul 31 16:36:59 2015 Guillaume ROBIN
+** Started on  Sat Aug  1 11:53:28 2015 Guillaume ROBIN
+** Last update Sat Aug  1 13:15:01 2015 Guillaume ROBIN
 */
 
 #ifndef PLUGIN_H_
 # define PLUGIN_H_
 
-# include "circle.h"
-# include "ia.h"
 # include "Plugin/i_plugin.h"
 
-class MyPlugin : public Plugin::IPlugin
+class BasicSurvival : public Plugin::IPlugin
 {
  public:
-  MyPlugin(void);
-  virtual ~MyPlugin(void);
+  BasicSurvival(void);
+  ~BasicSurvival(void);
 
   /*
   ** Methods.
@@ -29,8 +27,8 @@ class MyPlugin : public Plugin::IPlugin
   std::vector<Graphics::ISensor *>&	getSensors(void);
 
  private:
-  std::vector<Graphics::IObject *>	_objs;
-  std::vector<Graphics::ICollider *>	_colls;
+  std::vector<Graphics::IObject *>	_objects;
+  std::vector<Graphics::ICollider *>	_colliders;
   std::vector<Graphics::ISensor *>	_sensors;
 };
 

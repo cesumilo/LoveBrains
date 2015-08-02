@@ -5,7 +5,7 @@
 ## Login   <robin_f@epitech.eu>
 ## 
 ## Started on  Thu Jul 30 16:03:56 2015 Guillaume ROBIN
-## Last update Fri Jul 31 16:41:58 2015 Guillaume ROBIN
+## Last update Sat Aug  1 14:43:11 2015 Guillaume ROBIN
 ##
 
 CC	= g++
@@ -18,11 +18,14 @@ CXXFALGS	+= -std=c++11
 
 CXXFLAGS	+= -I ./include/ -I ./api/include/ -I ./api/lib/ANNLibrary/include/
 
-LDFLAGS	= -lANN -L./api/lib/ANNLibrary/ -lsfml-graphics -lsfml-window -lsfml-system
+LDFLAGS	= -lANN -L./api/lib/ANNLibrary/ -lsfml-graphics -lsfml-window -lsfml-system -lm
 
-SRCS	+= src/circle.cc \
-	   src/plugin.cc \
-	   src/ia.cc
+# Add sources below.
+SRCS	+= src/plugin.cc \
+	   src/food.cc \
+	   src/basic_ai.cc \
+	   src/ai_food_collider.cc \
+	   src/ai_food_collision.cc
 
 OBJS	= $(SRCS:.cc=.o)
 

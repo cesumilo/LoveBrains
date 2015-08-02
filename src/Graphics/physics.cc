@@ -5,7 +5,7 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Wed Jul 22 15:14:26 2015 Guillaume ROBIN
-// Last update Fri Jul 31 18:27:14 2015 Guillaume ROBIN
+// Last update Sat Aug  1 15:02:07 2015 Guillaume ROBIN
 //
 
 #include <iostream>
@@ -180,6 +180,7 @@ namespace Graphics
 		      {
 			action->Update(*it1);
 			action->Update(*it2);
+			delete(action);
 		      }
 		  }
 	      }
