@@ -5,7 +5,7 @@
 ** Login   <robin_f@epitech.eu>
 ** 
 ** Started on  Sat Aug  1 12:30:15 2015 Guillaume ROBIN
-** Last update Sat Aug  1 14:28:34 2015 Guillaume ROBIN
+** Last update Tue Aug  4 12:28:24 2015 Guillaume ROBIN
 */
 
 #ifndef BASIC_IA_H_
@@ -19,6 +19,8 @@
 class BasicAI : public Graphics::IBrain
 {
  public:
+  enum class LifeType { LOW, MEDIUM, HIGH };
+
   BasicAI(void);
   BasicAI(BasicAI const& brain);
   ~BasicAI(void);
@@ -33,6 +35,7 @@ class BasicAI : public Graphics::IBrain
   GANN::ANN const&		getBrain(void) const;
   sf::CircleShape const&	getShape(void) const;
   sf::Vector2f const&		getPosition(void) const;
+  BasicAI::TypeLife		getLife(void) const;
 
   /*
   ** Setters.
@@ -43,6 +46,8 @@ class BasicAI : public Graphics::IBrain
   void	setFitness(double fitness);
   void	setBrain(GANN::ANN const& brain);
   void	setInput(unsigned int index, double value);
+  void	increaseLife(void);
+  void	decreaseLife(void);
 
   /*
   ** Methods.
@@ -55,6 +60,7 @@ class BasicAI : public Graphics::IBrain
   double		_fitness;
   double		_angle;
   float			_time;
+  LifeType		_life;
   sf::Vector2f		_position;
   sf::Time		_elapsed;
   sf::CircleShape	_shape;

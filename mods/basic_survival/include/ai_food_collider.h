@@ -5,7 +5,7 @@
 ** Login   <robin_f@epitech.eu>
 ** 
 ** Started on  Sat Aug  1 14:11:27 2015 Guillaume ROBIN
-** Last update Sat Aug  1 14:43:42 2015 Guillaume ROBIN
+** Last update Mon Aug  3 12:40:29 2015 Guillaume ROBIN
 */
 
 #ifndef AI_FOOD_COLLIDER_H_
@@ -25,6 +25,9 @@ class ColliderAIAndFood : public Graphics::ICollider
   bool			isValid(std::string const& obj_1, std::string const& obj_2);
   bool			isCollision(Graphics::IObject *obj_1, Graphics::IObject *obj_2);
   Graphics::IBehavior	*getAction(void) const;
+
+ private:
+  Graphics::IBehavior	*_action;
 };
 
 #endif /* !AI_FOOD_COLLIDER_H_ */

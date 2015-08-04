@@ -5,7 +5,7 @@
 ** Login   <robin_f@epitech.eu>
 ** 
 ** Started on  Sat Aug  1 12:03:54 2015 Guillaume ROBIN
-** Last update Sat Aug  1 14:31:09 2015 Guillaume ROBIN
+** Last update Tue Aug  4 11:50:51 2015 Guillaume ROBIN
 */
 
 #ifndef FOOD_H_
@@ -44,7 +44,6 @@ class BasicFood : public Graphics::IObject
  private:
   bool			_dead;
   float			_time;
-  sf::Vector2f		_position;
   sf::Time		_elapsed;
   sf::CircleShape	_shape;
 

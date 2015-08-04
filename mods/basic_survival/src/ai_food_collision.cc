@@ -5,7 +5,7 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Sat Aug  1 14:39:38 2015 Guillaume ROBIN
-// Last update Sat Aug  1 14:46:34 2015 Guillaume ROBIN
+// Last update Tue Aug  4 12:17:45 2015 Guillaume ROBIN
 //
 
 #include <iostream>
@@ -28,5 +28,6 @@ AIAndFoodCollision::~AIAndFoodCollision(void)
 */
 void	AIAndFoodCollision::Update(Graphics::IObject *obj)
 {
-  std::cerr << "Collision: " << obj->getType() << std::endl;
+  if (obj->getType().compare("basic_food") == 0)
+    obj->setIsDead(true);
 }

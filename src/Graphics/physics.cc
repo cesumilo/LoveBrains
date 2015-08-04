@@ -5,7 +5,7 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Wed Jul 22 15:14:26 2015 Guillaume ROBIN
-// Last update Sat Aug  1 15:02:07 2015 Guillaume ROBIN
+// Last update Mon Aug  3 18:05:59 2015 Guillaume ROBIN
 //
 
 #include <iostream>
@@ -160,31 +160,23 @@ namespace Graphics
       }
   }
 
-  void	Physics::UpdateColliders(std::list<IObject *>& env) const
+  void		Physics::UpdateColliders(std::list<IObject *>& env) const
   {
-    std::list<IObject *>::iterator	it2;
-    IBehavior				*action;
+    IBehavior	*action;
 
     for (std::list<IObject *>::iterator it1 = env.begin(); it1 != env.end(); ++it1)
       {
-        it2 = it1;
-	++it2;
-	while (it2 != env.end())
+	for (std::list<IObject *>::iterator it2 = env.begin(); it2 != env.end(); ++it2)
 	  {
-	    if (*it1 && *it2)
+	    for (unsigned int i = 0; i < _colls.size(); ++i)
 	      {
-		for (unsigned int i = 0; i < _colls.size(); ++i)
+		if (_colls[i] && _colls[i]->isValid((*it1)->getType(), (*it2)->getType())
+		    && _colls[i]->isCollision(*it1, *it2) && (action = _colls[i]->getAction()))
 		  {
-		    if (_colls[i] && _colls[i]->isValid((*it1)->getType(), (*it2)->getType())
-			&& _colls[i]->isCollision(*it1, *it2) && (action = _colls[i]->getAction()))
-		      {
-			action->Update(*it1);
-			action->Update(*it2);
-			delete(action);
-		      }
+		    action->Update(*it1);
+		    action->Update(*it2);
 		  }
 	      }
-	    ++it2;
 	  }
       }
   }

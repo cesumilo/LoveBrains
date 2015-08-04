@@ -5,7 +5,7 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Sat Aug  1 12:35:21 2015 Guillaume ROBIN
-// Last update Sat Aug  1 14:28:55 2015 Guillaume ROBIN
+// Last update Tue Aug  4 12:28:44 2015 Guillaume ROBIN
 //
 
 #include <cmath>
@@ -16,7 +16,8 @@
 /*
 ** Constructor & Destructor.
 */
-BasicAI::BasicAI(void): _dead(false), _fitness(0), _angle(0), _time(0)
+BasicAI::BasicAI(void): _dead(false), _fitness(0), _angle(0), _time(0),
+			_life(BasicAI::LifeType::HIGH)
 {
   _position = sf::Vector2f(GANN::RandomDouble(10, 1270), GANN::RandomDouble(10, 710));
   _shape.setPosition(_position);
@@ -75,6 +76,11 @@ sf::Vector2f const&	BasicAI::getPosition(void) const
   return (_position);
 }
 
+BasicAI::TypeLife	BasicAI::getLife(void) const
+{
+  return (_life);
+}
+
 /*
 ** Setters.
 */
@@ -111,6 +117,38 @@ void	BasicAI::setInput(unsigned int index, double value)
     _inputs(index, 0) = value;
 }
 
+void	BasicAI::increaseLife(void)
+{
+  switch (_life)
+    {
+    case BasicAI::LifeType::LOW:
+      _life = BasicAI::LifeType::MEDIUM;
+      break;
+    case BasicAI::LifeType::MEDIUM:
+      _life = BasicAI::TypeLife:HIGH;
+      break;
+    default:
+      break;
+    }
+}
+
+void	BasicAI::decreaseLife(void)
+{
+  switch (_life)
+    {
+    case BasicAI::TypeLife::LOW:
+      _dead = true;
+      break;
+    case BasicAI::TypeLife::MEDIUM:
+      _life = BasicAI::TypeLife::LOW;
+      break;
+    case BasicAI::TypeLife::HIGH:
+      _life = BasicAI::TypeLife::MEDIUM;
+      break;
+    }
+}
+
+
 /*
 ** Methods.
 */
@@ -134,6 +172,9 @@ void		BasicAI::Update(void)
   sf::Vector2f	move(0, 2);
 
   _time += _elapsed.asSeconds();
+  // Update Life.
+  if (_time >= 1)
+    decreaseLife();
   // TODO: Move the AI.
   if (_time > 0.01)
     {
@@ -144,6 +185,7 @@ void		BasicAI::Update(void)
 	_angle -= 1;
       RotateVector2f(move, _angle * 180 / PI);
       _shape.move(move);
+      _position = _shape.getPosition();
       _time = 0;
     }
   // TODO: Animate the AI.

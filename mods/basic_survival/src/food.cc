@@ -5,7 +5,7 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Sat Aug  1 12:07:53 2015 Guillaume ROBIN
-// Last update Sat Aug  1 14:45:31 2015 Guillaume ROBIN
+// Last update Tue Aug  4 11:53:22 2015 Guillaume ROBIN
 //
 
 #include <iostream>
@@ -19,8 +19,7 @@
 BasicFood::BasicFood(void): _dead(false), _time(0)
 {
   // TODO: Generate random position.
-  _position = sf::Vector2f(GANN::RandomDouble(10, 1270), GANN::RandomDouble(10, 710));
-  _shape.setPosition(_position);
+  _shape.setPosition(sf::Vector2f(GANN::RandomDouble(10, 1270), GANN::RandomDouble(10, 710)));
   _shape.setRadius(GANN::RandomDouble(10, 50));
   _shape.setFillColor(sf::Color::Green);
 }
@@ -49,7 +48,7 @@ std::string	BasicFood::getType(void) const
 
 sf::Vector2f const&	BasicFood::getPosition(void) const
 {
-  return (_position);
+  return (_shape.getPosition());
 }
 
 float	BasicFood::getRadius(void) const
@@ -62,7 +61,7 @@ float	BasicFood::getRadius(void) const
 */
 void	BasicFood::setPosition(sf::Vector2f const& position)
 {
-  _position = position;
+  _shape.setPosition(position);
 }
 
 void	BasicFood::setIsDead(bool dead)
