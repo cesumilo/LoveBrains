@@ -5,7 +5,7 @@
 ** Login   <robin_f@epitech.eu>
 ** 
 ** Started on  Sat Aug  1 12:30:15 2015 Guillaume ROBIN
-** Last update Tue Aug  4 12:28:24 2015 Guillaume ROBIN
+** Last update Tue Aug 18 14:30:37 2015 Guillaume ROBIN
 */
 
 #ifndef BASIC_IA_H_
@@ -14,7 +14,13 @@
 # include "Graphics/i_brain.h"
 
 /* TODO:  Move the define */
-# define PI 3.141592
+# define MAX_ACTIVATION		(double)1.00
+# define FOOD_SCORE		(double)1.00
+# define DEATH_SCORE		(double)-1.00
+# define INPUT_FOOD		(unsigned int)0
+# define INPUT_TRAP		(unsigned int)1
+# define INPUT_AGENT		(unsigned int)2
+# define INPUT_LIFE		(unsigned int)3
 
 class BasicAI : public Graphics::IBrain
 {
@@ -35,7 +41,8 @@ class BasicAI : public Graphics::IBrain
   GANN::ANN const&		getBrain(void) const;
   sf::CircleShape const&	getShape(void) const;
   sf::Vector2f const&		getPosition(void) const;
-  BasicAI::TypeLife		getLife(void) const;
+  BasicAI::LifeType    		getLife(void) const;
+  double			getRotation(void) const;
 
   /*
   ** Setters.
@@ -66,6 +73,9 @@ class BasicAI : public Graphics::IBrain
   sf::CircleShape	_shape;
   GANN::ANN		_brain;
   GANN::Matrix<double>	_inputs;
+
+  sf::CircleShape	_vfield1;
+  sf::CircleShape	_vfield2;
 
   void	draw(sf::RenderTarget& target, sf::RenderStates states) const;
 };

@@ -6,7 +6,7 @@
 ** Login   <robin_f@epitech.eu>
 ** 
 ** Started on  Wed Jul 22 14:39:45 2015 Guillaume ROBIN
-** Last update Thu Jul 30 17:13:03 2015 Guillaume ROBIN
+** Last update Tue Aug 18 13:40:14 2015 Guillaume ROBIN
 */
 
 #ifndef I_SENSOR_H_
@@ -23,7 +23,7 @@ namespace Graphics
   public:
     virtual ~ISensor() { }
 
-    virtual void	Update(IObject *obj, std::list<IObject *> const& env) = 0;
+    virtual void	Update(IObject *obj, std::list<IObject *>& env) = 0;
     virtual bool	isValid(IObject *obj) = 0;
   };
 }

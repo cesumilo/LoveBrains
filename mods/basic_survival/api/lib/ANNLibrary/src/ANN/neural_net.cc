@@ -5,7 +5,7 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Wed Jul  8 15:52:17 2015 Guillaume ROBIN
-// Last update Wed Jul 29 10:23:13 2015 Guillaume ROBIN
+// Last update Tue Aug 18 14:54:07 2015 Guillaume ROBIN
 //
 
 #include <stdlib.h>
@@ -148,6 +148,7 @@ namespace GANN
     _out_activation = b.getOutputsActivation();
     _layer_activation = b.getActivationFunction();
     _cross_rate = b.getCrossingRate();
+    _infos = b.getInfos();
     layers = b.getLayers();
     for (unsigned int i = 0; i < size; i++)
       delete(_layers[i]);

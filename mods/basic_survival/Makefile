@@ -5,7 +5,7 @@
 ## Login   <robin_f@epitech.eu>
 ## 
 ## Started on  Thu Jul 30 16:03:56 2015 Guillaume ROBIN
-## Last update Sat Aug  1 14:43:11 2015 Guillaume ROBIN
+## Last update Tue Aug 18 13:39:45 2015 Guillaume ROBIN
 ##
 
 CC	= g++
@@ -14,18 +14,20 @@ RM	= rm -f
 
 NAME	= basic_survival.so
 
-CXXFALGS	+= -std=c++11
+CXXFLAGS	+= -std=c++11
 
 CXXFLAGS	+= -I ./include/ -I ./api/include/ -I ./api/lib/ANNLibrary/include/
 
-LDFLAGS	= -lANN -L./api/lib/ANNLibrary/ -lsfml-graphics -lsfml-window -lsfml-system -lm
+LDFLAGS	= -lsfml-graphics -lsfml-window -lsfml-system -lm -lANN -L./api/lib/ANNLibrary/
 
 # Add sources below.
 SRCS	+= src/plugin.cc \
 	   src/food.cc \
 	   src/basic_ai.cc \
 	   src/ai_food_collider.cc \
-	   src/ai_food_collision.cc
+	   src/ai_food_collision.cc \
+	   src/math.cc \
+	   src/ai_vision_field.cc
 
 OBJS	= $(SRCS:.cc=.o)
 
@@ -42,10 +44,10 @@ flib:
 	make fclean -C ./api/lib/ANNLibrary/
 
 %.o: %.cc
-	$(CC) -fPIC $(LDFLAGS) -c $< -o $@ $(CXXFLAGS)
+	$(CC) -fPIC $(CXXFLAGS) -c $< $(LDFLAGS) -o $@
 
 $(NAME): $(OBJS)
-	$(CC) -shared $(OBJS) -o $(NAME) -Wl,--whole-archive -lANN -L./api/lib/ANNLibrary -Wl,--no-whole-archive
+	$(CC) -shared $(CXXFLAGS) $(OBJS) -o $(NAME) -Wl,--whole-archive -lANN -L./api/lib/ANNLibrary -Wl,--no-whole-archive
 
 clean: clib
 	$(RM) $(OBJS)

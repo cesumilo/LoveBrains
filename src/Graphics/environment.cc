@@ -5,7 +5,7 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Thu Jul 23 11:41:41 2015 Guillaume ROBIN
-// Last update Fri Jul 31 17:52:33 2015 Guillaume ROBIN
+// Last update Tue Aug 18 14:42:53 2015 Guillaume ROBIN
 //
 
 #include <iostream>
@@ -173,6 +173,8 @@ namespace Graphics
   */
   void	Environment::Update(sf::Time elapsed)
   {
+    _physics.UpdateColliders(_env);
+    _physics.UpdateSensors(_env);
     for (std::list<IObject *>::iterator it = _env.begin(); it != _env.end(); ++it)
       {
 	if (*it)
@@ -181,8 +183,6 @@ namespace Graphics
 	    (*it)->Update();
 	  }
       }
-    _physics.UpdateColliders(_env);
-    _physics.UpdateSensors(_env);
     _physics.UpdateEnvironment(_env);
   }
 

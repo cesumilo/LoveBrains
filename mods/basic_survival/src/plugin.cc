@@ -5,13 +5,14 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Sat Aug  1 11:58:27 2015 Guillaume ROBIN
-// Last update Sat Aug  1 14:34:26 2015 Guillaume ROBIN
+// Last update Tue Aug 18 14:07:52 2015 Guillaume ROBIN
 //
 
 #include "plugin.h"
 #include "basic_ia.h"
 #include "food.h"
 #include "ai_food_collider.h"
+#include "ai_vision_field.h"
 
 /*
 ** Constructor & Destructor.
@@ -20,6 +21,7 @@ BasicSurvival::BasicSurvival(void)
 {
   Graphics::IObject	*ptr;
   Graphics::ICollider	*coll;
+  Graphics::ISensor	*sensor;
 
   // TODO: Add objects, colliders and sensors.
   if ((ptr = new BasicFood()))
@@ -29,6 +31,9 @@ BasicSurvival::BasicSurvival(void)
 
   if ((coll = new ColliderAIAndFood()))
     _colliders.push_back(coll);
+
+  if ((sensor = new AIVisionField()))
+    _sensors.push_back(sensor);
 }
 
 BasicSurvival::~BasicSurvival(void)
