@@ -5,7 +5,7 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Mon Aug 17 14:11:34 2015 ROBIN Guillaume
-// Last update Tue Aug 18 15:05:07 2015 Guillaume ROBIN
+// Last update Wed Aug 19 11:36:32 2015 Guillaume ROBIN
 //
 
 #include "ai_vision_field.h"
@@ -86,10 +86,10 @@ void	AIVisionField::Update(Graphics::IObject *obj, std::list<Graphics::IObject *
 			 ((BasicAI *)obj)->getRotation()))
 	    {
 	      ((BasicAI *)obj)->setInput(INPUT_FOOD,
-					   Math::NormalizeData(Math::EuclideanDistance(position,
-										       target),
-							       DEF_MIN_DIST,
-							       DEF_MAX_DIST));
+					 Math::NormalizeData(Math::EuclideanDistance(position,
+										     target),
+							     DEF_MIN_DIST,
+							     DEF_MAX_DIST));
 	    }
 	}
     }

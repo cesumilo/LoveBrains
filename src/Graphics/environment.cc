@@ -5,11 +5,12 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Thu Jul 23 11:41:41 2015 Guillaume ROBIN
-// Last update Tue Aug 18 14:42:53 2015 Guillaume ROBIN
+// Last update Wed Aug 19 12:57:32 2015 Guillaume ROBIN
 //
 
 #include <iostream>
 #include <fstream>
+#include <string>
 
 #include "Graphics/environment.h"
 #include "Graphics/factory_object.h"
@@ -25,8 +26,27 @@ namespace Graphics
   /*
   ** Constructor & Destructor.
   */
-  Environment::Environment(void)
+  Environment::Environment(void): _num_epochs(0)
   {
+    std::string	font_name("CODE Bold.otf");
+    std::string	path(DEF_APP_FONTS);
+
+    _font.loadFromFile(path + font_name);
+    _best_fitness.setCharacterSize(18);
+    _best_fitness.setColor(sf::Color::Black);
+    _best_fitness.setStyle(sf::Text::Bold);
+    _best_fitness.setPosition(sf::Vector2f(10, 30));
+    _best_fitness.setFont(_font);
+    _avg_fitness.setCharacterSize(18);
+    _avg_fitness.setColor(sf::Color::Black);
+    _avg_fitness.setStyle(sf::Text::Bold);
+    _avg_fitness.setPosition(sf::Vector2f(10, 50));
+    _avg_fitness.setFont(_font);
+    _epochs.setCharacterSize(18);
+    _epochs.setColor(sf::Color::Black);
+    _epochs.setStyle(sf::Text::Bold);
+    _epochs.setPosition(sf::Vector2f(10, 10));
+    _epochs.setFont(_font);
     _window.setFramerateLimit(DEF_APP_FRAMER);
   }
 
@@ -171,6 +191,28 @@ namespace Graphics
   /*
   ** Methods.
   */
+  void		Environment::UpdateInfos(void)
+  {
+    IBrain	*brain;
+    double	fitness = 0;
+    double	avg_fit = 0;
+    double	tmp;
+
+    for (std::list<IObject *>::iterator it = _env.begin(); it != _env.end(); ++it)
+      {
+	if ((*it)->hasBrain() && (brain = dynamic_cast<IBrain *>((*it))))
+	  {
+	    if ((tmp = brain->getFitness()) > fitness)
+	      fitness = tmp;
+	    avg_fit += tmp;
+	  }
+      }
+    avg_fit /= _env.size();
+    _best_fitness.setString(std::string(DEF_ENV_STRBFITNESS) + std::to_string(fitness));
+    _avg_fitness.setString(std::string(DEF_ENV_STRAFITNESS) + std::to_string(avg_fit));
+    _epochs.setString(std::string(DEF_ENV_STREPOCHS) + std::to_string(_num_epochs));
+  }
+
   void	Environment::Update(sf::Time elapsed)
   {
     _physics.UpdateColliders(_env);
@@ -191,6 +233,9 @@ namespace Graphics
     _window.clear(sf::Color::White);
     for (std::list<IObject *>::iterator it = _env.begin(); it != _env.end(); ++it)
       _window.draw(*(*it));
+    _window.draw(_epochs);
+    _window.draw(_best_fitness);
+    _window.draw(_avg_fitness);
     _window.display();
   }
 
@@ -222,6 +267,8 @@ namespace Graphics
 	Update(clock.restart());
 	Draw();
       }
+    UpdateInfos();
+    ++_num_epochs;
     if (!_window.isOpen())
       Notify(GA::AObserver::States::QUIT);
   }

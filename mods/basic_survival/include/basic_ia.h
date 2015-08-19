@@ -5,7 +5,7 @@
 ** Login   <robin_f@epitech.eu>
 ** 
 ** Started on  Sat Aug  1 12:30:15 2015 Guillaume ROBIN
-** Last update Tue Aug 18 14:30:37 2015 Guillaume ROBIN
+** Last update Wed Aug 19 12:11:22 2015 Guillaume ROBIN
 */
 
 #ifndef BASIC_IA_H_
@@ -17,10 +17,12 @@
 # define MAX_ACTIVATION		(double)1.00
 # define FOOD_SCORE		(double)1.00
 # define DEATH_SCORE		(double)-1.00
+/* Neural net : 2-2-5 */
 # define INPUT_FOOD		(unsigned int)0
-# define INPUT_TRAP		(unsigned int)1
-# define INPUT_AGENT		(unsigned int)2
-# define INPUT_LIFE		(unsigned int)3
+# define INPUT_LIFE		(unsigned int)1
+
+# define DEF_AI_RADIUS		(float)10
+# define DEF_AI_VISION_RADIUS	(float)2
 
 class BasicAI : public Graphics::IBrain
 {

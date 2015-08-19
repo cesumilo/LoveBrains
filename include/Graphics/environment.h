@@ -5,7 +5,7 @@
 ** Login   <robin_f@epitech.eu>
 ** 
 ** Started on  Thu Jul 23 11:39:20 2015 Guillaume ROBIN
-** Last update Fri Jul 31 17:22:06 2015 Guillaume ROBIN
+** Last update Wed Aug 19 12:52:15 2015 Guillaume ROBIN
 */
 
 #ifndef ENVIRONMENT_H_
@@ -54,9 +54,16 @@ namespace Graphics
     void	Run(std::list<GA::IDNA *>& brains);
 
   private:
+    unsigned int			_num_epochs;
     std::list<IObject *>		_env;
+    sf::Font				_font;
+    sf::Text				_best_fitness;
+    sf::Text				_avg_fitness;
+    sf::Text				_epochs;
     Physics				_physics;
     static sf::RenderWindow		_window;
+
+    void	UpdateInfos(void);
   };
 }
 

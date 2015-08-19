@@ -5,7 +5,7 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Sat Aug  1 12:35:21 2015 Guillaume ROBIN
-// Last update Tue Aug 18 15:05:17 2015 Guillaume ROBIN
+// Last update Wed Aug 19 12:12:23 2015 Guillaume ROBIN
 //
 
 #include <cmath>
@@ -22,10 +22,10 @@ BasicAI::BasicAI(void): _dead(false), _fitness(0), _angle(0), _time(0),
 {
   _position = sf::Vector2f(GANN::RandomDouble(10, 1270), GANN::RandomDouble(10, 710));
   _shape.setPosition(_position);
-  _shape.setRadius(25);
+  _shape.setRadius(DEF_AI_RADIUS);
   _shape.setFillColor(sf::Color::Cyan);
-  _vfield1.setRadius(5);
-  _vfield2.setRadius(5);
+  _vfield1.setRadius(DEF_AI_VISION_RADIUS);
+  _vfield2.setRadius(DEF_AI_VISION_RADIUS);
   _vfield1.setFillColor(sf::Color::Red);
   _vfield2.setFillColor(sf::Color::Red);
 }
@@ -40,6 +40,8 @@ BasicAI::BasicAI(BasicAI const& brain)
   _position = sf::Vector2f(GANN::RandomDouble(10, 1270), GANN::RandomDouble(10, 710));
   _shape = brain.getShape();
   _shape.setPosition(_position);
+  _vfield1.setRadius(DEF_AI_VISION_RADIUS);
+  _vfield2.setRadius(DEF_AI_VISION_RADIUS);
   _brain = brain.getBrain();
   _inputs = GANN::Matrix<double>(_brain.getInfos()[0], 1, 0);
 }
@@ -190,6 +192,22 @@ static unsigned int	getActivatedNeuron(GANN::Matrix<double> const& outputs)
   return (index);
 }
 
+static void	getStateLife(GANN::Matrix<double>& inputs, BasicAI::LifeType life)
+{
+  switch (life)
+    {
+    case BasicAI::LifeType::LOW:
+      inputs(INPUT_LIFE, 0) = 1.00;
+      break;
+    case BasicAI::LifeType::MEDIUM:
+      inputs(INPUT_LIFE, 0) = 0.50;
+      break;
+    case BasicAI::LifeType::HIGH:
+      inputs(INPUT_LIFE, 0) = 0.00;
+      break;
+    }
+}
+
 void			BasicAI::Update(void)
 {
   sf::Vector2f		move(0, 0);
@@ -227,6 +245,9 @@ void			BasicAI::Update(void)
     _shape.setFillColor(sf::Color::Yellow);
   else
     _shape.setFillColor(sf::Color::Cyan);
+
+  getStateLife(_inputs, _life); // Get life state and put it into neural net.
+
   // TODO: Animation.
   _brain.Activate(_inputs); // The sensors will stimulate neurons inside the network.
   outputs = _brain.getOutputs(); // Getting the outputs of the network.
