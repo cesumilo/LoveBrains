@@ -5,7 +5,7 @@
 ** Login   <robin_f@epitech.eu>
 ** 
 ** Started on  Fri Jul 31 11:49:24 2015 Guillaume ROBIN
-** Last update Fri Jul 31 16:04:39 2015 Guillaume ROBIN
+** Last update Thu Aug 20 13:21:34 2015 Guillaume ROBIN
 */
 
 #ifndef APP_CONST_H_
@@ -17,8 +17,9 @@
 # define ERR_APP_INVALIDCONF	(const char *)"Error: ConfigManager: invalid configuration file"
 # define ERR_APP_UNEXPECTED_TOK	(const char *)"Error: ConfigManager: unexpected token: "
 # define ERR_APP_SIMULATOR	(const char *)"Error: App: cannot initialize the simulator"
-# define ERR_APP_HELP		(const char *)"Usage: ./LoveBrains simulation_file environment_file"
 # define ERR_APP_NEEDIA		(const char *)"Error: App: no brains found"
+
+# define ERR_APP_HELP (const char *)"Usage: ./LoveBrains simulationFile environmentFile outputFile"
 
 /*
 ** Default values.

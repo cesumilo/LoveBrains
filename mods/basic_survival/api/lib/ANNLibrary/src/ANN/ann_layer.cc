@@ -5,7 +5,7 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Wed Jul  8 14:23:00 2015 Guillaume ROBIN
-// Last update Sun Jul 12 01:50:00 2015 Guillaume ROBIN
+// Last update Thu Aug 20 12:41:58 2015 Guillaume ROBIN
 //
 
 #include <cmath>
@@ -14,6 +14,7 @@
 
 #include "ANN/ann_layer.h"
 #include "ANN/tools.h"
+#include "ANN/ann_const.h"
 
 namespace GANN
 {

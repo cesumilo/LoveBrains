@@ -5,21 +5,13 @@
 ** Login   <robin_f@epitech.eu>
 ** 
 ** Started on  Wed Jul  8 14:16:10 2015 Guillaume ROBIN
-** Last update Mon Jul 13 10:21:19 2015 Guillaume ROBIN
+** Last update Thu Aug 20 12:27:25 2015 Guillaume ROBIN
 */
 
 #ifndef ANN_LAYER_H_
 # define ANN_LAYER_H_
 
 # include "ANN/matrix.h"
-
-# define ERR_ANN_NLAYER		(char *)"Error: allocation of an ANNLayer failed."
-# define ERR_ANN_INVLAYERS	(char *)"Error: invalid size of layers."
-# define ERR_ANN_INVCROSSRATE	(char *)"Error: invalid crossing rate."
-# define ERR_ANN_NULLACTIVATION	(char *)"Error: activation function is null."
-# define ERR_ANN_ERRACTIVATE	(char *)"Error: impossible to activate a null layer."
-
-# define DEF_CROSS_RATE		(double)0.7
 
 namespace GANN
 {

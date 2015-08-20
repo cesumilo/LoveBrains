@@ -5,7 +5,7 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Fri Jul 31 13:33:16 2015 Guillaume ROBIN
-// Last update Fri Jul 31 16:04:17 2015 Guillaume ROBIN
+// Last update Thu Aug 20 13:38:32 2015 Guillaume ROBIN
 //
 
 #include "App/app.h"
@@ -51,7 +51,8 @@ namespace App
     return (false);
   }
 
-  void	App::Run(const char *simulator_file, const char *environment_file)
+  void	App::Run(const char *simulator_file, const char *environment_file,
+		 const char *output_file)
   {
     Graphics::FactoryObjects	factory;
 
@@ -90,7 +91,7 @@ namespace App
       {
 	try
 	  {
-	    _simulator->Run();
+	    _simulator->Run(output_file);
 	  }
 	catch (Simulator::SimulatorException const& e)
 	  {

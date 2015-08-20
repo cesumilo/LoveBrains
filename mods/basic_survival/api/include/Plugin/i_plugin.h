@@ -5,7 +5,7 @@
 ** Login   <robin_f@epitech.eu>
 ** 
 ** Started on  Thu Jul 30 11:04:27 2015 Guillaume ROBIN
-** Last update Thu Jul 30 18:41:55 2015 Guillaume ROBIN
+** Last update Thu Jul 30 18:42:07 2015 Guillaume ROBIN
 */
 
 #ifndef I_PLUGIN_H_

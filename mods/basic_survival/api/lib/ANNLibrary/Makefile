@@ -5,7 +5,7 @@
 ## Login   <robin_f@epitech.eu>
 ## 
 ## Started on  Tue Jul  7 16:36:25 2015 Guillaume ROBIN
-## Last update Thu Jul 30 19:08:25 2015 Guillaume ROBIN
+## Last update Thu Aug 20 13:45:42 2015 Guillaume ROBIN
 ##
 
 CC	= g++ -g3
@@ -21,8 +21,13 @@ CXXFLAGS	+= -I ./include
 LDFLAGS	= -lm
 
 SRCS	+= src/ANN/ann_layer.cc \
+	   src/ANN/ann_exception.cc \
 	   src/ANN/neural_net.cc \
+	   src/ANN/neural_net_load.cc \
+	   src/ANN/neural_net_save.cc \
 	   src/ANN/tools.cc
+
+SRCS	+= src/json/jsoncpp.cc
 
 OBJS	= $(SRCS:.cc=.o)
 

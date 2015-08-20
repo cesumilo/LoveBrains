@@ -5,7 +5,7 @@
 ** Login   <robin_f@epitech.eu>
 ** 
 ** Started on  Fri Jul 31 11:35:32 2015 Guillaume ROBIN
-** Last update Fri Jul 31 14:32:34 2015 Guillaume ROBIN
+** Last update Thu Aug 20 13:37:55 2015 Guillaume ROBIN
 */
 
 #ifndef APP_H_
@@ -33,7 +33,8 @@ namespace App
     /*
     ** Methods.
     */
-    void	Run(const char *simulator_file, const char *environment_file);
+    void	Run(const char *simulator_file, const char *environment_file,
+		    const char *output_file);
 
   private:
     ConfigManager		_manager;

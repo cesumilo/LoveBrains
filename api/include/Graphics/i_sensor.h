@@ -6,7 +6,7 @@
 ** Login   <robin_f@epitech.eu>
 ** 
 ** Started on  Wed Jul 22 14:39:45 2015 Guillaume ROBIN
-** Last update Tue Aug 18 13:40:32 2015 Guillaume ROBIN
+** Last update Tue Aug 18 13:40:40 2015 Guillaume ROBIN
 */
 
 #ifndef I_SENSOR_H_

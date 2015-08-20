@@ -5,7 +5,7 @@
 ** Login   <robin_f@epitech.eu>
 ** 
 ** Started on  Thu Jul 23 11:56:50 2015 Guillaume ROBIN
-** Last update Fri Jul 31 16:07:35 2015 Guillaume ROBIN
+** Last update Thu Aug 20 13:19:55 2015 Guillaume ROBIN
 */
 
 #ifndef SIMULATOR_H_
@@ -44,7 +44,7 @@ namespace Simulator
     */
     void	InitEnvironment(SConfig const& config);
     void	Init(SConfig const& config, const char *file);
-    void	Run(void);
+    void	Run(const char *output_file);
     static void	Evaluate(std::list<GA::IDNA *>& brains);
 
   private:

@@ -5,7 +5,7 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Fri Jul 31 12:09:39 2015 Guillaume ROBIN
-// Last update Fri Jul 31 15:01:31 2015 Guillaume ROBIN
+// Last update Thu Aug 20 13:31:29 2015 Guillaume ROBIN
 //
 
 #include <stdexcept>
@@ -216,11 +216,11 @@ namespace App
     try
       {
 	if (value.find(DEF_FUNCTION_SIGMOID) != value.size())
-	  config.setActivation(&GANN::Sigmoid);
+	  config.setActivation(&GANN::Sigmoid, GANN::ANN::ActivationType::SIGMOID);
 	else if (value.find(DEF_FUNCTION_THRESHOLD) != value.size())
-	  config.setActivation(&GANN::Threshold);
+	  config.setActivation(&GANN::Threshold, GANN::ANN::ActivationType::THRESHOLD);
 	else
-	  config.setActivation(&GANN::Sigmoid);
+	  config.setActivation(&GANN::Sigmoid, GANN::ANN::ActivationType::SIGMOID);
       }
     catch (Simulator::SimulatorException const& e)
       {
@@ -233,11 +233,11 @@ namespace App
     try
       {
 	if (value.find(DEF_FUNCTION_SIGMOID) != value.size())
-	  config.setOutputsActivation(&GANN::Sigmoid);
+	  config.setOutputsActivation(&GANN::Sigmoid, GANN::ANN::ActivationType::SIGMOID);
 	else if (value.find(DEF_FUNCTION_THRESHOLD) != value.size())
-	  config.setOutputsActivation(&GANN::Threshold);
+	  config.setOutputsActivation(&GANN::Threshold, GANN::ANN::ActivationType::THRESHOLD);
 	else
-	  config.setOutputsActivation(&GANN::Sigmoid);
+	  config.setOutputsActivation(&GANN::Sigmoid, GANN::ANN::ActivationType::SIGMOID);
       }
     catch (Simulator::SimulatorException const& e)
       {

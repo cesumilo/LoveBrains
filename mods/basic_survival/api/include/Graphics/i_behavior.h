@@ -5,7 +5,7 @@
 ** Login   <robin_f@epitech.eu>
 ** 
 ** Started on  Wed Jul 22 14:29:54 2015 Guillaume ROBIN
-** Last update Thu Jul 30 18:37:43 2015 Guillaume ROBIN
+** Last update Thu Jul 30 17:13:12 2015 Guillaume ROBIN
 */
 
 #ifndef I_BEHAVIOR_H_

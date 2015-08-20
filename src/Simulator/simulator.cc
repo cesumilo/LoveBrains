@@ -5,7 +5,7 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Thu Jul 23 12:19:26 2015 Guillaume ROBIN
-// Last update Fri Jul 31 17:24:41 2015 Guillaume ROBIN
+// Last update Thu Aug 20 13:37:15 2015 Guillaume ROBIN
 //
 
 #include <iostream>
@@ -93,8 +93,8 @@ namespace Simulator
     _env->LoadFromFile(file);
     _config = _engine.getGAConfig();
     _generator.init(config.getANNInfos(), config.getCrossingRate());
-    _generator.setActivationFunction(config.getActivation());
-    _generator.setOutputsActivation(config.getOutputsActivation());
+    _generator.setActivationFunction(config.getActivation(), config.getLayerActivationType());
+    _generator.setOutputsActivation(config.getOutputsActivation(), config.getOutputActivationType());
     _config.setGenerator(&_generator);
     _config.setEvaluation(&Simulator::Evaluate);
     try
@@ -119,13 +119,24 @@ namespace Simulator
       }
   }
 
-  void	Simulator::Run(void)
+  void		Simulator::Run(const char *output_file)
   {
+    GANN::ANN	bestAnn;
+
     try
       {
 	_engine.StartSimulation(true);
+	bestAnn = _engine.getBestANN();
       }
     catch (GANN::GANNException const& e)
+      {
+	throw (SimulatorException(e.what()));
+      }
+    try
+      {
+	bestAnn.Save(output_file);
+      }
+    catch (GANN::ANNException const& e)
       {
 	throw (SimulatorException(e.what()));
       }

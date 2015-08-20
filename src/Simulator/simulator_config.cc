@@ -5,7 +5,7 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Thu Jul 23 14:07:18 2015 Guillaume ROBIN
-// Last update Thu Jul 30 10:54:06 2015 Guillaume ROBIN
+// Last update Thu Aug 20 13:58:04 2015 Guillaume ROBIN
 //
 
 #include <stdexcept>
@@ -126,17 +126,20 @@ namespace Simulator
       }
   }
 
-  void	SConfig::setActivation(GANN::ANNLayer::FActivate function)
+  void	SConfig::setActivation(GANN::ANNLayer::FActivate function, GANN::ANN::ActivationType type)
   {
     if (!function)
       throw (SimulatorException(ERR_SCONFIG_FUNCTION));
+    _layer_ftype = type;
     _activation = function;
   }
 
-  void	SConfig::setOutputsActivation(GANN::ANNLayer::FActivate function)
+  void	SConfig::setOutputsActivation(GANN::ANNLayer::FActivate function,
+				      GANN::ANN::ActivationType type)
   {
     if (!function)
       throw (SimulatorException(ERR_SCONFIG_FUNCTION));
+    _out_ftype = type;
     _output_activation = function;
   }
 
@@ -216,6 +219,16 @@ namespace Simulator
     return (_env_height);
   }
 
+  GANN::ANN::ActivationType	SConfig::getLayerActivationType(void) const throw()
+  {
+    return (_layer_ftype);
+  }
+
+  GANN::ANN::ActivationType	SConfig::getOutputActivationType(void) const throw()
+  {
+    return (_out_ftype);
+  }
+
   /*
   ** Overload.
   */
@@ -233,7 +246,9 @@ namespace Simulator
     _activation = config.getActivation();
     _output_activation = config.getOutputsActivation();
     _env_width = config.getEnvironmentWidth();
-    _env_height = config.getEnvironmentHeight();
+  _env_height = config.getEnvironmentHeight();
+  _layer_ftype = config.getLayerActivationType();
+  _out_ftype = config.getOutputActivationType();
     return (*this);
   }
 }

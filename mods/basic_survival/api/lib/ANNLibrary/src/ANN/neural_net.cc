@@ -5,7 +5,7 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Wed Jul  8 15:52:17 2015 Guillaume ROBIN
-// Last update Tue Aug 18 14:54:07 2015 Guillaume ROBIN
+// Last update Thu Aug 20 12:43:42 2015 Guillaume ROBIN
 //
 
 #include <stdlib.h>
@@ -13,18 +13,19 @@
 
 #include "ANN/neural_net.h"
 #include "ANN/tools.h"
-
-#include <iostream>
+#include "ANN/ann_const.h"
 
 namespace GANN
 {
   /*
   ** Constructor & Destructor.
   */
-  ANN::ANN(void): _rand_min(-10), _rand_max(10)
+  ANN::ANN(void) throw(): _rand_min(-10), _rand_max(10), _cross_rate(DEF_CROSS_RATE),
+			  _out_ftype(ANN::ActivationType::SIGMOID),
+			  _layer_ftype(ANN::ActivationType::SIGMOID),
+			  _out_activation(&Sigmoid),
+			  _layer_activation(&Sigmoid)
   {
-    _layer_activation = &Sigmoid;
-    _out_activation = &Sigmoid;
   }
 
   ANN::ANN(std::vector<unsigned int> const& infos): ANN()
@@ -41,11 +42,11 @@ namespace GANN
 	if (ptr)
 	  _layers.push_back(ptr);
 	else
-	  std::cerr << ERR_ANN_NLAYER << std::endl;
+	  throw (ANNException(ERR_ANN_NLAYER));
       }
   }
 
-  ANN::~ANN(void)
+  ANN::~ANN(void) throw()
   {
     unsigned int size = _layers.size();
 
@@ -58,54 +59,67 @@ namespace GANN
   */
   Matrix<double> const&	ANN::getOutputs(void) const
   {
-    return (_layers[_layers.size() - 1]->getOutputs());
+    if (_layers.size() > 0)
+      return (_layers[_layers.size() - 1]->getOutputs());
+    else
+      throw (ANNException(ERR_ANN_GETOUT));
   }
 
-  double	ANN::getMinRandom(void) const
+  double	ANN::getMinRandom(void) const throw()
   {
     return (_rand_min);
   }
 
-  double	ANN::getMaxRandom(void) const
+  double	ANN::getMaxRandom(void) const throw()
   {
     return (_rand_max);
   }
 
-  std::vector<ANNLayer *> const&	ANN::getLayers(void) const
+  std::vector<ANNLayer *> const&	ANN::getLayers(void) const throw()
   {
     return (_layers);
   }
 
-  std::vector<unsigned int> const&	ANN::getInfos(void) const
+  std::vector<unsigned int> const&	ANN::getInfos(void) const throw()
   {
     return (_infos);
   }
 
-  double	ANN::getCrossingRate(void) const
+  double	ANN::getCrossingRate(void) const throw()
   {
     return (_cross_rate);
   }
 
-  ANNLayer::FActivate	ANN::getActivationFunction(void) const
+  ANNLayer::FActivate	ANN::getActivationFunction(void) const throw()
   {
     return (_layer_activation);
   }
 
-  ANNLayer::FActivate	ANN::getOutputsActivation(void) const
+  ANNLayer::FActivate	ANN::getOutputsActivation(void) const throw()
   {
     return (_out_activation);
+  }
+
+  ANN::ActivationType	ANN::getOutputType(void) const throw()
+  {
+    return (_out_ftype);
+  }
+
+  ANN::ActivationType	ANN::getLayerType(void) const throw()
+  {
+    return (_layer_ftype);
   }
 
   /*
   ** Setters.
   */
-  void	ANN::setRandom(double min, double max)
+  void	ANN::setRandom(double min, double max) throw()
   {
     _rand_min = min;
     _rand_max = max;
   }
 
-  void	ANN::setLayers(std::vector<ANNLayer *> const& layers)
+  void	ANN::setLayers(std::vector<ANNLayer *> const& layers) throw()
   {
     for (unsigned int i = 0; i < _layers.size(); i++)
       delete(_layers[i]);
@@ -114,7 +128,7 @@ namespace GANN
       _layers.push_back(layers[i]);
   }
 
-  void	ANN::setCrossingRate(double rate)
+  void	ANN::setCrossingRate(double rate) throw()
   {
     if (rate >= 0 && rate <= 1)
       _cross_rate = rate;
@@ -125,14 +139,20 @@ namespace GANN
       }
   }
 
-  void	ANN::setActivationFunction(ANNLayer::FActivate f)
+  void	ANN::setActivationFunction(ANNLayer::FActivate f, ANN::ActivationType type)
   {
+    if (!f)
+      throw(ANNException(ERR_ANN_ACTF));
     _layer_activation = f;
+    _layer_ftype = type;
   }
 
-  void	ANN::setOutputsActivation(ANNLayer::FActivate f)
+  void	ANN::setOutputsActivation(ANNLayer::FActivate f,  ANN::ActivationType type)
   {
+    if (!f)
+      throw(ANNException(ERR_ANN_OUTF));
     _out_activation = f;
+    _out_ftype = type;
   }
 
   /*
@@ -147,6 +167,8 @@ namespace GANN
     _rand_max = b.getMaxRandom();
     _out_activation = b.getOutputsActivation();
     _layer_activation = b.getActivationFunction();
+    _out_ftype = b.getOutputType();
+    _layer_ftype = b.getLayerType();
     _cross_rate = b.getCrossingRate();
     _infos = b.getInfos();
     layers = b.getLayers();
@@ -173,10 +195,7 @@ namespace GANN
 	    current = Matrix<double>(_layers[i]->getOutputs());
 	  }
 	else
-	  {
-	    std::cerr << ERR_ANN_ERRACTIVATE << std::endl;
-	    i = _layers.size();
-	  }
+	  throw(ANNException(ERR_ANN_ERRACTIVATE));
       }
   }
 
@@ -194,10 +213,7 @@ namespace GANN
 	if (ptr)
 	  _layers.push_back(ptr);
 	else
-	  {
-	    std::cerr << ERR_ANN_NLAYER << std::endl;
-	    i = infos.size();
-	  }
+	  throw(ANNException(ERR_ANN_NLAYER));
       }
   }
 }

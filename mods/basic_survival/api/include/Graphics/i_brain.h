@@ -5,7 +5,7 @@
 ** Login   <robin_f@epitech.eu>
 ** 
 ** Started on  Wed Jul 29 16:51:30 2015 Guillaume ROBIN
-** Last update Sat Aug  1 12:33:03 2015 Guillaume ROBIN
+** Last update Thu Jul 30 17:51:38 2015 Guillaume ROBIN
 */
 
 #ifndef I_BRAIN_H_

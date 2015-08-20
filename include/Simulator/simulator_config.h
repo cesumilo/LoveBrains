@@ -5,7 +5,7 @@
 ** Login   <robin_f@epitech.eu>
 ** 
 ** Started on  Thu Jul 23 13:51:41 2015 Guillaume ROBIN
-** Last update Tue Jul 28 16:52:13 2015 Guillaume ROBIN
+** Last update Thu Aug 20 13:32:15 2015 Guillaume ROBIN
 */
 
 #ifndef SIMULATOR_CONFIG_H_
@@ -15,7 +15,7 @@
 # include <string>
 
 # include "Simulator/simulator_exception.h"
-# include "ANN/ann_layer.h"
+# include "ANN/neural_net.h"
 
 namespace Simulator
 {
@@ -37,8 +37,9 @@ namespace Simulator
     void	setReportInterval(unsigned int interval) throw();
     void	setPopulationSize(unsigned int size);
     void	setANNInfos(std::string infos);
-    void	setActivation(GANN::ANNLayer::FActivate function);
-    void	setOutputsActivation(GANN::ANNLayer::FActivate function);
+    void	setActivation(GANN::ANNLayer::FActivate function, GANN::ANN::ActivationType type);
+    void	setOutputsActivation(GANN::ANNLayer::FActivate function,
+				     GANN::ANN::ActivationType type);
     void	setEnvironmentSize(unsigned int width, unsigned int height);
 
     /*
@@ -57,6 +58,8 @@ namespace Simulator
     GANN::ANNLayer::FActivate		getOutputsActivation(void) const throw();
     unsigned int			getEnvironmentWidth(void) const throw();
     unsigned int			getEnvironmentHeight(void) const throw();
+    GANN::ANN::ActivationType		getLayerActivationType(void) const throw();
+    GANN::ANN::ActivationType		getOutputActivationType(void) const throw();
 
     /*
     ** Overlaod.
@@ -77,6 +80,8 @@ namespace Simulator
     std::vector<unsigned int>	_infos;
     GANN::ANNLayer::FActivate	_activation;
     GANN::ANNLayer::FActivate	_output_activation;
+    GANN::ANN::ActivationType	_layer_ftype;
+    GANN::ANN::ActivationType	_out_ftype;
   };
 }
 
