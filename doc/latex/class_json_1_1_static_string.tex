@@ -1,0 +1,69 @@
+\section{Json\+:\+:Static\+String Class Reference}
+\label{class_json_1_1_static_string}\index{Json\+::\+Static\+String@{Json\+::\+Static\+String}}
+
+
+Lightweight wrapper to tag static string.  
+
+
+
+
+{\ttfamily \#include $<$json.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Static\+String} (const char $\ast$czstring)\label{class_json_1_1_static_string_afb6baf1ec078ce76f0b0f9b39d19437f}
+
+\item 
+{\bfseries operator const char $\ast$} () const \label{class_json_1_1_static_string_ac2b334d46bbea4c0227e508fc66433e9}
+
+\item 
+const char $\ast$ {\bfseries c\+\_\+str} () const \label{class_json_1_1_static_string_ab86fc6a3183adf12fdba4b370acf1754}
+
+\item 
+{\bfseries Static\+String} (const char $\ast$czstring)\label{class_json_1_1_static_string_afb6baf1ec078ce76f0b0f9b39d19437f}
+
+\item 
+{\bfseries operator const char $\ast$} () const \label{class_json_1_1_static_string_ac2b334d46bbea4c0227e508fc66433e9}
+
+\item 
+const char $\ast$ {\bfseries c\+\_\+str} () const \label{class_json_1_1_static_string_ab86fc6a3183adf12fdba4b370acf1754}
+
+\item 
+{\bfseries Static\+String} (const char $\ast$czstring)\label{class_json_1_1_static_string_afb6baf1ec078ce76f0b0f9b39d19437f}
+
+\item 
+{\bfseries operator const char $\ast$} () const \label{class_json_1_1_static_string_ac2b334d46bbea4c0227e508fc66433e9}
+
+\item 
+const char $\ast$ {\bfseries c\+\_\+str} () const \label{class_json_1_1_static_string_ab86fc6a3183adf12fdba4b370acf1754}
+
+\item 
+{\bfseries Static\+String} (const char $\ast$czstring)\label{class_json_1_1_static_string_afb6baf1ec078ce76f0b0f9b39d19437f}
+
+\item 
+{\bfseries operator const char $\ast$} () const \label{class_json_1_1_static_string_ac2b334d46bbea4c0227e508fc66433e9}
+
+\item 
+const char $\ast$ {\bfseries c\+\_\+str} () const \label{class_json_1_1_static_string_ab86fc6a3183adf12fdba4b370acf1754}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Lightweight wrapper to tag static string. 
+
+\doxyref{Value}{p.}{class_json_1_1_value} constructor and object\+Value member assignement takes advantage of the \doxyref{Static\+String}{p.}{class_json_1_1_static_string} and avoid the cost of string duplication when storing the string or the member name.
+
+Example of usage\+: 
+\begin{DoxyCode}
+Json::Value aValue( StaticString(\textcolor{stringliteral}{"some text"}) );
+Json::Value object;
+\textcolor{keyword}{static} \textcolor{keyword}{const} StaticString code(\textcolor{stringliteral}{"code"});
+\textcolor{keywordtype}{object}[code] = 1234;
+\end{DoxyCode}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+api/lib/\+A\+N\+N\+Library/include/json/json.\+h\end{DoxyCompactItemize}

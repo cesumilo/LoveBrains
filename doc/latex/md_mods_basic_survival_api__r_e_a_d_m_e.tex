@@ -1,0 +1,110 @@
+\section*{Description}
+
+As it was mention in the Love\+Brains R\+E\+A\+D\+M\+E.\+md file, you can create a plugin to add several features. The A\+P\+I is very simple, the big part is your job that is creating a plugin !
+
+\section*{How to compile my plugin with the A\+P\+I ?}
+
+I have created a little example in the directory called \char`\"{}mods\char`\"{}. However, I give you an example of a Makefile \+:
+
+
+\begin{DoxyCode}
+1 CC  = g++
+2 
+3 RM  = rm -f
+4 
+5 # -- Put your name below /!\(\backslash\) ".so" is MANDATORY /!\(\backslash\) -- #
+6 NAME    = plugin\_name.so
+7 
+8 CXXFALGS    += -std=c++11
+9 
+10 CXXFLAGS    += -I ./include/ -I ./api/include/ -I ./api/lib/ANNLibrary/include/
+11 
+12 LDFLAGS = -lANN -L./api/lib/ANNLibrary/ -lsfml-graphics -lsfml-window -lsfml-system
+13 
+14 # -- Add your sources below -- #
+15 SRCS    +=
+16 
+17 OBJS    = $(SRCS:.cc=.o)
+18 
+19 
+20 all: lib $(NAME)
+21 
+22 lib:
+23     make -C ./api/lib/ANNLibrary/
+24 
+25 clib:
+26     make clean -C ./api/lib/ANNLibrary/
+27 
+28 flib:
+29     make fclean -C ./api/lib/ANNLibrary/
+30 
+31 %.o: %.cc
+32     $(CC) -fPIC $(LDFLAGS) -c $< -o $@ $(CXXFLAGS)
+33 
+34 $(NAME): $(OBJS)
+35     $(CC) -shared $(OBJS) -o $(NAME) -Wl,--whole-archive -lANN -L./api/lib/ANNLibrary
+       -Wl,--no-whole-archive
+36 
+37 clean: clib
+38     $(RM) $(OBJS)
+39 
+40 fclean: clean flib
+41     $(RM) $(NAME)
+42 
+43 re: fclean all
+44 
+45 .PHONY: all re clean fclean lib clib flib
+\end{DoxyCode}
+
+
+If you copy and paste this Makefile, you can be sure that your plugin is compatible with Love\+Brains !
+
+\section*{Interfaces}
+
+\subsection*{I\+Plugin interface}
+
+
+\begin{DoxyCode}
+1 \{c++\}
+2 
+3   class IPlugin
+4   \{
+5   public:
+6     /*
+7     ** Typedef.
+8     */
+9     /*
+10     ** Madatory name for the PluginCreator function : "CreatePlugin"
+11     ** Example: IPlugin *CreatePlugin(void);
+12     */
+13     typedef IPlugin *(*PluginCreator)(void);
+14 
+15     virtual ~IPlugin(void) \{ \}
+16 
+17     /*
+18     ** Methods.
+19     */
+20     virtual std::vector<Graphics::IObject *>&   getObjects(void) = 0;
+21     virtual std::vector<Graphics::ICollider *>& getColliders(void) = 0;
+22     virtual std::vector<Graphics::ISensor *>&   getSensors(void) = 0;
+23   \};
+\end{DoxyCode}
+
+
+\begin{quote}
+virtual std\+::vector$<$\+Graphics\+::\+I\+Object $\ast$$>$\& get\+Objects(void) = 0; \end{quote}
+
+
+This function is called by Love\+Brains to add your objects in the factory. Your objects have to inherit of I\+Object interface described below.
+
+\begin{quote}
+virtual std\+::vector$<$\+Graphics\+::\+I\+Collider $\ast$$>$\& get\+Colliders(void) = 0; \end{quote}
+
+
+Work in progress...
+
+\section*{Licence}
+
+{\tt }~\newline
+$<$span xmlns\+:dct=\char`\"{}http\+://purl.\+org/dc/terms/\char`\"{} property=\char`\"{}dct\+:title\char`\"{}$>$Love\+Brains A\+P\+I by $<$span xmlns\+:cc=\char`\"{}http\+://creativecommons.\+org/ns\#\char`\"{} property=\char`\"{}cc\+:attribution\+Name\char`\"{}$>$Robin Guillaume is licensed under a {\tt Creative Commons Attribution-\/\+Non\+Commercial-\/\+Share\+Alike 4.\+0 International License}.~\newline
+Based on a work at $<$a xmlns\+:dct=\char`\"{}http\+://purl.\+org/dc/terms/\char`\"{} href=\char`\"{}https\+://github.\+com/cesumilo/\+Love\+Brains\char`\"{} rel=\char`\"{}dct\+:source\char`\"{}$>${\tt https\+://github.\+com/cesumilo/\+Love\+Brains}. 

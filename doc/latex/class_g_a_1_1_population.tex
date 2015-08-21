@@ -1,0 +1,421 @@
+\section{G\+A\+:\+:Population Class Reference}
+\label{class_g_a_1_1_population}\index{G\+A\+::\+Population@{G\+A\+::\+Population}}
+
+
+Define what is a population for the \doxyref{G\+A\+Engine}{p.}{class_g_a_1_1_g_a_engine}.  
+
+
+
+
+{\ttfamily \#include $<$population.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Population} (void)  throw ()\label{class_g_a_1_1_population_a823f4ac46f06245c843fe11ac861a885}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+{\bf Population} ({\bf G\+A\+Config} const \&config, unsigned int size)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+{\bf $\sim$\+Population} (void)  throw ()\label{class_g_a_1_1_population_a1fd982913e72def248f6f1bf9d4ff9bd}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+{\bf Population} \& {\bfseries operator=} ({\bf Population} const \&pop)  throw ()\label{class_g_a_1_1_population_acb87318925923632810265238e2646c1}
+
+\item 
+void {\bf Generate} (void)
+\begin{DoxyCompactList}\small\item\em Generator the entire population. \end{DoxyCompactList}\item 
+unsigned int {\bf get\+Size} (void) const   throw ()
+\begin{DoxyCompactList}\small\item\em Get the population size member. \end{DoxyCompactList}\item 
+unsigned int {\bf get\+Pool\+Size} (void) const   throw ()
+\begin{DoxyCompactList}\small\item\em Get the pool size member. \end{DoxyCompactList}\item 
+double {\bf get\+Mutation\+Rate} (void) const   throw ()
+\begin{DoxyCompactList}\small\item\em Get the mutation rate member. \end{DoxyCompactList}\item 
+double {\bf get\+Selection\+Rate} (void) const   throw ()
+\begin{DoxyCompactList}\small\item\em Get the selection rate member. \end{DoxyCompactList}\item 
+double {\bf get\+Best\+Fitness} (void) const   throw ()
+\begin{DoxyCompactList}\small\item\em Get the best fitness contained in the population. \end{DoxyCompactList}\item 
+double {\bf get\+Average\+Fitness} (void) const   throw ()
+\begin{DoxyCompactList}\small\item\em Get the average fitness of the population. \end{DoxyCompactList}\item 
+{\bf G\+A\+Config} const \& {\bf get\+Config} (void) const   throw ()
+\begin{DoxyCompactList}\small\item\em Get the configuration of the \doxyref{G\+A\+Engine}{p.}{class_g_a_1_1_g_a_engine}. \end{DoxyCompactList}\item 
+std\+::list$<$ {\bf I\+D\+N\+A} $\ast$ $>$ const \& {\bf get} (void) const   throw ()
+\begin{DoxyCompactList}\small\item\em Get the list of the \doxyref{I\+D\+N\+A}{p.}{class_g_a_1_1_i_d_n_a}. \end{DoxyCompactList}\item 
+std\+::list$<$ {\bf I\+D\+N\+A} $\ast$ $>$ \& {\bf get} (void)  throw ()
+\begin{DoxyCompactList}\small\item\em Get the list of the \doxyref{I\+D\+N\+A}{p.}{class_g_a_1_1_i_d_n_a}. \end{DoxyCompactList}\item 
+void {\bf set\+Size} (unsigned int size)
+\begin{DoxyCompactList}\small\item\em Set the population size. \end{DoxyCompactList}\item 
+void {\bf set\+Pool\+Size} (unsigned int size)
+\begin{DoxyCompactList}\small\item\em Set the pool size. \end{DoxyCompactList}\item 
+void {\bf set\+Mutation\+Rate} (double rate)
+\begin{DoxyCompactList}\small\item\em Set the mutation rate. \end{DoxyCompactList}\item 
+void {\bf set\+Selection\+Rate} (double rate)
+\begin{DoxyCompactList}\small\item\em Set the selection rate. \end{DoxyCompactList}\item 
+void {\bf set\+Config} ({\bf G\+A\+Config} const \&config)
+\begin{DoxyCompactList}\small\item\em Set the \doxyref{G\+A\+Engine}{p.}{class_g_a_1_1_g_a_engine}\textquotesingle{}s configuration. \end{DoxyCompactList}\item 
+void {\bf Evaluate} (unsigned int nb\+Thread)
+\begin{DoxyCompactList}\small\item\em Evaluate the population. \end{DoxyCompactList}\item 
+void {\bf Selection} (void)  throw ()\label{class_g_a_1_1_population_ae2860a7103f97c8fbfbd1ba34dfe3edf}
+
+\begin{DoxyCompactList}\small\item\em Do the selection of the population in order to generate the next population. \end{DoxyCompactList}\item 
+void {\bf Crossover} (void)
+\begin{DoxyCompactList}\small\item\em Do te crossover of the population. \end{DoxyCompactList}\item 
+void {\bf Mutation} (void)  throw ()
+\begin{DoxyCompactList}\small\item\em Do the mutation of the population. \end{DoxyCompactList}\item 
+{\bfseries Population} ({\bf G\+A\+Config} const \&config, unsigned int size)\label{class_g_a_1_1_population_a07d9e0bd4e67cf4c04aa57574a3ef158}
+
+\item 
+{\bf Population} \& {\bfseries operator=} ({\bf Population} const \&pop)  throw ()\label{class_g_a_1_1_population_ab291d3d1d1f7bd3a60b19b9f20614c0d}
+
+\item 
+void {\bfseries Generate} (void)\label{class_g_a_1_1_population_a85c286f5cf3772fec6f3837d23a272cd}
+
+\item 
+unsigned int {\bfseries get\+Size} (void) const   throw ()\label{class_g_a_1_1_population_acd38f2a823b19df8ef2e65e0ffd46aa1}
+
+\item 
+unsigned int {\bfseries get\+Pool\+Size} (void) const   throw ()\label{class_g_a_1_1_population_a9d92e11b3285a8e66ecbbadb7c20764c}
+
+\item 
+double {\bfseries get\+Mutation\+Rate} (void) const   throw ()\label{class_g_a_1_1_population_a6cc06a8905dd77db17f273ca3c93aed8}
+
+\item 
+double {\bfseries get\+Selection\+Rate} (void) const   throw ()\label{class_g_a_1_1_population_a470d346251ef0281b6f5a3e06210d976}
+
+\item 
+double {\bfseries get\+Best\+Fitness} (void) const   throw ()\label{class_g_a_1_1_population_a0c5469bc7bad779b1e9bd5a7a253a5bd}
+
+\item 
+double {\bfseries get\+Average\+Fitness} (void) const   throw ()\label{class_g_a_1_1_population_ac54b8069a72b14072e3d9eeb88725802}
+
+\item 
+{\bf G\+A\+Config} const \& {\bfseries get\+Config} (void) const   throw ()\label{class_g_a_1_1_population_ab311910f33a33d0b38733e4f5e25a95f}
+
+\item 
+std\+::list$<$ {\bf I\+D\+N\+A} $\ast$ $>$ const \& {\bfseries get} (void) const   throw ()\label{class_g_a_1_1_population_ae2c94b2cc89843656488f242c01b5654}
+
+\item 
+std\+::list$<$ {\bf I\+D\+N\+A} $\ast$ $>$ \& {\bfseries get} (void)  throw ()\label{class_g_a_1_1_population_ab4996083978928a40da1c3362849b5f9}
+
+\item 
+void {\bfseries set\+Size} (unsigned int size)\label{class_g_a_1_1_population_a96aab9b5047d4ebc7c63dfaaa4106271}
+
+\item 
+void {\bfseries set\+Pool\+Size} (unsigned int size)\label{class_g_a_1_1_population_aeb464760e9486c63ba6a79dafab9b26a}
+
+\item 
+void {\bfseries set\+Mutation\+Rate} (double rate)\label{class_g_a_1_1_population_ac064867b9bf7f1985208b888fd68ac5a}
+
+\item 
+void {\bfseries set\+Selection\+Rate} (double rate)\label{class_g_a_1_1_population_aa0b977136c775920189428d97bd0cc71}
+
+\item 
+void {\bfseries set\+Config} ({\bf G\+A\+Config} const \&config)\label{class_g_a_1_1_population_ae98e3ede4e9a53efebe491316696a812}
+
+\item 
+void {\bfseries Evaluate} (unsigned int nb\+Thread)\label{class_g_a_1_1_population_a726114389a86922475bb7129c26155b0}
+
+\item 
+void {\bfseries Selection} (void)  throw ()\label{class_g_a_1_1_population_ae2860a7103f97c8fbfbd1ba34dfe3edf}
+
+\item 
+void {\bfseries Crossover} (void)\label{class_g_a_1_1_population_a22400795cfdb52eae7f632b299645fcf}
+
+\item 
+void {\bfseries Mutation} (void)  throw ()\label{class_g_a_1_1_population_a51367eaf5b04539182b739ead73f01d1}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Define what is a population for the \doxyref{G\+A\+Engine}{p.}{class_g_a_1_1_g_a_engine}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{G\+A\+::\+Population@{G\+A\+::\+Population}!Population@{Population}}
+\index{Population@{Population}!G\+A\+::\+Population@{G\+A\+::\+Population}}
+\subsubsection[{Population(\+G\+A\+Config const \&config, unsigned int size)}]{\setlength{\rightskip}{0pt plus 5cm}G\+A\+::\+Population\+::\+Population (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+A\+Config} const \&}]{config, }
+\item[{unsigned int}]{size}
+\end{DoxyParamCaption}
+)}\label{class_g_a_1_1_population_a07d9e0bd4e67cf4c04aa57574a3ef158}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & \+: Contains the configuration of the population. \\
+\hline
+{\em size} & \+: Contains the population size. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+error \+: \doxyref{Population\+Exception}{p.}{class_g_a_1_1_population_exception} 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\index{G\+A\+::\+Population@{G\+A\+::\+Population}!Crossover@{Crossover}}
+\index{Crossover@{Crossover}!G\+A\+::\+Population@{G\+A\+::\+Population}}
+\subsubsection[{Crossover(void)}]{\setlength{\rightskip}{0pt plus 5cm}void G\+A\+::\+Population\+::\+Crossover (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{class_g_a_1_1_population_a22400795cfdb52eae7f632b299645fcf}
+
+
+Do te crossover of the population. 
+
+\begin{DoxyReturn}{Returns}
+error \+: \doxyref{Population\+Exception}{p.}{class_g_a_1_1_population_exception} 
+\end{DoxyReturn}
+\index{G\+A\+::\+Population@{G\+A\+::\+Population}!Evaluate@{Evaluate}}
+\index{Evaluate@{Evaluate}!G\+A\+::\+Population@{G\+A\+::\+Population}}
+\subsubsection[{Evaluate(unsigned int nb\+Thread)}]{\setlength{\rightskip}{0pt plus 5cm}void G\+A\+::\+Population\+::\+Evaluate (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{nb\+Thread}
+\end{DoxyParamCaption}
+)}\label{class_g_a_1_1_population_a726114389a86922475bb7129c26155b0}
+
+
+Evaluate the population. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nb\+Thread} & \+: Contains the number of threads used to evaluate the population. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+error \+: \doxyref{Population\+Exception}{p.}{class_g_a_1_1_population_exception} 
+\end{DoxyReturn}
+\index{G\+A\+::\+Population@{G\+A\+::\+Population}!Generate@{Generate}}
+\index{Generate@{Generate}!G\+A\+::\+Population@{G\+A\+::\+Population}}
+\subsubsection[{Generate(void)}]{\setlength{\rightskip}{0pt plus 5cm}void G\+A\+::\+Population\+::\+Generate (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{class_g_a_1_1_population_a85c286f5cf3772fec6f3837d23a272cd}
+
+
+Generator the entire population. 
+
+\begin{DoxyReturn}{Returns}
+error \+: \doxyref{Population\+Exception}{p.}{class_g_a_1_1_population_exception} 
+\end{DoxyReturn}
+\index{G\+A\+::\+Population@{G\+A\+::\+Population}!get@{get}}
+\index{get@{get}!G\+A\+::\+Population@{G\+A\+::\+Population}}
+\subsubsection[{get(void) const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::list$<$ {\bf I\+D\+N\+A} $\ast$ $>$ const \& G\+A\+::\+Population\+::get (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const throw  ) }\label{class_g_a_1_1_population_afb97e28bb0001d810117f2bb38c66369}
+
+
+Get the list of the \doxyref{I\+D\+N\+A}{p.}{class_g_a_1_1_i_d_n_a}. 
+
+\begin{DoxyReturn}{Returns}
+std\+::list$<$\+I\+D\+N\+A $\ast$$>$ const\& 
+\end{DoxyReturn}
+\index{G\+A\+::\+Population@{G\+A\+::\+Population}!get@{get}}
+\index{get@{get}!G\+A\+::\+Population@{G\+A\+::\+Population}}
+\subsubsection[{get(void)}]{\setlength{\rightskip}{0pt plus 5cm}std\+::list$<$ {\bf I\+D\+N\+A} $\ast$ $>$ \& G\+A\+::\+Population\+::get (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) throw  ) }\label{class_g_a_1_1_population_aae2749b5c7d8f17c185ab8cc77f0b12d}
+
+
+Get the list of the \doxyref{I\+D\+N\+A}{p.}{class_g_a_1_1_i_d_n_a}. 
+
+\begin{DoxyReturn}{Returns}
+std\+::list$<$\+I\+D\+N\+A $\ast$$>$ \& 
+\end{DoxyReturn}
+\index{G\+A\+::\+Population@{G\+A\+::\+Population}!get\+Average\+Fitness@{get\+Average\+Fitness}}
+\index{get\+Average\+Fitness@{get\+Average\+Fitness}!G\+A\+::\+Population@{G\+A\+::\+Population}}
+\subsubsection[{get\+Average\+Fitness(void) const }]{\setlength{\rightskip}{0pt plus 5cm}double G\+A\+::\+Population\+::get\+Average\+Fitness (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const throw  ) }\label{class_g_a_1_1_population_ac54b8069a72b14072e3d9eeb88725802}
+
+
+Get the average fitness of the population. 
+
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+\index{G\+A\+::\+Population@{G\+A\+::\+Population}!get\+Best\+Fitness@{get\+Best\+Fitness}}
+\index{get\+Best\+Fitness@{get\+Best\+Fitness}!G\+A\+::\+Population@{G\+A\+::\+Population}}
+\subsubsection[{get\+Best\+Fitness(void) const }]{\setlength{\rightskip}{0pt plus 5cm}double G\+A\+::\+Population\+::get\+Best\+Fitness (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const throw  ) }\label{class_g_a_1_1_population_a0c5469bc7bad779b1e9bd5a7a253a5bd}
+
+
+Get the best fitness contained in the population. 
+
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+\index{G\+A\+::\+Population@{G\+A\+::\+Population}!get\+Config@{get\+Config}}
+\index{get\+Config@{get\+Config}!G\+A\+::\+Population@{G\+A\+::\+Population}}
+\subsubsection[{get\+Config(void) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+A\+Config} const \& G\+A\+::\+Population\+::get\+Config (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const throw  ) }\label{class_g_a_1_1_population_a6050a874a091622b0b28f7be239bf915}
+
+
+Get the configuration of the \doxyref{G\+A\+Engine}{p.}{class_g_a_1_1_g_a_engine}. 
+
+\begin{DoxyReturn}{Returns}
+\doxyref{G\+A\+Config}{p.}{class_g_a_1_1_g_a_config} const\& 
+\end{DoxyReturn}
+\index{G\+A\+::\+Population@{G\+A\+::\+Population}!get\+Mutation\+Rate@{get\+Mutation\+Rate}}
+\index{get\+Mutation\+Rate@{get\+Mutation\+Rate}!G\+A\+::\+Population@{G\+A\+::\+Population}}
+\subsubsection[{get\+Mutation\+Rate(void) const }]{\setlength{\rightskip}{0pt plus 5cm}double G\+A\+::\+Population\+::get\+Mutation\+Rate (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const throw  ) }\label{class_g_a_1_1_population_a6cc06a8905dd77db17f273ca3c93aed8}
+
+
+Get the mutation rate member. 
+
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+\index{G\+A\+::\+Population@{G\+A\+::\+Population}!get\+Pool\+Size@{get\+Pool\+Size}}
+\index{get\+Pool\+Size@{get\+Pool\+Size}!G\+A\+::\+Population@{G\+A\+::\+Population}}
+\subsubsection[{get\+Pool\+Size(void) const }]{\setlength{\rightskip}{0pt plus 5cm}unsigned int G\+A\+::\+Population\+::get\+Pool\+Size (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const throw  ) }\label{class_g_a_1_1_population_a9d92e11b3285a8e66ecbbadb7c20764c}
+
+
+Get the pool size member. 
+
+\begin{DoxyReturn}{Returns}
+unsigned int 
+\end{DoxyReturn}
+\index{G\+A\+::\+Population@{G\+A\+::\+Population}!get\+Selection\+Rate@{get\+Selection\+Rate}}
+\index{get\+Selection\+Rate@{get\+Selection\+Rate}!G\+A\+::\+Population@{G\+A\+::\+Population}}
+\subsubsection[{get\+Selection\+Rate(void) const }]{\setlength{\rightskip}{0pt plus 5cm}double G\+A\+::\+Population\+::get\+Selection\+Rate (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const throw  ) }\label{class_g_a_1_1_population_a470d346251ef0281b6f5a3e06210d976}
+
+
+Get the selection rate member. 
+
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+\index{G\+A\+::\+Population@{G\+A\+::\+Population}!get\+Size@{get\+Size}}
+\index{get\+Size@{get\+Size}!G\+A\+::\+Population@{G\+A\+::\+Population}}
+\subsubsection[{get\+Size(void) const }]{\setlength{\rightskip}{0pt plus 5cm}unsigned int G\+A\+::\+Population\+::get\+Size (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const throw  ) }\label{class_g_a_1_1_population_acd38f2a823b19df8ef2e65e0ffd46aa1}
+
+
+Get the population size member. 
+
+\begin{DoxyReturn}{Returns}
+unsigned int 
+\end{DoxyReturn}
+\index{G\+A\+::\+Population@{G\+A\+::\+Population}!Mutation@{Mutation}}
+\index{Mutation@{Mutation}!G\+A\+::\+Population@{G\+A\+::\+Population}}
+\subsubsection[{Mutation(void)}]{\setlength{\rightskip}{0pt plus 5cm}void G\+A\+::\+Population\+::\+Mutation (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) throw  ) }\label{class_g_a_1_1_population_a51367eaf5b04539182b739ead73f01d1}
+
+
+Do the mutation of the population. 
+
+\begin{DoxyReturn}{Returns}
+error \+: \doxyref{Population\+Exception}{p.}{class_g_a_1_1_population_exception} 
+\end{DoxyReturn}
+\index{G\+A\+::\+Population@{G\+A\+::\+Population}!set\+Config@{set\+Config}}
+\index{set\+Config@{set\+Config}!G\+A\+::\+Population@{G\+A\+::\+Population}}
+\subsubsection[{set\+Config(\+G\+A\+Config const \&config)}]{\setlength{\rightskip}{0pt plus 5cm}void G\+A\+::\+Population\+::set\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+A\+Config} const \&}]{config}
+\end{DoxyParamCaption}
+)}\label{class_g_a_1_1_population_ae98e3ede4e9a53efebe491316696a812}
+
+
+Set the \doxyref{G\+A\+Engine}{p.}{class_g_a_1_1_g_a_engine}\textquotesingle{}s configuration. 
+
+\begin{DoxyReturn}{Returns}
+error \+: \doxyref{Population\+Exception}{p.}{class_g_a_1_1_population_exception} 
+\end{DoxyReturn}
+\index{G\+A\+::\+Population@{G\+A\+::\+Population}!set\+Mutation\+Rate@{set\+Mutation\+Rate}}
+\index{set\+Mutation\+Rate@{set\+Mutation\+Rate}!G\+A\+::\+Population@{G\+A\+::\+Population}}
+\subsubsection[{set\+Mutation\+Rate(double rate)}]{\setlength{\rightskip}{0pt plus 5cm}void G\+A\+::\+Population\+::set\+Mutation\+Rate (
+\begin{DoxyParamCaption}
+\item[{double}]{rate}
+\end{DoxyParamCaption}
+)}\label{class_g_a_1_1_population_ac064867b9bf7f1985208b888fd68ac5a}
+
+
+Set the mutation rate. 
+
+\begin{DoxyReturn}{Returns}
+error \+: \doxyref{Population\+Exception}{p.}{class_g_a_1_1_population_exception} 
+\end{DoxyReturn}
+\index{G\+A\+::\+Population@{G\+A\+::\+Population}!set\+Pool\+Size@{set\+Pool\+Size}}
+\index{set\+Pool\+Size@{set\+Pool\+Size}!G\+A\+::\+Population@{G\+A\+::\+Population}}
+\subsubsection[{set\+Pool\+Size(unsigned int size)}]{\setlength{\rightskip}{0pt plus 5cm}void G\+A\+::\+Population\+::set\+Pool\+Size (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{size}
+\end{DoxyParamCaption}
+)}\label{class_g_a_1_1_population_aeb464760e9486c63ba6a79dafab9b26a}
+
+
+Set the pool size. 
+
+\begin{DoxyReturn}{Returns}
+error \+: \doxyref{Population\+Exception}{p.}{class_g_a_1_1_population_exception} 
+\end{DoxyReturn}
+\index{G\+A\+::\+Population@{G\+A\+::\+Population}!set\+Selection\+Rate@{set\+Selection\+Rate}}
+\index{set\+Selection\+Rate@{set\+Selection\+Rate}!G\+A\+::\+Population@{G\+A\+::\+Population}}
+\subsubsection[{set\+Selection\+Rate(double rate)}]{\setlength{\rightskip}{0pt plus 5cm}void G\+A\+::\+Population\+::set\+Selection\+Rate (
+\begin{DoxyParamCaption}
+\item[{double}]{rate}
+\end{DoxyParamCaption}
+)}\label{class_g_a_1_1_population_aa0b977136c775920189428d97bd0cc71}
+
+
+Set the selection rate. 
+
+\begin{DoxyReturn}{Returns}
+error \+: \doxyref{Population\+Exception}{p.}{class_g_a_1_1_population_exception} 
+\end{DoxyReturn}
+\index{G\+A\+::\+Population@{G\+A\+::\+Population}!set\+Size@{set\+Size}}
+\index{set\+Size@{set\+Size}!G\+A\+::\+Population@{G\+A\+::\+Population}}
+\subsubsection[{set\+Size(unsigned int size)}]{\setlength{\rightskip}{0pt plus 5cm}void G\+A\+::\+Population\+::set\+Size (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{size}
+\end{DoxyParamCaption}
+)}\label{class_g_a_1_1_population_a96aab9b5047d4ebc7c63dfaaa4106271}
+
+
+Set the population size. 
+
+\begin{DoxyReturn}{Returns}
+error \+: \doxyref{Population\+Exception}{p.}{class_g_a_1_1_population_exception} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+G\+A/population.\+h\item 
+lib/\+G\+A\+N\+N\+Engine/src/\+G\+A/population.\+cc\end{DoxyCompactItemize}

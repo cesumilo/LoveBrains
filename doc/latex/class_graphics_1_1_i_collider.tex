@@ -1,0 +1,129 @@
+\section{Graphics\+:\+:I\+Collider Class Reference}
+\label{class_graphics_1_1_i_collider}\index{Graphics\+::\+I\+Collider@{Graphics\+::\+I\+Collider}}
+
+
+Define the interface for the collider object.  
+
+
+
+
+{\ttfamily \#include $<$i\+\_\+collider.\+h$>$}
+
+Inheritance diagram for Graphics\+:\+:I\+Collider\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_graphics_1_1_i_collider}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool {\bfseries is\+Valid} (std\+::string const \&obj\+\_\+1, std\+::string const \&obj\+\_\+2)=0\label{class_graphics_1_1_i_collider_a7a9174231a3590a6283a6577d3d00af4}
+
+\item 
+virtual bool {\bfseries is\+Collision} ({\bf I\+Object} $\ast$obj\+\_\+1, {\bf I\+Object} $\ast$obj\+\_\+2)=0\label{class_graphics_1_1_i_collider_aee43552fc9e6b45f616b1220a2053971}
+
+\item 
+virtual {\bf I\+Behavior} $\ast$ {\bfseries get\+Action} (void) const  =0\label{class_graphics_1_1_i_collider_a80c81a8f9f1212f1053a0613f0f4d943}
+
+\item 
+virtual {\bf $\sim$\+I\+Collider} ()\label{class_graphics_1_1_i_collider_aa026161123f822795fa64c187b216aa9}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual bool {\bf is\+Valid} (std\+::string const \&obj\+\_\+1, std\+::string const \&obj\+\_\+2)=0
+\begin{DoxyCompactList}\small\item\em Verify if the couple of objects is supported by the collider. \end{DoxyCompactList}\item 
+virtual bool {\bf is\+Collision} ({\bf I\+Object} $\ast$obj\+\_\+1, {\bf I\+Object} $\ast$obj\+\_\+2)=0
+\begin{DoxyCompactList}\small\item\em Compute if the couple of objects is colliding. \end{DoxyCompactList}\item 
+virtual {\bf I\+Behavior} $\ast$ {\bf get\+Action} (void) const  =0
+\begin{DoxyCompactList}\small\item\em Get the action that the collider will execute. \end{DoxyCompactList}\item 
+virtual bool {\bfseries is\+Valid} (std\+::string const \&obj\+\_\+1, std\+::string const \&obj\+\_\+2)=0\label{class_graphics_1_1_i_collider_a7a9174231a3590a6283a6577d3d00af4}
+
+\item 
+virtual bool {\bfseries is\+Collision} ({\bf I\+Object} $\ast$obj\+\_\+1, {\bf I\+Object} $\ast$obj\+\_\+2)=0\label{class_graphics_1_1_i_collider_aee43552fc9e6b45f616b1220a2053971}
+
+\item 
+virtual {\bf I\+Behavior} $\ast$ {\bfseries get\+Action} (void) const  =0\label{class_graphics_1_1_i_collider_a80c81a8f9f1212f1053a0613f0f4d943}
+
+\item 
+virtual bool {\bfseries is\+Valid} (std\+::string const \&obj\+\_\+1, std\+::string const \&obj\+\_\+2)=0\label{class_graphics_1_1_i_collider_a7a9174231a3590a6283a6577d3d00af4}
+
+\item 
+virtual bool {\bfseries is\+Collision} ({\bf I\+Object} $\ast$obj\+\_\+1, {\bf I\+Object} $\ast$obj\+\_\+2)=0\label{class_graphics_1_1_i_collider_aee43552fc9e6b45f616b1220a2053971}
+
+\item 
+virtual {\bf I\+Behavior} $\ast$ {\bfseries get\+Action} (void) const  =0\label{class_graphics_1_1_i_collider_a80c81a8f9f1212f1053a0613f0f4d943}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Define the interface for the collider object. 
+
+\subsection{Member Function Documentation}
+\index{Graphics\+::\+I\+Collider@{Graphics\+::\+I\+Collider}!get\+Action@{get\+Action}}
+\index{get\+Action@{get\+Action}!Graphics\+::\+I\+Collider@{Graphics\+::\+I\+Collider}}
+\subsubsection[{get\+Action(void) const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf I\+Behavior}$\ast$ Graphics\+::\+I\+Collider\+::get\+Action (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_graphics_1_1_i_collider_a80c81a8f9f1212f1053a0613f0f4d943}
+
+
+Get the action that the collider will execute. 
+
+\begin{DoxyReturn}{Returns}
+\doxyref{I\+Behavior}{p.}{class_graphics_1_1_i_behavior} $\ast$ 
+\end{DoxyReturn}
+\index{Graphics\+::\+I\+Collider@{Graphics\+::\+I\+Collider}!is\+Collision@{is\+Collision}}
+\index{is\+Collision@{is\+Collision}!Graphics\+::\+I\+Collider@{Graphics\+::\+I\+Collider}}
+\subsubsection[{is\+Collision(\+I\+Object $\ast$obj\+\_\+1, I\+Object $\ast$obj\+\_\+2)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Graphics\+::\+I\+Collider\+::is\+Collision (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+Object} $\ast$}]{obj\+\_\+1, }
+\item[{{\bf I\+Object} $\ast$}]{obj\+\_\+2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_graphics_1_1_i_collider_aee43552fc9e6b45f616b1220a2053971}
+
+
+Compute if the couple of objects is colliding. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj\+\_\+1} & \+: Contains the first object. \\
+\hline
+{\em obj\+\_\+2} & \+: Contains the second object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true \+: if the couple of objects is colliding. 
+
+false \+: if they don\textquotesingle{}t collide. 
+\end{DoxyReturn}
+\index{Graphics\+::\+I\+Collider@{Graphics\+::\+I\+Collider}!is\+Valid@{is\+Valid}}
+\index{is\+Valid@{is\+Valid}!Graphics\+::\+I\+Collider@{Graphics\+::\+I\+Collider}}
+\subsubsection[{is\+Valid(std\+::string const \&obj\+\_\+1, std\+::string const \&obj\+\_\+2)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Graphics\+::\+I\+Collider\+::is\+Valid (
+\begin{DoxyParamCaption}
+\item[{std\+::string const \&}]{obj\+\_\+1, }
+\item[{std\+::string const \&}]{obj\+\_\+2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_graphics_1_1_i_collider_a7a9174231a3590a6283a6577d3d00af4}
+
+
+Verify if the couple of objects is supported by the collider. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj\+\_\+1} & \+: Contains the key of the first object. \\
+\hline
+{\em obj\+\_\+2} & \+: Contains the key of the second object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true \+: if the collider support the couple of objects. 
+
+false \+: if the collider doesn\textquotesingle{}t support the couple of objects. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+api/include/\+Graphics/i\+\_\+collider.\+h\end{DoxyCompactItemize}

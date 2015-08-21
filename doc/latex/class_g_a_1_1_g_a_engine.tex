@@ -1,0 +1,444 @@
+\section{G\+A\+:\+:G\+A\+Engine Class Reference}
+\label{class_g_a_1_1_g_a_engine}\index{G\+A\+::\+G\+A\+Engine@{G\+A\+::\+G\+A\+Engine}}
+
+
+Manage the evolution of a population composed of \doxyref{I\+D\+N\+A}{p.}{class_g_a_1_1_i_d_n_a} objects.  
+
+
+
+
+{\ttfamily \#include $<$ga\+\_\+engine.\+h$>$}
+
+Inheritance diagram for G\+A\+:\+:G\+A\+Engine\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_g_a_1_1_g_a_engine}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf G\+A\+Engine} (void)  throw ()\label{class_g_a_1_1_g_a_engine_a45a7cf0ffd877b46acedb5e0882440fb}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+{\bf $\sim$\+G\+A\+Engine} (void)  throw ()\label{class_g_a_1_1_g_a_engine_aa178dbdf00eed1f9a43621340f3baee2}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+{\bf Population} const \& {\bf get\+Population} (void) const   throw ()
+\begin{DoxyCompactList}\small\item\em Get the \doxyref{G\+A\+::\+Population}{p.}{class_g_a_1_1_population} member. \end{DoxyCompactList}\item 
+{\bf Population} \& {\bf get\+Population} (void)  throw ()
+\begin{DoxyCompactList}\small\item\em Get the \doxyref{G\+A\+::\+Population}{p.}{class_g_a_1_1_population} member. \end{DoxyCompactList}\item 
+double {\bf get\+Mutation\+Rate} (void) const   throw ()
+\begin{DoxyCompactList}\small\item\em Get the mutation rate member. \end{DoxyCompactList}\item 
+double {\bf get\+Selection\+Rate} (void) const   throw ()
+\begin{DoxyCompactList}\small\item\em Get the selection rate member. \end{DoxyCompactList}\item 
+unsigned int {\bf get\+Pool\+Size} (void) const   throw ()
+\begin{DoxyCompactList}\small\item\em Get the pool size member. \end{DoxyCompactList}\item 
+{\bf G\+A\+::\+G\+A\+Config\+::\+F\+Evaluate} {\bf get\+Evaluation} (void) const   throw ()
+\begin{DoxyCompactList}\small\item\em Get the evaluation function pointer. \end{DoxyCompactList}\item 
+int {\bf get\+Max\+Epochs} (void) const   throw ()
+\begin{DoxyCompactList}\small\item\em Get the maximum epochs member. \end{DoxyCompactList}\item 
+unsigned int {\bf get\+Report\+Interval} (void) const   throw ()
+\begin{DoxyCompactList}\small\item\em Get the interval between each report. \end{DoxyCompactList}\item 
+unsigned int {\bf get\+Number\+Of\+Thread} (void) const   throw ()
+\begin{DoxyCompactList}\small\item\em Get the number of threads used to evaluate the population. \end{DoxyCompactList}\item 
+double {\bf get\+Expected\+Fitness} (void) const   throw ()
+\begin{DoxyCompactList}\small\item\em Get the expected fitness member. \end{DoxyCompactList}\item 
+void {\bf set\+Max\+Epochs} (int max)  throw ()
+\begin{DoxyCompactList}\small\item\em Set the maximum epochs. \end{DoxyCompactList}\item 
+void {\bf set\+Expected\+Fitness} (double fitness)  throw ()
+\begin{DoxyCompactList}\small\item\em Set the expected fitness. \end{DoxyCompactList}\item 
+void {\bf set\+Number\+Of\+Threads} (unsigned int nb)  throw ()
+\begin{DoxyCompactList}\small\item\em Set the number of threads used to evaluate the population. \end{DoxyCompactList}\item 
+void {\bf set\+Report\+Interval} (unsigned int nb)  throw ()
+\begin{DoxyCompactList}\small\item\em Set the interval between each report. \end{DoxyCompactList}\item 
+void {\bf set\+Mutation\+Rate} (double rate)
+\begin{DoxyCompactList}\small\item\em Set the mutation rate. \end{DoxyCompactList}\item 
+void {\bf set\+Selection\+Rate} (double rate)
+\begin{DoxyCompactList}\small\item\em Set the selection rate. \end{DoxyCompactList}\item 
+void {\bf set\+Pool\+Size} (unsigned int size)
+\begin{DoxyCompactList}\small\item\em Set the pool size for the tournament. \end{DoxyCompactList}\item 
+{\bf G\+A\+Engine} \& {\bfseries operator=} ({\bf G\+A\+Engine} const \&engine)\label{class_g_a_1_1_g_a_engine_a292b09001c1c8ad52d19afaa34aee50b}
+
+\item 
+void {\bf Create\+Population} ({\bf G\+A\+Config} const \&config, unsigned int size)
+\begin{DoxyCompactList}\small\item\em Create a new population in terms of the configuration. \end{DoxyCompactList}\item 
+unsigned int {\bf Evolve} (bool report)
+\begin{DoxyCompactList}\small\item\em Run the evolution of the population. \end{DoxyCompactList}\item 
+{\bf Population} const \& {\bfseries get\+Population} (void) const   throw ()\label{class_g_a_1_1_g_a_engine_a9297174b10467931bda4e8896dc4c792}
+
+\item 
+{\bf Population} \& {\bfseries get\+Population} (void)  throw ()\label{class_g_a_1_1_g_a_engine_aacd141a3ab2bd7100a46ec0fcf539c5d}
+
+\item 
+double {\bfseries get\+Mutation\+Rate} (void) const   throw ()\label{class_g_a_1_1_g_a_engine_a00ab5ab68b9481575c54d9773e9725da}
+
+\item 
+double {\bfseries get\+Selection\+Rate} (void) const   throw ()\label{class_g_a_1_1_g_a_engine_ad07783e9b68d2ab59e6d15dd71b39feb}
+
+\item 
+unsigned int {\bfseries get\+Pool\+Size} (void) const   throw ()\label{class_g_a_1_1_g_a_engine_a7fc06e1fbbae46bee2b049deb59b9045}
+
+\item 
+{\bf G\+A\+::\+G\+A\+Config\+::\+F\+Evaluate} {\bfseries get\+Evaluation} (void) const   throw ()\label{class_g_a_1_1_g_a_engine_a3dec096b5616dfe71ce905681e63e4c9}
+
+\item 
+int {\bfseries get\+Max\+Epochs} (void) const   throw ()\label{class_g_a_1_1_g_a_engine_adae401233b6c83ea3bccf745e5ac2938}
+
+\item 
+unsigned int {\bfseries get\+Report\+Interval} (void) const   throw ()\label{class_g_a_1_1_g_a_engine_a937750d82dc1a1d7fdc6f9484b387d3f}
+
+\item 
+unsigned int {\bfseries get\+Number\+Of\+Thread} (void) const   throw ()\label{class_g_a_1_1_g_a_engine_a5d273ce296a59b837989e047945c9900}
+
+\item 
+double {\bfseries get\+Expected\+Fitness} (void) const   throw ()\label{class_g_a_1_1_g_a_engine_aff5b5af1086653068757fc4fda6e148d}
+
+\item 
+void {\bfseries set\+Max\+Epochs} (int max)  throw ()\label{class_g_a_1_1_g_a_engine_adad627d36b63e10e83f5cc4cc654c4cd}
+
+\item 
+void {\bfseries set\+Expected\+Fitness} (double fitness)  throw ()\label{class_g_a_1_1_g_a_engine_a1c72795e3845ee895cb4a1f9e66c408a}
+
+\item 
+void {\bfseries set\+Number\+Of\+Threads} (unsigned int nb)  throw ()\label{class_g_a_1_1_g_a_engine_a3748545720c0509615109c1146f72658}
+
+\item 
+void {\bfseries set\+Report\+Interval} (unsigned int nb)  throw ()\label{class_g_a_1_1_g_a_engine_a0ab0fa1a0eb1c8978da04a706b273071}
+
+\item 
+void {\bfseries set\+Mutation\+Rate} (double rate)\label{class_g_a_1_1_g_a_engine_ac849c71c69910a94330e09f591dd74c4}
+
+\item 
+void {\bfseries set\+Selection\+Rate} (double rate)\label{class_g_a_1_1_g_a_engine_aabe6abef76f01281da25fff2b7055c67}
+
+\item 
+void {\bfseries set\+Pool\+Size} (unsigned int size)\label{class_g_a_1_1_g_a_engine_aaa734244ed01c0d0c67ef362b8f7928b}
+
+\item 
+{\bf G\+A\+Engine} \& {\bfseries operator=} ({\bf G\+A\+Engine} const \&engine)\label{class_g_a_1_1_g_a_engine_a1583b7f68ec3c7b271b5365c7e389d86}
+
+\item 
+void {\bfseries Create\+Population} ({\bf G\+A\+Config} const \&config, unsigned int size)\label{class_g_a_1_1_g_a_engine_adf98d76aa342c503e4a716477746b7a4}
+
+\item 
+unsigned int {\bfseries Evolve} (bool report)\label{class_g_a_1_1_g_a_engine_a86ae5f848f581298231494400a9d97d4}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Manage the evolution of a population composed of \doxyref{I\+D\+N\+A}{p.}{class_g_a_1_1_i_d_n_a} objects. 
+
+\subsection{Member Function Documentation}
+\index{G\+A\+::\+G\+A\+Engine@{G\+A\+::\+G\+A\+Engine}!Create\+Population@{Create\+Population}}
+\index{Create\+Population@{Create\+Population}!G\+A\+::\+G\+A\+Engine@{G\+A\+::\+G\+A\+Engine}}
+\subsubsection[{Create\+Population(\+G\+A\+Config const \&config, unsigned int size)}]{\setlength{\rightskip}{0pt plus 5cm}void G\+A\+::\+G\+A\+Engine\+::\+Create\+Population (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+A\+Config} const \&}]{config, }
+\item[{unsigned int}]{size}
+\end{DoxyParamCaption}
+)}\label{class_g_a_1_1_g_a_engine_adf98d76aa342c503e4a716477746b7a4}
+
+
+Create a new population in terms of the configuration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & \+: Contains the configuration of the \doxyref{G\+A\+Engine}{p.}{class_g_a_1_1_g_a_engine}. \\
+\hline
+{\em size} & \+: Contains the size of the population. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+error \+: \doxyref{G\+A\+Engine\+Exception}{p.}{class_g_a_1_1_g_a_engine_exception} 
+\end{DoxyReturn}
+\index{G\+A\+::\+G\+A\+Engine@{G\+A\+::\+G\+A\+Engine}!Evolve@{Evolve}}
+\index{Evolve@{Evolve}!G\+A\+::\+G\+A\+Engine@{G\+A\+::\+G\+A\+Engine}}
+\subsubsection[{Evolve(bool report)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int G\+A\+::\+G\+A\+Engine\+::\+Evolve (
+\begin{DoxyParamCaption}
+\item[{bool}]{report}
+\end{DoxyParamCaption}
+)}\label{class_g_a_1_1_g_a_engine_a86ae5f848f581298231494400a9d97d4}
+
+
+Run the evolution of the population. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em report} & \+: Contains the boolean that define if there is a report or not. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+unsigned int \+: number of epochs 
+
+error \+: \doxyref{G\+A\+Engine\+Exception}{p.}{class_g_a_1_1_g_a_engine_exception} 
+\end{DoxyReturn}
+\index{G\+A\+::\+G\+A\+Engine@{G\+A\+::\+G\+A\+Engine}!get\+Evaluation@{get\+Evaluation}}
+\index{get\+Evaluation@{get\+Evaluation}!G\+A\+::\+G\+A\+Engine@{G\+A\+::\+G\+A\+Engine}}
+\subsubsection[{get\+Evaluation(void) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+A\+::\+G\+A\+Config\+::\+F\+Evaluate} G\+A\+::\+G\+A\+Engine\+::get\+Evaluation (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const throw  ) }\label{class_g_a_1_1_g_a_engine_a3dec096b5616dfe71ce905681e63e4c9}
+
+
+Get the evaluation function pointer. 
+
+\begin{DoxyReturn}{Returns}
+\doxyref{G\+A\+::\+G\+A\+Config\+::\+F\+Evaluate}{p.}{class_g_a_1_1_g_a_config_a5884e3b48a91855b9db19fc76607a07b} 
+\end{DoxyReturn}
+\index{G\+A\+::\+G\+A\+Engine@{G\+A\+::\+G\+A\+Engine}!get\+Expected\+Fitness@{get\+Expected\+Fitness}}
+\index{get\+Expected\+Fitness@{get\+Expected\+Fitness}!G\+A\+::\+G\+A\+Engine@{G\+A\+::\+G\+A\+Engine}}
+\subsubsection[{get\+Expected\+Fitness(void) const }]{\setlength{\rightskip}{0pt plus 5cm}double G\+A\+::\+G\+A\+Engine\+::get\+Expected\+Fitness (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const throw  ) }\label{class_g_a_1_1_g_a_engine_aff5b5af1086653068757fc4fda6e148d}
+
+
+Get the expected fitness member. 
+
+\begin{DoxyReturn}{Returns}
+double. 
+\end{DoxyReturn}
+\index{G\+A\+::\+G\+A\+Engine@{G\+A\+::\+G\+A\+Engine}!get\+Max\+Epochs@{get\+Max\+Epochs}}
+\index{get\+Max\+Epochs@{get\+Max\+Epochs}!G\+A\+::\+G\+A\+Engine@{G\+A\+::\+G\+A\+Engine}}
+\subsubsection[{get\+Max\+Epochs(void) const }]{\setlength{\rightskip}{0pt plus 5cm}int G\+A\+::\+G\+A\+Engine\+::get\+Max\+Epochs (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const throw  ) }\label{class_g_a_1_1_g_a_engine_adae401233b6c83ea3bccf745e5ac2938}
+
+
+Get the maximum epochs member. 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\index{G\+A\+::\+G\+A\+Engine@{G\+A\+::\+G\+A\+Engine}!get\+Mutation\+Rate@{get\+Mutation\+Rate}}
+\index{get\+Mutation\+Rate@{get\+Mutation\+Rate}!G\+A\+::\+G\+A\+Engine@{G\+A\+::\+G\+A\+Engine}}
+\subsubsection[{get\+Mutation\+Rate(void) const }]{\setlength{\rightskip}{0pt plus 5cm}double G\+A\+::\+G\+A\+Engine\+::get\+Mutation\+Rate (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const throw  ) }\label{class_g_a_1_1_g_a_engine_a00ab5ab68b9481575c54d9773e9725da}
+
+
+Get the mutation rate member. 
+
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+\index{G\+A\+::\+G\+A\+Engine@{G\+A\+::\+G\+A\+Engine}!get\+Number\+Of\+Thread@{get\+Number\+Of\+Thread}}
+\index{get\+Number\+Of\+Thread@{get\+Number\+Of\+Thread}!G\+A\+::\+G\+A\+Engine@{G\+A\+::\+G\+A\+Engine}}
+\subsubsection[{get\+Number\+Of\+Thread(void) const }]{\setlength{\rightskip}{0pt plus 5cm}unsigned int G\+A\+::\+G\+A\+Engine\+::get\+Number\+Of\+Thread (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const throw  ) }\label{class_g_a_1_1_g_a_engine_a5d273ce296a59b837989e047945c9900}
+
+
+Get the number of threads used to evaluate the population. 
+
+\begin{DoxyReturn}{Returns}
+unsigned int 
+\end{DoxyReturn}
+\index{G\+A\+::\+G\+A\+Engine@{G\+A\+::\+G\+A\+Engine}!get\+Pool\+Size@{get\+Pool\+Size}}
+\index{get\+Pool\+Size@{get\+Pool\+Size}!G\+A\+::\+G\+A\+Engine@{G\+A\+::\+G\+A\+Engine}}
+\subsubsection[{get\+Pool\+Size(void) const }]{\setlength{\rightskip}{0pt plus 5cm}unsigned int G\+A\+::\+G\+A\+Engine\+::get\+Pool\+Size (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const throw  ) }\label{class_g_a_1_1_g_a_engine_a7fc06e1fbbae46bee2b049deb59b9045}
+
+
+Get the pool size member. 
+
+\begin{DoxyReturn}{Returns}
+unsigned int 
+\end{DoxyReturn}
+\index{G\+A\+::\+G\+A\+Engine@{G\+A\+::\+G\+A\+Engine}!get\+Population@{get\+Population}}
+\index{get\+Population@{get\+Population}!G\+A\+::\+G\+A\+Engine@{G\+A\+::\+G\+A\+Engine}}
+\subsubsection[{get\+Population(void) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Population} const \& G\+A\+::\+G\+A\+Engine\+::get\+Population (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const throw  ) }\label{class_g_a_1_1_g_a_engine_a98cf07706035fd18e99e3112b4f2349d}
+
+
+Get the \doxyref{G\+A\+::\+Population}{p.}{class_g_a_1_1_population} member. 
+
+\begin{DoxyReturn}{Returns}
+\doxyref{G\+A\+::\+Population}{p.}{class_g_a_1_1_population} const\& 
+\end{DoxyReturn}
+\index{G\+A\+::\+G\+A\+Engine@{G\+A\+::\+G\+A\+Engine}!get\+Population@{get\+Population}}
+\index{get\+Population@{get\+Population}!G\+A\+::\+G\+A\+Engine@{G\+A\+::\+G\+A\+Engine}}
+\subsubsection[{get\+Population(void)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Population} \& G\+A\+::\+G\+A\+Engine\+::get\+Population (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) throw  ) }\label{class_g_a_1_1_g_a_engine_a2565134197a765a195cac11606bdff3b}
+
+
+Get the \doxyref{G\+A\+::\+Population}{p.}{class_g_a_1_1_population} member. 
+
+\begin{DoxyReturn}{Returns}
+\doxyref{G\+A\+::\+Population}{p.}{class_g_a_1_1_population} \& 
+\end{DoxyReturn}
+\index{G\+A\+::\+G\+A\+Engine@{G\+A\+::\+G\+A\+Engine}!get\+Report\+Interval@{get\+Report\+Interval}}
+\index{get\+Report\+Interval@{get\+Report\+Interval}!G\+A\+::\+G\+A\+Engine@{G\+A\+::\+G\+A\+Engine}}
+\subsubsection[{get\+Report\+Interval(void) const }]{\setlength{\rightskip}{0pt plus 5cm}unsigned int G\+A\+::\+G\+A\+Engine\+::get\+Report\+Interval (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const throw  ) }\label{class_g_a_1_1_g_a_engine_a937750d82dc1a1d7fdc6f9484b387d3f}
+
+
+Get the interval between each report. 
+
+\begin{DoxyReturn}{Returns}
+unsigned int 
+\end{DoxyReturn}
+\index{G\+A\+::\+G\+A\+Engine@{G\+A\+::\+G\+A\+Engine}!get\+Selection\+Rate@{get\+Selection\+Rate}}
+\index{get\+Selection\+Rate@{get\+Selection\+Rate}!G\+A\+::\+G\+A\+Engine@{G\+A\+::\+G\+A\+Engine}}
+\subsubsection[{get\+Selection\+Rate(void) const }]{\setlength{\rightskip}{0pt plus 5cm}double G\+A\+::\+G\+A\+Engine\+::get\+Selection\+Rate (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const throw  ) }\label{class_g_a_1_1_g_a_engine_ad07783e9b68d2ab59e6d15dd71b39feb}
+
+
+Get the selection rate member. 
+
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+\index{G\+A\+::\+G\+A\+Engine@{G\+A\+::\+G\+A\+Engine}!set\+Expected\+Fitness@{set\+Expected\+Fitness}}
+\index{set\+Expected\+Fitness@{set\+Expected\+Fitness}!G\+A\+::\+G\+A\+Engine@{G\+A\+::\+G\+A\+Engine}}
+\subsubsection[{set\+Expected\+Fitness(double fitness)}]{\setlength{\rightskip}{0pt plus 5cm}void G\+A\+::\+G\+A\+Engine\+::set\+Expected\+Fitness (
+\begin{DoxyParamCaption}
+\item[{double}]{fitness}
+\end{DoxyParamCaption}
+) throw  ) }\label{class_g_a_1_1_g_a_engine_a1c72795e3845ee895cb4a1f9e66c408a}
+
+
+Set the expected fitness. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fitness} & \+: Contains the new expected fitness. \\
+\hline
+\end{DoxyParams}
+\index{G\+A\+::\+G\+A\+Engine@{G\+A\+::\+G\+A\+Engine}!set\+Max\+Epochs@{set\+Max\+Epochs}}
+\index{set\+Max\+Epochs@{set\+Max\+Epochs}!G\+A\+::\+G\+A\+Engine@{G\+A\+::\+G\+A\+Engine}}
+\subsubsection[{set\+Max\+Epochs(int max)}]{\setlength{\rightskip}{0pt plus 5cm}void G\+A\+::\+G\+A\+Engine\+::set\+Max\+Epochs (
+\begin{DoxyParamCaption}
+\item[{int}]{max}
+\end{DoxyParamCaption}
+) throw  ) }\label{class_g_a_1_1_g_a_engine_adad627d36b63e10e83f5cc4cc654c4cd}
+
+
+Set the maximum epochs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em max} & \+: Contains the maximum epochs. \\
+\hline
+\end{DoxyParams}
+\index{G\+A\+::\+G\+A\+Engine@{G\+A\+::\+G\+A\+Engine}!set\+Mutation\+Rate@{set\+Mutation\+Rate}}
+\index{set\+Mutation\+Rate@{set\+Mutation\+Rate}!G\+A\+::\+G\+A\+Engine@{G\+A\+::\+G\+A\+Engine}}
+\subsubsection[{set\+Mutation\+Rate(double rate)}]{\setlength{\rightskip}{0pt plus 5cm}void G\+A\+::\+G\+A\+Engine\+::set\+Mutation\+Rate (
+\begin{DoxyParamCaption}
+\item[{double}]{rate}
+\end{DoxyParamCaption}
+)}\label{class_g_a_1_1_g_a_engine_ac849c71c69910a94330e09f591dd74c4}
+
+
+Set the mutation rate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rate} & \+: Contains the new mutation rate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+error \+: \doxyref{G\+A\+Engine\+Exception}{p.}{class_g_a_1_1_g_a_engine_exception} 
+\end{DoxyReturn}
+\index{G\+A\+::\+G\+A\+Engine@{G\+A\+::\+G\+A\+Engine}!set\+Number\+Of\+Threads@{set\+Number\+Of\+Threads}}
+\index{set\+Number\+Of\+Threads@{set\+Number\+Of\+Threads}!G\+A\+::\+G\+A\+Engine@{G\+A\+::\+G\+A\+Engine}}
+\subsubsection[{set\+Number\+Of\+Threads(unsigned int nb)}]{\setlength{\rightskip}{0pt plus 5cm}void G\+A\+::\+G\+A\+Engine\+::set\+Number\+Of\+Threads (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{nb}
+\end{DoxyParamCaption}
+) throw  ) }\label{class_g_a_1_1_g_a_engine_a3748545720c0509615109c1146f72658}
+
+
+Set the number of threads used to evaluate the population. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nb} & \+: Contains the number of threads. \\
+\hline
+\end{DoxyParams}
+\index{G\+A\+::\+G\+A\+Engine@{G\+A\+::\+G\+A\+Engine}!set\+Pool\+Size@{set\+Pool\+Size}}
+\index{set\+Pool\+Size@{set\+Pool\+Size}!G\+A\+::\+G\+A\+Engine@{G\+A\+::\+G\+A\+Engine}}
+\subsubsection[{set\+Pool\+Size(unsigned int size)}]{\setlength{\rightskip}{0pt plus 5cm}void G\+A\+::\+G\+A\+Engine\+::set\+Pool\+Size (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{size}
+\end{DoxyParamCaption}
+)}\label{class_g_a_1_1_g_a_engine_aaa734244ed01c0d0c67ef362b8f7928b}
+
+
+Set the pool size for the tournament. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & \+: Contains the pool size. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+error \+: \doxyref{G\+A\+Engine\+Exception}{p.}{class_g_a_1_1_g_a_engine_exception} 
+\end{DoxyReturn}
+\index{G\+A\+::\+G\+A\+Engine@{G\+A\+::\+G\+A\+Engine}!set\+Report\+Interval@{set\+Report\+Interval}}
+\index{set\+Report\+Interval@{set\+Report\+Interval}!G\+A\+::\+G\+A\+Engine@{G\+A\+::\+G\+A\+Engine}}
+\subsubsection[{set\+Report\+Interval(unsigned int nb)}]{\setlength{\rightskip}{0pt plus 5cm}void G\+A\+::\+G\+A\+Engine\+::set\+Report\+Interval (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{nb}
+\end{DoxyParamCaption}
+) throw  ) }\label{class_g_a_1_1_g_a_engine_a0ab0fa1a0eb1c8978da04a706b273071}
+
+
+Set the interval between each report. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nb} & \+: Contains the interval number. \\
+\hline
+\end{DoxyParams}
+\index{G\+A\+::\+G\+A\+Engine@{G\+A\+::\+G\+A\+Engine}!set\+Selection\+Rate@{set\+Selection\+Rate}}
+\index{set\+Selection\+Rate@{set\+Selection\+Rate}!G\+A\+::\+G\+A\+Engine@{G\+A\+::\+G\+A\+Engine}}
+\subsubsection[{set\+Selection\+Rate(double rate)}]{\setlength{\rightskip}{0pt plus 5cm}void G\+A\+::\+G\+A\+Engine\+::set\+Selection\+Rate (
+\begin{DoxyParamCaption}
+\item[{double}]{rate}
+\end{DoxyParamCaption}
+)}\label{class_g_a_1_1_g_a_engine_aabe6abef76f01281da25fff2b7055c67}
+
+
+Set the selection rate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rate} & \+: Contains the new selection rate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+error \+: \doxyref{G\+A\+Engine\+Exception}{p.}{class_g_a_1_1_g_a_engine_exception} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+G\+A/ga\+\_\+engine.\+h\item 
+lib/\+G\+A\+N\+N\+Engine/src/\+G\+A/ga\+\_\+engine.\+cc\end{DoxyCompactItemize}

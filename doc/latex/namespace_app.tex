@@ -1,0 +1,70 @@
+\section{App Namespace Reference}
+\label{namespace_app}\index{App@{App}}
+
+
+Contains all the tools which compose the application.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf App}
+\begin{DoxyCompactList}\small\item\em Manage all the stuff in order to run the simulation. \end{DoxyCompactList}\item 
+class {\bf App\+Exception}
+\begin{DoxyCompactList}\small\item\em Define the exception for the \doxyref{App}{p.}{class_app_1_1_app} class. \end{DoxyCompactList}\item 
+class {\bf Config\+Manager}
+\begin{DoxyCompactList}\small\item\em Manage the configuration of the simulator and the engines. \end{DoxyCompactList}\item 
+struct {\bf s\+\_\+config\+\_\+getter}
+\begin{DoxyCompactList}\small\item\em Object which manage parsing of the configuration file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ {\bfseries Config\+Getter}) ({\bf Simulator\+::\+S\+Config} \&, std\+::string const \&)\label{namespace_app_ab4965ee935cdff07ac1daa677f45b5a9}
+
+\item 
+typedef struct {\bf App\+::s\+\_\+config\+\_\+getter} {\bf t\+\_\+config\+\_\+getter}\label{namespace_app_a33f1fc3e4e586c2c7d3afccfb32bb0a8}
+
+\begin{DoxyCompactList}\small\item\em Object which manage parsing of the configuration file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf config\+\_\+get\+Crossing\+Rate} ({\bf Simulator\+::\+S\+Config} \&config, std\+::string const \&value)\label{namespace_app_aa18273af60d4c7c0af67896ecd9909ed}
+
+\begin{DoxyCompactList}\small\item\em Get the crossing rate from the configuration file. \end{DoxyCompactList}\item 
+void {\bf config\+\_\+get\+Mutation\+Rate} ({\bf Simulator\+::\+S\+Config} \&config, std\+::string const \&value)\label{namespace_app_a0041c4348012bfabfd841ec47ba84139}
+
+\begin{DoxyCompactList}\small\item\em Get the mutation rate from the configuration file. \end{DoxyCompactList}\item 
+void {\bf config\+\_\+get\+Selection\+Rate} ({\bf Simulator\+::\+S\+Config} \&config, std\+::string const \&value)\label{namespace_app_a5dd5bdf8ed746732ba4c08d6b7bc7aa0}
+
+\begin{DoxyCompactList}\small\item\em Get the selection rate from the configuration file. \end{DoxyCompactList}\item 
+void {\bf config\+\_\+get\+Expected\+Fitness} ({\bf Simulator\+::\+S\+Config} \&config, std\+::string const \&value)\label{namespace_app_addfc84e631beada10e58a68a081f53cf}
+
+\begin{DoxyCompactList}\small\item\em Get the expected fitness from the configuration file. \end{DoxyCompactList}\item 
+void {\bf config\+\_\+get\+Pool\+Size} ({\bf Simulator\+::\+S\+Config} \&config, std\+::string const \&value)\label{namespace_app_a96f76875d64e357b6877570d81fd7c0d}
+
+\begin{DoxyCompactList}\small\item\em Get the pool size for the tournament from the configuration file. \end{DoxyCompactList}\item 
+void {\bf config\+\_\+get\+Max\+Epochs} ({\bf Simulator\+::\+S\+Config} \&config, std\+::string const \&value)\label{namespace_app_aa821f0f8d63ad581ab9c3d1623e95577}
+
+\begin{DoxyCompactList}\small\item\em Get the maximum epochs from the configuration file. \end{DoxyCompactList}\item 
+void {\bf config\+\_\+get\+Report\+Interval} ({\bf Simulator\+::\+S\+Config} \&config, std\+::string const \&value)\label{namespace_app_a0b8d91989d1072a936f8433604448803}
+
+\begin{DoxyCompactList}\small\item\em Get the report interval from the configuration file. \end{DoxyCompactList}\item 
+void {\bf config\+\_\+get\+Population\+Size} ({\bf Simulator\+::\+S\+Config} \&config, std\+::string const \&value)\label{namespace_app_ac332ed182e1dab292c89fea3b71809f8}
+
+\begin{DoxyCompactList}\small\item\em Get the population size from the configuration file. \end{DoxyCompactList}\item 
+void {\bf config\+\_\+get\+A\+N\+N\+Infos} ({\bf Simulator\+::\+S\+Config} \&config, std\+::string const \&value)\label{namespace_app_aa234558647bbd7f063febe0e6511dba6}
+
+\begin{DoxyCompactList}\small\item\em Get the neural network informations from the configuration file. \end{DoxyCompactList}\item 
+void {\bf config\+\_\+get\+Activation} ({\bf Simulator\+::\+S\+Config} \&config, std\+::string const \&value)\label{namespace_app_a954dff4faa80392055a9de880f1fb254}
+
+\begin{DoxyCompactList}\small\item\em Get the activation function for the intern layers, from the configuration file. \end{DoxyCompactList}\item 
+void {\bf config\+\_\+get\+Outputs\+Activation} ({\bf Simulator\+::\+S\+Config} \&config, std\+::string const \&value)\label{namespace_app_ae200cc2cb13f25ff8158321266825ad6}
+
+\begin{DoxyCompactList}\small\item\em Get the activation function for the output layer, from the configuration file. \end{DoxyCompactList}\item 
+void {\bf config\+\_\+get\+Environment\+Size} ({\bf Simulator\+::\+S\+Config} \&config, std\+::string const \&value)\label{namespace_app_ad7085cbbe4a11a6ec0d62887382e3017}
+
+\begin{DoxyCompactList}\small\item\em Get the environment size (window size) from the configuration file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains all the tools which compose the application. 

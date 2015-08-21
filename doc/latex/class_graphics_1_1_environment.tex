@@ -1,0 +1,203 @@
+\section{Graphics\+:\+:Environment Class Reference}
+\label{class_graphics_1_1_environment}\index{Graphics\+::\+Environment@{Graphics\+::\+Environment}}
+
+
+Define the graphic environment that will contain the objects defined by plugins.  
+
+
+
+
+{\ttfamily \#include $<$environment.\+h$>$}
+
+Inheritance diagram for Graphics\+:\+:Environment\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_graphics_1_1_environment}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Environment} (void)\label{class_graphics_1_1_environment_a044db0dbb0e9be9b65a5b48514d3f391}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+{\bf Environment} (unsigned int width, unsigned int height)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+{\bf $\sim$\+Environment} (void)\label{class_graphics_1_1_environment_a16ca8179cad35b4ac6b24d75ba590578}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+std\+::list$<$ {\bf I\+Object} $\ast$ $>$ const \& {\bf get\+Objects} (void) const 
+\begin{DoxyCompactList}\small\item\em Get all the objects of the environment. \end{DoxyCompactList}\item 
+std\+::list$<$ {\bf I\+Object} $\ast$ $>$ \& {\bf get\+Objects} (void)
+\begin{DoxyCompactList}\small\item\em Get all the objects of the environment. \end{DoxyCompactList}\item 
+{\bf Physics} const \& {\bf get\+Physics} (void) const 
+\begin{DoxyCompactList}\small\item\em Get the physics engine member. \end{DoxyCompactList}\item 
+{\bf Physics} \& {\bf get\+Physics} (void)
+\begin{DoxyCompactList}\small\item\em Get the physics engine member. \end{DoxyCompactList}\item 
+sf\+::\+Render\+Window \& {\bf get\+Window} (void)
+\begin{DoxyCompactList}\small\item\em Get the sf\+::\+Render\+Window member. \end{DoxyCompactList}\item 
+void {\bf Load\+From\+File} (const char $\ast$path)
+\begin{DoxyCompactList}\small\item\em Load the environment from the environment file given in parameters of Love\+Brains. \end{DoxyCompactList}\item 
+{\bf Environment} \& {\bfseries operator=} ({\bf Environment} const \&env)\label{class_graphics_1_1_environment_a7cb224cf4a6fc72f86dd23448812791f}
+
+\item 
+void {\bf Update} (sf\+::\+Time elapsed)
+\begin{DoxyCompactList}\small\item\em Update all the objects contains in the environment. \end{DoxyCompactList}\item 
+void {\bf Draw} (void)\label{class_graphics_1_1_environment_a47288858214f1d3e32e46e2cfb8fcbcb}
+
+\begin{DoxyCompactList}\small\item\em Draw all the objects on the window. \end{DoxyCompactList}\item 
+void {\bf Run} (std\+::list$<$ {\bf G\+A\+::\+I\+D\+N\+A} $\ast$ $>$ \&brains)
+\begin{DoxyCompactList}\small\item\em Run the simulation with the graphic environment. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Define the graphic environment that will contain the objects defined by plugins. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Graphics\+::\+Environment@{Graphics\+::\+Environment}!Environment@{Environment}}
+\index{Environment@{Environment}!Graphics\+::\+Environment@{Graphics\+::\+Environment}}
+\subsubsection[{Environment(unsigned int width, unsigned int height)}]{\setlength{\rightskip}{0pt plus 5cm}Graphics\+::\+Environment\+::\+Environment (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{width, }
+\item[{unsigned int}]{height}
+\end{DoxyParamCaption}
+)}\label{class_graphics_1_1_environment_a17adc4457ec4343fd34f071fc01e8ecd}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & \+: window\textquotesingle{}s width \\
+\hline
+{\em height} & \+: window\textquotesingle{}s height. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Graphics\+::\+Environment@{Graphics\+::\+Environment}!get\+Objects@{get\+Objects}}
+\index{get\+Objects@{get\+Objects}!Graphics\+::\+Environment@{Graphics\+::\+Environment}}
+\subsubsection[{get\+Objects(void) const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::list$<$ {\bf I\+Object} $\ast$ $>$ const \& Graphics\+::\+Environment\+::get\+Objects (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}\label{class_graphics_1_1_environment_abdb681d2317e7c5fb0e8de71485b3d44}
+
+
+Get all the objects of the environment. 
+
+\begin{DoxyReturn}{Returns}
+std\+::list$<$\+I\+Object $\ast$$>$ const\& 
+\end{DoxyReturn}
+\index{Graphics\+::\+Environment@{Graphics\+::\+Environment}!get\+Objects@{get\+Objects}}
+\index{get\+Objects@{get\+Objects}!Graphics\+::\+Environment@{Graphics\+::\+Environment}}
+\subsubsection[{get\+Objects(void)}]{\setlength{\rightskip}{0pt plus 5cm}std\+::list$<$ {\bf I\+Object} $\ast$ $>$ \& Graphics\+::\+Environment\+::get\+Objects (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{class_graphics_1_1_environment_a0f6fd1e56d8dacc957c868d2e114b542}
+
+
+Get all the objects of the environment. 
+
+\begin{DoxyReturn}{Returns}
+std\+::list$<$\+I\+Object $\ast$$>$ \& 
+\end{DoxyReturn}
+\index{Graphics\+::\+Environment@{Graphics\+::\+Environment}!get\+Physics@{get\+Physics}}
+\index{get\+Physics@{get\+Physics}!Graphics\+::\+Environment@{Graphics\+::\+Environment}}
+\subsubsection[{get\+Physics(void) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Physics} const \& Graphics\+::\+Environment\+::get\+Physics (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}\label{class_graphics_1_1_environment_aae24b029dc83bcfbf66a30e126171b90}
+
+
+Get the physics engine member. 
+
+\begin{DoxyReturn}{Returns}
+\doxyref{Graphics\+::\+Physics}{p.}{class_graphics_1_1_physics} const\& 
+\end{DoxyReturn}
+\index{Graphics\+::\+Environment@{Graphics\+::\+Environment}!get\+Physics@{get\+Physics}}
+\index{get\+Physics@{get\+Physics}!Graphics\+::\+Environment@{Graphics\+::\+Environment}}
+\subsubsection[{get\+Physics(void)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Physics} \& Graphics\+::\+Environment\+::get\+Physics (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{class_graphics_1_1_environment_a2319eb2aa525a02c5fcfcb4ffdee078b}
+
+
+Get the physics engine member. 
+
+\begin{DoxyReturn}{Returns}
+\doxyref{Graphics\+::\+Physics}{p.}{class_graphics_1_1_physics} \& 
+\end{DoxyReturn}
+\index{Graphics\+::\+Environment@{Graphics\+::\+Environment}!get\+Window@{get\+Window}}
+\index{get\+Window@{get\+Window}!Graphics\+::\+Environment@{Graphics\+::\+Environment}}
+\subsubsection[{get\+Window(void)}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Render\+Window \& Graphics\+::\+Environment\+::get\+Window (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{class_graphics_1_1_environment_a48fd6c1e0b586fce7a98997a70830b64}
+
+
+Get the sf\+::\+Render\+Window member. 
+
+\begin{DoxyReturn}{Returns}
+sf\+::\+Render\+Window \& 
+\end{DoxyReturn}
+\index{Graphics\+::\+Environment@{Graphics\+::\+Environment}!Load\+From\+File@{Load\+From\+File}}
+\index{Load\+From\+File@{Load\+From\+File}!Graphics\+::\+Environment@{Graphics\+::\+Environment}}
+\subsubsection[{Load\+From\+File(const char $\ast$path)}]{\setlength{\rightskip}{0pt plus 5cm}void Graphics\+::\+Environment\+::\+Load\+From\+File (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{path}
+\end{DoxyParamCaption}
+)}\label{class_graphics_1_1_environment_af84834a647e88bd65d0aae0689017e7f}
+
+
+Load the environment from the environment file given in parameters of Love\+Brains. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & \+: contains the path of the environment file. \\
+\hline
+\end{DoxyParams}
+\index{Graphics\+::\+Environment@{Graphics\+::\+Environment}!Run@{Run}}
+\index{Run@{Run}!Graphics\+::\+Environment@{Graphics\+::\+Environment}}
+\subsubsection[{Run(std\+::list$<$ G\+A\+::\+I\+D\+N\+A $\ast$ $>$ \&brains)}]{\setlength{\rightskip}{0pt plus 5cm}void Graphics\+::\+Environment\+::\+Run (
+\begin{DoxyParamCaption}
+\item[{std\+::list$<$ {\bf G\+A\+::\+I\+D\+N\+A} $\ast$ $>$ \&}]{brains}
+\end{DoxyParamCaption}
+)}\label{class_graphics_1_1_environment_a75607613b1e08e1b72d34fb31b39a1b1}
+
+
+Run the simulation with the graphic environment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em brains} & \+: Contains all the neural networks used by the A\+I objects. \\
+\hline
+\end{DoxyParams}
+\index{Graphics\+::\+Environment@{Graphics\+::\+Environment}!Update@{Update}}
+\index{Update@{Update}!Graphics\+::\+Environment@{Graphics\+::\+Environment}}
+\subsubsection[{Update(sf\+::\+Time elapsed)}]{\setlength{\rightskip}{0pt plus 5cm}void Graphics\+::\+Environment\+::\+Update (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Time}]{elapsed}
+\end{DoxyParamCaption}
+)}\label{class_graphics_1_1_environment_a9f07302d5b90a03d0e30205a464e7053}
+
+
+Update all the objects contains in the environment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elapsed} & \+: Contains the elapsed time between the current update and the previous update. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Graphics/environment.\+h\item 
+src/\+Graphics/environment.\+cc\end{DoxyCompactItemize}

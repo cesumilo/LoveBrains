@@ -5,7 +5,7 @@
 ** Login   <robin_f@epitech.eu>
 ** 
 ** Started on  Tue Jul 21 16:03:50 2015 Guillaume ROBIN
-** Last update Tue Jul 28 16:15:10 2015 Guillaume ROBIN
+** Last update Fri Aug 21 17:18:15 2015 Guillaume ROBIN
 */
 
 #ifndef I_GENERATOR_H_
@@ -15,11 +15,22 @@
 
 namespace GA
 {
+  /*!
+   * \class IGenerator
+   * \brief Define the interface that allow to define a new generator of individual for the GAEngine.
+   */
   class IGenerator
   {
   public:
+    /*!
+     * \brief Destructor.
+     */
     virtual ~IGenerator(void);
 
+    /*!
+     * \brief Generate a new individual.
+     * \return IDNA *
+     */
     virtual IDNA	*Generate(void) const = 0;
   };
 }

@@ -1,0 +1,195 @@
+\section{G\+A\+N\+N\+:\+:G\+A\+N\+N Class Reference}
+\label{class_g_a_n_n_1_1_g_a_n_n}\index{G\+A\+N\+N\+::\+G\+A\+N\+N@{G\+A\+N\+N\+::\+G\+A\+N\+N}}
+
+
+Define a new object called \char`\"{}\+G\+A\+N\+N\char`\"{} for Genetic Artificial Neural Network that inherit of the interface I\+D\+N\+A.  
+
+
+
+
+{\ttfamily \#include $<$gann.\+h$>$}
+
+Inheritance diagram for G\+A\+N\+N\+:\+:G\+A\+N\+N\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_g_a_n_n_1_1_g_a_n_n}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf G\+A\+N\+N} (std\+::vector$<$ unsigned int $>$ const \&infos)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+{\bf G\+A\+N\+N} ({\bf A\+N\+N} const \&ann)\label{class_g_a_n_n_1_1_g_a_n_n_af79852b180fa36389cc52d965d2caf8a}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+{\bf $\sim$\+G\+A\+N\+N} (void)\label{class_g_a_n_n_1_1_g_a_n_n_a04296403435806cb780d525550cc539f}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+double {\bf get\+Fitness} (void) const 
+\begin{DoxyCompactList}\small\item\em Get the fitness of the \doxyref{G\+A\+N\+N}{p.}{class_g_a_n_n_1_1_g_a_n_n}. \end{DoxyCompactList}\item 
+{\bf A\+N\+N} const \& {\bf get\+Genes} (void) const 
+\begin{DoxyCompactList}\small\item\em Get the neural network of the \doxyref{G\+A\+N\+N}{p.}{class_g_a_n_n_1_1_g_a_n_n}. \end{DoxyCompactList}\item 
+void {\bf set\+Fitness} (double fitness)
+\begin{DoxyCompactList}\small\item\em Set the fitness of the \doxyref{G\+A\+N\+N}{p.}{class_g_a_n_n_1_1_g_a_n_n}. \end{DoxyCompactList}\item 
+void {\bf set\+Genes} ({\bf A\+N\+N} const \&ann)
+\begin{DoxyCompactList}\small\item\em Set the neural network of the \doxyref{G\+A\+N\+N}{p.}{class_g_a_n_n_1_1_g_a_n_n}. \end{DoxyCompactList}\item 
+void {\bf Print} (void)\label{class_g_a_n_n_1_1_g_a_n_n_add795af2e18eed7a2de4e853a4f33cec}
+
+\begin{DoxyCompactList}\small\item\em Print the neural network in the shell. \end{DoxyCompactList}\item 
+{\bfseries G\+A\+N\+N} (std\+::vector$<$ unsigned int $>$ const \&infos)\label{class_g_a_n_n_1_1_g_a_n_n_a905bdec4aba9b9ec93e744d353fe83d1}
+
+\item 
+{\bfseries G\+A\+N\+N} ({\bf A\+N\+N} const \&ann)\label{class_g_a_n_n_1_1_g_a_n_n_af79852b180fa36389cc52d965d2caf8a}
+
+\item 
+double {\bf get\+Fitness} (void) const 
+\begin{DoxyCompactList}\small\item\em Get the fitness of the individual. \end{DoxyCompactList}\item 
+{\bf A\+N\+N} const \& {\bfseries get\+Genes} (void) const \label{class_g_a_n_n_1_1_g_a_n_n_a27dd2ecb262ecd41761e74c0423c1c62}
+
+\item 
+void {\bf set\+Fitness} (double fitness)
+\begin{DoxyCompactList}\small\item\em Set the fitness of the individual. \end{DoxyCompactList}\item 
+void {\bfseries set\+Genes} ({\bf A\+N\+N} const \&ann)\label{class_g_a_n_n_1_1_g_a_n_n_a637f9a4ecc8b96a3b9bb3607c89419fe}
+
+\item 
+void {\bf Print} (void)\label{class_g_a_n_n_1_1_g_a_n_n_add795af2e18eed7a2de4e853a4f33cec}
+
+\begin{DoxyCompactList}\small\item\em Allow to draw the individual on the shell. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Define a new object called \char`\"{}\+G\+A\+N\+N\char`\"{} for Genetic Artificial Neural Network that inherit of the interface I\+D\+N\+A. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{G\+A\+N\+N\+::\+G\+A\+N\+N@{G\+A\+N\+N\+::\+G\+A\+N\+N}!G\+A\+N\+N@{G\+A\+N\+N}}
+\index{G\+A\+N\+N@{G\+A\+N\+N}!G\+A\+N\+N\+::\+G\+A\+N\+N@{G\+A\+N\+N\+::\+G\+A\+N\+N}}
+\subsubsection[{G\+A\+N\+N(std\+::vector$<$ unsigned int $>$ const \&infos)}]{\setlength{\rightskip}{0pt plus 5cm}G\+A\+N\+N\+::\+G\+A\+N\+N\+::\+G\+A\+N\+N (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ unsigned int $>$ const \&}]{infos}
+\end{DoxyParamCaption}
+)}\label{class_g_a_n_n_1_1_g_a_n_n_a905bdec4aba9b9ec93e744d353fe83d1}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em infos} & \+: Contains the topology of the neural network. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{G\+A\+N\+N\+::\+G\+A\+N\+N@{G\+A\+N\+N\+::\+G\+A\+N\+N}!get\+Fitness@{get\+Fitness}}
+\index{get\+Fitness@{get\+Fitness}!G\+A\+N\+N\+::\+G\+A\+N\+N@{G\+A\+N\+N\+::\+G\+A\+N\+N}}
+\subsubsection[{get\+Fitness(void) const }]{\setlength{\rightskip}{0pt plus 5cm}double G\+A\+N\+N\+::\+G\+A\+N\+N\+::get\+Fitness (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_g_a_n_n_1_1_g_a_n_n_af42d40435b452eb2e98adf3f1968b544}
+
+
+Get the fitness of the individual. 
+
+\begin{DoxyReturn}{Returns}
+double \+: fitness 
+\end{DoxyReturn}
+
+
+Implements {\bf G\+A\+::\+I\+D\+N\+A} \doxyref{}{p.}{class_g_a_1_1_i_d_n_a_a1e997178236d20727c75d3f04063f57c}.
+
+\index{G\+A\+N\+N\+::\+G\+A\+N\+N@{G\+A\+N\+N\+::\+G\+A\+N\+N}!get\+Fitness@{get\+Fitness}}
+\index{get\+Fitness@{get\+Fitness}!G\+A\+N\+N\+::\+G\+A\+N\+N@{G\+A\+N\+N\+::\+G\+A\+N\+N}}
+\subsubsection[{get\+Fitness(void) const }]{\setlength{\rightskip}{0pt plus 5cm}double G\+A\+N\+N\+::\+G\+A\+N\+N\+::get\+Fitness (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_g_a_n_n_1_1_g_a_n_n_af42d40435b452eb2e98adf3f1968b544}
+
+
+Get the fitness of the \doxyref{G\+A\+N\+N}{p.}{class_g_a_n_n_1_1_g_a_n_n}. 
+
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+
+
+Implements {\bf G\+A\+::\+I\+D\+N\+A} \doxyref{}{p.}{class_g_a_1_1_i_d_n_a_a1e997178236d20727c75d3f04063f57c}.
+
+\index{G\+A\+N\+N\+::\+G\+A\+N\+N@{G\+A\+N\+N\+::\+G\+A\+N\+N}!get\+Genes@{get\+Genes}}
+\index{get\+Genes@{get\+Genes}!G\+A\+N\+N\+::\+G\+A\+N\+N@{G\+A\+N\+N\+::\+G\+A\+N\+N}}
+\subsubsection[{get\+Genes(void) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf A\+N\+N} const \& G\+A\+N\+N\+::\+G\+A\+N\+N\+::get\+Genes (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}\label{class_g_a_n_n_1_1_g_a_n_n_a0b77cd4242c996c5dceeb7a951d122e1}
+
+
+Get the neural network of the \doxyref{G\+A\+N\+N}{p.}{class_g_a_n_n_1_1_g_a_n_n}. 
+
+\begin{DoxyReturn}{Returns}
+\doxyref{A\+N\+N}{p.}{class_g_a_n_n_1_1_a_n_n} const\& 
+\end{DoxyReturn}
+\index{G\+A\+N\+N\+::\+G\+A\+N\+N@{G\+A\+N\+N\+::\+G\+A\+N\+N}!set\+Fitness@{set\+Fitness}}
+\index{set\+Fitness@{set\+Fitness}!G\+A\+N\+N\+::\+G\+A\+N\+N@{G\+A\+N\+N\+::\+G\+A\+N\+N}}
+\subsubsection[{set\+Fitness(double fitness)}]{\setlength{\rightskip}{0pt plus 5cm}void G\+A\+N\+N\+::\+G\+A\+N\+N\+::set\+Fitness (
+\begin{DoxyParamCaption}
+\item[{double}]{fitness}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_g_a_n_n_1_1_g_a_n_n_ab1083fbf86c2512b9a699f2d963d7a71}
+
+
+Set the fitness of the individual. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fitness} & \+: Contains the new fitness. \\
+\hline
+\end{DoxyParams}
+
+
+Implements {\bf G\+A\+::\+I\+D\+N\+A} \doxyref{}{p.}{class_g_a_1_1_i_d_n_a_a7057dc78f322c30c7d55fa04202960eb}.
+
+\index{G\+A\+N\+N\+::\+G\+A\+N\+N@{G\+A\+N\+N\+::\+G\+A\+N\+N}!set\+Fitness@{set\+Fitness}}
+\index{set\+Fitness@{set\+Fitness}!G\+A\+N\+N\+::\+G\+A\+N\+N@{G\+A\+N\+N\+::\+G\+A\+N\+N}}
+\subsubsection[{set\+Fitness(double fitness)}]{\setlength{\rightskip}{0pt plus 5cm}void G\+A\+N\+N\+::\+G\+A\+N\+N\+::set\+Fitness (
+\begin{DoxyParamCaption}
+\item[{double}]{fitness}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_g_a_n_n_1_1_g_a_n_n_ab1083fbf86c2512b9a699f2d963d7a71}
+
+
+Set the fitness of the \doxyref{G\+A\+N\+N}{p.}{class_g_a_n_n_1_1_g_a_n_n}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fitness} & \+: Contains the new fitness of the \doxyref{G\+A\+N\+N}{p.}{class_g_a_n_n_1_1_g_a_n_n}. \\
+\hline
+\end{DoxyParams}
+
+
+Implements {\bf G\+A\+::\+I\+D\+N\+A} \doxyref{}{p.}{class_g_a_1_1_i_d_n_a_a7057dc78f322c30c7d55fa04202960eb}.
+
+\index{G\+A\+N\+N\+::\+G\+A\+N\+N@{G\+A\+N\+N\+::\+G\+A\+N\+N}!set\+Genes@{set\+Genes}}
+\index{set\+Genes@{set\+Genes}!G\+A\+N\+N\+::\+G\+A\+N\+N@{G\+A\+N\+N\+::\+G\+A\+N\+N}}
+\subsubsection[{set\+Genes(\+A\+N\+N const \&ann)}]{\setlength{\rightskip}{0pt plus 5cm}void G\+A\+N\+N\+::\+G\+A\+N\+N\+::set\+Genes (
+\begin{DoxyParamCaption}
+\item[{{\bf A\+N\+N} const \&}]{ann}
+\end{DoxyParamCaption}
+)}\label{class_g_a_n_n_1_1_g_a_n_n_a637f9a4ecc8b96a3b9bb3607c89419fe}
+
+
+Set the neural network of the \doxyref{G\+A\+N\+N}{p.}{class_g_a_n_n_1_1_g_a_n_n}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ann} & \+: Contains the new neural network of the \doxyref{G\+A\+N\+N}{p.}{class_g_a_n_n_1_1_g_a_n_n}. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+G\+A\+N\+N/gann.\+h\item 
+lib/\+G\+A\+N\+N\+Engine/src/\+G\+A\+N\+N/gann.\+cc\end{DoxyCompactItemize}

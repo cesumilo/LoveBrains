@@ -1,0 +1,112 @@
+\section{Plugin\+:\+:Plugin\+Manager Class Reference}
+\label{class_plugin_1_1_plugin_manager}\index{Plugin\+::\+Plugin\+Manager@{Plugin\+::\+Plugin\+Manager}}
+
+
+Manage the plugins loading.  
+
+
+
+
+{\ttfamily \#include $<$plugin\+\_\+manager.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Plugin\+Manager} (void)  throw ()\label{class_plugin_1_1_plugin_manager_af2f5a319f6d47eaebb1d832865a16b7e}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+{\bf $\sim$\+Plugin\+Manager} (void)  throw ()\label{class_plugin_1_1_plugin_manager_a52fd28885e9815aa1f380ba8ded00d39}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void {\bf Load\+Plugins} (void)
+\begin{DoxyCompactList}\small\item\em Load all the plugins contained in the \char`\"{}mods\char`\"{} directory. \end{DoxyCompactList}\item 
+void {\bf Load\+Objects} (void)
+\begin{DoxyCompactList}\small\item\em Load all the objects contained in the plugin. \end{DoxyCompactList}\item 
+void {\bf Load\+Colliders} ({\bf Graphics\+::\+Physics} \&physics)
+\begin{DoxyCompactList}\small\item\em Load all the colliders contained in the plugin. \end{DoxyCompactList}\item 
+void {\bf Load\+Sensors} ({\bf Graphics\+::\+Physics} \&physics)
+\begin{DoxyCompactList}\small\item\em Load all the sensors contained in the plugin. \end{DoxyCompactList}\item 
+void {\bf Close\+Plugins} (void)
+\begin{DoxyCompactList}\small\item\em Close all the plugins. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Manage the plugins loading. 
+
+\subsection{Member Function Documentation}
+\index{Plugin\+::\+Plugin\+Manager@{Plugin\+::\+Plugin\+Manager}!Close\+Plugins@{Close\+Plugins}}
+\index{Close\+Plugins@{Close\+Plugins}!Plugin\+::\+Plugin\+Manager@{Plugin\+::\+Plugin\+Manager}}
+\subsubsection[{Close\+Plugins(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Plugin\+::\+Plugin\+Manager\+::\+Close\+Plugins (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{class_plugin_1_1_plugin_manager_a30b977f5930e31293da31ddf7517f166}
+
+
+Close all the plugins. 
+
+\begin{DoxyReturn}{Returns}
+error \+: \doxyref{Plugin\+Exception}{p.}{class_plugin_1_1_plugin_exception} 
+\end{DoxyReturn}
+\index{Plugin\+::\+Plugin\+Manager@{Plugin\+::\+Plugin\+Manager}!Load\+Colliders@{Load\+Colliders}}
+\index{Load\+Colliders@{Load\+Colliders}!Plugin\+::\+Plugin\+Manager@{Plugin\+::\+Plugin\+Manager}}
+\subsubsection[{Load\+Colliders(\+Graphics\+::\+Physics \&physics)}]{\setlength{\rightskip}{0pt plus 5cm}void Plugin\+::\+Plugin\+Manager\+::\+Load\+Colliders (
+\begin{DoxyParamCaption}
+\item[{{\bf Graphics\+::\+Physics} \&}]{physics}
+\end{DoxyParamCaption}
+)}\label{class_plugin_1_1_plugin_manager_a8db66df6a06424b652663823b26a578d}
+
+
+Load all the colliders contained in the plugin. 
+
+\begin{DoxyReturn}{Returns}
+error \+: \doxyref{Plugin\+Exception}{p.}{class_plugin_1_1_plugin_exception} 
+\end{DoxyReturn}
+\index{Plugin\+::\+Plugin\+Manager@{Plugin\+::\+Plugin\+Manager}!Load\+Objects@{Load\+Objects}}
+\index{Load\+Objects@{Load\+Objects}!Plugin\+::\+Plugin\+Manager@{Plugin\+::\+Plugin\+Manager}}
+\subsubsection[{Load\+Objects(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Plugin\+::\+Plugin\+Manager\+::\+Load\+Objects (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{class_plugin_1_1_plugin_manager_a2e24a227c98229c87d42c3882e9bb64a}
+
+
+Load all the objects contained in the plugin. 
+
+\begin{DoxyReturn}{Returns}
+error \+: \doxyref{Plugin\+Exception}{p.}{class_plugin_1_1_plugin_exception} 
+\end{DoxyReturn}
+\index{Plugin\+::\+Plugin\+Manager@{Plugin\+::\+Plugin\+Manager}!Load\+Plugins@{Load\+Plugins}}
+\index{Load\+Plugins@{Load\+Plugins}!Plugin\+::\+Plugin\+Manager@{Plugin\+::\+Plugin\+Manager}}
+\subsubsection[{Load\+Plugins(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Plugin\+::\+Plugin\+Manager\+::\+Load\+Plugins (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{class_plugin_1_1_plugin_manager_a690a2d3e142376e42719181a049a04b1}
+
+
+Load all the plugins contained in the \char`\"{}mods\char`\"{} directory. 
+
+\begin{DoxyReturn}{Returns}
+error \+: \doxyref{Plugin\+Exception}{p.}{class_plugin_1_1_plugin_exception} 
+\end{DoxyReturn}
+\index{Plugin\+::\+Plugin\+Manager@{Plugin\+::\+Plugin\+Manager}!Load\+Sensors@{Load\+Sensors}}
+\index{Load\+Sensors@{Load\+Sensors}!Plugin\+::\+Plugin\+Manager@{Plugin\+::\+Plugin\+Manager}}
+\subsubsection[{Load\+Sensors(\+Graphics\+::\+Physics \&physics)}]{\setlength{\rightskip}{0pt plus 5cm}void Plugin\+::\+Plugin\+Manager\+::\+Load\+Sensors (
+\begin{DoxyParamCaption}
+\item[{{\bf Graphics\+::\+Physics} \&}]{physics}
+\end{DoxyParamCaption}
+)}\label{class_plugin_1_1_plugin_manager_aed33e3037fca968dc27af35b283fc3dc}
+
+
+Load all the sensors contained in the plugin. 
+
+\begin{DoxyReturn}{Returns}
+error \+: \doxyref{Plugin\+Exception}{p.}{class_plugin_1_1_plugin_exception} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Plugin/plugin\+\_\+manager.\+h\item 
+src/\+Plugin/plugin\+\_\+manager.\+cc\end{DoxyCompactItemize}

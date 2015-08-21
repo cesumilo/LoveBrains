@@ -1,0 +1,445 @@
+\section{G\+A\+N\+N\+:\+:A\+N\+N\+Layer Class Reference}
+\label{class_g_a_n_n_1_1_a_n_n_layer}\index{G\+A\+N\+N\+::\+A\+N\+N\+Layer@{G\+A\+N\+N\+::\+A\+N\+N\+Layer}}
+
+
+Define a layer of a neural network.  
+
+
+
+
+{\ttfamily \#include $<$ann\+\_\+layer.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef double($\ast$ {\bfseries F\+Activate}) (double)\label{class_g_a_n_n_1_1_a_n_n_layer_abb160533dd36e791bd0e561ef244cbae}
+
+\item 
+typedef double($\ast$ {\bf F\+Activate}) (double)\label{class_g_a_n_n_1_1_a_n_n_layer_abb160533dd36e791bd0e561ef244cbae}
+
+\begin{DoxyCompactList}\small\item\em Function pointer of an activation function. \end{DoxyCompactList}\item 
+typedef double($\ast$ {\bfseries F\+Activate}) (double)\label{class_g_a_n_n_1_1_a_n_n_layer_abb160533dd36e791bd0e561ef244cbae}
+
+\item 
+typedef double($\ast$ {\bfseries F\+Activate}) (double)\label{class_g_a_n_n_1_1_a_n_n_layer_abb160533dd36e791bd0e561ef244cbae}
+
+\item 
+typedef double($\ast$ {\bfseries F\+Activate}) (double)\label{class_g_a_n_n_1_1_a_n_n_layer_abb160533dd36e791bd0e561ef244cbae}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries A\+N\+N\+Layer} (unsigned int num\+\_\+inputs, unsigned int num\+\_\+neurons, double min, double max, F\+Activate activation)\label{class_g_a_n_n_1_1_a_n_n_layer_a98a15401495eddad363a75c2ab9c5773}
+
+\item 
+{\bfseries A\+N\+N\+Layer} ({\bf A\+N\+N\+Layer} const \&copy)\label{class_g_a_n_n_1_1_a_n_n_layer_a89236bd33096986ab0efa417d4cbcb1c}
+
+\item 
+{\bf Matrix}$<$ double $>$ const \& {\bfseries get\+Weights} (void) const \label{class_g_a_n_n_1_1_a_n_n_layer_a53907cae383f48d74ec7377665d99748}
+
+\item 
+{\bf Matrix}$<$ double $>$ \& {\bfseries get\+Weights} (void)\label{class_g_a_n_n_1_1_a_n_n_layer_ae91b6f9960dfea801080512dc5d9b224}
+
+\item 
+{\bf Matrix}$<$ double $>$ const \& {\bfseries get\+Outputs} (void) const \label{class_g_a_n_n_1_1_a_n_n_layer_a73e68bd212308c07f0e189cac0ce1f78}
+
+\item 
+{\bf Matrix}$<$ double $>$ const \& {\bfseries get\+Bias} (void) const \label{class_g_a_n_n_1_1_a_n_n_layer_a667dafc7ab40773bbd6bc32553bd4cb0}
+
+\item 
+{\bf Matrix}$<$ double $>$ \& {\bfseries get\+Bias} (void)\label{class_g_a_n_n_1_1_a_n_n_layer_a35de727d75d940dd9614ecdf0f1327ca}
+
+\item 
+F\+Activate {\bfseries get\+Activation\+Function} (void) const \label{class_g_a_n_n_1_1_a_n_n_layer_ac6177070fe7bb18aeed82980b70894e1}
+
+\item 
+void {\bfseries set\+Weights} ({\bf Matrix}$<$ double $>$ const \&weights)\label{class_g_a_n_n_1_1_a_n_n_layer_a99b44245e660160e6431f4bd8b7cf8ed}
+
+\item 
+void {\bfseries set\+Bias} ({\bf Matrix}$<$ double $>$ const \&bias)\label{class_g_a_n_n_1_1_a_n_n_layer_a33b17fa33318cc5ab3060025ccf90faf}
+
+\item 
+void {\bfseries set\+Outputs} ({\bf Matrix}$<$ double $>$ const \&outputs)\label{class_g_a_n_n_1_1_a_n_n_layer_a7249be13922695f54aa3ed0b888584b8}
+
+\item 
+void {\bfseries set\+Activation\+Function} (F\+Activate f)\label{class_g_a_n_n_1_1_a_n_n_layer_afee60047b0ccb6d2b92f75d4b55febdc}
+
+\item 
+{\bf A\+N\+N\+Layer} \& {\bfseries operator=} ({\bf A\+N\+N\+Layer} const \&layer)\label{class_g_a_n_n_1_1_a_n_n_layer_af0143b0bacad70f0fc69969e31f60abb}
+
+\item 
+void {\bfseries Activate} ({\bf Matrix}$<$ double $>$ const \&inputs)\label{class_g_a_n_n_1_1_a_n_n_layer_aa8388e643e0916ad8366bb8abc227331}
+
+\item 
+{\bf A\+N\+N\+Layer} (unsigned int num\+\_\+inputs, unsigned int num\+\_\+neurons, double min, double max, F\+Activate activation)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+{\bf A\+N\+N\+Layer} ({\bf A\+N\+N\+Layer} const \&copy)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+{\bf A\+N\+N\+Layer} (void)\label{class_g_a_n_n_1_1_a_n_n_layer_a15723dede429598530fefcc7532e9ef8}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+{\bf $\sim$\+A\+N\+N\+Layer} (void)\label{class_g_a_n_n_1_1_a_n_n_layer_a467acde1c266c8f32c2f47764d4e4ee0}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+{\bf Matrix}$<$ double $>$ const \& {\bf get\+Weights} (void) const 
+\begin{DoxyCompactList}\small\item\em Get the weights matrix of the neural network. \end{DoxyCompactList}\item 
+{\bf Matrix}$<$ double $>$ \& {\bf get\+Weights} (void)
+\begin{DoxyCompactList}\small\item\em Get the weights matrix of the neural network. \end{DoxyCompactList}\item 
+{\bf Matrix}$<$ double $>$ const \& {\bf get\+Outputs} (void) const \label{class_g_a_n_n_1_1_a_n_n_layer_a47fbef47e9c7c0ef638aed2a2bd30974}
+
+\begin{DoxyCompactList}\small\item\em Get the outputs matrix of the neural network.  G\+A\+N\+N\+::\+Matrix$<$double$>$ const\&. \end{DoxyCompactList}\item 
+{\bf Matrix}$<$ double $>$ const \& {\bf get\+Bias} (void) const 
+\begin{DoxyCompactList}\small\item\em Get the bias matrix of the neural network. \end{DoxyCompactList}\item 
+{\bf Matrix}$<$ double $>$ \& {\bf get\+Bias} (void)
+\begin{DoxyCompactList}\small\item\em Get the bias matrix of the neural network. \end{DoxyCompactList}\item 
+F\+Activate {\bf get\+Activation\+Function} (void) const 
+\begin{DoxyCompactList}\small\item\em Get the activation function of the current layer. \end{DoxyCompactList}\item 
+void {\bf set\+Weights} ({\bf Matrix}$<$ double $>$ const \&weights)
+\begin{DoxyCompactList}\small\item\em Set the matrix of weights. \end{DoxyCompactList}\item 
+void {\bf set\+Bias} ({\bf Matrix}$<$ double $>$ const \&bias)
+\begin{DoxyCompactList}\small\item\em Set the matrix of bias. \end{DoxyCompactList}\item 
+void {\bf set\+Outputs} ({\bf Matrix}$<$ double $>$ const \&outputs)
+\begin{DoxyCompactList}\small\item\em Set the outputs matrix. \end{DoxyCompactList}\item 
+void {\bf set\+Activation\+Function} (F\+Activate f)
+\begin{DoxyCompactList}\small\item\em Set the activation function of the layer. \end{DoxyCompactList}\item 
+{\bf A\+N\+N\+Layer} \& {\bfseries operator=} ({\bf A\+N\+N\+Layer} const \&layer)\label{class_g_a_n_n_1_1_a_n_n_layer_a2b22cd2b08de3d0b41615dd6be0198d4}
+
+\item 
+void {\bf Activate} ({\bf Matrix}$<$ double $>$ const \&inputs)
+\begin{DoxyCompactList}\small\item\em Activate the current layer and set the matrix of outputs. \end{DoxyCompactList}\item 
+{\bfseries A\+N\+N\+Layer} (unsigned int num\+\_\+inputs, unsigned int num\+\_\+neurons, double min, double max, F\+Activate activation)\label{class_g_a_n_n_1_1_a_n_n_layer_a98a15401495eddad363a75c2ab9c5773}
+
+\item 
+{\bfseries A\+N\+N\+Layer} ({\bf A\+N\+N\+Layer} const \&copy)\label{class_g_a_n_n_1_1_a_n_n_layer_a89236bd33096986ab0efa417d4cbcb1c}
+
+\item 
+{\bf Matrix}$<$ double $>$ const \& {\bfseries get\+Weights} (void) const \label{class_g_a_n_n_1_1_a_n_n_layer_ab2ccaae743a40f1f39595f983db22a8d}
+
+\item 
+{\bf Matrix}$<$ double $>$ \& {\bfseries get\+Weights} (void)\label{class_g_a_n_n_1_1_a_n_n_layer_abd06bed4090d09e09669e9ff56b4659a}
+
+\item 
+{\bf Matrix}$<$ double $>$ const \& {\bfseries get\+Outputs} (void) const \label{class_g_a_n_n_1_1_a_n_n_layer_a47fbef47e9c7c0ef638aed2a2bd30974}
+
+\item 
+{\bf Matrix}$<$ double $>$ const \& {\bfseries get\+Bias} (void) const \label{class_g_a_n_n_1_1_a_n_n_layer_a23a78b0d4255e3480872ba6df6562290}
+
+\item 
+{\bf Matrix}$<$ double $>$ \& {\bfseries get\+Bias} (void)\label{class_g_a_n_n_1_1_a_n_n_layer_a2814de885892bd51d23d157fb7ff53a9}
+
+\item 
+F\+Activate {\bfseries get\+Activation\+Function} (void) const \label{class_g_a_n_n_1_1_a_n_n_layer_a17a2ecad13a3aac38329470e8575ed62}
+
+\item 
+void {\bfseries set\+Weights} ({\bf Matrix}$<$ double $>$ const \&weights)\label{class_g_a_n_n_1_1_a_n_n_layer_a99b44245e660160e6431f4bd8b7cf8ed}
+
+\item 
+void {\bfseries set\+Bias} ({\bf Matrix}$<$ double $>$ const \&bias)\label{class_g_a_n_n_1_1_a_n_n_layer_a33b17fa33318cc5ab3060025ccf90faf}
+
+\item 
+void {\bfseries set\+Outputs} ({\bf Matrix}$<$ double $>$ const \&outputs)\label{class_g_a_n_n_1_1_a_n_n_layer_a7249be13922695f54aa3ed0b888584b8}
+
+\item 
+void {\bfseries set\+Activation\+Function} (F\+Activate f)\label{class_g_a_n_n_1_1_a_n_n_layer_afee60047b0ccb6d2b92f75d4b55febdc}
+
+\item 
+{\bf A\+N\+N\+Layer} \& {\bfseries operator=} ({\bf A\+N\+N\+Layer} const \&layer)\label{class_g_a_n_n_1_1_a_n_n_layer_a2b22cd2b08de3d0b41615dd6be0198d4}
+
+\item 
+void {\bfseries Activate} ({\bf Matrix}$<$ double $>$ const \&inputs)\label{class_g_a_n_n_1_1_a_n_n_layer_aa8388e643e0916ad8366bb8abc227331}
+
+\item 
+{\bfseries A\+N\+N\+Layer} (unsigned int num\+\_\+inputs, unsigned int num\+\_\+neurons, double min, double max, F\+Activate activation)\label{class_g_a_n_n_1_1_a_n_n_layer_a98a15401495eddad363a75c2ab9c5773}
+
+\item 
+{\bfseries A\+N\+N\+Layer} ({\bf A\+N\+N\+Layer} const \&copy)\label{class_g_a_n_n_1_1_a_n_n_layer_a89236bd33096986ab0efa417d4cbcb1c}
+
+\item 
+{\bf Matrix}$<$ double $>$ const \& {\bfseries get\+Weights} (void) const \label{class_g_a_n_n_1_1_a_n_n_layer_ab2ccaae743a40f1f39595f983db22a8d}
+
+\item 
+{\bf Matrix}$<$ double $>$ \& {\bfseries get\+Weights} (void)\label{class_g_a_n_n_1_1_a_n_n_layer_abd06bed4090d09e09669e9ff56b4659a}
+
+\item 
+{\bf Matrix}$<$ double $>$ const \& {\bfseries get\+Outputs} (void) const \label{class_g_a_n_n_1_1_a_n_n_layer_a47fbef47e9c7c0ef638aed2a2bd30974}
+
+\item 
+{\bf Matrix}$<$ double $>$ const \& {\bfseries get\+Bias} (void) const \label{class_g_a_n_n_1_1_a_n_n_layer_a23a78b0d4255e3480872ba6df6562290}
+
+\item 
+{\bf Matrix}$<$ double $>$ \& {\bfseries get\+Bias} (void)\label{class_g_a_n_n_1_1_a_n_n_layer_a2814de885892bd51d23d157fb7ff53a9}
+
+\item 
+F\+Activate {\bfseries get\+Activation\+Function} (void) const \label{class_g_a_n_n_1_1_a_n_n_layer_a17a2ecad13a3aac38329470e8575ed62}
+
+\item 
+void {\bfseries set\+Weights} ({\bf Matrix}$<$ double $>$ const \&weights)\label{class_g_a_n_n_1_1_a_n_n_layer_a99b44245e660160e6431f4bd8b7cf8ed}
+
+\item 
+void {\bfseries set\+Bias} ({\bf Matrix}$<$ double $>$ const \&bias)\label{class_g_a_n_n_1_1_a_n_n_layer_a33b17fa33318cc5ab3060025ccf90faf}
+
+\item 
+void {\bfseries set\+Outputs} ({\bf Matrix}$<$ double $>$ const \&outputs)\label{class_g_a_n_n_1_1_a_n_n_layer_a7249be13922695f54aa3ed0b888584b8}
+
+\item 
+void {\bfseries set\+Activation\+Function} (F\+Activate f)\label{class_g_a_n_n_1_1_a_n_n_layer_afee60047b0ccb6d2b92f75d4b55febdc}
+
+\item 
+{\bf A\+N\+N\+Layer} \& {\bfseries operator=} ({\bf A\+N\+N\+Layer} const \&layer)\label{class_g_a_n_n_1_1_a_n_n_layer_a2b22cd2b08de3d0b41615dd6be0198d4}
+
+\item 
+void {\bfseries Activate} ({\bf Matrix}$<$ double $>$ const \&inputs)\label{class_g_a_n_n_1_1_a_n_n_layer_aa8388e643e0916ad8366bb8abc227331}
+
+\item 
+{\bfseries A\+N\+N\+Layer} (unsigned int num\+\_\+inputs, unsigned int num\+\_\+neurons, double min, double max, F\+Activate activation)\label{class_g_a_n_n_1_1_a_n_n_layer_a98a15401495eddad363a75c2ab9c5773}
+
+\item 
+{\bfseries A\+N\+N\+Layer} ({\bf A\+N\+N\+Layer} const \&copy)\label{class_g_a_n_n_1_1_a_n_n_layer_a89236bd33096986ab0efa417d4cbcb1c}
+
+\item 
+{\bf Matrix}$<$ double $>$ const \& {\bfseries get\+Weights} (void) const \label{class_g_a_n_n_1_1_a_n_n_layer_ab2ccaae743a40f1f39595f983db22a8d}
+
+\item 
+{\bf Matrix}$<$ double $>$ \& {\bfseries get\+Weights} (void)\label{class_g_a_n_n_1_1_a_n_n_layer_abd06bed4090d09e09669e9ff56b4659a}
+
+\item 
+{\bf Matrix}$<$ double $>$ const \& {\bfseries get\+Outputs} (void) const \label{class_g_a_n_n_1_1_a_n_n_layer_a47fbef47e9c7c0ef638aed2a2bd30974}
+
+\item 
+{\bf Matrix}$<$ double $>$ const \& {\bfseries get\+Bias} (void) const \label{class_g_a_n_n_1_1_a_n_n_layer_a23a78b0d4255e3480872ba6df6562290}
+
+\item 
+{\bf Matrix}$<$ double $>$ \& {\bfseries get\+Bias} (void)\label{class_g_a_n_n_1_1_a_n_n_layer_a2814de885892bd51d23d157fb7ff53a9}
+
+\item 
+F\+Activate {\bfseries get\+Activation\+Function} (void) const \label{class_g_a_n_n_1_1_a_n_n_layer_a17a2ecad13a3aac38329470e8575ed62}
+
+\item 
+void {\bfseries set\+Weights} ({\bf Matrix}$<$ double $>$ const \&weights)\label{class_g_a_n_n_1_1_a_n_n_layer_a99b44245e660160e6431f4bd8b7cf8ed}
+
+\item 
+void {\bfseries set\+Bias} ({\bf Matrix}$<$ double $>$ const \&bias)\label{class_g_a_n_n_1_1_a_n_n_layer_a33b17fa33318cc5ab3060025ccf90faf}
+
+\item 
+void {\bfseries set\+Outputs} ({\bf Matrix}$<$ double $>$ const \&outputs)\label{class_g_a_n_n_1_1_a_n_n_layer_a7249be13922695f54aa3ed0b888584b8}
+
+\item 
+void {\bfseries set\+Activation\+Function} (F\+Activate f)\label{class_g_a_n_n_1_1_a_n_n_layer_afee60047b0ccb6d2b92f75d4b55febdc}
+
+\item 
+{\bf A\+N\+N\+Layer} \& {\bfseries operator=} ({\bf A\+N\+N\+Layer} const \&layer)\label{class_g_a_n_n_1_1_a_n_n_layer_a2b22cd2b08de3d0b41615dd6be0198d4}
+
+\item 
+void {\bfseries Activate} ({\bf Matrix}$<$ double $>$ const \&inputs)\label{class_g_a_n_n_1_1_a_n_n_layer_aa8388e643e0916ad8366bb8abc227331}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Define a layer of a neural network. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{G\+A\+N\+N\+::\+A\+N\+N\+Layer@{G\+A\+N\+N\+::\+A\+N\+N\+Layer}!A\+N\+N\+Layer@{A\+N\+N\+Layer}}
+\index{A\+N\+N\+Layer@{A\+N\+N\+Layer}!G\+A\+N\+N\+::\+A\+N\+N\+Layer@{G\+A\+N\+N\+::\+A\+N\+N\+Layer}}
+\subsubsection[{A\+N\+N\+Layer(unsigned int num\+\_\+inputs, unsigned int num\+\_\+neurons, double min, double max, F\+Activate activation)}]{\setlength{\rightskip}{0pt plus 5cm}G\+A\+N\+N\+::\+A\+N\+N\+Layer\+::\+A\+N\+N\+Layer (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{num\+\_\+inputs, }
+\item[{unsigned int}]{num\+\_\+neurons, }
+\item[{double}]{min, }
+\item[{double}]{max, }
+\item[{F\+Activate}]{activation}
+\end{DoxyParamCaption}
+)}\label{class_g_a_n_n_1_1_a_n_n_layer_a98a15401495eddad363a75c2ab9c5773}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+\_\+inputs} & \+: Contains the number of inputs. \\
+\hline
+{\em num\+\_\+neurons} & \+: Contains the number of neurons in the layer. \\
+\hline
+{\em min} & \+: Contains the minimum value of the randomization. \\
+\hline
+{\em max} & \+: Contains the maximum value of the randomization. \\
+\hline
+{\em activation} & \+: Contains the function pointer of the activation function. \\
+\hline
+\end{DoxyParams}
+\index{G\+A\+N\+N\+::\+A\+N\+N\+Layer@{G\+A\+N\+N\+::\+A\+N\+N\+Layer}!A\+N\+N\+Layer@{A\+N\+N\+Layer}}
+\index{A\+N\+N\+Layer@{A\+N\+N\+Layer}!G\+A\+N\+N\+::\+A\+N\+N\+Layer@{G\+A\+N\+N\+::\+A\+N\+N\+Layer}}
+\subsubsection[{A\+N\+N\+Layer(\+A\+N\+N\+Layer const \&copy)}]{\setlength{\rightskip}{0pt plus 5cm}G\+A\+N\+N\+::\+A\+N\+N\+Layer\+::\+A\+N\+N\+Layer (
+\begin{DoxyParamCaption}
+\item[{{\bf A\+N\+N\+Layer} const \&}]{copy}
+\end{DoxyParamCaption}
+)}\label{class_g_a_n_n_1_1_a_n_n_layer_a89236bd33096986ab0efa417d4cbcb1c}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em copy} & \+: Contains a layer that will be used in order to create a new layer. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{G\+A\+N\+N\+::\+A\+N\+N\+Layer@{G\+A\+N\+N\+::\+A\+N\+N\+Layer}!Activate@{Activate}}
+\index{Activate@{Activate}!G\+A\+N\+N\+::\+A\+N\+N\+Layer@{G\+A\+N\+N\+::\+A\+N\+N\+Layer}}
+\subsubsection[{Activate(\+Matrix$<$ double $>$ const \&inputs)}]{\setlength{\rightskip}{0pt plus 5cm}void G\+A\+N\+N\+::\+A\+N\+N\+Layer\+::\+Activate (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}$<$ double $>$ const \&}]{inputs}
+\end{DoxyParamCaption}
+)}\label{class_g_a_n_n_1_1_a_n_n_layer_aa8388e643e0916ad8366bb8abc227331}
+
+
+Activate the current layer and set the matrix of outputs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inputs} & \+: Contains the matrix of inputs of the layer. \\
+\hline
+\end{DoxyParams}
+\index{G\+A\+N\+N\+::\+A\+N\+N\+Layer@{G\+A\+N\+N\+::\+A\+N\+N\+Layer}!get\+Activation\+Function@{get\+Activation\+Function}}
+\index{get\+Activation\+Function@{get\+Activation\+Function}!G\+A\+N\+N\+::\+A\+N\+N\+Layer@{G\+A\+N\+N\+::\+A\+N\+N\+Layer}}
+\subsubsection[{get\+Activation\+Function(void) const }]{\setlength{\rightskip}{0pt plus 5cm}F\+Activate G\+A\+N\+N\+::\+A\+N\+N\+Layer\+::get\+Activation\+Function (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}\label{class_g_a_n_n_1_1_a_n_n_layer_a17a2ecad13a3aac38329470e8575ed62}
+
+
+Get the activation function of the current layer. 
+
+\begin{DoxyReturn}{Returns}
+G\+A\+N\+N\+::\+A\+N\+N\+Layer\+::\+F\+Activate 
+\end{DoxyReturn}
+\index{G\+A\+N\+N\+::\+A\+N\+N\+Layer@{G\+A\+N\+N\+::\+A\+N\+N\+Layer}!get\+Bias@{get\+Bias}}
+\index{get\+Bias@{get\+Bias}!G\+A\+N\+N\+::\+A\+N\+N\+Layer@{G\+A\+N\+N\+::\+A\+N\+N\+Layer}}
+\subsubsection[{get\+Bias(void) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix}$<$double$>$ const\& G\+A\+N\+N\+::\+A\+N\+N\+Layer\+::get\+Bias (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}\label{class_g_a_n_n_1_1_a_n_n_layer_a23a78b0d4255e3480872ba6df6562290}
+
+
+Get the bias matrix of the neural network. 
+
+\begin{DoxyReturn}{Returns}
+G\+A\+N\+N\+::\+Matrix$<$double$>$ const\& 
+\end{DoxyReturn}
+\index{G\+A\+N\+N\+::\+A\+N\+N\+Layer@{G\+A\+N\+N\+::\+A\+N\+N\+Layer}!get\+Bias@{get\+Bias}}
+\index{get\+Bias@{get\+Bias}!G\+A\+N\+N\+::\+A\+N\+N\+Layer@{G\+A\+N\+N\+::\+A\+N\+N\+Layer}}
+\subsubsection[{get\+Bias(void)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix}$<$double$>$\& G\+A\+N\+N\+::\+A\+N\+N\+Layer\+::get\+Bias (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{class_g_a_n_n_1_1_a_n_n_layer_a2814de885892bd51d23d157fb7ff53a9}
+
+
+Get the bias matrix of the neural network. 
+
+\begin{DoxyReturn}{Returns}
+G\+A\+N\+N\+::\+Matrix$<$double$>$ \& 
+\end{DoxyReturn}
+\index{G\+A\+N\+N\+::\+A\+N\+N\+Layer@{G\+A\+N\+N\+::\+A\+N\+N\+Layer}!get\+Weights@{get\+Weights}}
+\index{get\+Weights@{get\+Weights}!G\+A\+N\+N\+::\+A\+N\+N\+Layer@{G\+A\+N\+N\+::\+A\+N\+N\+Layer}}
+\subsubsection[{get\+Weights(void) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix}$<$double$>$ const\& G\+A\+N\+N\+::\+A\+N\+N\+Layer\+::get\+Weights (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}\label{class_g_a_n_n_1_1_a_n_n_layer_ab2ccaae743a40f1f39595f983db22a8d}
+
+
+Get the weights matrix of the neural network. 
+
+\begin{DoxyReturn}{Returns}
+G\+A\+N\+N\+::\+Matrix$<$double$>$ const\& 
+\end{DoxyReturn}
+\index{G\+A\+N\+N\+::\+A\+N\+N\+Layer@{G\+A\+N\+N\+::\+A\+N\+N\+Layer}!get\+Weights@{get\+Weights}}
+\index{get\+Weights@{get\+Weights}!G\+A\+N\+N\+::\+A\+N\+N\+Layer@{G\+A\+N\+N\+::\+A\+N\+N\+Layer}}
+\subsubsection[{get\+Weights(void)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix}$<$double$>$\& G\+A\+N\+N\+::\+A\+N\+N\+Layer\+::get\+Weights (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{class_g_a_n_n_1_1_a_n_n_layer_abd06bed4090d09e09669e9ff56b4659a}
+
+
+Get the weights matrix of the neural network. 
+
+\begin{DoxyReturn}{Returns}
+G\+A\+N\+N\+::\+Matrix$<$double$>$ \& 
+\end{DoxyReturn}
+\index{G\+A\+N\+N\+::\+A\+N\+N\+Layer@{G\+A\+N\+N\+::\+A\+N\+N\+Layer}!set\+Activation\+Function@{set\+Activation\+Function}}
+\index{set\+Activation\+Function@{set\+Activation\+Function}!G\+A\+N\+N\+::\+A\+N\+N\+Layer@{G\+A\+N\+N\+::\+A\+N\+N\+Layer}}
+\subsubsection[{set\+Activation\+Function(\+F\+Activate f)}]{\setlength{\rightskip}{0pt plus 5cm}void G\+A\+N\+N\+::\+A\+N\+N\+Layer\+::set\+Activation\+Function (
+\begin{DoxyParamCaption}
+\item[{F\+Activate}]{f}
+\end{DoxyParamCaption}
+)}\label{class_g_a_n_n_1_1_a_n_n_layer_afee60047b0ccb6d2b92f75d4b55febdc}
+
+
+Set the activation function of the layer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & \+: Contains the function pointer of the activation function. \\
+\hline
+\end{DoxyParams}
+\index{G\+A\+N\+N\+::\+A\+N\+N\+Layer@{G\+A\+N\+N\+::\+A\+N\+N\+Layer}!set\+Bias@{set\+Bias}}
+\index{set\+Bias@{set\+Bias}!G\+A\+N\+N\+::\+A\+N\+N\+Layer@{G\+A\+N\+N\+::\+A\+N\+N\+Layer}}
+\subsubsection[{set\+Bias(\+Matrix$<$ double $>$ const \&bias)}]{\setlength{\rightskip}{0pt plus 5cm}void G\+A\+N\+N\+::\+A\+N\+N\+Layer\+::set\+Bias (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}$<$ double $>$ const \&}]{bias}
+\end{DoxyParamCaption}
+)}\label{class_g_a_n_n_1_1_a_n_n_layer_a33b17fa33318cc5ab3060025ccf90faf}
+
+
+Set the matrix of bias. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bias} & \+: Contains the matrix of bias. \\
+\hline
+\end{DoxyParams}
+\index{G\+A\+N\+N\+::\+A\+N\+N\+Layer@{G\+A\+N\+N\+::\+A\+N\+N\+Layer}!set\+Outputs@{set\+Outputs}}
+\index{set\+Outputs@{set\+Outputs}!G\+A\+N\+N\+::\+A\+N\+N\+Layer@{G\+A\+N\+N\+::\+A\+N\+N\+Layer}}
+\subsubsection[{set\+Outputs(\+Matrix$<$ double $>$ const \&outputs)}]{\setlength{\rightskip}{0pt plus 5cm}void G\+A\+N\+N\+::\+A\+N\+N\+Layer\+::set\+Outputs (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}$<$ double $>$ const \&}]{outputs}
+\end{DoxyParamCaption}
+)}\label{class_g_a_n_n_1_1_a_n_n_layer_a7249be13922695f54aa3ed0b888584b8}
+
+
+Set the outputs matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em outputs} & \+: Contains the matrix of outputs.\+x \\
+\hline
+\end{DoxyParams}
+\index{G\+A\+N\+N\+::\+A\+N\+N\+Layer@{G\+A\+N\+N\+::\+A\+N\+N\+Layer}!set\+Weights@{set\+Weights}}
+\index{set\+Weights@{set\+Weights}!G\+A\+N\+N\+::\+A\+N\+N\+Layer@{G\+A\+N\+N\+::\+A\+N\+N\+Layer}}
+\subsubsection[{set\+Weights(\+Matrix$<$ double $>$ const \&weights)}]{\setlength{\rightskip}{0pt plus 5cm}void G\+A\+N\+N\+::\+A\+N\+N\+Layer\+::set\+Weights (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}$<$ double $>$ const \&}]{weights}
+\end{DoxyParamCaption}
+)}\label{class_g_a_n_n_1_1_a_n_n_layer_a99b44245e660160e6431f4bd8b7cf8ed}
+
+
+Set the matrix of weights. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em weights} & \+: Contains the matrix of weights. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+api/lib/\+A\+N\+N\+Library/include/\+A\+N\+N/ann\+\_\+layer.\+h\item 
+api/lib/\+A\+N\+N\+Library/src/\+A\+N\+N/ann\+\_\+layer.\+cc\end{DoxyCompactItemize}
