@@ -5,7 +5,7 @@
 ** Login   <robin_f@epitech.eu>
 ** 
 ** Started on  Wed Jul 22 14:11:24 2015 Guillaume ROBIN
-** Last update Wed Aug 19 12:57:06 2015 Guillaume ROBIN
+** Last update Mon Aug 24 15:09:56 2015 Guillaume ROBIN
 */
 
 #ifndef GRAPHICS_CONST_H_
@@ -33,7 +33,10 @@
 # define DEF_APP_HEIGHT	(unsigned int)720
 # define DEF_APP_FRAMER	(unsigned int)60
 # define DEF_APP_FONTS	(char *)"resources/fonts/"
+# define DEF_APP_BRAINS	(const char *)"brains/"
+# define DEF_APP_TOURN	(const char *)"tournament.txt"
 
+# define DEF_ENV_POINTCHAR	(char)'.'
 # define DEF_ENV_DELIM		(const char *)","
 # define DEF_ENV_DELIMCHAR	(char)','
 # define DEF_ENV_MINCHAR	(char)'a'
@@ -47,5 +50,6 @@
 # define DEF_ENV_STRBFITNESS	(const char *)"Best fitness: "
 # define DEF_ENV_STRAFITNESS	(const char *)"Average fitness: "
 # define DEF_ENV_STREPOCHS	(const char *)"Epochs: "
+# define DEF_ENV_SEP_SCORE	(const char *)" : "
 
 #endif /* !GRAPHICS_CONST_H_ */

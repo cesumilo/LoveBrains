@@ -5,7 +5,7 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Wed Jul 22 14:07:01 2015 Guillaume ROBIN
-// Last update Thu Aug 20 13:20:46 2015 Guillaume ROBIN
+// Last update Mon Aug 24 13:40:53 2015 Guillaume ROBIN
 //
 
 #include <iostream>
@@ -21,7 +21,8 @@ int	       	main(int ac, char **av)
     {
       try
 	{
-	  app.Run(av[1], av[2], av[3]);
+	  app.Init(av[1], av[2]);
+	  app.Run(av[3]);
 	}
       catch (App::AppException const& e)
 	{

@@ -5,11 +5,17 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Wed Jul 22 15:14:26 2015 Guillaume ROBIN
-// Last update Mon Aug  3 18:05:59 2015 Guillaume ROBIN
+// Last update Mon Aug 24 15:19:59 2015 Guillaume ROBIN
 //
 
 #include <iostream>
 #include <type_traits>
+
+#include <sys/types.h>
+#include <dirent.h>
+#include <string.h>
+#include <stdlib.h>
+#include <dlfcn.h>
 
 #include "Graphics/physics.h"
 #include "Graphics/graphics_const.h"
@@ -217,6 +223,61 @@ namespace Graphics
 		env.push_back(ptr);
 	      }
 	  }
+      }
+  }
+
+  static void		passInvalidFile(DIR *dir, struct dirent **info)
+  {
+    while (*info && ((*info)->d_name)[0] == DEF_ENV_POINTCHAR)
+      *info = readdir(dir);
+  }
+
+  void		Physics::GenerateTournament(std::list<IObject *>& env,
+					    std::list<GA::IDNA *>& brains)
+  {
+    DIR *dir;
+    struct dirent *info;
+    std::string path;
+    IObject *ptr;
+    std::list<GA::IDNA *>::iterator br = brains.begin();
+    GANN::ANN brain;
+
+    if ((dir = opendir(DEF_APP_BRAINS)))
+      {
+	for (std::list<IObject *>::iterator it = env.begin(); it != env.end(); ++it)
+	  delete(*it);
+	env.clear();
+	for (std::map<std::string, int>::iterator it = _env_settings.begin();
+	     it != _env_settings.end(); ++it)
+	  {
+	    for (int i = 0; i < it->second; ++i)
+	      {
+		if ((ptr = _factory.Create(it->first)))
+		  {
+		    if (ptr->hasBrain() && dynamic_cast<IBrain *>(ptr) && br != brains.end())
+		      {
+			brain = ((GANN::GANN *)(*br))->getGenes();
+			if ((info = readdir(dir)))
+			  {
+			    passInvalidFile(dir, &info);
+			    path = std::string(DEF_APP_BRAINS) + std::string(info->d_name);
+			    try
+			      {
+				brain.Load(path.c_str());
+			      }
+			    catch (GANN::ANNException const& e)
+			      {
+				std::cerr << e.what() << std::endl;
+			      }
+			  }
+			((IBrain *)ptr)->setBrain(brain);
+			++br;
+		      }
+		    env.push_back(ptr);
+		  }
+	      }
+	  }
+	closedir(dir);
       }
   }
 }

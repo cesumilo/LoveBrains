@@ -5,7 +5,7 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Fri Jul 31 11:43:33 2015 Guillaume ROBIN
-// Last update Fri Jul 31 14:58:05 2015 Guillaume ROBIN
+// Last update Mon Aug 24 14:32:00 2015 Guillaume ROBIN
 //
 
 #include <fstream>
@@ -31,7 +31,8 @@ namespace App
     {std::string(DEF_GET_ANNINFOS), &config_getANNInfos},
     {std::string(DEF_GET_ACTIVATION), &config_getActivation},
     {std::string(DEF_GET_OACTIVATION), config_getOutputsActivation},
-    {std::string(DEF_GET_ENVIRONMENT_S), &config_getEnvironmentSize}
+    {std::string(DEF_GET_ENVIRONMENT_S), &config_getEnvironmentSize},
+    {std::string(DEF_GET_TOURNAMENT), &config_getIsTournament}
   };
 
   /*

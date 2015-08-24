@@ -5,7 +5,7 @@
 ** Login   <robin_f@epitech.eu>
 ** 
 ** Started on  Wed Jul 22 14:41:22 2015 Guillaume ROBIN
-** Last update Fri Aug 21 15:52:58 2015 Guillaume ROBIN
+** Last update Mon Aug 24 14:17:19 2015 Guillaume ROBIN
 */
 
 #ifndef PHYSICS_H_
@@ -119,6 +119,12 @@ namespace Graphics
      * \param brains : Contains all the neural networks.
      */
     void	GenerateEnvironment(std::list<IObject *>& env, std::list<GA::IDNA *>& brains);
+    /*!
+     * \brief Generate the environment in terms of the environment settings for the tournament.
+     * \param env : Contains all the objects in the environment.
+     * \param brains : Contains all the neural networks.
+     */
+    void	GenerateTournament(std::list<IObject *>& env, std::list<GA::IDNA *>& brains);
 
     /*
     ** Overload.

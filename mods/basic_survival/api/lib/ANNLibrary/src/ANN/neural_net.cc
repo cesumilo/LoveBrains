@@ -5,7 +5,7 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Wed Jul  8 15:52:17 2015 Guillaume ROBIN
-// Last update Thu Aug 20 12:43:42 2015 Guillaume ROBIN
+// Last update Mon Aug 24 15:38:42 2015 Guillaume ROBIN
 //
 
 #include <stdlib.h>
@@ -187,16 +187,21 @@ namespace GANN
   {
     Matrix<double>	current(inputs);
 
-    for (unsigned int i = 0; i < _layers.size(); i++)
+    if (_infos.size() > 0 && inputs.rows() == _infos[0])
       {
-	if (_layers[i])
+	for (unsigned int i = 0; i < _layers.size(); i++)
 	  {
-	    _layers[i]->Activate(current);
-	    current = Matrix<double>(_layers[i]->getOutputs());
+	    if (_layers[i])
+	      {
+		_layers[i]->Activate(current);
+		current = Matrix<double>(_layers[i]->getOutputs());
+	      }
+	    else
+	      throw(ANNException(ERR_ANN_ERRACTIVATE));
 	  }
-	else
-	  throw(ANNException(ERR_ANN_ERRACTIVATE));
       }
+    else
+      throw (ANNException(ERR_ANN_INVALIDINPUT));
   }
 
   void	       	ANN::Create(std::vector<unsigned int> const& infos)

@@ -5,7 +5,7 @@
 ** Login   <robin_f@epitech.eu>
 ** 
 ** Started on  Wed Aug 19 13:51:31 2015 Guillaume ROBIN
-** Last update Thu Aug 20 12:42:17 2015 Guillaume ROBIN
+** Last update Mon Aug 24 15:37:14 2015 Guillaume ROBIN
 */
 
 #ifndef ANN_CONST_H_
@@ -34,6 +34,7 @@
 # define ERR_ANN_INVCROSSRATE	(char *)"Error: invalid crossing rate."
 # define ERR_ANN_NULLACTIVATION	(char *)"Error: activation function is null."
 # define ERR_ANN_ERRACTIVATE	(char *)"Error: impossible to activate a null layer."
+# define ERR_ANN_INVALIDINPUT	(char *)"Error: invalid size of input matrix."
 
 # define ERR_ANN_LOADL	(const char *)"Error: ANN::LoadLayers(): allocation failed."
 # define ERR_ANN_PARSE	(const char *)"Error: ANN::Load(): Jsoncpp cannot parse the input file."

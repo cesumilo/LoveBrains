@@ -5,7 +5,7 @@
 ** Login   <robin_f@epitech.eu>
 ** 
 ** Started on  Thu Jul 23 13:51:41 2015 Guillaume ROBIN
-** Last update Fri Aug 21 14:09:23 2015 Guillaume ROBIN
+** Last update Mon Aug 24 14:30:11 2015 Guillaume ROBIN
 */
 
 #ifndef SIMULATOR_CONFIG_H_
@@ -112,6 +112,11 @@ namespace Simulator
      * \return error : SimulatorException
      */
     void	setEnvironmentSize(unsigned int width, unsigned int height);
+    /*!
+     * \brief Set if it's a tournament or not.
+     * \param isTournament : (true) if it's a tournament, (false) is it's not.
+     */
+    void	setIsTournament(bool isTournament) throw();
 
     /*
     ** Getters.
@@ -192,6 +197,11 @@ namespace Simulator
      * \return GANN::ANN::ActivationType
      */
     GANN::ANN::ActivationType		getOutputActivationType(void) const throw();
+    /*!
+     * \brief Get the boolean that says if it's a tournament.
+     * \return bool
+     */
+    bool	isTournament(void) const throw();
 
     /*
     ** Overlaod.
@@ -199,6 +209,7 @@ namespace Simulator
     SConfig&	operator=(SConfig const& config);
 
   private:
+    bool			_isTournament; /*!< Contains the boolean that says if it's a tournament. */
     double			_crossing_rate; /*!< Contains the crossing rate. */
     double			_mutation_rate; /*!< Contains the mutation rate. */
     double			_selection_rate; /*!< Contains the selection rate. */

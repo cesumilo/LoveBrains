@@ -5,7 +5,7 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Fri Jul 31 12:09:39 2015 Guillaume ROBIN
-// Last update Thu Aug 20 13:31:29 2015 Guillaume ROBIN
+// Last update Mon Aug 24 14:50:24 2015 Guillaume ROBIN
 //
 
 #include <stdexcept>
@@ -277,5 +277,14 @@ namespace App
 	config.setEnvironmentSize(width, height);
 	std::cerr << e.what() << std::endl;
       }
+  }
+
+  void	config_getIsTournament(Simulator::SConfig& config,
+			       std::string const& value)
+  {
+    if (value.find("true"))
+      config.setIsTournament(true);
+    else
+      config.setIsTournament(false);
   }
 }

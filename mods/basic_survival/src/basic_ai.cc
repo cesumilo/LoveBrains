@@ -5,7 +5,7 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Sat Aug  1 12:35:21 2015 Guillaume ROBIN
-// Last update Wed Aug 19 12:12:23 2015 Guillaume ROBIN
+// Last update Mon Aug 24 15:39:38 2015 Guillaume ROBIN
 //
 
 #include <cmath>
@@ -28,6 +28,7 @@ BasicAI::BasicAI(void): _dead(false), _fitness(0), _angle(0), _time(0),
   _vfield2.setRadius(DEF_AI_VISION_RADIUS);
   _vfield1.setFillColor(sf::Color::Red);
   _vfield2.setFillColor(sf::Color::Red);
+  _inputs = GANN::Matrix<double>(1, 1, 0);
 }
 
 BasicAI::BasicAI(BasicAI const& brain)
@@ -208,6 +209,8 @@ static void	getStateLife(GANN::Matrix<double>& inputs, BasicAI::LifeType life)
     }
 }
 
+#include <iostream>
+
 void			BasicAI::Update(void)
 {
   sf::Vector2f		move(0, 0);
@@ -241,7 +244,7 @@ void			BasicAI::Update(void)
       decreaseLife();
       _time = 0; // Have to be removed for the animation.
     }
-  if (_inputs(INPUT_FOOD, 0) >= 0.4)
+  if (INPUT_FOOD < _inputs.rows() && _inputs(INPUT_FOOD, 0) >= 0.4)
     _shape.setFillColor(sf::Color::Yellow);
   else
     _shape.setFillColor(sf::Color::Cyan);

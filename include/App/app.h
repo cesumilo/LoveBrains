@@ -5,7 +5,7 @@
 ** Login   <robin_f@epitech.eu>
 ** 
 ** Started on  Fri Jul 31 11:35:32 2015 Guillaume ROBIN
-** Last update Fri Aug 21 14:05:58 2015 Guillaume ROBIN
+** Last update Mon Aug 24 13:42:36 2015 Guillaume ROBIN
 */
 
 #ifndef APP_H_
@@ -26,9 +26,10 @@
 
 namespace App
 {
-  /*! \namespace App
-  * \brief Contains all the tools which compose the application.
-  */
+  /*!
+   * \namespace App
+   * \brief Contains all the tools which compose the application.
+   */
 
   /*!
    * \brief Manage all the stuff in order to run the simulation.
@@ -62,14 +63,18 @@ namespace App
     ** Methods.
     */
     /*!
-     * \brief Run the application and launch the simulation.
+     * \brief Initialize the application.
      * \param simulator_file : the simulation file's path.
      * \param environment_file : the environment file's path.
+     * \return error : AppException
+     */
+    void	Init(const char *simulator_file, const char *environment_file);
+    /*!
+     * \brief Run the application and launch the simulation.
      * \param output_file : the output file's path.
      * \return error : AppException
      */
-    void	Run(const char *simulator_file, const char *environment_file,
-		    const char *output_file);
+    void	Run(const char *output_file);
 
   private:
     ConfigManager		_manager; /*!< Manage the simulator configuration */

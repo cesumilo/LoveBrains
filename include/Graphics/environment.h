@@ -5,7 +5,7 @@
 ** Login   <robin_f@epitech.eu>
 ** 
 ** Started on  Thu Jul 23 11:39:20 2015 Guillaume ROBIN
-** Last update Fri Aug 21 14:21:17 2015 Guillaume ROBIN
+** Last update Mon Aug 24 14:06:12 2015 Guillaume ROBIN
 */
 
 #ifndef ENVIRONMENT_H_
@@ -82,9 +82,14 @@ namespace Graphics
 
     /*!
      * \brief Load the environment from the environment file given in parameters of LoveBrains.
-     * \param path : contains the path of the environment file.
+     * \param path : Contains the path of the environment file.
      */
     void	LoadFromFile(const char *path);
+    /*!
+     * \brief Set if the current environment is a tournament or not.
+     * \param isTournament : Contains the boolean that says if it's a tournament.
+     */
+    void	setIsTournament(bool isTournament);
 
     /*
     ** Overload.
@@ -111,6 +116,7 @@ namespace Graphics
     void	Run(std::list<GA::IDNA *>& brains);
 
   private:
+    bool				_isTournament; /*!< Contains the boolean that says if it's a tournament or not. */
     unsigned int			_num_epochs; /*!< Contains the current number of epochs */
     std::list<IObject *>		_env; /*!< Contains all the objects that inherit of Graphics::IObject */
     sf::Font				_font; /*!< Contains the font that will be used to draw the informations about the simulation. */

@@ -5,7 +5,7 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Thu Jul 23 12:19:26 2015 Guillaume ROBIN
-// Last update Thu Aug 20 13:37:15 2015 Guillaume ROBIN
+// Last update Mon Aug 24 14:34:33 2015 Guillaume ROBIN
 //
 
 #include <iostream>
@@ -91,6 +91,7 @@ namespace Simulator
   void	Simulator::Init(SConfig const& config, const char *file)
   {
     _env->LoadFromFile(file);
+    _env->setIsTournament(config.isTournament());
     _config = _engine.getGAConfig();
     _generator.init(config.getANNInfos(), config.getCrossingRate());
     _generator.setActivationFunction(config.getActivation(), config.getLayerActivationType());

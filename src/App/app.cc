@@ -5,7 +5,7 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Fri Jul 31 13:33:16 2015 Guillaume ROBIN
-// Last update Thu Aug 20 13:38:32 2015 Guillaume ROBIN
+// Last update Mon Aug 24 14:43:50 2015 Guillaume ROBIN
 //
 
 #include "App/app.h"
@@ -51,8 +51,7 @@ namespace App
     return (false);
   }
 
-  void	App::Run(const char *simulator_file, const char *environment_file,
-		 const char *output_file)
+  void	App::Init(const char *simulator_file, const char *environment_file)
   {
     Graphics::FactoryObjects	factory;
 
@@ -87,27 +86,34 @@ namespace App
       {
 	throw (AppException(e.what()));
       }
-    if (isThereBrains(_simulator->getObjects()))
+  }
+
+  void	App::Run(const char *output_file)
+  {
+    if (_simulator)
       {
+	if (isThereBrains(_simulator->getObjects()))
+	  {
+	    try
+	      {
+		_simulator->Run(output_file);
+	      }
+	    catch (Simulator::SimulatorException const& e)
+	      {
+		throw (AppException(e.what()));
+	      }
+	  }
+	else
+	  throw (AppException(ERR_APP_NEEDIA));
+	delete(_simulator);
 	try
 	  {
-	    _simulator->Run(output_file);
+	    _plugins.ClosePlugins();
 	  }
-	catch (Simulator::SimulatorException const& e)
+	catch (Plugin::PluginException const& e)
 	  {
 	    throw (AppException(e.what()));
 	  }
-      }
-    else
-      throw (AppException(ERR_APP_NEEDIA));
-    delete(_simulator);
-    try
-      {
-	_plugins.ClosePlugins();
-      }
-    catch (Plugin::PluginException const& e)
-      {
-	throw (AppException(e.what()));
       }
   }
 }

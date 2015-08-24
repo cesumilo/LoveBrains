@@ -5,12 +5,17 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Thu Jul 23 11:41:41 2015 Guillaume ROBIN
-// Last update Wed Aug 19 12:57:32 2015 Guillaume ROBIN
+// Last update Mon Aug 24 15:10:01 2015 Guillaume ROBIN
 //
 
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <sys/types.h>
+#include <dirent.h>
+#include <string.h>
+#include <stdlib.h>
+#include <dlfcn.h>
 
 #include "Graphics/environment.h"
 #include "Graphics/factory_object.h"
@@ -26,7 +31,7 @@ namespace Graphics
   /*
   ** Constructor & Destructor.
   */
-  Environment::Environment(void): _num_epochs(0)
+  Environment::Environment(void): _isTournament(false), _num_epochs(0)
   {
     std::string	font_name("CODE Bold.otf");
     std::string	path(DEF_APP_FONTS);
@@ -178,6 +183,11 @@ namespace Graphics
       std::cerr << ERR_ENV_INVALIDFILE << std::endl;
   }
 
+  void	Environment::setIsTournament(bool isTournament)
+  {
+    _isTournament = isTournament;
+  }
+
   /*
   ** Overload.
   */
@@ -251,12 +261,47 @@ namespace Graphics
     return (count);
   }
 
+  static void		passInvalidFile(DIR *dir, struct dirent **info)
+  {
+    while (*info && ((*info)->d_name)[0] == DEF_ENV_POINTCHAR)
+      *info = readdir(dir);
+  }
+
+  static void		saveRanking(std::list<IObject *>& env)
+  {
+    DIR			*dir;
+    struct dirent	*info;
+    std::string		filename;
+    std::ofstream	file(DEF_APP_TOURN);
+
+    if (file && (dir = opendir(DEF_APP_BRAINS)))
+      {
+	info = readdir(dir);
+	passInvalidFile(dir, &info);
+        for (std::list<IObject *>::iterator it = env.begin(); it != env.end(); ++it)
+	  {
+	    if ((*it)->hasBrain() && info)
+	      {
+		passInvalidFile(dir, &info);
+		filename = std::string(info->d_name);
+		file << filename + std::string(DEF_ENV_SEP_SCORE)
+		  + std::to_string(((IBrain *)(*it))->getFitness()) << std::endl;
+		info = readdir(dir);
+	      }
+	  }
+	closedir(dir);
+      }
+  }
+
   void		Environment::Run(std::list<GA::IDNA *>& brains)
   {
     sf::Clock	clock;
     sf::Event	event;
 
-    _physics.GenerateEnvironment(_env, brains);
+    if (!_isTournament)
+      _physics.GenerateEnvironment(_env, brains);
+    else
+      _physics.GenerateTournament(_env, brains);
     while (_window.isOpen() && countBrainAlive(_env) > 0)
       {
 	while (_window.pollEvent(event))
@@ -269,7 +314,9 @@ namespace Graphics
       }
     UpdateInfos();
     ++_num_epochs;
-    if (!_window.isOpen())
+    if (!_window.isOpen() || _isTournament)
       Notify(GA::AObserver::States::QUIT);
+    if (_isTournament)
+      saveRanking(_env);
   }
 }

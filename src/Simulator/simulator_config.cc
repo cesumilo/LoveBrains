@@ -5,7 +5,7 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Thu Jul 23 14:07:18 2015 Guillaume ROBIN
-// Last update Thu Aug 20 13:58:04 2015 Guillaume ROBIN
+// Last update Mon Aug 24 14:30:30 2015 Guillaume ROBIN
 //
 
 #include <stdexcept>
@@ -19,7 +19,8 @@ namespace Simulator
   /*
   ** Constructor & Destructor.
   */
-  SConfig::SConfig(void) throw(): _crossing_rate(DEF_CROSSING_RATE),
+  SConfig::SConfig(void) throw(): _isTournament(false),
+				  _crossing_rate(DEF_CROSSING_RATE),
 				  _mutation_rate(DEF_MUTATION_RATE),
 				  _selection_rate(DEF_SELECTION_RATE),
 				  _expected_fitness(DEF_EXPECTED_FITNESS),
@@ -151,6 +152,11 @@ namespace Simulator
     _env_height = height;
   }
 
+  void	SConfig::setIsTournament(bool isTournament) throw()
+  {
+    _isTournament = isTournament;
+  }
+
   /*
   ** Getters.
   */
@@ -229,11 +235,17 @@ namespace Simulator
     return (_out_ftype);
   }
 
+  bool	SConfig::isTournament(void) const throw()
+  {
+    return (_isTournament);
+  }
+
   /*
   ** Overload.
   */
   SConfig&	SConfig::operator=(SConfig const& config)
   {
+    _isTournament = config.isTournament();
     _crossing_rate = config.getCrossingRate();
     _mutation_rate = config.getMutationRate();
     _selection_rate = config.getSelectionRate();
@@ -246,9 +258,9 @@ namespace Simulator
     _activation = config.getActivation();
     _output_activation = config.getOutputsActivation();
     _env_width = config.getEnvironmentWidth();
-  _env_height = config.getEnvironmentHeight();
-  _layer_ftype = config.getLayerActivationType();
-  _out_ftype = config.getOutputActivationType();
+    _env_height = config.getEnvironmentHeight();
+    _layer_ftype = config.getLayerActivationType();
+    _out_ftype = config.getOutputActivationType();
     return (*this);
   }
 }
