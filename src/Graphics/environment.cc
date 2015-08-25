@@ -5,7 +5,7 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Thu Jul 23 11:41:41 2015 Guillaume ROBIN
-// Last update Tue Aug 25 16:12:16 2015 Guillaume ROBIN
+// Last update Tue Aug 25 16:44:06 2015 Guillaume ROBIN
 //
 
 #include <iostream>
@@ -299,6 +299,19 @@ namespace Graphics
       }
   }
 
+  static void	UpdateBrainsFitness(std::list<GA::IDNA *>& brains, std::list<IObject *>& env)
+  {
+    std::list<GA::IDNA *>::iterator iter = brains.begin();
+    for (std::list<IObject *>::iterator it = env.begin(); it != env.end(); ++it)
+      {
+	if ((*it)->hasBrain() && dynamic_cast<IBrain *>((*it)) && iter != brains.end())
+	  {
+	    (*iter)->setFitness(((IBrain *)(*it))->getFitness());
+	    ++iter;
+	  }
+      }
+  }
+
   void		Environment2D::Run(std::list<GA::IDNA *>& brains)
   {
     sf::Clock	clock;
@@ -321,6 +334,7 @@ namespace Graphics
       }
     UpdateInfos();
     ++_num_epochs;
+    UpdateBrainsFitness(brains, _env);
     if ((_display && !_window.isOpen()) || _isTournament)
       Notify(GA::AObserver::States::QUIT);
     if (_isTournament)

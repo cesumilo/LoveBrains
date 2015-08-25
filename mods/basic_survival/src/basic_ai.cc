@@ -5,7 +5,7 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Sat Aug  1 12:35:21 2015 Guillaume ROBIN
-// Last update Tue Aug 25 16:11:44 2015 Guillaume ROBIN
+// Last update Tue Aug 25 16:21:07 2015 Guillaume ROBIN
 //
 
 #include <cmath>
@@ -235,8 +235,6 @@ void			BasicAI::Update(void)
   // _vfield1.setPosition(p2);
   // _vfield2.setPosition(p3);
   // END DEBUG
-  if (_dead)
-    return;
 
   _time += _elapsed.asSeconds();
   _fitness += _time;
