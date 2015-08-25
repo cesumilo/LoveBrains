@@ -6,6 +6,21 @@ LoveBrains is a simulator of artificial intelligence based on a plugin system. I
 # Documentation
 <a href="http://cesumilo.github.io/LoveBrains">LoveBrains documentation (doxygen)</a>
 
+# Installation
+
+In order to compile LoveBrains, this is very simple :
+> $> make && make clean
+
+The Makefile contains several methods :
+
+- **make** : Compile LoveBrains without removing the object files.
+
+- **make clean** : Remove all the object files.
+
+- **make fclean** : Remove the executable and the object files.
+
+- **make re** : Remove the executable and the object files and then compile LoveBrains.
+
 # How to use LoveBrains ?
 
 ## Requirements
