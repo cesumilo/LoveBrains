@@ -8,7 +8,7 @@ var searchData=
   ['_7eapp',['~App',['../class_app_1_1_app.html#a2bd7dd5bc68d00c89e75cec082173012',1,'App::App']]],
   ['_7eappexception',['~AppException',['../class_app_1_1_app_exception.html#a5ddfeafa474530a5941e57efbc11f318',1,'App::AppException']]],
   ['_7econfigmanager',['~ConfigManager',['../class_app_1_1_config_manager.html#aa66b1af2f0235acd887084336151a07a',1,'App::ConfigManager']]],
-  ['_7eenvironment',['~Environment',['../class_graphics_1_1_environment.html#a16ca8179cad35b4ac6b24d75ba590578',1,'Graphics::Environment']]],
+  ['_7eenvironment2d',['~Environment2D',['../class_graphics_1_1_environment2_d.html#a7cc8baccd86c8d649c825dbc030e35ff',1,'Graphics::Environment2D']]],
   ['_7efactoryobjects',['~FactoryObjects',['../class_graphics_1_1_factory_objects.html#a89aec6a156872cf980aa49c42f25f2b5',1,'Graphics::FactoryObjects']]],
   ['_7egaconfig',['~GAConfig',['../class_g_a_1_1_g_a_config.html#ab3e04db60930265b45349e672e2ba275',1,'GA::GAConfig']]],
   ['_7egaengine',['~GAEngine',['../class_g_a_1_1_g_a_engine.html#aa178dbdf00eed1f9a43621340f3baee2',1,'GA::GAEngine']]],

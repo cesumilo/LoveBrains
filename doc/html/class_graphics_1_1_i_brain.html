@@ -107,11 +107,10 @@ Inheritance diagram for Graphics::IBrain:</div>
  <div class="center">
   <img src="class_graphics_1_1_i_brain.png" usemap="#Graphics::IBrain_map" alt=""/>
   <map id="Graphics::IBrain_map" name="Graphics::IBrain_map">
-<area href="class_graphics_1_1_i_object.html" title="Define the interface of an object. " alt="Graphics::IObject" shape="rect" coords="0,224,109,248"/>
-<area href="class_graphics_1_1_i_object.html" title="Define the interface of an object. " alt="Graphics::IObject" shape="rect" coords="238,224,347,248"/>
-<area href="class_graphics_1_1_i_object.html" title="Define the interface of an object. " alt="Graphics::IObject" shape="rect" coords="476,224,585,248"/>
-<area href="class_graphics_1_1_i_object.html" title="Define the interface of an object. " alt="Graphics::IObject" shape="rect" coords="714,224,823,248"/>
-<area href="class_basic_a_i.html" alt="BasicAI" shape="rect" coords="357,336,466,360"/>
+<area href="class_graphics_1_1_i_object.html" title="Define the interface of an object. " alt="Graphics::IObject" shape="rect" coords="0,168,109,192"/>
+<area href="class_graphics_1_1_i_object.html" title="Define the interface of an object. " alt="Graphics::IObject" shape="rect" coords="238,168,347,192"/>
+<area href="class_graphics_1_1_i_object.html" title="Define the interface of an object. " alt="Graphics::IObject" shape="rect" coords="476,168,585,192"/>
+<area href="class_basic_a_i.html" alt="BasicAI" shape="rect" coords="238,280,347,304"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -144,18 +143,6 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="separator:a56c5f2f1f998551b571442b0225986e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a768f7a2e586cafbbc7c4c2ae846a52be"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics_1_1_i_brain.html#a768f7a2e586cafbbc7c4c2ae846a52be">setInput</a> (unsigned int index, double value)=0</td></tr>
 <tr class="memdesc:a768f7a2e586cafbbc7c4c2ae846a52be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set an input for the neural network.  <a href="#a768f7a2e586cafbbc7c4c2ae846a52be">More...</a><br /></td></tr>
-<tr class="separator:a768f7a2e586cafbbc7c4c2ae846a52be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45403eb25f611290de9c53eaf7f6e800"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a45403eb25f611290de9c53eaf7f6e800"></a>
-virtual double&#160;</td><td class="memItemRight" valign="bottom"><b>getFitness</b> (void) const  =0</td></tr>
-<tr class="separator:a45403eb25f611290de9c53eaf7f6e800"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1fdec2222c5a04a93c6918ed1f271947"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1fdec2222c5a04a93c6918ed1f271947"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setFitness</b> (double fitness)=0</td></tr>
-<tr class="separator:a1fdec2222c5a04a93c6918ed1f271947"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56c5f2f1f998551b571442b0225986e7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a56c5f2f1f998551b571442b0225986e7"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setBrain</b> (<a class="el" href="class_g_a_n_n_1_1_a_n_n.html">GANN::ANN</a> const &amp;brain)=0</td></tr>
-<tr class="separator:a56c5f2f1f998551b571442b0225986e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a768f7a2e586cafbbc7c4c2ae846a52be"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a768f7a2e586cafbbc7c4c2ae846a52be"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setInput</b> (unsigned int index, double value)=0</td></tr>
 <tr class="separator:a768f7a2e586cafbbc7c4c2ae846a52be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45403eb25f611290de9c53eaf7f6e800"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a45403eb25f611290de9c53eaf7f6e800"></a>
 virtual double&#160;</td><td class="memItemRight" valign="bottom"><b>getFitness</b> (void) const  =0</td></tr>
@@ -247,30 +234,6 @@ virtual <a class="el" href="class_graphics_1_1_i_object.html">IObject</a> *&#160
 <tr class="memitem:a45b5308a10381dd4f41faeef2d06f46c inherit pub_methods_class_graphics_1_1_i_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a45b5308a10381dd4f41faeef2d06f46c"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Update</b> (void)=0</td></tr>
 <tr class="separator:a45b5308a10381dd4f41faeef2d06f46c inherit pub_methods_class_graphics_1_1_i_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8efbdb791e3a99d697e5c74a1531d2c8 inherit pub_methods_class_graphics_1_1_i_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8efbdb791e3a99d697e5c74a1531d2c8"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>isDead</b> (void) const  =0</td></tr>
-<tr class="separator:a8efbdb791e3a99d697e5c74a1531d2c8 inherit pub_methods_class_graphics_1_1_i_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2915106368247427dcff04c5eec2190c inherit pub_methods_class_graphics_1_1_i_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2915106368247427dcff04c5eec2190c"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>hasBrain</b> (void) const  =0</td></tr>
-<tr class="separator:a2915106368247427dcff04c5eec2190c inherit pub_methods_class_graphics_1_1_i_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ca3ca5527c0c565d06396efe80ba243 inherit pub_methods_class_graphics_1_1_i_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9ca3ca5527c0c565d06396efe80ba243"></a>
-virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getType</b> (void) const  =0</td></tr>
-<tr class="separator:a9ca3ca5527c0c565d06396efe80ba243 inherit pub_methods_class_graphics_1_1_i_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb10bc8924396f1e9a8aa510e96ec0c2 inherit pub_methods_class_graphics_1_1_i_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acb10bc8924396f1e9a8aa510e96ec0c2"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setPosition</b> (sf::Vector2f const &amp;position)=0</td></tr>
-<tr class="separator:acb10bc8924396f1e9a8aa510e96ec0c2 inherit pub_methods_class_graphics_1_1_i_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55f6f70a2c0c2690b6b6a78a75ece3fb inherit pub_methods_class_graphics_1_1_i_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a55f6f70a2c0c2690b6b6a78a75ece3fb"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setIsDead</b> (bool condition)=0</td></tr>
-<tr class="separator:a55f6f70a2c0c2690b6b6a78a75ece3fb inherit pub_methods_class_graphics_1_1_i_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8866f1765a721c230556bfa391d0299 inherit pub_methods_class_graphics_1_1_i_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af8866f1765a721c230556bfa391d0299"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setElapsedTime</b> (sf::Time &amp;time)=0</td></tr>
-<tr class="separator:af8866f1765a721c230556bfa391d0299 inherit pub_methods_class_graphics_1_1_i_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f863b90e0b37e462c487731cc218fdd inherit pub_methods_class_graphics_1_1_i_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1f863b90e0b37e462c487731cc218fdd"></a>
-virtual <a class="el" href="class_graphics_1_1_i_object.html">IObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>Clone</b> (void)=0</td></tr>
-<tr class="separator:a1f863b90e0b37e462c487731cc218fdd inherit pub_methods_class_graphics_1_1_i_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45b5308a10381dd4f41faeef2d06f46c inherit pub_methods_class_graphics_1_1_i_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a45b5308a10381dd4f41faeef2d06f46c"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Update</b> (void)=0</td></tr>
-<tr class="separator:a45b5308a10381dd4f41faeef2d06f46c inherit pub_methods_class_graphics_1_1_i_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -280,9 +243,6 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> (sf:
 <tr class="separator:a1bbb236da76f9cff3750afb768be6260 inherit pro_methods_class_graphics_1_1_i_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1bbb236da76f9cff3750afb768be6260 inherit pro_methods_class_graphics_1_1_i_object"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics_1_1_i_object.html#a1bbb236da76f9cff3750afb768be6260">draw</a> (sf::RenderTarget &amp;target, sf::RenderStates states) const  =0</td></tr>
 <tr class="memdesc:a1bbb236da76f9cff3750afb768be6260 inherit pro_methods_class_graphics_1_1_i_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow the object to be drawn on the window.  <a href="#a1bbb236da76f9cff3750afb768be6260">More...</a><br /></td></tr>
-<tr class="separator:a1bbb236da76f9cff3750afb768be6260 inherit pro_methods_class_graphics_1_1_i_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1bbb236da76f9cff3750afb768be6260 inherit pro_methods_class_graphics_1_1_i_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1bbb236da76f9cff3750afb768be6260"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> (sf::RenderTarget &amp;target, sf::RenderStates states) const  =0</td></tr>
 <tr class="separator:a1bbb236da76f9cff3750afb768be6260 inherit pro_methods_class_graphics_1_1_i_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1bbb236da76f9cff3750afb768be6260 inherit pro_methods_class_graphics_1_1_i_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1bbb236da76f9cff3750afb768be6260"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> (sf::RenderTarget &amp;target, sf::RenderStates states) const  =0</td></tr>
@@ -426,12 +386,12 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> (sf:
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>api/include/Graphics/<a class="el" href="api_2include_2_graphics_2i__brain_8h_source.html">i_brain.h</a></li>
+<li>/home/robin_f/Programming/Git/CPP/LoveBrains/api/include/Graphics/<a class="el" href="api_2include_2_graphics_2i__brain_8h_source.html">i_brain.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 21 2015 23:53:00 for LoveBrains by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 25 2015 12:42:44 for LoveBrains by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

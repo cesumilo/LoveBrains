@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['surival_20plugin',['Surival Plugin',['../md_mods_basic_survival__r_e_a_d_m_e.html',1,'']]],
+  ['surival_20plugin',['Surival Plugin',['../md__home_robin_f__programming__git__c_p_p__love_brains_mods_basic_survival__r_e_a_d_m_e.html',1,'']]],
   ['s_5fconfig_5fgetter',['s_config_getter',['../struct_app_1_1s__config__getter.html',1,'App']]],
   ['save',['Save',['../class_g_a_n_n_1_1_a_n_n.html#a523bdbe95d22035e8019868f619aa50e',1,'GANN::ANN']]],
   ['sconfig',['SConfig',['../class_simulator_1_1_s_config.html',1,'Simulator']]],
@@ -15,6 +15,8 @@ var searchData=
   ['setconfig',['setConfig',['../class_g_a_1_1_population.html#ae98e3ede4e9a53efebe491316696a812',1,'GA::Population']]],
   ['setcrossingrate',['setCrossingRate',['../class_g_a_n_n_1_1_a_n_n.html#a4476dd0e4d95747cae5489db42639190',1,'GANN::ANN::setCrossingRate()'],['../class_simulator_1_1_s_config.html#a36c6a62747ae192c6ff4fa30c74c5394',1,'Simulator::SConfig::setCrossingRate()']]],
   ['setdefaults',['setDefaults',['../class_json_1_1_char_reader_builder.html#a03ff031e06aabff989ab4addc87294ab',1,'Json::CharReaderBuilder::setDefaults()'],['../class_json_1_1_stream_writer_builder.html#a53bf106b141e28637b01ad0ecd2acbf6',1,'Json::StreamWriterBuilder::setDefaults()'],['../class_json_1_1_char_reader_builder.html#a0ddbea7a0af6da9feea922fbe4e5d6c6',1,'Json::CharReaderBuilder::setDefaults()'],['../class_json_1_1_stream_writer_builder.html#a886224c308545b54ed242b436cdc90d3',1,'Json::StreamWriterBuilder::setDefaults()'],['../class_json_1_1_char_reader_builder.html#a0ddbea7a0af6da9feea922fbe4e5d6c6',1,'Json::CharReaderBuilder::setDefaults()'],['../class_json_1_1_stream_writer_builder.html#a886224c308545b54ed242b436cdc90d3',1,'Json::StreamWriterBuilder::setDefaults()'],['../class_json_1_1_char_reader_builder.html#a0ddbea7a0af6da9feea922fbe4e5d6c6',1,'Json::CharReaderBuilder::setDefaults()'],['../class_json_1_1_stream_writer_builder.html#a886224c308545b54ed242b436cdc90d3',1,'Json::StreamWriterBuilder::setDefaults()']]],
+  ['setdisplay',['setDisplay',['../class_graphics_1_1_environment2_d.html#a47ab497a09a23f2d76a50d19beac8340',1,'Graphics::Environment2D']]],
+  ['setdisplaymode',['setDisplayMode',['../class_simulator_1_1_s_config.html#a789d9ad79be92a9a85a05fd7a6221604',1,'Simulator::SConfig']]],
   ['setdnacompare',['setDNACompare',['../class_g_a_1_1_g_a_config.html#ae1eb890426761e36b46efb30fd1f7cf6',1,'GA::GAConfig']]],
   ['setdnacrossover',['setDNACrossover',['../class_g_a_1_1_g_a_config.html#a9977e61df6045f84e765502839d8bbb8',1,'GA::GAConfig']]],
   ['setdnafitness',['setDNAFitness',['../class_g_a_1_1_g_a_config.html#ac0bc65372a7c32fdc539a2167661cdb2',1,'GA::GAConfig']]],
@@ -30,6 +32,7 @@ var searchData=
   ['setid',['setId',['../class_g_a_1_1_a_observer.html#a2c51ab020eeea35b56de2e8639515c01',1,'GA::AObserver']]],
   ['setinput',['setInput',['../class_graphics_1_1_i_brain.html#a768f7a2e586cafbbc7c4c2ae846a52be',1,'Graphics::IBrain']]],
   ['setisdead',['setIsDead',['../class_graphics_1_1_i_object.html#a55f6f70a2c0c2690b6b6a78a75ece3fb',1,'Graphics::IObject']]],
+  ['setistournament',['setIsTournament',['../class_graphics_1_1_environment2_d.html#a73a1970e9d5b13f7ab821100e4f92f11',1,'Graphics::Environment2D::setIsTournament()'],['../class_simulator_1_1_s_config.html#ae3b5748affd5043e797ef07a9bedcb41',1,'Simulator::SConfig::setIsTournament()']]],
   ['setlayers',['setLayers',['../class_g_a_n_n_1_1_a_n_n.html#aae6cc0117e368dec728e5164fd4877cc',1,'GANN::ANN']]],
   ['setmaxepochs',['setMaxEpochs',['../class_g_a_1_1_g_a_engine.html#adad627d36b63e10e83f5cc4cc654c4cd',1,'GA::GAEngine::setMaxEpochs()'],['../class_simulator_1_1_s_config.html#ae80e11f712bedd1cfa6f29e3ce5e32a4',1,'Simulator::SConfig::setMaxEpochs()']]],
   ['setmutationrate',['setMutationRate',['../class_g_a_1_1_g_a_engine.html#ac849c71c69910a94330e09f591dd74c4',1,'GA::GAEngine::setMutationRate()'],['../class_g_a_1_1_population.html#ac064867b9bf7f1985208b888fd68ac5a',1,'GA::Population::setMutationRate()'],['../class_simulator_1_1_s_config.html#aa67d54c12588a728cd833a8f3bc1cd14',1,'Simulator::SConfig::setMutationRate()']]],

@@ -44,6 +44,8 @@ void {\bf Update\+Sensors} (std\+::list$<$ {\bf I\+Object} $\ast$ $>$ \&env) con
 \begin{DoxyCompactList}\small\item\em Update all the sensors in the physics engine. \end{DoxyCompactList}\item 
 void {\bf Generate\+Environment} (std\+::list$<$ {\bf I\+Object} $\ast$ $>$ \&env, std\+::list$<$ {\bf G\+A\+::\+I\+D\+N\+A} $\ast$ $>$ \&brains)
 \begin{DoxyCompactList}\small\item\em Generate the environment in terms of the environment settings. \end{DoxyCompactList}\item 
+void {\bf Generate\+Tournament} (std\+::list$<$ {\bf I\+Object} $\ast$ $>$ \&env, std\+::list$<$ {\bf G\+A\+::\+I\+D\+N\+A} $\ast$ $>$ \&brains)
+\begin{DoxyCompactList}\small\item\em Generate the environment in terms of the environment settings for the tournament. \end{DoxyCompactList}\item 
 {\bf Physics} \& {\bfseries operator=} ({\bf Physics} const \&physics)\label{class_graphics_1_1_physics_aed694e57d71ae2cf211ad59dbb46cad0}
 
 \end{DoxyCompactItemize}
@@ -115,6 +117,25 @@ Add a new sensor to the physics engine.
 
 
 Generate the environment in terms of the environment settings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em env} & \+: Contains all the objects in the environment. \\
+\hline
+{\em brains} & \+: Contains all the neural networks. \\
+\hline
+\end{DoxyParams}
+\index{Graphics\+::\+Physics@{Graphics\+::\+Physics}!Generate\+Tournament@{Generate\+Tournament}}
+\index{Generate\+Tournament@{Generate\+Tournament}!Graphics\+::\+Physics@{Graphics\+::\+Physics}}
+\subsubsection[{Generate\+Tournament(std\+::list$<$ I\+Object $\ast$ $>$ \&env, std\+::list$<$ G\+A\+::\+I\+D\+N\+A $\ast$ $>$ \&brains)}]{\setlength{\rightskip}{0pt plus 5cm}void Graphics\+::\+Physics\+::\+Generate\+Tournament (
+\begin{DoxyParamCaption}
+\item[{std\+::list$<$ {\bf I\+Object} $\ast$ $>$ \&}]{env, }
+\item[{std\+::list$<$ {\bf G\+A\+::\+I\+D\+N\+A} $\ast$ $>$ \&}]{brains}
+\end{DoxyParamCaption}
+)}\label{class_graphics_1_1_physics_a1fd6b08eee276a403dd86a3b58747738}
+
+
+Generate the environment in terms of the environment settings for the tournament. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -261,5 +282,5 @@ Update all the sensors in the physics engine.
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/\+Graphics/physics.\+h\item 
-src/\+Graphics/physics.\+cc\end{DoxyCompactItemize}
+/home/robin\+\_\+f/\+Programming/\+Git/\+C\+P\+P/\+Love\+Brains/include/\+Graphics/physics.\+h\item 
+/home/robin\+\_\+f/\+Programming/\+Git/\+C\+P\+P/\+Love\+Brains/src/\+Graphics/physics.\+cc\end{DoxyCompactItemize}

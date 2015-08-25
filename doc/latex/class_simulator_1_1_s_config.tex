@@ -9,6 +9,14 @@ Manage the configuration of the simulator.
 
 {\ttfamily \#include $<$simulator\+\_\+config.\+h$>$}
 
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf Display\+Mode} \{ {\bfseries N\+O\+N\+E}, 
+{\bfseries E\+N\+V\+I\+R\+O\+N\+M\+E\+N\+T\+\_\+2\+D}
+ \}\label{class_simulator_1_1_s_config_a8be687eeeccc7fb426e23009216a6b42}
+\begin{DoxyCompactList}\small\item\em Contains several display options. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -42,6 +50,10 @@ void {\bf set\+Outputs\+Activation} (G\+A\+N\+N\+::\+A\+N\+N\+Layer\+::\+F\+Acti
 \begin{DoxyCompactList}\small\item\em Set the activation function for the output layer of the neural network. \end{DoxyCompactList}\item 
 void {\bf set\+Environment\+Size} (unsigned int width, unsigned int height)
 \begin{DoxyCompactList}\small\item\em Set the environment size (window size). \end{DoxyCompactList}\item 
+void {\bf set\+Is\+Tournament} (bool {\bf is\+Tournament})  throw ()
+\begin{DoxyCompactList}\small\item\em Set if it\textquotesingle{}s a tournament or not. \end{DoxyCompactList}\item 
+void {\bf set\+Display\+Mode} ({\bf Display\+Mode} display)  throw ()
+\begin{DoxyCompactList}\small\item\em Set the display mode of the environment. \end{DoxyCompactList}\item 
 double {\bf get\+Crossing\+Rate} (void) const   throw ()
 \begin{DoxyCompactList}\small\item\em Get the crossing rate member. \end{DoxyCompactList}\item 
 double {\bf get\+Mutation\+Rate} (void) const   throw ()
@@ -72,6 +84,10 @@ G\+A\+N\+N\+::\+A\+N\+N\+::\+Activation\+Type {\bf get\+Layer\+Activation\+Type}
 \begin{DoxyCompactList}\small\item\em Get the type of the activation function pointer inside an intern layer. \end{DoxyCompactList}\item 
 G\+A\+N\+N\+::\+A\+N\+N\+::\+Activation\+Type {\bf get\+Output\+Activation\+Type} (void) const   throw ()
 \begin{DoxyCompactList}\small\item\em Get the type of the activation function pointer inside the output layer. \end{DoxyCompactList}\item 
+bool {\bf is\+Tournament} (void) const   throw ()
+\begin{DoxyCompactList}\small\item\em Get the boolean that says if it\textquotesingle{}s a tournament. \end{DoxyCompactList}\item 
+{\bf Display\+Mode} {\bf get\+Display\+Mode} (void) const   throw ()
+\begin{DoxyCompactList}\small\item\em Get the current display mode of the environment. \end{DoxyCompactList}\item 
 {\bf S\+Config} \& {\bfseries operator=} ({\bf S\+Config} const \&config)\label{class_simulator_1_1_s_config_a9b944530ec87d9f9d61e7c53d7c46c96}
 
 \end{DoxyCompactItemize}
@@ -122,6 +138,20 @@ Get the crossing rate member.
 
 \begin{DoxyReturn}{Returns}
 double 
+\end{DoxyReturn}
+\index{Simulator\+::\+S\+Config@{Simulator\+::\+S\+Config}!get\+Display\+Mode@{get\+Display\+Mode}}
+\index{get\+Display\+Mode@{get\+Display\+Mode}!Simulator\+::\+S\+Config@{Simulator\+::\+S\+Config}}
+\subsubsection[{get\+Display\+Mode(void) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+Config\+::\+Display\+Mode} Simulator\+::\+S\+Config\+::get\+Display\+Mode (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const throw  ) }\label{class_simulator_1_1_s_config_a65cdf37295b0570e049e193b71975352}
+
+
+Get the current display mode of the environment. 
+
+\begin{DoxyReturn}{Returns}
+\doxyref{S\+Config\+::\+Display\+Mode}{p.}{class_simulator_1_1_s_config_a8be687eeeccc7fb426e23009216a6b42} 
 \end{DoxyReturn}
 \index{Simulator\+::\+S\+Config@{Simulator\+::\+S\+Config}!get\+Environment\+Height@{get\+Environment\+Height}}
 \index{get\+Environment\+Height@{get\+Environment\+Height}!Simulator\+::\+S\+Config@{Simulator\+::\+S\+Config}}
@@ -291,6 +321,20 @@ Get the selection rate member.
 \begin{DoxyReturn}{Returns}
 double 
 \end{DoxyReturn}
+\index{Simulator\+::\+S\+Config@{Simulator\+::\+S\+Config}!is\+Tournament@{is\+Tournament}}
+\index{is\+Tournament@{is\+Tournament}!Simulator\+::\+S\+Config@{Simulator\+::\+S\+Config}}
+\subsubsection[{is\+Tournament(void) const }]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::\+S\+Config\+::is\+Tournament (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const throw  ) }\label{class_simulator_1_1_s_config_a667bc81d1b246e5a9c76d5c2a584a99a}
+
+
+Get the boolean that says if it\textquotesingle{}s a tournament. 
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
 \index{Simulator\+::\+S\+Config@{Simulator\+::\+S\+Config}!set\+Activation@{set\+Activation}}
 \index{set\+Activation@{set\+Activation}!Simulator\+::\+S\+Config@{Simulator\+::\+S\+Config}}
 \subsubsection[{set\+Activation(\+G\+A\+N\+N\+::\+A\+N\+N\+Layer\+::\+F\+Activate function, G\+A\+N\+N\+::\+A\+N\+N\+::\+Activation\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+S\+Config\+::set\+Activation (
@@ -351,6 +395,22 @@ Set the crossing rate that will be used by the G\+A\+Engine.
 \begin{DoxyReturn}{Returns}
 error \+: \doxyref{Simulator\+Exception}{p.}{class_simulator_1_1_simulator_exception} 
 \end{DoxyReturn}
+\index{Simulator\+::\+S\+Config@{Simulator\+::\+S\+Config}!set\+Display\+Mode@{set\+Display\+Mode}}
+\index{set\+Display\+Mode@{set\+Display\+Mode}!Simulator\+::\+S\+Config@{Simulator\+::\+S\+Config}}
+\subsubsection[{set\+Display\+Mode(\+Display\+Mode display)}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+S\+Config\+::set\+Display\+Mode (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+Config\+::\+Display\+Mode}}]{display}
+\end{DoxyParamCaption}
+) throw  ) }\label{class_simulator_1_1_s_config_a789d9ad79be92a9a85a05fd7a6221604}
+
+
+Set the display mode of the environment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em display} & \+: Contains the display mode. \\
+\hline
+\end{DoxyParams}
 \index{Simulator\+::\+S\+Config@{Simulator\+::\+S\+Config}!set\+Environment\+Size@{set\+Environment\+Size}}
 \index{set\+Environment\+Size@{set\+Environment\+Size}!Simulator\+::\+S\+Config@{Simulator\+::\+S\+Config}}
 \subsubsection[{set\+Environment\+Size(unsigned int width, unsigned int height)}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+S\+Config\+::set\+Environment\+Size (
@@ -387,6 +447,22 @@ Set the expected fitness that will be used by the G\+A\+Engine.
 
 \begin{DoxyParams}{Parameters}
 {\em rate} & \+: Contains the new expected fitness. \\
+\hline
+\end{DoxyParams}
+\index{Simulator\+::\+S\+Config@{Simulator\+::\+S\+Config}!set\+Is\+Tournament@{set\+Is\+Tournament}}
+\index{set\+Is\+Tournament@{set\+Is\+Tournament}!Simulator\+::\+S\+Config@{Simulator\+::\+S\+Config}}
+\subsubsection[{set\+Is\+Tournament(bool is\+Tournament)}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+S\+Config\+::set\+Is\+Tournament (
+\begin{DoxyParamCaption}
+\item[{bool}]{is\+Tournament}
+\end{DoxyParamCaption}
+) throw  ) }\label{class_simulator_1_1_s_config_ae3b5748affd5043e797ef07a9bedcb41}
+
+
+Set if it\textquotesingle{}s a tournament or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Tournament} & \+: (true) if it\textquotesingle{}s a tournament, (false) is it\textquotesingle{}s not. \\
 \hline
 \end{DoxyParams}
 \index{Simulator\+::\+S\+Config@{Simulator\+::\+S\+Config}!set\+Max\+Epochs@{set\+Max\+Epochs}}
@@ -523,5 +599,5 @@ error \+: \doxyref{Simulator\+Exception}{p.}{class_simulator_1_1_simulator_excep
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/\+Simulator/simulator\+\_\+config.\+h\item 
-src/\+Simulator/simulator\+\_\+config.\+cc\end{DoxyCompactItemize}
+/home/robin\+\_\+f/\+Programming/\+Git/\+C\+P\+P/\+Love\+Brains/include/\+Simulator/simulator\+\_\+config.\+h\item 
+/home/robin\+\_\+f/\+Programming/\+Git/\+C\+P\+P/\+Love\+Brains/src/\+Simulator/simulator\+\_\+config.\+cc\end{DoxyCompactItemize}
