@@ -1,0 +1,132 @@
+\section{Graphics\+:\+:I\+Brain Class Reference}
+\label{class_graphics_1_1_i_brain}\index{Graphics\+::\+I\+Brain@{Graphics\+::\+I\+Brain}}
+
+
+Define the interface of an object that contains a neural network.  
+
+
+
+
+{\ttfamily \#include $<$i\+\_\+brain.\+h$>$}
+
+Inheritance diagram for Graphics\+:\+:I\+Brain\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.786325cm]{class_graphics_1_1_i_brain}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual double {\bfseries get\+Fitness} (void) const  =0\label{class_graphics_1_1_i_brain_a45403eb25f611290de9c53eaf7f6e800}
+
+\item 
+virtual void {\bfseries set\+Fitness} (double fitness)=0\label{class_graphics_1_1_i_brain_a1fdec2222c5a04a93c6918ed1f271947}
+
+\item 
+virtual void {\bfseries set\+Brain} ({\bf G\+A\+N\+N\+::\+A\+N\+N} const \&brain)=0\label{class_graphics_1_1_i_brain_a56c5f2f1f998551b571442b0225986e7}
+
+\item 
+virtual void {\bfseries set\+Input} (unsigned int index, double value)=0\label{class_graphics_1_1_i_brain_a768f7a2e586cafbbc7c4c2ae846a52be}
+
+\item 
+virtual {\bf $\sim$\+I\+Brain} (void)\label{class_graphics_1_1_i_brain_a9069cd56cdd867929c7f87d90c55f0c8}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual double {\bf get\+Fitness} (void) const  =0
+\begin{DoxyCompactList}\small\item\em Get the current fitness of the object. \end{DoxyCompactList}\item 
+virtual void {\bf set\+Fitness} (double fitness)=0
+\begin{DoxyCompactList}\small\item\em Set the current fitness of the object. \end{DoxyCompactList}\item 
+virtual void {\bf set\+Brain} ({\bf G\+A\+N\+N\+::\+A\+N\+N} const \&brain)=0
+\begin{DoxyCompactList}\small\item\em Set the current neural network of the object. \end{DoxyCompactList}\item 
+virtual void {\bf set\+Input} (unsigned int index, double value)=0
+\begin{DoxyCompactList}\small\item\em Set an input for the neural network. \end{DoxyCompactList}\item 
+virtual double {\bfseries get\+Fitness} (void) const  =0\label{class_graphics_1_1_i_brain_a45403eb25f611290de9c53eaf7f6e800}
+
+\item 
+virtual void {\bfseries set\+Fitness} (double fitness)=0\label{class_graphics_1_1_i_brain_a1fdec2222c5a04a93c6918ed1f271947}
+
+\item 
+virtual void {\bfseries set\+Brain} ({\bf G\+A\+N\+N\+::\+A\+N\+N} const \&brain)=0\label{class_graphics_1_1_i_brain_a56c5f2f1f998551b571442b0225986e7}
+
+\item 
+virtual void {\bfseries set\+Input} (unsigned int index, double value)=0\label{class_graphics_1_1_i_brain_a768f7a2e586cafbbc7c4c2ae846a52be}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Define the interface of an object that contains a neural network. 
+
+\subsection{Member Function Documentation}
+\index{Graphics\+::\+I\+Brain@{Graphics\+::\+I\+Brain}!get\+Fitness@{get\+Fitness}}
+\index{get\+Fitness@{get\+Fitness}!Graphics\+::\+I\+Brain@{Graphics\+::\+I\+Brain}}
+\subsubsection[{get\+Fitness(void) const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual double Graphics\+::\+I\+Brain\+::get\+Fitness (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_graphics_1_1_i_brain_a45403eb25f611290de9c53eaf7f6e800}
+
+
+Get the current fitness of the object. 
+
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+\index{Graphics\+::\+I\+Brain@{Graphics\+::\+I\+Brain}!set\+Brain@{set\+Brain}}
+\index{set\+Brain@{set\+Brain}!Graphics\+::\+I\+Brain@{Graphics\+::\+I\+Brain}}
+\subsubsection[{set\+Brain(\+G\+A\+N\+N\+::\+A\+N\+N const \&brain)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Graphics\+::\+I\+Brain\+::set\+Brain (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+A\+N\+N\+::\+A\+N\+N} const \&}]{brain}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_graphics_1_1_i_brain_a56c5f2f1f998551b571442b0225986e7}
+
+
+Set the current neural network of the object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em brain} & \+: Contains the new neural network. \\
+\hline
+\end{DoxyParams}
+\index{Graphics\+::\+I\+Brain@{Graphics\+::\+I\+Brain}!set\+Fitness@{set\+Fitness}}
+\index{set\+Fitness@{set\+Fitness}!Graphics\+::\+I\+Brain@{Graphics\+::\+I\+Brain}}
+\subsubsection[{set\+Fitness(double fitness)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Graphics\+::\+I\+Brain\+::set\+Fitness (
+\begin{DoxyParamCaption}
+\item[{double}]{fitness}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_graphics_1_1_i_brain_a1fdec2222c5a04a93c6918ed1f271947}
+
+
+Set the current fitness of the object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fitness} & \+: Contains the new fitness of the object. \\
+\hline
+\end{DoxyParams}
+\index{Graphics\+::\+I\+Brain@{Graphics\+::\+I\+Brain}!set\+Input@{set\+Input}}
+\index{set\+Input@{set\+Input}!Graphics\+::\+I\+Brain@{Graphics\+::\+I\+Brain}}
+\subsubsection[{set\+Input(unsigned int index, double value)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Graphics\+::\+I\+Brain\+::set\+Input (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{index, }
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_graphics_1_1_i_brain_a768f7a2e586cafbbc7c4c2ae846a52be}
+
+
+Set an input for the neural network. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & \+: Contains the index of the input. \\
+\hline
+{\em value} & \+: Contains the input value. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/robin\+\_\+f/\+Programming/\+Git/\+C\+P\+P/\+Love\+Brains/api/include/\+Graphics/i\+\_\+brain.\+h\end{DoxyCompactItemize}

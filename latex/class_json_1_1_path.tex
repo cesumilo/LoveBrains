@@ -1,0 +1,109 @@
+\section{Json\+:\+:Path Class Reference}
+\label{class_json_1_1_path}\index{Json\+::\+Path@{Json\+::\+Path}}
+
+
+Experimental and untested\+: represents a \char`\"{}path\char`\"{} to access a node.  
+
+
+
+
+{\ttfamily \#include $<$json.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Path} (const std\+::string \&path, const {\bf Path\+Argument} \&a1={\bf Path\+Argument}(), const {\bf Path\+Argument} \&a2={\bf Path\+Argument}(), const {\bf Path\+Argument} \&a3={\bf Path\+Argument}(), const {\bf Path\+Argument} \&a4={\bf Path\+Argument}(), const {\bf Path\+Argument} \&a5={\bf Path\+Argument}())\label{class_json_1_1_path_aaa37a99650e770d0cd680bf53585ec99}
+
+\item 
+const {\bf Value} \& {\bfseries resolve} (const {\bf Value} \&root) const \label{class_json_1_1_path_ae1d05fa985a6ee3c57f2b8ed186b5982}
+
+\item 
+{\bf Value} {\bfseries resolve} (const {\bf Value} \&root, const {\bf Value} \&default\+Value) const \label{class_json_1_1_path_a33d1749770a4cf74e9a3de419bc7febe}
+
+\item 
+{\bf Value} \& {\bf make} ({\bf Value} \&root) const 
+\item 
+{\bfseries Path} (const std\+::string \&path, const {\bf Path\+Argument} \&a1={\bf Path\+Argument}(), const {\bf Path\+Argument} \&a2={\bf Path\+Argument}(), const {\bf Path\+Argument} \&a3={\bf Path\+Argument}(), const {\bf Path\+Argument} \&a4={\bf Path\+Argument}(), const {\bf Path\+Argument} \&a5={\bf Path\+Argument}())\label{class_json_1_1_path_aaa37a99650e770d0cd680bf53585ec99}
+
+\item 
+const {\bf Value} \& {\bfseries resolve} (const {\bf Value} \&root) const \label{class_json_1_1_path_a781d60b27fdb34f228018e5b1ce16d59}
+
+\item 
+{\bf Value} {\bfseries resolve} (const {\bf Value} \&root, const {\bf Value} \&default\+Value) const \label{class_json_1_1_path_a33d1749770a4cf74e9a3de419bc7febe}
+
+\item 
+{\bf Value} \& {\bf make} ({\bf Value} \&root) const 
+\item 
+{\bfseries Path} (const std\+::string \&path, const {\bf Path\+Argument} \&a1={\bf Path\+Argument}(), const {\bf Path\+Argument} \&a2={\bf Path\+Argument}(), const {\bf Path\+Argument} \&a3={\bf Path\+Argument}(), const {\bf Path\+Argument} \&a4={\bf Path\+Argument}(), const {\bf Path\+Argument} \&a5={\bf Path\+Argument}())\label{class_json_1_1_path_aaa37a99650e770d0cd680bf53585ec99}
+
+\item 
+const {\bf Value} \& {\bfseries resolve} (const {\bf Value} \&root) const \label{class_json_1_1_path_a781d60b27fdb34f228018e5b1ce16d59}
+
+\item 
+{\bf Value} {\bfseries resolve} (const {\bf Value} \&root, const {\bf Value} \&default\+Value) const \label{class_json_1_1_path_a33d1749770a4cf74e9a3de419bc7febe}
+
+\item 
+{\bf Value} \& {\bf make} ({\bf Value} \&root) const 
+\item 
+{\bfseries Path} (const std\+::string \&path, const {\bf Path\+Argument} \&a1={\bf Path\+Argument}(), const {\bf Path\+Argument} \&a2={\bf Path\+Argument}(), const {\bf Path\+Argument} \&a3={\bf Path\+Argument}(), const {\bf Path\+Argument} \&a4={\bf Path\+Argument}(), const {\bf Path\+Argument} \&a5={\bf Path\+Argument}())\label{class_json_1_1_path_aaa37a99650e770d0cd680bf53585ec99}
+
+\item 
+const {\bf Value} \& {\bfseries resolve} (const {\bf Value} \&root) const \label{class_json_1_1_path_a781d60b27fdb34f228018e5b1ce16d59}
+
+\item 
+{\bf Value} {\bfseries resolve} (const {\bf Value} \&root, const {\bf Value} \&default\+Value) const \label{class_json_1_1_path_a33d1749770a4cf74e9a3de419bc7febe}
+
+\item 
+{\bf Value} \& {\bf make} ({\bf Value} \&root) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Experimental and untested\+: represents a \char`\"{}path\char`\"{} to access a node. 
+
+Syntax\+:
+\begin{DoxyItemize}
+\item \char`\"{}.\char`\"{} =$>$ root node
+\item \char`\"{}.[n]\char`\"{} =$>$ elements at index \textquotesingle{}n\textquotesingle{} of root node (an array value)
+\item \char`\"{}.\+name\char`\"{} =$>$ member named \textquotesingle{}name\textquotesingle{} of root node (an object value)
+\item \char`\"{}.\+name1.\+name2.\+name3\char`\"{}
+\item \char`\"{}.[0][1][2].\+name1[3]\char`\"{}
+\item \char`\"{}.\%\char`\"{} =$>$ member name is provided as parameter
+\item \char`\"{}.[\%]\char`\"{} =$>$ index is provied as parameter 
+\end{DoxyItemize}
+
+\subsection{Member Function Documentation}
+\index{Json\+::\+Path@{Json\+::\+Path}!make@{make}}
+\index{make@{make}!Json\+::\+Path@{Json\+::\+Path}}
+\subsubsection[{make(\+Value \&root) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Value} \& Json\+::\+Path\+::make (
+\begin{DoxyParamCaption}
+\item[{{\bf Value} \&}]{root}
+\end{DoxyParamCaption}
+) const}\label{class_json_1_1_path_a5289901fc58ad1fdca1de7fb5a0b620c}
+Creates the \char`\"{}path\char`\"{} to access the specified node and returns a reference on the node. \index{Json\+::\+Path@{Json\+::\+Path}!make@{make}}
+\index{make@{make}!Json\+::\+Path@{Json\+::\+Path}}
+\subsubsection[{make(\+Value \&root) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Value}\& Json\+::\+Path\+::make (
+\begin{DoxyParamCaption}
+\item[{{\bf Value} \&}]{root}
+\end{DoxyParamCaption}
+) const}\label{class_json_1_1_path_afa04fe0c53033fdc044bc7e3c782c4af}
+Creates the \char`\"{}path\char`\"{} to access the specified node and returns a reference on the node. \index{Json\+::\+Path@{Json\+::\+Path}!make@{make}}
+\index{make@{make}!Json\+::\+Path@{Json\+::\+Path}}
+\subsubsection[{make(\+Value \&root) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Value}\& Json\+::\+Path\+::make (
+\begin{DoxyParamCaption}
+\item[{{\bf Value} \&}]{root}
+\end{DoxyParamCaption}
+) const}\label{class_json_1_1_path_afa04fe0c53033fdc044bc7e3c782c4af}
+Creates the \char`\"{}path\char`\"{} to access the specified node and returns a reference on the node. \index{Json\+::\+Path@{Json\+::\+Path}!make@{make}}
+\index{make@{make}!Json\+::\+Path@{Json\+::\+Path}}
+\subsubsection[{make(\+Value \&root) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Value}\& Json\+::\+Path\+::make (
+\begin{DoxyParamCaption}
+\item[{{\bf Value} \&}]{root}
+\end{DoxyParamCaption}
+) const}\label{class_json_1_1_path_afa04fe0c53033fdc044bc7e3c782c4af}
+Creates the \char`\"{}path\char`\"{} to access the specified node and returns a reference on the node. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/robin\+\_\+f/\+Programming/\+Git/\+C\+P\+P/\+Love\+Brains/api/lib/\+A\+N\+N\+Library/include/json/json.\+h\item 
+/home/robin\+\_\+f/\+Programming/\+Git/\+C\+P\+P/\+Love\+Brains/api/lib/\+A\+N\+N\+Library/src/json/jsoncpp.\+cc\end{DoxyCompactItemize}

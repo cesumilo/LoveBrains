@@ -1,0 +1,90 @@
+\section{Graphics\+:\+:I\+Sensor Class Reference}
+\label{class_graphics_1_1_i_sensor}\index{Graphics\+::\+I\+Sensor@{Graphics\+::\+I\+Sensor}}
+
+
+Define the interface of a sensor.  
+
+
+
+
+{\ttfamily \#include $<$i\+\_\+sensor.\+h$>$}
+
+Inheritance diagram for Graphics\+:\+:I\+Sensor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_graphics_1_1_i_sensor}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries Update} ({\bf I\+Object} $\ast$obj, std\+::list$<$ {\bf I\+Object} $\ast$ $>$ \&env)=0\label{class_graphics_1_1_i_sensor_a898b379aa5b3c1e3bd0123a321b2c68a}
+
+\item 
+virtual bool {\bfseries is\+Valid} ({\bf I\+Object} $\ast$obj)=0\label{class_graphics_1_1_i_sensor_a7bfe9af666729794a423231e2d91c7c4}
+
+\item 
+virtual {\bf $\sim$\+I\+Sensor} ()\label{class_graphics_1_1_i_sensor_a48b21797770f8ab82091f5dac6fb77f1}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual void {\bf Update} ({\bf I\+Object} $\ast$obj, std\+::list$<$ {\bf I\+Object} $\ast$ $>$ \&env)=0
+\begin{DoxyCompactList}\small\item\em Update the object in terms of the environment. \end{DoxyCompactList}\item 
+virtual bool {\bf is\+Valid} ({\bf I\+Object} $\ast$obj)=0
+\begin{DoxyCompactList}\small\item\em Verify if the sensor support the current object. \end{DoxyCompactList}\item 
+virtual void {\bfseries Update} ({\bf I\+Object} $\ast$obj, std\+::list$<$ {\bf I\+Object} $\ast$ $>$ \&env)=0\label{class_graphics_1_1_i_sensor_a898b379aa5b3c1e3bd0123a321b2c68a}
+
+\item 
+virtual bool {\bfseries is\+Valid} ({\bf I\+Object} $\ast$obj)=0\label{class_graphics_1_1_i_sensor_a7bfe9af666729794a423231e2d91c7c4}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Define the interface of a sensor. 
+
+\subsection{Member Function Documentation}
+\index{Graphics\+::\+I\+Sensor@{Graphics\+::\+I\+Sensor}!is\+Valid@{is\+Valid}}
+\index{is\+Valid@{is\+Valid}!Graphics\+::\+I\+Sensor@{Graphics\+::\+I\+Sensor}}
+\subsubsection[{is\+Valid(\+I\+Object $\ast$obj)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Graphics\+::\+I\+Sensor\+::is\+Valid (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_graphics_1_1_i_sensor_a7bfe9af666729794a423231e2d91c7c4}
+
+
+Verify if the sensor support the current object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & \+: Contains the current object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true \+: if the object is supported. 
+
+false \+: if the object is not supported. 
+\end{DoxyReturn}
+\index{Graphics\+::\+I\+Sensor@{Graphics\+::\+I\+Sensor}!Update@{Update}}
+\index{Update@{Update}!Graphics\+::\+I\+Sensor@{Graphics\+::\+I\+Sensor}}
+\subsubsection[{Update(\+I\+Object $\ast$obj, std\+::list$<$ I\+Object $\ast$ $>$ \&env)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Graphics\+::\+I\+Sensor\+::\+Update (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+Object} $\ast$}]{obj, }
+\item[{std\+::list$<$ {\bf I\+Object} $\ast$ $>$ \&}]{env}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_graphics_1_1_i_sensor_a898b379aa5b3c1e3bd0123a321b2c68a}
+
+
+Update the object in terms of the environment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & \+: Contains the object that is involved by the sensor. \\
+\hline
+{\em env} & \+: Contains all the objects in the environment. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/robin\+\_\+f/\+Programming/\+Git/\+C\+P\+P/\+Love\+Brains/api/include/\+Graphics/i\+\_\+sensor.\+h\end{DoxyCompactItemize}

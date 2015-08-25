@@ -1,0 +1,136 @@
+\section{G\+A\+:\+:A\+Observer Class Reference}
+\label{class_g_a_1_1_a_observer}\index{G\+A\+::\+A\+Observer@{G\+A\+::\+A\+Observer}}
+
+
+Define the abstract class that allow to be an observer.  
+
+
+
+
+{\ttfamily \#include $<$a\+\_\+observer.\+h$>$}
+
+Inheritance diagram for G\+A\+:\+:A\+Observer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_g_a_1_1_a_observer}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries States} \{ \\*
+{\bfseries N\+O\+N\+E}, 
+{\bfseries Q\+U\+I\+T}, 
+{\bfseries R\+E\+P\+O\+R\+T}, 
+{\bfseries N\+O\+N\+E}, 
+\\*
+{\bfseries Q\+U\+I\+T}, 
+{\bfseries R\+E\+P\+O\+R\+T}
+ \}\label{class_g_a_1_1_a_observer_a1c7c36e301acb5574a7b1d43dbeefb7a}
+
+\item 
+enum {\bfseries States} \{ \\*
+{\bfseries N\+O\+N\+E}, 
+{\bfseries Q\+U\+I\+T}, 
+{\bfseries R\+E\+P\+O\+R\+T}, 
+{\bfseries N\+O\+N\+E}, 
+\\*
+{\bfseries Q\+U\+I\+T}, 
+{\bfseries R\+E\+P\+O\+R\+T}
+ \}\label{class_g_a_1_1_a_observer_a1c7c36e301acb5574a7b1d43dbeefb7a}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int {\bf id} (void) const 
+\begin{DoxyCompactList}\small\item\em Return the I\+D of the observer. \end{DoxyCompactList}\item 
+States const \& {\bf get\+State} (void) const 
+\begin{DoxyCompactList}\small\item\em Return the state of the observer. \end{DoxyCompactList}\item 
+void {\bf Update} (States state)
+\begin{DoxyCompactList}\small\item\em Update the observer. \end{DoxyCompactList}\item 
+unsigned int {\bfseries id} (void) const \label{class_g_a_1_1_a_observer_a179703ea106637547da70a66ec69c0d0}
+
+\item 
+States const \& {\bfseries get\+State} (void) const \label{class_g_a_1_1_a_observer_a8a91bd8e4d3a673e82a46608361132f3}
+
+\item 
+void {\bfseries Update} (States state)\label{class_g_a_1_1_a_observer_a6d70fb2f1fa04407125f62cde1d932b5}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf set\+Id} (void)\label{class_g_a_1_1_a_observer_a2c51ab020eeea35b56de2e8639515c01}
+
+\begin{DoxyCompactList}\small\item\em Set the I\+D of the observer. \end{DoxyCompactList}\item 
+void {\bfseries set\+Id} (void)\label{class_g_a_1_1_a_observer_a2c51ab020eeea35b56de2e8639515c01}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+States {\bf \+\_\+state}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Define the abstract class that allow to be an observer. 
+
+\subsection{Member Function Documentation}
+\index{G\+A\+::\+A\+Observer@{G\+A\+::\+A\+Observer}!get\+State@{get\+State}}
+\index{get\+State@{get\+State}!G\+A\+::\+A\+Observer@{G\+A\+::\+A\+Observer}}
+\subsubsection[{get\+State(void) const }]{\setlength{\rightskip}{0pt plus 5cm}A\+Observer\+::\+States const \& G\+A\+::\+A\+Observer\+::get\+State (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}\label{class_g_a_1_1_a_observer_afdda4e77b2bfdb697c15bf2e8a89d292}
+
+
+Return the state of the observer. 
+
+\begin{DoxyReturn}{Returns}
+A\+Observer\+::\+States const\& 
+\end{DoxyReturn}
+\index{G\+A\+::\+A\+Observer@{G\+A\+::\+A\+Observer}!id@{id}}
+\index{id@{id}!G\+A\+::\+A\+Observer@{G\+A\+::\+A\+Observer}}
+\subsubsection[{id(void) const }]{\setlength{\rightskip}{0pt plus 5cm}unsigned int G\+A\+::\+A\+Observer\+::id (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}\label{class_g_a_1_1_a_observer_a179703ea106637547da70a66ec69c0d0}
+
+
+Return the I\+D of the observer. 
+
+\begin{DoxyReturn}{Returns}
+unsigned int 
+\end{DoxyReturn}
+\index{G\+A\+::\+A\+Observer@{G\+A\+::\+A\+Observer}!Update@{Update}}
+\index{Update@{Update}!G\+A\+::\+A\+Observer@{G\+A\+::\+A\+Observer}}
+\subsubsection[{Update(\+States state)}]{\setlength{\rightskip}{0pt plus 5cm}void G\+A\+::\+A\+Observer\+::\+Update (
+\begin{DoxyParamCaption}
+\item[{A\+Observer\+::\+States}]{state}
+\end{DoxyParamCaption}
+)}\label{class_g_a_1_1_a_observer_a6d70fb2f1fa04407125f62cde1d932b5}
+
+
+Update the observer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & \+: Contains the new state. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\index{G\+A\+::\+A\+Observer@{G\+A\+::\+A\+Observer}!\+\_\+state@{\+\_\+state}}
+\index{\+\_\+state@{\+\_\+state}!G\+A\+::\+A\+Observer@{G\+A\+::\+A\+Observer}}
+\subsubsection[{\+\_\+state}]{\setlength{\rightskip}{0pt plus 5cm}States G\+A\+::\+A\+Observer\+::\+\_\+state\hspace{0.3cm}{\ttfamily [protected]}}\label{class_g_a_1_1_a_observer_a501625128eee0003e223c2430a2302fc}
+Contains the current state 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/robin\+\_\+f/\+Programming/\+Git/\+C\+P\+P/\+Love\+Brains/include/\+G\+A/a\+\_\+observer.\+h\item 
+/home/robin\+\_\+f/\+Programming/\+Git/\+C\+P\+P/\+Love\+Brains/lib/\+G\+A\+N\+N\+Engine/src/\+G\+A/a\+\_\+observer.\+cc\end{DoxyCompactItemize}

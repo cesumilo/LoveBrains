@@ -1,0 +1,69 @@
+\section{G\+A\+N\+N Namespace Reference}
+\label{namespace_g_a_n_n}\index{G\+A\+N\+N@{G\+A\+N\+N}}
+
+
+Contains all the objects that provide the management for the genetic algorithm with neural networks.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf A\+N\+N}
+\begin{DoxyCompactList}\small\item\em Define what is a neural network. \end{DoxyCompactList}\item 
+class {\bf A\+N\+N\+Exception}
+\begin{DoxyCompactList}\small\item\em Define the exception that will be used by the \doxyref{G\+A\+N\+N\+::\+A\+N\+N}{p.}{class_g_a_n_n_1_1_a_n_n} class. \end{DoxyCompactList}\item 
+class {\bf A\+N\+N\+Generator}
+\begin{DoxyCompactList}\small\item\em Define the generator of a neural network. \end{DoxyCompactList}\item 
+class {\bf A\+N\+N\+Layer}
+\begin{DoxyCompactList}\small\item\em Define a layer of a neural network. \end{DoxyCompactList}\item 
+class {\bf G\+A\+N\+N}
+\begin{DoxyCompactList}\small\item\em Define a new object called \char`\"{}\+G\+A\+N\+N\char`\"{} for Genetic Artificial Neural Network that inherit of the interface I\+D\+N\+A. \end{DoxyCompactList}\item 
+class {\bf G\+A\+N\+N\+Engine}
+\begin{DoxyCompactList}\small\item\em Define the engine that will manage the population of \doxyref{G\+A\+N\+N}{p.}{class_g_a_n_n_1_1_g_a_n_n} and the evolution. \end{DoxyCompactList}\item 
+class {\bf G\+A\+N\+N\+Exception}
+\begin{DoxyCompactList}\small\item\em Define the exception that will be used by the \doxyref{G\+A\+N\+N\+Engine}{p.}{class_g_a_n_n_1_1_g_a_n_n_engine} class. \end{DoxyCompactList}\item 
+class {\bf Matrix}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T $>$ }\\{\bf Matrix}$<$ T $>$ {\bfseries operator+} ({\bf Matrix}$<$ T $>$ const \&m1, {\bf Matrix}$<$ T $>$ const \&m2)\label{namespace_g_a_n_n_a22a3301c8c2df66cf92fb0051d6efb52}
+
+\item 
+{\footnotesize template$<$class T $>$ }\\{\bf Matrix}$<$ T $>$ {\bfseries operator-\/} ({\bf Matrix}$<$ T $>$ const \&m1, {\bf Matrix}$<$ T $>$ const \&m2)\label{namespace_g_a_n_n_a89325dd129ef0905ac6f25292950a65d}
+
+\item 
+{\footnotesize template$<$class T $>$ }\\{\bf Matrix}$<$ T $>$ {\bfseries operator+} ({\bf Matrix}$<$ T $>$ const \&m1, T const \&s)\label{namespace_g_a_n_n_a9b87790bbddc1262e2954572c0746d6a}
+
+\item 
+{\footnotesize template$<$class T $>$ }\\{\bf Matrix}$<$ T $>$ {\bfseries operator$\ast$} ({\bf Matrix}$<$ T $>$ const \&m1, T const \&s)\label{namespace_g_a_n_n_a2e0480821a3873e27154a82966e56c0e}
+
+\item 
+{\footnotesize template$<$class T $>$ }\\{\bf Matrix}$<$ T $>$ {\bfseries operator$\ast$} ({\bf Matrix}$<$ T $>$ const \&m1, {\bf Matrix}$<$ T $>$ const \&m2)\label{namespace_g_a_n_n_aa6e545d07628a3eb6211992ab742d723}
+
+\item 
+{\footnotesize template$<$class T $>$ }\\bool {\bfseries operator==} ({\bf Matrix}$<$ T $>$ const \&m1, {\bf Matrix}$<$ T $>$ const \&m2)\label{namespace_g_a_n_n_a35d8f5d6809e0243f3568a36d50d9ce0}
+
+\item 
+{\footnotesize template$<$class T $>$ }\\bool {\bfseries operator==} ({\bf Matrix}$<$ T $>$ \&m1, {\bf Matrix}$<$ T $>$ \&m2)\label{namespace_g_a_n_n_a1dbef0ff715d9aad5bbba26c76989966}
+
+\item 
+{\footnotesize template$<$class T $>$ }\\std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&flux, {\bf Matrix}$<$ T $>$ const \&m)\label{namespace_g_a_n_n_a91db1e381839d2fbeb3a0f1e4b89623d}
+
+\item 
+double {\bfseries Sigmoid} (double x)\label{namespace_g_a_n_n_a17ddb8f5d90b3cc3b22675620933c695}
+
+\item 
+double {\bfseries Threshold} (double x)\label{namespace_g_a_n_n_aaa74396736432a8afe69af55e1bb7909}
+
+\item 
+double {\bfseries Random\+Double} (double min, double max)\label{namespace_g_a_n_n_adeab2c47039dd6ef4591166da49f251b}
+
+\item 
+int {\bfseries Random\+Int} (int min, int max)\label{namespace_g_a_n_n_a36f5a5a537e96431a4b4a739947614a7}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains all the objects that provide the management for the genetic algorithm with neural networks. 

@@ -1,0 +1,59 @@
+\section{App Class Reference}
+\label{class_app}\index{App@{App}}
+
+
+The \char`\"{}\+App\char`\"{} class will manage all the stuff in order to run the simulation.  
+
+
+
+
+{\ttfamily \#include $<$app.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ {\bfseries Config\+Getter}) ({\bf Simulator\+::\+S\+Config} \&, std\+::string const \&)\label{class_app_ab4965ee935cdff07ac1daa677f45b5a9}
+
+\item 
+typedef struct {\bf App\+::s\+\_\+config\+\_\+getter} {\bfseries t\+\_\+config\+\_\+getter}\label{class_app_a33f1fc3e4e586c2c7d3afccfb32bb0a8}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static t\+\_\+config\+\_\+getter {\bfseries g\+\_\+getters} [D\+E\+F\+\_\+\+M\+A\+X\+\_\+\+G\+E\+T\+T\+E\+R\+S]
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \char`\"{}\+App\char`\"{} class will manage all the stuff in order to run the simulation. 
+
+\subsection{Member Data Documentation}
+\index{App@{App}!g\+\_\+getters@{g\+\_\+getters}}
+\index{g\+\_\+getters@{g\+\_\+getters}!App@{App}}
+\subsubsection[{g\+\_\+getters}]{\setlength{\rightskip}{0pt plus 5cm}t\+\_\+config\+\_\+getter App\+::g\+\_\+getters[D\+E\+F\+\_\+\+M\+A\+X\+\_\+\+G\+E\+T\+T\+E\+R\+S]\hspace{0.3cm}{\ttfamily [static]}}\label{class_app_ac62e6d975af3165aebcc6b4d790a390a}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+  \{
+    \{std::string(DEF\_GET\_CROSSING\_RATE), &config\_getCrossingRate\},
+    \{std::string(DEF\_GET\_MUTATION\_RATE), &config\_getMutationRate\},
+    \{std::string(DEF\_GET\_SELECTION\_RATE), &config\_getSelectionRate\},
+    \{std::string(DEF\_GET\_EXPECTED\_FIT), &config\_getExpectedFitness\},
+    \{std::string(DEF\_GET\_POOL\_SIZE), &config\_getPoolSize\},
+    \{std::string(DEF\_GET\_MAX\_EPOCHS), &config\_getMaxEpochs\},
+    \{std::string(DEF\_GET\_REPORT\_INTER), &config\_getReportInterval\},
+    \{std::string(DEF\_GET\_POPULATION\_SIZ), &config\_getPopulationSize\},
+    \{std::string(DEF\_GET\_ANNINFOS), &config\_getANNInfos\},
+    \{std::string(DEF\_GET\_ACTIVATION), &config\_getActivation\},
+    \{std::string(DEF\_GET\_OACTIVATION), config\_getOutputsActivation\},
+    \{std::string(DEF\_GET\_ENVIRONMENT\_S), &config\_getEnvironmentSize\}
+  \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+App/{\bf app.\+h}\item 
+include/\+App/config\+\_\+getter.\+h\item 
+src/\+App/config\+\_\+manager.\+cc\end{DoxyCompactItemize}

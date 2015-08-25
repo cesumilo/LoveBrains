@@ -1,0 +1,250 @@
+\section{Json\+:\+:Styled\+Stream\+Writer Class Reference}
+\label{class_json_1_1_styled_stream_writer}\index{Json\+::\+Styled\+Stream\+Writer@{Json\+::\+Styled\+Stream\+Writer}}
+
+
+Writes a \doxyref{Value}{p.}{class_json_1_1_value} in {\tt J\+S\+O\+N} format in a human friendly way, to a stream rather than to a string.  
+
+
+
+
+{\ttfamily \#include $<$json.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Styled\+Stream\+Writer} (std\+::string indentation=\char`\"{}\textbackslash{}t\char`\"{})\label{class_json_1_1_styled_stream_writer_ae87567a08de865b6dc84d7218a3001df}
+
+\item 
+void {\bf write} (std\+::ostream \&out, const {\bf Value} \&root)
+\begin{DoxyCompactList}\small\item\em Serialize a \doxyref{Value}{p.}{class_json_1_1_value} in {\tt J\+S\+O\+N} format. \end{DoxyCompactList}\item 
+{\bfseries Styled\+Stream\+Writer} (std\+::string indentation=\char`\"{}\textbackslash{}t\char`\"{})\label{class_json_1_1_styled_stream_writer_ae87567a08de865b6dc84d7218a3001df}
+
+\item 
+void {\bf write} (std\+::ostream \&out, const {\bf Value} \&root)
+\begin{DoxyCompactList}\small\item\em Serialize a \doxyref{Value}{p.}{class_json_1_1_value} in {\tt J\+S\+O\+N} format. \end{DoxyCompactList}\item 
+{\bfseries Styled\+Stream\+Writer} (std\+::string indentation=\char`\"{}\textbackslash{}t\char`\"{})\label{class_json_1_1_styled_stream_writer_ae87567a08de865b6dc84d7218a3001df}
+
+\item 
+void {\bf write} (std\+::ostream \&out, const {\bf Value} \&root)
+\begin{DoxyCompactList}\small\item\em Serialize a \doxyref{Value}{p.}{class_json_1_1_value} in {\tt J\+S\+O\+N} format. \end{DoxyCompactList}\item 
+{\bfseries Styled\+Stream\+Writer} (std\+::string indentation=\char`\"{}\textbackslash{}t\char`\"{})\label{class_json_1_1_styled_stream_writer_ae87567a08de865b6dc84d7218a3001df}
+
+\item 
+void {\bf write} (std\+::ostream \&out, const {\bf Value} \&root)
+\begin{DoxyCompactList}\small\item\em Serialize a \doxyref{Value}{p.}{class_json_1_1_value} in {\tt J\+S\+O\+N} format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Writes a \doxyref{Value}{p.}{class_json_1_1_value} in {\tt J\+S\+O\+N} format in a human friendly way, to a stream rather than to a string. 
+
+The rules for line break and indent are as follow\+:
+\begin{DoxyItemize}
+\item Object value\+:
+\begin{DoxyItemize}
+\item if empty then print \{\} without indent and line break
+\item if not empty the print \textquotesingle{}\{\textquotesingle{}, line break \& indent, print one value per line and then unindent and line break and print \textquotesingle{}\}\textquotesingle{}.
+\end{DoxyItemize}
+\item Array value\+:
+\begin{DoxyItemize}
+\item if empty then print [] without indent and line break
+\item if the array contains no object value, empty array or some other value types, and all the values fit on one lines, then print the array on a single line.
+\item otherwise, it the values do not fit on one line, or the array contains object or non empty array, then print one value per line.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+If the \doxyref{Value}{p.}{class_json_1_1_value} have comments then they are outputed according to their \doxyref{Comment\+Placement}{p.}{namespace_json_a4fc417c23905b2ae9e2c47d197a45351}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em indentation} & Each level will be indented by this amount extra. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxyref{Reader}{p.}{class_json_1_1_reader}, \doxyref{Value}{p.}{class_json_1_1_value}, \doxyref{Value\+::set\+Comment()}{p.}{class_json_1_1_value_a29f3a30f7e5d3af6f38d57999bf5b480} 
+\end{DoxySeeAlso}
+\begin{DoxyRefDesc}{Deprecated}
+\item[{\bf Deprecated}]Use \doxyref{Stream\+Writer\+Builder}{p.}{class_json_1_1_stream_writer_builder}. \end{DoxyRefDesc}
+
+
+The rules for line break and indent are as follow\+:
+\begin{DoxyItemize}
+\item Object value\+:
+\begin{DoxyItemize}
+\item if empty then print \{\} without indent and line break
+\item if not empty the print \textquotesingle{}\{\textquotesingle{}, line break \& indent, print one value per line and then unindent and line break and print \textquotesingle{}\}\textquotesingle{}.
+\end{DoxyItemize}
+\item Array value\+:
+\begin{DoxyItemize}
+\item if empty then print [] without indent and line break
+\item if the array contains no object value, empty array or some other value types, and all the values fit on one lines, then print the array on a single line.
+\item otherwise, it the values do not fit on one line, or the array contains object or non empty array, then print one value per line.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+If the \doxyref{Value}{p.}{class_json_1_1_value} have comments then they are outputed according to their \doxyref{Comment\+Placement}{p.}{namespace_json_a4fc417c23905b2ae9e2c47d197a45351}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em indentation} & Each level will be indented by this amount extra. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxyref{Reader}{p.}{class_json_1_1_reader}, \doxyref{Value}{p.}{class_json_1_1_value}, \doxyref{Value\+::set\+Comment()}{p.}{class_json_1_1_value_a29f3a30f7e5d3af6f38d57999bf5b480} 
+\end{DoxySeeAlso}
+\begin{DoxyRefDesc}{Deprecated}
+\item[{\bf Deprecated}]Use \doxyref{Stream\+Writer\+Builder}{p.}{class_json_1_1_stream_writer_builder}. \end{DoxyRefDesc}
+
+
+The rules for line break and indent are as follow\+:
+\begin{DoxyItemize}
+\item Object value\+:
+\begin{DoxyItemize}
+\item if empty then print \{\} without indent and line break
+\item if not empty the print \textquotesingle{}\{\textquotesingle{}, line break \& indent, print one value per line and then unindent and line break and print \textquotesingle{}\}\textquotesingle{}.
+\end{DoxyItemize}
+\item Array value\+:
+\begin{DoxyItemize}
+\item if empty then print [] without indent and line break
+\item if the array contains no object value, empty array or some other value types, and all the values fit on one lines, then print the array on a single line.
+\item otherwise, it the values do not fit on one line, or the array contains object or non empty array, then print one value per line.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+If the \doxyref{Value}{p.}{class_json_1_1_value} have comments then they are outputed according to their \doxyref{Comment\+Placement}{p.}{namespace_json_a4fc417c23905b2ae9e2c47d197a45351}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em indentation} & Each level will be indented by this amount extra. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxyref{Reader}{p.}{class_json_1_1_reader}, \doxyref{Value}{p.}{class_json_1_1_value}, \doxyref{Value\+::set\+Comment()}{p.}{class_json_1_1_value_a29f3a30f7e5d3af6f38d57999bf5b480} 
+\end{DoxySeeAlso}
+\begin{DoxyRefDesc}{Deprecated}
+\item[{\bf Deprecated}]Use \doxyref{Stream\+Writer\+Builder}{p.}{class_json_1_1_stream_writer_builder}. \end{DoxyRefDesc}
+
+
+The rules for line break and indent are as follow\+:
+\begin{DoxyItemize}
+\item Object value\+:
+\begin{DoxyItemize}
+\item if empty then print \{\} without indent and line break
+\item if not empty the print \textquotesingle{}\{\textquotesingle{}, line break \& indent, print one value per line and then unindent and line break and print \textquotesingle{}\}\textquotesingle{}.
+\end{DoxyItemize}
+\item Array value\+:
+\begin{DoxyItemize}
+\item if empty then print [] without indent and line break
+\item if the array contains no object value, empty array or some other value types, and all the values fit on one lines, then print the array on a single line.
+\item otherwise, it the values do not fit on one line, or the array contains object or non empty array, then print one value per line.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+If the \doxyref{Value}{p.}{class_json_1_1_value} have comments then they are outputed according to their \doxyref{Comment\+Placement}{p.}{namespace_json_a4fc417c23905b2ae9e2c47d197a45351}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em indentation} & Each level will be indented by this amount extra. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxyref{Reader}{p.}{class_json_1_1_reader}, \doxyref{Value}{p.}{class_json_1_1_value}, \doxyref{Value\+::set\+Comment()}{p.}{class_json_1_1_value_a29f3a30f7e5d3af6f38d57999bf5b480} 
+\end{DoxySeeAlso}
+\begin{DoxyRefDesc}{Deprecated}
+\item[{\bf Deprecated}]Use \doxyref{Stream\+Writer\+Builder}{p.}{class_json_1_1_stream_writer_builder}. \end{DoxyRefDesc}
+
+
+\subsection{Member Function Documentation}
+\index{Json\+::\+Styled\+Stream\+Writer@{Json\+::\+Styled\+Stream\+Writer}!write@{write}}
+\index{write@{write}!Json\+::\+Styled\+Stream\+Writer@{Json\+::\+Styled\+Stream\+Writer}}
+\subsubsection[{write(std\+::ostream \&out, const Value \&root)}]{\setlength{\rightskip}{0pt plus 5cm}void Json\+::\+Styled\+Stream\+Writer\+::write (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{out, }
+\item[{const {\bf Value} \&}]{root}
+\end{DoxyParamCaption}
+)}\label{class_json_1_1_styled_stream_writer_a07807741c6c43ecd35885a87234d0805}
+
+
+Serialize a \doxyref{Value}{p.}{class_json_1_1_value} in {\tt J\+S\+O\+N} format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Stream to write to. (Can be ostringstream, e.\+g.) \\
+\hline
+{\em root} & \doxyref{Value}{p.}{class_json_1_1_value} to serialize. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+There is no point in deriving from \doxyref{Writer}{p.}{class_json_1_1_writer}, since \doxyref{write()}{p.}{class_json_1_1_styled_stream_writer_a07807741c6c43ecd35885a87234d0805} should not return a value. 
+\end{DoxyNote}
+\index{Json\+::\+Styled\+Stream\+Writer@{Json\+::\+Styled\+Stream\+Writer}!write@{write}}
+\index{write@{write}!Json\+::\+Styled\+Stream\+Writer@{Json\+::\+Styled\+Stream\+Writer}}
+\subsubsection[{write(std\+::ostream \&out, const Value \&root)}]{\setlength{\rightskip}{0pt plus 5cm}void Json\+::\+Styled\+Stream\+Writer\+::write (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{out, }
+\item[{const {\bf Value} \&}]{root}
+\end{DoxyParamCaption}
+)}\label{class_json_1_1_styled_stream_writer_a07807741c6c43ecd35885a87234d0805}
+
+
+Serialize a \doxyref{Value}{p.}{class_json_1_1_value} in {\tt J\+S\+O\+N} format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Stream to write to. (Can be ostringstream, e.\+g.) \\
+\hline
+{\em root} & \doxyref{Value}{p.}{class_json_1_1_value} to serialize. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+There is no point in deriving from \doxyref{Writer}{p.}{class_json_1_1_writer}, since \doxyref{write()}{p.}{class_json_1_1_styled_stream_writer_a07807741c6c43ecd35885a87234d0805} should not return a value. 
+\end{DoxyNote}
+\index{Json\+::\+Styled\+Stream\+Writer@{Json\+::\+Styled\+Stream\+Writer}!write@{write}}
+\index{write@{write}!Json\+::\+Styled\+Stream\+Writer@{Json\+::\+Styled\+Stream\+Writer}}
+\subsubsection[{write(std\+::ostream \&out, const Value \&root)}]{\setlength{\rightskip}{0pt plus 5cm}void Json\+::\+Styled\+Stream\+Writer\+::write (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{out, }
+\item[{const {\bf Value} \&}]{root}
+\end{DoxyParamCaption}
+)}\label{class_json_1_1_styled_stream_writer_a07807741c6c43ecd35885a87234d0805}
+
+
+Serialize a \doxyref{Value}{p.}{class_json_1_1_value} in {\tt J\+S\+O\+N} format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Stream to write to. (Can be ostringstream, e.\+g.) \\
+\hline
+{\em root} & \doxyref{Value}{p.}{class_json_1_1_value} to serialize. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+There is no point in deriving from \doxyref{Writer}{p.}{class_json_1_1_writer}, since \doxyref{write()}{p.}{class_json_1_1_styled_stream_writer_a07807741c6c43ecd35885a87234d0805} should not return a value. 
+\end{DoxyNote}
+\index{Json\+::\+Styled\+Stream\+Writer@{Json\+::\+Styled\+Stream\+Writer}!write@{write}}
+\index{write@{write}!Json\+::\+Styled\+Stream\+Writer@{Json\+::\+Styled\+Stream\+Writer}}
+\subsubsection[{write(std\+::ostream \&out, const Value \&root)}]{\setlength{\rightskip}{0pt plus 5cm}void Json\+::\+Styled\+Stream\+Writer\+::write (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{out, }
+\item[{const {\bf Value} \&}]{root}
+\end{DoxyParamCaption}
+)}\label{class_json_1_1_styled_stream_writer_a07807741c6c43ecd35885a87234d0805}
+
+
+Serialize a \doxyref{Value}{p.}{class_json_1_1_value} in {\tt J\+S\+O\+N} format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Stream to write to. (Can be ostringstream, e.\+g.) \\
+\hline
+{\em root} & \doxyref{Value}{p.}{class_json_1_1_value} to serialize. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+There is no point in deriving from \doxyref{Writer}{p.}{class_json_1_1_writer}, since \doxyref{write()}{p.}{class_json_1_1_styled_stream_writer_a07807741c6c43ecd35885a87234d0805} should not return a value. 
+\end{DoxyNote}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/robin\+\_\+f/\+Programming/\+Git/\+C\+P\+P/\+Love\+Brains/api/lib/\+A\+N\+N\+Library/include/json/json.\+h\item 
+/home/robin\+\_\+f/\+Programming/\+Git/\+C\+P\+P/\+Love\+Brains/api/lib/\+A\+N\+N\+Library/src/json/jsoncpp.\+cc\end{DoxyCompactItemize}

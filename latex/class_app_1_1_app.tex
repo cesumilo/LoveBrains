@@ -1,0 +1,83 @@
+\section{App\+:\+:App Class Reference}
+\label{class_app_1_1_app}\index{App\+::\+App@{App\+::\+App}}
+
+
+Manage all the stuff in order to run the simulation.  
+
+
+
+
+{\ttfamily \#include $<$app.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf App} (void)  throw ()\label{class_app_1_1_app_abc56b43454579310556d57ca33926dbe}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+{\bf $\sim$\+App} (void)  throw ()\label{class_app_1_1_app_a2bd7dd5bc68d00c89e75cec082173012}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+{\bf Config\+Manager} const \& {\bf get\+Config\+Manager} (void) const   throw ()\label{class_app_1_1_app_a55cc8d5da967ebe8861f84f7cd0f009c}
+
+\begin{DoxyCompactList}\small\item\em Get the configuration manager. \end{DoxyCompactList}\item 
+const {\bf Simulator\+::\+Simulator} $\ast$ {\bf get\+Simulator} (void) const   throw ()\label{class_app_1_1_app_a30784768b1a8ded72300c9253dfdd2e5}
+
+\begin{DoxyCompactList}\small\item\em Get the simulator object. \end{DoxyCompactList}\item 
+void {\bf Init} (const char $\ast$simulator\+\_\+file, const char $\ast$environment\+\_\+file)
+\begin{DoxyCompactList}\small\item\em Initialize the application. \end{DoxyCompactList}\item 
+void {\bf Run} (const char $\ast$output\+\_\+file)
+\begin{DoxyCompactList}\small\item\em Run the application and launch the simulation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Manage all the stuff in order to run the simulation. 
+
+\subsection{Member Function Documentation}
+\index{App\+::\+App@{App\+::\+App}!Init@{Init}}
+\index{Init@{Init}!App\+::\+App@{App\+::\+App}}
+\subsubsection[{Init(const char $\ast$simulator\+\_\+file, const char $\ast$environment\+\_\+file)}]{\setlength{\rightskip}{0pt plus 5cm}void App\+::\+App\+::\+Init (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{simulator\+\_\+file, }
+\item[{const char $\ast$}]{environment\+\_\+file}
+\end{DoxyParamCaption}
+)}\label{class_app_1_1_app_a74082302dd04370d5a5968159da44913}
+
+
+Initialize the application. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em simulator\+\_\+file} & \+: the simulation file\textquotesingle{}s path. \\
+\hline
+{\em environment\+\_\+file} & \+: the environment file\textquotesingle{}s path. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+error \+: \doxyref{App\+Exception}{p.}{class_app_1_1_app_exception} 
+\end{DoxyReturn}
+\index{App\+::\+App@{App\+::\+App}!Run@{Run}}
+\index{Run@{Run}!App\+::\+App@{App\+::\+App}}
+\subsubsection[{Run(const char $\ast$output\+\_\+file)}]{\setlength{\rightskip}{0pt plus 5cm}void App\+::\+App\+::\+Run (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{output\+\_\+file}
+\end{DoxyParamCaption}
+)}\label{class_app_1_1_app_a766d9ed4639e0da5b5dc433c91365ed5}
+
+
+Run the application and launch the simulation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em output\+\_\+file} & \+: the output file\textquotesingle{}s path. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+error \+: \doxyref{App\+Exception}{p.}{class_app_1_1_app_exception} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/robin\+\_\+f/\+Programming/\+Git/\+C\+P\+P/\+Love\+Brains/include/\+App/{\bf app.\+h}\item 
+/home/robin\+\_\+f/\+Programming/\+Git/\+C\+P\+P/\+Love\+Brains/src/\+App/app.\+cc\end{DoxyCompactItemize}

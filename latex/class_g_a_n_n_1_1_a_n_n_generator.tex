@@ -1,0 +1,359 @@
+\section{G\+A\+N\+N\+:\+:A\+N\+N\+Generator Class Reference}
+\label{class_g_a_n_n_1_1_a_n_n_generator}\index{G\+A\+N\+N\+::\+A\+N\+N\+Generator@{G\+A\+N\+N\+::\+A\+N\+N\+Generator}}
+
+
+Define the generator of a neural network.  
+
+
+
+
+{\ttfamily \#include $<$ann\+\_\+generator.\+h$>$}
+
+Inheritance diagram for G\+A\+N\+N\+:\+:A\+N\+N\+Generator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_g_a_n_n_1_1_a_n_n_generator}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf A\+N\+N\+Generator} (void)  throw ()\label{class_g_a_n_n_1_1_a_n_n_generator_a9b24d9370c60a3b47a7399a81e1efcc2}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+{\bf A\+N\+N\+Generator} (std\+::vector$<$ unsigned int $>$ const \&infos, double crossing\+\_\+rate)  throw ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+{\bf $\sim$\+A\+N\+N\+Generator} (void)  throw ()\label{class_g_a_n_n_1_1_a_n_n_generator_af678c722a1d9d3c80d5e991e17723dff}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void {\bf init} (std\+::vector$<$ unsigned int $>$ const \&infos, double crossing\+\_\+rate)  throw ()
+\begin{DoxyCompactList}\small\item\em Initialize the generator. \end{DoxyCompactList}\item 
+void {\bf set\+Randomize} (double min, double max)  throw ()
+\begin{DoxyCompactList}\small\item\em Set the range of the randomization. \end{DoxyCompactList}\item 
+void {\bf set\+Activation\+Function} (A\+N\+N\+Layer\+::\+F\+Activate function, A\+N\+N\+::\+Activation\+Type type)  throw ()
+\begin{DoxyCompactList}\small\item\em Set the activation function of the intern layers. \end{DoxyCompactList}\item 
+void {\bf set\+Outputs\+Activation} (A\+N\+N\+Layer\+::\+F\+Activate function, A\+N\+N\+::\+Activation\+Type type)  throw ()
+\begin{DoxyCompactList}\small\item\em Set the activation function of the output layer. \end{DoxyCompactList}\item 
+std\+::vector$<$ unsigned int $>$ const \& {\bf get\+Infos} (void) const   throw ()
+\begin{DoxyCompactList}\small\item\em Get the topology of the neural network. \end{DoxyCompactList}\item 
+double {\bf get\+Crossing\+Rate} (void) const   throw ()
+\begin{DoxyCompactList}\small\item\em Get the crossing rate of the neural network. \end{DoxyCompactList}\item 
+double {\bf get\+Random\+Min} (void) const   throw ()
+\begin{DoxyCompactList}\small\item\em Get the minimum value of the randomization range. \end{DoxyCompactList}\item 
+double {\bf get\+Random\+Max} (void) const   throw ()
+\begin{DoxyCompactList}\small\item\em Get the maximum value of the randomization range. \end{DoxyCompactList}\item 
+A\+N\+N\+Layer\+::\+F\+Activate {\bf get\+Activation} (void) const   throw ()
+\begin{DoxyCompactList}\small\item\em Get the activation function pointer of the intern layers. \end{DoxyCompactList}\item 
+A\+N\+N\+Layer\+::\+F\+Activate {\bf get\+Outputs\+Activation} (void) const   throw ()
+\begin{DoxyCompactList}\small\item\em Get the activation function pointer of the output layer. \end{DoxyCompactList}\item 
+A\+N\+N\+::\+Activation\+Type {\bf get\+Output\+Type} (void) const   throw ()
+\begin{DoxyCompactList}\small\item\em Get the activation function\textquotesingle{}s type of the intern layers. \end{DoxyCompactList}\item 
+A\+N\+N\+::\+Activation\+Type {\bf get\+Layer\+Type} (void) const   throw ()
+\begin{DoxyCompactList}\small\item\em Get the activaton function\textquotesingle{}s type of the output layer. \end{DoxyCompactList}\item 
+{\bf A\+N\+N\+Generator} \& {\bfseries operator=} ({\bf A\+N\+N\+Generator} const \&gen)  throw ()\label{class_g_a_n_n_1_1_a_n_n_generator_a6f61ed5962be9c83546b734edc0ad4d4}
+
+\item 
+{\bf G\+A\+::\+I\+D\+N\+A} $\ast$ {\bf Generate} (void) const   throw ()
+\begin{DoxyCompactList}\small\item\em Generate a new neural network. \end{DoxyCompactList}\item 
+{\bfseries A\+N\+N\+Generator} (std\+::vector$<$ unsigned int $>$ const \&infos, double crossing\+\_\+rate)  throw ()\label{class_g_a_n_n_1_1_a_n_n_generator_a6bf907e2c9cbd9af996db4c14de198b1}
+
+\item 
+void {\bfseries init} (std\+::vector$<$ unsigned int $>$ const \&infos, double crossing\+\_\+rate)  throw ()\label{class_g_a_n_n_1_1_a_n_n_generator_a44e09f856b57a98e24236373baa9b865}
+
+\item 
+void {\bfseries set\+Randomize} (double min, double max)  throw ()\label{class_g_a_n_n_1_1_a_n_n_generator_a27a6812e33b66e7df61d6e2996d57b6b}
+
+\item 
+void {\bfseries set\+Activation\+Function} (A\+N\+N\+Layer\+::\+F\+Activate function, A\+N\+N\+::\+Activation\+Type type)  throw ()\label{class_g_a_n_n_1_1_a_n_n_generator_a685ccb6a24ecbb81eea69f3552338fab}
+
+\item 
+void {\bfseries set\+Outputs\+Activation} (A\+N\+N\+Layer\+::\+F\+Activate function, A\+N\+N\+::\+Activation\+Type type)  throw ()\label{class_g_a_n_n_1_1_a_n_n_generator_a7731f13e7e3b9a27ccb0c95df389ac4c}
+
+\item 
+std\+::vector$<$ unsigned int $>$ const \& {\bfseries get\+Infos} (void) const   throw ()\label{class_g_a_n_n_1_1_a_n_n_generator_a7109368cc11dfd0b490bfc59a29520df}
+
+\item 
+double {\bfseries get\+Crossing\+Rate} (void) const   throw ()\label{class_g_a_n_n_1_1_a_n_n_generator_a5bffdba50b2db679b859540cf927660d}
+
+\item 
+double {\bfseries get\+Random\+Min} (void) const   throw ()\label{class_g_a_n_n_1_1_a_n_n_generator_a637b8ff0b80c6638b0c76aaf0e20fb44}
+
+\item 
+double {\bfseries get\+Random\+Max} (void) const   throw ()\label{class_g_a_n_n_1_1_a_n_n_generator_ad6a287d13c840c89abddfa11983392af}
+
+\item 
+A\+N\+N\+Layer\+::\+F\+Activate {\bfseries get\+Activation} (void) const   throw ()\label{class_g_a_n_n_1_1_a_n_n_generator_a7b632c6708c228d52a0b82a55e0f0759}
+
+\item 
+A\+N\+N\+Layer\+::\+F\+Activate {\bfseries get\+Outputs\+Activation} (void) const   throw ()\label{class_g_a_n_n_1_1_a_n_n_generator_af336b38d6dacc9ee52489218058bc193}
+
+\item 
+A\+N\+N\+::\+Activation\+Type {\bfseries get\+Output\+Type} (void) const   throw ()\label{class_g_a_n_n_1_1_a_n_n_generator_a515efd311d411de4c063b66425468c4e}
+
+\item 
+A\+N\+N\+::\+Activation\+Type {\bfseries get\+Layer\+Type} (void) const   throw ()\label{class_g_a_n_n_1_1_a_n_n_generator_a83ffaaae45a8340d1f362534c1dc7b74}
+
+\item 
+{\bf A\+N\+N\+Generator} \& {\bfseries operator=} ({\bf A\+N\+N\+Generator} const \&gen)  throw ()\label{class_g_a_n_n_1_1_a_n_n_generator_a7998ae42ec91982bfdc7533b561ffd78}
+
+\item 
+{\bf G\+A\+::\+I\+D\+N\+A} $\ast$ {\bf Generate} (void) const   throw ()
+\begin{DoxyCompactList}\small\item\em Generate a new individual. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Define the generator of a neural network. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{G\+A\+N\+N\+::\+A\+N\+N\+Generator@{G\+A\+N\+N\+::\+A\+N\+N\+Generator}!A\+N\+N\+Generator@{A\+N\+N\+Generator}}
+\index{A\+N\+N\+Generator@{A\+N\+N\+Generator}!G\+A\+N\+N\+::\+A\+N\+N\+Generator@{G\+A\+N\+N\+::\+A\+N\+N\+Generator}}
+\subsubsection[{A\+N\+N\+Generator(std\+::vector$<$ unsigned int $>$ const \&infos, double crossing\+\_\+rate)}]{\setlength{\rightskip}{0pt plus 5cm}G\+A\+N\+N\+::\+A\+N\+N\+Generator\+::\+A\+N\+N\+Generator (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ unsigned int $>$ const \&}]{infos, }
+\item[{double}]{crossing\+\_\+rate}
+\end{DoxyParamCaption}
+) throw  ) }\label{class_g_a_n_n_1_1_a_n_n_generator_a6bf907e2c9cbd9af996db4c14de198b1}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em infos} & \+: Contains the topology of the neural network. \\
+\hline
+{\em crossing\+\_\+rate} & \+: Contains the crossing rate of the neural network. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{G\+A\+N\+N\+::\+A\+N\+N\+Generator@{G\+A\+N\+N\+::\+A\+N\+N\+Generator}!Generate@{Generate}}
+\index{Generate@{Generate}!G\+A\+N\+N\+::\+A\+N\+N\+Generator@{G\+A\+N\+N\+::\+A\+N\+N\+Generator}}
+\subsubsection[{Generate(void) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+A\+::\+I\+D\+N\+A}$\ast$ G\+A\+N\+N\+::\+A\+N\+N\+Generator\+::\+Generate (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const throw  ) \hspace{0.3cm}{\ttfamily [virtual]}}\label{class_g_a_n_n_1_1_a_n_n_generator_aa6abae0227f867a736936ba3d97c5ef0}
+
+
+Generate a new individual. 
+
+\begin{DoxyReturn}{Returns}
+I\+D\+N\+A $\ast$ 
+\end{DoxyReturn}
+
+
+Implements {\bf G\+A\+::\+I\+Generator} \doxyref{}{p.}{class_g_a_1_1_i_generator_abdd5ee21b43a445403ee0538819a9529}.
+
+\index{G\+A\+N\+N\+::\+A\+N\+N\+Generator@{G\+A\+N\+N\+::\+A\+N\+N\+Generator}!Generate@{Generate}}
+\index{Generate@{Generate}!G\+A\+N\+N\+::\+A\+N\+N\+Generator@{G\+A\+N\+N\+::\+A\+N\+N\+Generator}}
+\subsubsection[{Generate(void) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+A\+::\+I\+D\+N\+A} $\ast$ G\+A\+N\+N\+::\+A\+N\+N\+Generator\+::\+Generate (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const throw  ) \hspace{0.3cm}{\ttfamily [virtual]}}\label{class_g_a_n_n_1_1_a_n_n_generator_a5372d2eb4e32b63f290482250997cb88}
+
+
+Generate a new neural network. 
+
+\begin{DoxyReturn}{Returns}
+\doxyref{G\+A\+::\+I\+D\+N\+A}{p.}{class_g_a_1_1_i_d_n_a} $\ast$ 
+\end{DoxyReturn}
+
+
+Implements {\bf G\+A\+::\+I\+Generator} \doxyref{}{p.}{class_g_a_1_1_i_generator_abdd5ee21b43a445403ee0538819a9529}.
+
+\index{G\+A\+N\+N\+::\+A\+N\+N\+Generator@{G\+A\+N\+N\+::\+A\+N\+N\+Generator}!get\+Activation@{get\+Activation}}
+\index{get\+Activation@{get\+Activation}!G\+A\+N\+N\+::\+A\+N\+N\+Generator@{G\+A\+N\+N\+::\+A\+N\+N\+Generator}}
+\subsubsection[{get\+Activation(void) const }]{\setlength{\rightskip}{0pt plus 5cm}A\+N\+N\+Layer\+::\+F\+Activate G\+A\+N\+N\+::\+A\+N\+N\+Generator\+::get\+Activation (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const throw  ) }\label{class_g_a_n_n_1_1_a_n_n_generator_a7b632c6708c228d52a0b82a55e0f0759}
+
+
+Get the activation function pointer of the intern layers. 
+
+\begin{DoxyReturn}{Returns}
+A\+N\+N\+Layer\+::\+F\+Activate 
+\end{DoxyReturn}
+\index{G\+A\+N\+N\+::\+A\+N\+N\+Generator@{G\+A\+N\+N\+::\+A\+N\+N\+Generator}!get\+Crossing\+Rate@{get\+Crossing\+Rate}}
+\index{get\+Crossing\+Rate@{get\+Crossing\+Rate}!G\+A\+N\+N\+::\+A\+N\+N\+Generator@{G\+A\+N\+N\+::\+A\+N\+N\+Generator}}
+\subsubsection[{get\+Crossing\+Rate(void) const }]{\setlength{\rightskip}{0pt plus 5cm}double G\+A\+N\+N\+::\+A\+N\+N\+Generator\+::get\+Crossing\+Rate (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const throw  ) }\label{class_g_a_n_n_1_1_a_n_n_generator_a5bffdba50b2db679b859540cf927660d}
+
+
+Get the crossing rate of the neural network. 
+
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+\index{G\+A\+N\+N\+::\+A\+N\+N\+Generator@{G\+A\+N\+N\+::\+A\+N\+N\+Generator}!get\+Infos@{get\+Infos}}
+\index{get\+Infos@{get\+Infos}!G\+A\+N\+N\+::\+A\+N\+N\+Generator@{G\+A\+N\+N\+::\+A\+N\+N\+Generator}}
+\subsubsection[{get\+Infos(void) const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ unsigned int $>$ const \& G\+A\+N\+N\+::\+A\+N\+N\+Generator\+::get\+Infos (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const throw  ) }\label{class_g_a_n_n_1_1_a_n_n_generator_ae9cb59ae51ec77fa84a6b39e5b3d177e}
+
+
+Get the topology of the neural network. 
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$unsigned int$>$ const\& 
+\end{DoxyReturn}
+\index{G\+A\+N\+N\+::\+A\+N\+N\+Generator@{G\+A\+N\+N\+::\+A\+N\+N\+Generator}!get\+Layer\+Type@{get\+Layer\+Type}}
+\index{get\+Layer\+Type@{get\+Layer\+Type}!G\+A\+N\+N\+::\+A\+N\+N\+Generator@{G\+A\+N\+N\+::\+A\+N\+N\+Generator}}
+\subsubsection[{get\+Layer\+Type(void) const }]{\setlength{\rightskip}{0pt plus 5cm}A\+N\+N\+::\+Activation\+Type G\+A\+N\+N\+::\+A\+N\+N\+Generator\+::get\+Layer\+Type (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const throw  ) }\label{class_g_a_n_n_1_1_a_n_n_generator_a83ffaaae45a8340d1f362534c1dc7b74}
+
+
+Get the activaton function\textquotesingle{}s type of the output layer. 
+
+\begin{DoxyReturn}{Returns}
+A\+N\+N\+::\+Activation\+Type 
+\end{DoxyReturn}
+\index{G\+A\+N\+N\+::\+A\+N\+N\+Generator@{G\+A\+N\+N\+::\+A\+N\+N\+Generator}!get\+Outputs\+Activation@{get\+Outputs\+Activation}}
+\index{get\+Outputs\+Activation@{get\+Outputs\+Activation}!G\+A\+N\+N\+::\+A\+N\+N\+Generator@{G\+A\+N\+N\+::\+A\+N\+N\+Generator}}
+\subsubsection[{get\+Outputs\+Activation(void) const }]{\setlength{\rightskip}{0pt plus 5cm}A\+N\+N\+Layer\+::\+F\+Activate G\+A\+N\+N\+::\+A\+N\+N\+Generator\+::get\+Outputs\+Activation (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const throw  ) }\label{class_g_a_n_n_1_1_a_n_n_generator_af336b38d6dacc9ee52489218058bc193}
+
+
+Get the activation function pointer of the output layer. 
+
+\begin{DoxyReturn}{Returns}
+A\+N\+N\+Layer\+::\+F\+Activate 
+\end{DoxyReturn}
+\index{G\+A\+N\+N\+::\+A\+N\+N\+Generator@{G\+A\+N\+N\+::\+A\+N\+N\+Generator}!get\+Output\+Type@{get\+Output\+Type}}
+\index{get\+Output\+Type@{get\+Output\+Type}!G\+A\+N\+N\+::\+A\+N\+N\+Generator@{G\+A\+N\+N\+::\+A\+N\+N\+Generator}}
+\subsubsection[{get\+Output\+Type(void) const }]{\setlength{\rightskip}{0pt plus 5cm}A\+N\+N\+::\+Activation\+Type G\+A\+N\+N\+::\+A\+N\+N\+Generator\+::get\+Output\+Type (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const throw  ) }\label{class_g_a_n_n_1_1_a_n_n_generator_a515efd311d411de4c063b66425468c4e}
+
+
+Get the activation function\textquotesingle{}s type of the intern layers. 
+
+\begin{DoxyReturn}{Returns}
+A\+N\+N\+::\+Activation\+Type 
+\end{DoxyReturn}
+\index{G\+A\+N\+N\+::\+A\+N\+N\+Generator@{G\+A\+N\+N\+::\+A\+N\+N\+Generator}!get\+Random\+Max@{get\+Random\+Max}}
+\index{get\+Random\+Max@{get\+Random\+Max}!G\+A\+N\+N\+::\+A\+N\+N\+Generator@{G\+A\+N\+N\+::\+A\+N\+N\+Generator}}
+\subsubsection[{get\+Random\+Max(void) const }]{\setlength{\rightskip}{0pt plus 5cm}double G\+A\+N\+N\+::\+A\+N\+N\+Generator\+::get\+Random\+Max (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const throw  ) }\label{class_g_a_n_n_1_1_a_n_n_generator_ad6a287d13c840c89abddfa11983392af}
+
+
+Get the maximum value of the randomization range. 
+
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+\index{G\+A\+N\+N\+::\+A\+N\+N\+Generator@{G\+A\+N\+N\+::\+A\+N\+N\+Generator}!get\+Random\+Min@{get\+Random\+Min}}
+\index{get\+Random\+Min@{get\+Random\+Min}!G\+A\+N\+N\+::\+A\+N\+N\+Generator@{G\+A\+N\+N\+::\+A\+N\+N\+Generator}}
+\subsubsection[{get\+Random\+Min(void) const }]{\setlength{\rightskip}{0pt plus 5cm}double G\+A\+N\+N\+::\+A\+N\+N\+Generator\+::get\+Random\+Min (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const throw  ) }\label{class_g_a_n_n_1_1_a_n_n_generator_a637b8ff0b80c6638b0c76aaf0e20fb44}
+
+
+Get the minimum value of the randomization range. 
+
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+\index{G\+A\+N\+N\+::\+A\+N\+N\+Generator@{G\+A\+N\+N\+::\+A\+N\+N\+Generator}!init@{init}}
+\index{init@{init}!G\+A\+N\+N\+::\+A\+N\+N\+Generator@{G\+A\+N\+N\+::\+A\+N\+N\+Generator}}
+\subsubsection[{init(std\+::vector$<$ unsigned int $>$ const \&infos, double crossing\+\_\+rate)}]{\setlength{\rightskip}{0pt plus 5cm}void G\+A\+N\+N\+::\+A\+N\+N\+Generator\+::init (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ unsigned int $>$ const \&}]{infos, }
+\item[{double}]{crossing\+\_\+rate}
+\end{DoxyParamCaption}
+) throw  ) }\label{class_g_a_n_n_1_1_a_n_n_generator_a44e09f856b57a98e24236373baa9b865}
+
+
+Initialize the generator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em infos} & \+: Contains the topology of the neural network. \\
+\hline
+{\em crossing\+\_\+rate} & \+: Contains the crossing rate of the neural network. \\
+\hline
+\end{DoxyParams}
+\index{G\+A\+N\+N\+::\+A\+N\+N\+Generator@{G\+A\+N\+N\+::\+A\+N\+N\+Generator}!set\+Activation\+Function@{set\+Activation\+Function}}
+\index{set\+Activation\+Function@{set\+Activation\+Function}!G\+A\+N\+N\+::\+A\+N\+N\+Generator@{G\+A\+N\+N\+::\+A\+N\+N\+Generator}}
+\subsubsection[{set\+Activation\+Function(\+A\+N\+N\+Layer\+::\+F\+Activate function, A\+N\+N\+::\+Activation\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}void G\+A\+N\+N\+::\+A\+N\+N\+Generator\+::set\+Activation\+Function (
+\begin{DoxyParamCaption}
+\item[{A\+N\+N\+Layer\+::\+F\+Activate}]{function, }
+\item[{A\+N\+N\+::\+Activation\+Type}]{type}
+\end{DoxyParamCaption}
+) throw  ) }\label{class_g_a_n_n_1_1_a_n_n_generator_a685ccb6a24ecbb81eea69f3552338fab}
+
+
+Set the activation function of the intern layers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em function} & \+: function pointer of the activation function. \\
+\hline
+{\em type} & \+: the type of the activation function. \\
+\hline
+\end{DoxyParams}
+\index{G\+A\+N\+N\+::\+A\+N\+N\+Generator@{G\+A\+N\+N\+::\+A\+N\+N\+Generator}!set\+Outputs\+Activation@{set\+Outputs\+Activation}}
+\index{set\+Outputs\+Activation@{set\+Outputs\+Activation}!G\+A\+N\+N\+::\+A\+N\+N\+Generator@{G\+A\+N\+N\+::\+A\+N\+N\+Generator}}
+\subsubsection[{set\+Outputs\+Activation(\+A\+N\+N\+Layer\+::\+F\+Activate function, A\+N\+N\+::\+Activation\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}void G\+A\+N\+N\+::\+A\+N\+N\+Generator\+::set\+Outputs\+Activation (
+\begin{DoxyParamCaption}
+\item[{A\+N\+N\+Layer\+::\+F\+Activate}]{function, }
+\item[{A\+N\+N\+::\+Activation\+Type}]{type}
+\end{DoxyParamCaption}
+) throw  ) }\label{class_g_a_n_n_1_1_a_n_n_generator_a7731f13e7e3b9a27ccb0c95df389ac4c}
+
+
+Set the activation function of the output layer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em function} & \+: function pointer of the activation function. \\
+\hline
+{\em type} & \+: the type of the activation function. \\
+\hline
+\end{DoxyParams}
+\index{G\+A\+N\+N\+::\+A\+N\+N\+Generator@{G\+A\+N\+N\+::\+A\+N\+N\+Generator}!set\+Randomize@{set\+Randomize}}
+\index{set\+Randomize@{set\+Randomize}!G\+A\+N\+N\+::\+A\+N\+N\+Generator@{G\+A\+N\+N\+::\+A\+N\+N\+Generator}}
+\subsubsection[{set\+Randomize(double min, double max)}]{\setlength{\rightskip}{0pt plus 5cm}void G\+A\+N\+N\+::\+A\+N\+N\+Generator\+::set\+Randomize (
+\begin{DoxyParamCaption}
+\item[{double}]{min, }
+\item[{double}]{max}
+\end{DoxyParamCaption}
+) throw  ) }\label{class_g_a_n_n_1_1_a_n_n_generator_a27a6812e33b66e7df61d6e2996d57b6b}
+
+
+Set the range of the randomization. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min} & \+: the minimum value of the range. \\
+\hline
+{\em max} & \+: the maximum value of the range. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/robin\+\_\+f/\+Programming/\+Git/\+C\+P\+P/\+Love\+Brains/include/\+A\+N\+N/ann\+\_\+generator.\+h\item 
+/home/robin\+\_\+f/\+Programming/\+Git/\+C\+P\+P/\+Love\+Brains/lib/\+G\+A\+N\+N\+Engine/src/\+A\+N\+N/ann\+\_\+generator.\+cc\end{DoxyCompactItemize}

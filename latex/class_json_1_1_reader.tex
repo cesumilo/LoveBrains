@@ -1,0 +1,866 @@
+\section{Json\+:\+:Reader Class Reference}
+\label{class_json_1_1_reader}\index{Json\+::\+Reader@{Json\+::\+Reader}}
+
+
+Unserialize a {\tt J\+S\+O\+N} document into a \doxyref{Value}{p.}{class_json_1_1_value}.  
+
+
+
+
+{\ttfamily \#include $<$json.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bf Structured\+Error}
+\begin{DoxyCompactList}\small\item\em An error tagged with where in the J\+S\+O\+N text it was encountered. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef char {\bfseries Char}\label{class_json_1_1_reader_a3eec9118f3e9a672ba8348c3a79d0f45}
+
+\item 
+typedef const Char $\ast$ {\bfseries Location}\label{class_json_1_1_reader_a46795b5b272bf79a7730e406cb96375a}
+
+\item 
+typedef char {\bfseries Char}\label{class_json_1_1_reader_a3eec9118f3e9a672ba8348c3a79d0f45}
+
+\item 
+typedef const Char $\ast$ {\bfseries Location}\label{class_json_1_1_reader_a46795b5b272bf79a7730e406cb96375a}
+
+\item 
+typedef char {\bfseries Char}\label{class_json_1_1_reader_a3eec9118f3e9a672ba8348c3a79d0f45}
+
+\item 
+typedef const Char $\ast$ {\bfseries Location}\label{class_json_1_1_reader_a46795b5b272bf79a7730e406cb96375a}
+
+\item 
+typedef char {\bfseries Char}\label{class_json_1_1_reader_a3eec9118f3e9a672ba8348c3a79d0f45}
+
+\item 
+typedef const Char $\ast$ {\bfseries Location}\label{class_json_1_1_reader_a46795b5b272bf79a7730e406cb96375a}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Reader} ()\label{class_json_1_1_reader_a0b3c4e24c8393354bab57a6ba3ffc27f}
+
+\begin{DoxyCompactList}\small\item\em Constructs a \doxyref{Reader}{p.}{class_json_1_1_reader} allowing all features for parsing. \end{DoxyCompactList}\item 
+{\bf Reader} (const {\bf Features} \&features)\label{class_json_1_1_reader_a45f17831118337309180313e93ac33f8}
+
+\begin{DoxyCompactList}\small\item\em Constructs a \doxyref{Reader}{p.}{class_json_1_1_reader} allowing the specified feature set for parsing. \end{DoxyCompactList}\item 
+bool {\bf parse} (const std\+::string \&document, {\bf Value} \&root, bool collect\+Comments=true)
+\begin{DoxyCompactList}\small\item\em Read a \doxyref{Value}{p.}{class_json_1_1_value} from a {\tt J\+S\+O\+N} document. \end{DoxyCompactList}\item 
+bool {\bf parse} (const char $\ast$begin\+Doc, const char $\ast$end\+Doc, {\bf Value} \&root, bool collect\+Comments=true)
+\begin{DoxyCompactList}\small\item\em Read a \doxyref{Value}{p.}{class_json_1_1_value} from a {\tt J\+S\+O\+N} document. \end{DoxyCompactList}\item 
+bool {\bf parse} (std\+::istream \&is, {\bf Value} \&root, bool collect\+Comments=true)
+\begin{DoxyCompactList}\small\item\em Parse from input stream. \end{DoxyCompactList}\item 
+std\+::string {\bf get\+Formated\+Error\+Messages} () const 
+\begin{DoxyCompactList}\small\item\em Returns a user friendly string that list errors in the parsed document. \end{DoxyCompactList}\item 
+std\+::string {\bf get\+Formatted\+Error\+Messages} () const 
+\begin{DoxyCompactList}\small\item\em Returns a user friendly string that list errors in the parsed document. \end{DoxyCompactList}\item 
+std\+::vector$<$ {\bf Structured\+Error} $>$ {\bf get\+Structured\+Errors} () const 
+\begin{DoxyCompactList}\small\item\em Returns a vector of structured erros encounted while parsing. \end{DoxyCompactList}\item 
+bool {\bf push\+Error} (const {\bf Value} \&value, const std\+::string \&message)
+\begin{DoxyCompactList}\small\item\em Add a semantic error message. \end{DoxyCompactList}\item 
+bool {\bf push\+Error} (const {\bf Value} \&value, const std\+::string \&message, const {\bf Value} \&extra)
+\begin{DoxyCompactList}\small\item\em Add a semantic error message with extra context. \end{DoxyCompactList}\item 
+bool {\bf good} () const 
+\begin{DoxyCompactList}\small\item\em Return whether there are any errors. \end{DoxyCompactList}\item 
+{\bf Reader} ()\label{class_json_1_1_reader_a0b3c4e24c8393354bab57a6ba3ffc27f}
+
+\begin{DoxyCompactList}\small\item\em Constructs a \doxyref{Reader}{p.}{class_json_1_1_reader} allowing all features for parsing. \end{DoxyCompactList}\item 
+{\bf Reader} (const {\bf Features} \&features)\label{class_json_1_1_reader_a45f17831118337309180313e93ac33f8}
+
+\begin{DoxyCompactList}\small\item\em Constructs a \doxyref{Reader}{p.}{class_json_1_1_reader} allowing the specified feature set for parsing. \end{DoxyCompactList}\item 
+bool {\bf parse} (const std\+::string \&document, {\bf Value} \&root, bool collect\+Comments=true)
+\begin{DoxyCompactList}\small\item\em Read a \doxyref{Value}{p.}{class_json_1_1_value} from a {\tt J\+S\+O\+N} document. \end{DoxyCompactList}\item 
+bool {\bf parse} (const char $\ast$begin\+Doc, const char $\ast$end\+Doc, {\bf Value} \&root, bool collect\+Comments=true)
+\begin{DoxyCompactList}\small\item\em Read a \doxyref{Value}{p.}{class_json_1_1_value} from a {\tt J\+S\+O\+N} document. \end{DoxyCompactList}\item 
+bool {\bf parse} (std\+::istream \&is, {\bf Value} \&root, bool collect\+Comments=true)
+\begin{DoxyCompactList}\small\item\em Parse from input stream. \end{DoxyCompactList}\item 
+std\+::string {\bf get\+Formated\+Error\+Messages} () const 
+\begin{DoxyCompactList}\small\item\em Returns a user friendly string that list errors in the parsed document. \end{DoxyCompactList}\item 
+std\+::string {\bf get\+Formatted\+Error\+Messages} () const 
+\begin{DoxyCompactList}\small\item\em Returns a user friendly string that list errors in the parsed document. \end{DoxyCompactList}\item 
+std\+::vector$<$ {\bf Structured\+Error} $>$ {\bf get\+Structured\+Errors} () const 
+\begin{DoxyCompactList}\small\item\em Returns a vector of structured erros encounted while parsing. \end{DoxyCompactList}\item 
+bool {\bf push\+Error} (const {\bf Value} \&value, const std\+::string \&message)
+\begin{DoxyCompactList}\small\item\em Add a semantic error message. \end{DoxyCompactList}\item 
+bool {\bf push\+Error} (const {\bf Value} \&value, const std\+::string \&message, const {\bf Value} \&extra)
+\begin{DoxyCompactList}\small\item\em Add a semantic error message with extra context. \end{DoxyCompactList}\item 
+bool {\bf good} () const 
+\begin{DoxyCompactList}\small\item\em Return whether there are any errors. \end{DoxyCompactList}\item 
+{\bf Reader} ()\label{class_json_1_1_reader_a0b3c4e24c8393354bab57a6ba3ffc27f}
+
+\begin{DoxyCompactList}\small\item\em Constructs a \doxyref{Reader}{p.}{class_json_1_1_reader} allowing all features for parsing. \end{DoxyCompactList}\item 
+{\bf Reader} (const {\bf Features} \&features)\label{class_json_1_1_reader_a45f17831118337309180313e93ac33f8}
+
+\begin{DoxyCompactList}\small\item\em Constructs a \doxyref{Reader}{p.}{class_json_1_1_reader} allowing the specified feature set for parsing. \end{DoxyCompactList}\item 
+bool {\bf parse} (const std\+::string \&document, {\bf Value} \&root, bool collect\+Comments=true)
+\begin{DoxyCompactList}\small\item\em Read a \doxyref{Value}{p.}{class_json_1_1_value} from a {\tt J\+S\+O\+N} document. \end{DoxyCompactList}\item 
+bool {\bf parse} (const char $\ast$begin\+Doc, const char $\ast$end\+Doc, {\bf Value} \&root, bool collect\+Comments=true)
+\begin{DoxyCompactList}\small\item\em Read a \doxyref{Value}{p.}{class_json_1_1_value} from a {\tt J\+S\+O\+N} document. \end{DoxyCompactList}\item 
+bool {\bf parse} (std\+::istream \&is, {\bf Value} \&root, bool collect\+Comments=true)
+\begin{DoxyCompactList}\small\item\em Parse from input stream. \end{DoxyCompactList}\item 
+std\+::string {\bf get\+Formated\+Error\+Messages} () const 
+\begin{DoxyCompactList}\small\item\em Returns a user friendly string that list errors in the parsed document. \end{DoxyCompactList}\item 
+std\+::string {\bf get\+Formatted\+Error\+Messages} () const 
+\begin{DoxyCompactList}\small\item\em Returns a user friendly string that list errors in the parsed document. \end{DoxyCompactList}\item 
+std\+::vector$<$ {\bf Structured\+Error} $>$ {\bf get\+Structured\+Errors} () const 
+\begin{DoxyCompactList}\small\item\em Returns a vector of structured erros encounted while parsing. \end{DoxyCompactList}\item 
+bool {\bf push\+Error} (const {\bf Value} \&value, const std\+::string \&message)
+\begin{DoxyCompactList}\small\item\em Add a semantic error message. \end{DoxyCompactList}\item 
+bool {\bf push\+Error} (const {\bf Value} \&value, const std\+::string \&message, const {\bf Value} \&extra)
+\begin{DoxyCompactList}\small\item\em Add a semantic error message with extra context. \end{DoxyCompactList}\item 
+bool {\bf good} () const 
+\begin{DoxyCompactList}\small\item\em Return whether there are any errors. \end{DoxyCompactList}\item 
+{\bf Reader} ()\label{class_json_1_1_reader_a0b3c4e24c8393354bab57a6ba3ffc27f}
+
+\begin{DoxyCompactList}\small\item\em Constructs a \doxyref{Reader}{p.}{class_json_1_1_reader} allowing all features for parsing. \end{DoxyCompactList}\item 
+{\bf Reader} (const {\bf Features} \&features)\label{class_json_1_1_reader_a45f17831118337309180313e93ac33f8}
+
+\begin{DoxyCompactList}\small\item\em Constructs a \doxyref{Reader}{p.}{class_json_1_1_reader} allowing the specified feature set for parsing. \end{DoxyCompactList}\item 
+bool {\bf parse} (const std\+::string \&document, {\bf Value} \&root, bool collect\+Comments=true)
+\begin{DoxyCompactList}\small\item\em Read a \doxyref{Value}{p.}{class_json_1_1_value} from a {\tt J\+S\+O\+N} document. \end{DoxyCompactList}\item 
+bool {\bf parse} (const char $\ast$begin\+Doc, const char $\ast$end\+Doc, {\bf Value} \&root, bool collect\+Comments=true)
+\begin{DoxyCompactList}\small\item\em Read a \doxyref{Value}{p.}{class_json_1_1_value} from a {\tt J\+S\+O\+N} document. \end{DoxyCompactList}\item 
+bool {\bf parse} (std\+::istream \&is, {\bf Value} \&root, bool collect\+Comments=true)
+\begin{DoxyCompactList}\small\item\em Parse from input stream. \end{DoxyCompactList}\item 
+std\+::string {\bf get\+Formated\+Error\+Messages} () const 
+\begin{DoxyCompactList}\small\item\em Returns a user friendly string that list errors in the parsed document. \end{DoxyCompactList}\item 
+std\+::string {\bf get\+Formatted\+Error\+Messages} () const 
+\begin{DoxyCompactList}\small\item\em Returns a user friendly string that list errors in the parsed document. \end{DoxyCompactList}\item 
+std\+::vector$<$ {\bf Structured\+Error} $>$ {\bf get\+Structured\+Errors} () const 
+\begin{DoxyCompactList}\small\item\em Returns a vector of structured erros encounted while parsing. \end{DoxyCompactList}\item 
+bool {\bf push\+Error} (const {\bf Value} \&value, const std\+::string \&message)
+\begin{DoxyCompactList}\small\item\em Add a semantic error message. \end{DoxyCompactList}\item 
+bool {\bf push\+Error} (const {\bf Value} \&value, const std\+::string \&message, const {\bf Value} \&extra)
+\begin{DoxyCompactList}\small\item\em Add a semantic error message with extra context. \end{DoxyCompactList}\item 
+bool {\bf good} () const 
+\begin{DoxyCompactList}\small\item\em Return whether there are any errors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Unserialize a {\tt J\+S\+O\+N} document into a \doxyref{Value}{p.}{class_json_1_1_value}. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[{\bf Deprecated}]Use \doxyref{Char\+Reader}{p.}{class_json_1_1_char_reader} and \doxyref{Char\+Reader\+Builder}{p.}{class_json_1_1_char_reader_builder}. \end{DoxyRefDesc}
+
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[{\bf Deprecated}]Use \doxyref{Char\+Reader}{p.}{class_json_1_1_char_reader} and \doxyref{Char\+Reader\+Builder}{p.}{class_json_1_1_char_reader_builder}. \end{DoxyRefDesc}
+
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[{\bf Deprecated}]Use \doxyref{Char\+Reader}{p.}{class_json_1_1_char_reader} and \doxyref{Char\+Reader\+Builder}{p.}{class_json_1_1_char_reader_builder}. \end{DoxyRefDesc}
+
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[{\bf Deprecated}]Use \doxyref{Char\+Reader}{p.}{class_json_1_1_char_reader} and \doxyref{Char\+Reader\+Builder}{p.}{class_json_1_1_char_reader_builder}. \end{DoxyRefDesc}
+
+
+\subsection{Member Function Documentation}
+\index{Json\+::\+Reader@{Json\+::\+Reader}!get\+Formated\+Error\+Messages@{get\+Formated\+Error\+Messages}}
+\index{get\+Formated\+Error\+Messages@{get\+Formated\+Error\+Messages}!Json\+::\+Reader@{Json\+::\+Reader}}
+\subsubsection[{get\+Formated\+Error\+Messages() const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Json\+::\+Reader\+::get\+Formated\+Error\+Messages (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_json_1_1_reader_afa4a59e962d23c4d1c38b433fc95eefa}
+
+
+Returns a user friendly string that list errors in the parsed document. 
+
+\begin{DoxyReturn}{Returns}
+Formatted error message with the list of errors with their location in the parsed document. An empty string is returned if no error occurred during parsing. 
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Deprecated}
+\item[{\bf Deprecated}]Use \doxyref{get\+Formatted\+Error\+Messages()}{p.}{class_json_1_1_reader_a95ab50aa789132e9dee0fc1475c85acf} instead (typo fix). \end{DoxyRefDesc}
+\index{Json\+::\+Reader@{Json\+::\+Reader}!get\+Formated\+Error\+Messages@{get\+Formated\+Error\+Messages}}
+\index{get\+Formated\+Error\+Messages@{get\+Formated\+Error\+Messages}!Json\+::\+Reader@{Json\+::\+Reader}}
+\subsubsection[{get\+Formated\+Error\+Messages() const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Json\+::\+Reader\+::get\+Formated\+Error\+Messages (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_json_1_1_reader_afa4a59e962d23c4d1c38b433fc95eefa}
+
+
+Returns a user friendly string that list errors in the parsed document. 
+
+\begin{DoxyReturn}{Returns}
+Formatted error message with the list of errors with their location in the parsed document. An empty string is returned if no error occurred during parsing. 
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Deprecated}
+\item[{\bf Deprecated}]Use \doxyref{get\+Formatted\+Error\+Messages()}{p.}{class_json_1_1_reader_a95ab50aa789132e9dee0fc1475c85acf} instead (typo fix). \end{DoxyRefDesc}
+\index{Json\+::\+Reader@{Json\+::\+Reader}!get\+Formated\+Error\+Messages@{get\+Formated\+Error\+Messages}}
+\index{get\+Formated\+Error\+Messages@{get\+Formated\+Error\+Messages}!Json\+::\+Reader@{Json\+::\+Reader}}
+\subsubsection[{get\+Formated\+Error\+Messages() const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Json\+::\+Reader\+::get\+Formated\+Error\+Messages (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_json_1_1_reader_afa4a59e962d23c4d1c38b433fc95eefa}
+
+
+Returns a user friendly string that list errors in the parsed document. 
+
+\begin{DoxyReturn}{Returns}
+Formatted error message with the list of errors with their location in the parsed document. An empty string is returned if no error occurred during parsing. 
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Deprecated}
+\item[{\bf Deprecated}]Use \doxyref{get\+Formatted\+Error\+Messages()}{p.}{class_json_1_1_reader_a95ab50aa789132e9dee0fc1475c85acf} instead (typo fix). \end{DoxyRefDesc}
+\index{Json\+::\+Reader@{Json\+::\+Reader}!get\+Formated\+Error\+Messages@{get\+Formated\+Error\+Messages}}
+\index{get\+Formated\+Error\+Messages@{get\+Formated\+Error\+Messages}!Json\+::\+Reader@{Json\+::\+Reader}}
+\subsubsection[{get\+Formated\+Error\+Messages() const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Json\+::\+Reader\+::get\+Formated\+Error\+Messages (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_json_1_1_reader_afa4a59e962d23c4d1c38b433fc95eefa}
+
+
+Returns a user friendly string that list errors in the parsed document. 
+
+\begin{DoxyReturn}{Returns}
+Formatted error message with the list of errors with their location in the parsed document. An empty string is returned if no error occurred during parsing. 
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Deprecated}
+\item[{\bf Deprecated}]Use \doxyref{get\+Formatted\+Error\+Messages()}{p.}{class_json_1_1_reader_a95ab50aa789132e9dee0fc1475c85acf} instead (typo fix). \end{DoxyRefDesc}
+\index{Json\+::\+Reader@{Json\+::\+Reader}!get\+Formatted\+Error\+Messages@{get\+Formatted\+Error\+Messages}}
+\index{get\+Formatted\+Error\+Messages@{get\+Formatted\+Error\+Messages}!Json\+::\+Reader@{Json\+::\+Reader}}
+\subsubsection[{get\+Formatted\+Error\+Messages() const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Json\+::\+Reader\+::get\+Formatted\+Error\+Messages (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_json_1_1_reader_a95ab50aa789132e9dee0fc1475c85acf}
+
+
+Returns a user friendly string that list errors in the parsed document. 
+
+\begin{DoxyReturn}{Returns}
+Formatted error message with the list of errors with their location in the parsed document. An empty string is returned if no error occurred during parsing. 
+\end{DoxyReturn}
+\index{Json\+::\+Reader@{Json\+::\+Reader}!get\+Formatted\+Error\+Messages@{get\+Formatted\+Error\+Messages}}
+\index{get\+Formatted\+Error\+Messages@{get\+Formatted\+Error\+Messages}!Json\+::\+Reader@{Json\+::\+Reader}}
+\subsubsection[{get\+Formatted\+Error\+Messages() const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Json\+::\+Reader\+::get\+Formatted\+Error\+Messages (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_json_1_1_reader_a95ab50aa789132e9dee0fc1475c85acf}
+
+
+Returns a user friendly string that list errors in the parsed document. 
+
+\begin{DoxyReturn}{Returns}
+Formatted error message with the list of errors with their location in the parsed document. An empty string is returned if no error occurred during parsing. 
+\end{DoxyReturn}
+\index{Json\+::\+Reader@{Json\+::\+Reader}!get\+Formatted\+Error\+Messages@{get\+Formatted\+Error\+Messages}}
+\index{get\+Formatted\+Error\+Messages@{get\+Formatted\+Error\+Messages}!Json\+::\+Reader@{Json\+::\+Reader}}
+\subsubsection[{get\+Formatted\+Error\+Messages() const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Json\+::\+Reader\+::get\+Formatted\+Error\+Messages (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_json_1_1_reader_a95ab50aa789132e9dee0fc1475c85acf}
+
+
+Returns a user friendly string that list errors in the parsed document. 
+
+\begin{DoxyReturn}{Returns}
+Formatted error message with the list of errors with their location in the parsed document. An empty string is returned if no error occurred during parsing. 
+\end{DoxyReturn}
+\index{Json\+::\+Reader@{Json\+::\+Reader}!get\+Formatted\+Error\+Messages@{get\+Formatted\+Error\+Messages}}
+\index{get\+Formatted\+Error\+Messages@{get\+Formatted\+Error\+Messages}!Json\+::\+Reader@{Json\+::\+Reader}}
+\subsubsection[{get\+Formatted\+Error\+Messages() const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Json\+::\+Reader\+::get\+Formatted\+Error\+Messages (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_json_1_1_reader_a95ab50aa789132e9dee0fc1475c85acf}
+
+
+Returns a user friendly string that list errors in the parsed document. 
+
+\begin{DoxyReturn}{Returns}
+Formatted error message with the list of errors with their location in the parsed document. An empty string is returned if no error occurred during parsing. 
+\end{DoxyReturn}
+\index{Json\+::\+Reader@{Json\+::\+Reader}!get\+Structured\+Errors@{get\+Structured\+Errors}}
+\index{get\+Structured\+Errors@{get\+Structured\+Errors}!Json\+::\+Reader@{Json\+::\+Reader}}
+\subsubsection[{get\+Structured\+Errors() const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Structured\+Error}$>$ Json\+::\+Reader\+::get\+Structured\+Errors (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_json_1_1_reader_af214f264eb2425a6f13691ca2d1d913f}
+
+
+Returns a vector of structured erros encounted while parsing. 
+
+\begin{DoxyReturn}{Returns}
+A (possibly empty) vector of \doxyref{Structured\+Error}{p.}{struct_json_1_1_reader_1_1_structured_error} objects. Currently only one error can be returned, but the caller should tolerate multiple errors. This can occur if the parser recovers from a non-\/fatal parse error and then encounters additional errors. 
+\end{DoxyReturn}
+\index{Json\+::\+Reader@{Json\+::\+Reader}!get\+Structured\+Errors@{get\+Structured\+Errors}}
+\index{get\+Structured\+Errors@{get\+Structured\+Errors}!Json\+::\+Reader@{Json\+::\+Reader}}
+\subsubsection[{get\+Structured\+Errors() const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ {\bf Reader\+::\+Structured\+Error} $>$ Json\+::\+Reader\+::get\+Structured\+Errors (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_json_1_1_reader_a08c2ea5ffc7d2a9c9e35020835624f0b}
+
+
+Returns a vector of structured erros encounted while parsing. 
+
+\begin{DoxyReturn}{Returns}
+A (possibly empty) vector of \doxyref{Structured\+Error}{p.}{struct_json_1_1_reader_1_1_structured_error} objects. Currently only one error can be returned, but the caller should tolerate multiple errors. This can occur if the parser recovers from a non-\/fatal parse error and then encounters additional errors. 
+\end{DoxyReturn}
+\index{Json\+::\+Reader@{Json\+::\+Reader}!get\+Structured\+Errors@{get\+Structured\+Errors}}
+\index{get\+Structured\+Errors@{get\+Structured\+Errors}!Json\+::\+Reader@{Json\+::\+Reader}}
+\subsubsection[{get\+Structured\+Errors() const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Structured\+Error}$>$ Json\+::\+Reader\+::get\+Structured\+Errors (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_json_1_1_reader_af214f264eb2425a6f13691ca2d1d913f}
+
+
+Returns a vector of structured erros encounted while parsing. 
+
+\begin{DoxyReturn}{Returns}
+A (possibly empty) vector of \doxyref{Structured\+Error}{p.}{struct_json_1_1_reader_1_1_structured_error} objects. Currently only one error can be returned, but the caller should tolerate multiple errors. This can occur if the parser recovers from a non-\/fatal parse error and then encounters additional errors. 
+\end{DoxyReturn}
+\index{Json\+::\+Reader@{Json\+::\+Reader}!get\+Structured\+Errors@{get\+Structured\+Errors}}
+\index{get\+Structured\+Errors@{get\+Structured\+Errors}!Json\+::\+Reader@{Json\+::\+Reader}}
+\subsubsection[{get\+Structured\+Errors() const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Structured\+Error}$>$ Json\+::\+Reader\+::get\+Structured\+Errors (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_json_1_1_reader_af214f264eb2425a6f13691ca2d1d913f}
+
+
+Returns a vector of structured erros encounted while parsing. 
+
+\begin{DoxyReturn}{Returns}
+A (possibly empty) vector of \doxyref{Structured\+Error}{p.}{struct_json_1_1_reader_1_1_structured_error} objects. Currently only one error can be returned, but the caller should tolerate multiple errors. This can occur if the parser recovers from a non-\/fatal parse error and then encounters additional errors. 
+\end{DoxyReturn}
+\index{Json\+::\+Reader@{Json\+::\+Reader}!good@{good}}
+\index{good@{good}!Json\+::\+Reader@{Json\+::\+Reader}}
+\subsubsection[{good() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Json\+::\+Reader\+::good (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_json_1_1_reader_a06b52dcc656549506b1ae6f05167ecf4}
+
+
+Return whether there are any errors. 
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if there are no errors to report {\ttfamily false} if errors have occurred. 
+\end{DoxyReturn}
+\index{Json\+::\+Reader@{Json\+::\+Reader}!good@{good}}
+\index{good@{good}!Json\+::\+Reader@{Json\+::\+Reader}}
+\subsubsection[{good() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Json\+::\+Reader\+::good (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_json_1_1_reader_a06b52dcc656549506b1ae6f05167ecf4}
+
+
+Return whether there are any errors. 
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if there are no errors to report {\ttfamily false} if errors have occurred. 
+\end{DoxyReturn}
+\index{Json\+::\+Reader@{Json\+::\+Reader}!good@{good}}
+\index{good@{good}!Json\+::\+Reader@{Json\+::\+Reader}}
+\subsubsection[{good() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Json\+::\+Reader\+::good (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_json_1_1_reader_a06b52dcc656549506b1ae6f05167ecf4}
+
+
+Return whether there are any errors. 
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if there are no errors to report {\ttfamily false} if errors have occurred. 
+\end{DoxyReturn}
+\index{Json\+::\+Reader@{Json\+::\+Reader}!good@{good}}
+\index{good@{good}!Json\+::\+Reader@{Json\+::\+Reader}}
+\subsubsection[{good() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Json\+::\+Reader\+::good (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_json_1_1_reader_a06b52dcc656549506b1ae6f05167ecf4}
+
+
+Return whether there are any errors. 
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if there are no errors to report {\ttfamily false} if errors have occurred. 
+\end{DoxyReturn}
+\index{Json\+::\+Reader@{Json\+::\+Reader}!parse@{parse}}
+\index{parse@{parse}!Json\+::\+Reader@{Json\+::\+Reader}}
+\subsubsection[{parse(const std\+::string \&document, Value \&root, bool collect\+Comments=true)}]{\setlength{\rightskip}{0pt plus 5cm}bool Json\+::\+Reader\+::parse (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{document, }
+\item[{{\bf Value} \&}]{root, }
+\item[{bool}]{collect\+Comments = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_json_1_1_reader_af1da6c976ad1e96c742804c3853eef94}
+
+
+Read a \doxyref{Value}{p.}{class_json_1_1_value} from a {\tt J\+S\+O\+N} document. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em document} & U\+T\+F-\/8 encoded string containing the document to read. \\
+\hline
+{\em root} & [out] Contains the root value of the document if it was successfully parsed. \\
+\hline
+{\em collect\+Comments} & {\ttfamily true} to collect comment and allow writing them back during serialization, {\ttfamily false} to discard comments. This parameter is ignored if \doxyref{Features\+::allow\+Comments\+\_\+}{p.}{class_json_1_1_features_a33afd389719624b6bdb23950b3c346c9} is {\ttfamily false}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if the document was successfully parsed, {\ttfamily false} if an error occurred. 
+\end{DoxyReturn}
+\index{Json\+::\+Reader@{Json\+::\+Reader}!parse@{parse}}
+\index{parse@{parse}!Json\+::\+Reader@{Json\+::\+Reader}}
+\subsubsection[{parse(const std\+::string \&document, Value \&root, bool collect\+Comments=true)}]{\setlength{\rightskip}{0pt plus 5cm}bool Json\+::\+Reader\+::parse (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{document, }
+\item[{{\bf Value} \&}]{root, }
+\item[{bool}]{collect\+Comments = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_json_1_1_reader_af1da6c976ad1e96c742804c3853eef94}
+
+
+Read a \doxyref{Value}{p.}{class_json_1_1_value} from a {\tt J\+S\+O\+N} document. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em document} & U\+T\+F-\/8 encoded string containing the document to read. \\
+\hline
+{\em root} & [out] Contains the root value of the document if it was successfully parsed. \\
+\hline
+{\em collect\+Comments} & {\ttfamily true} to collect comment and allow writing them back during serialization, {\ttfamily false} to discard comments. This parameter is ignored if \doxyref{Features\+::allow\+Comments\+\_\+}{p.}{class_json_1_1_features_a33afd389719624b6bdb23950b3c346c9} is {\ttfamily false}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if the document was successfully parsed, {\ttfamily false} if an error occurred. 
+\end{DoxyReturn}
+\index{Json\+::\+Reader@{Json\+::\+Reader}!parse@{parse}}
+\index{parse@{parse}!Json\+::\+Reader@{Json\+::\+Reader}}
+\subsubsection[{parse(const std\+::string \&document, Value \&root, bool collect\+Comments=true)}]{\setlength{\rightskip}{0pt plus 5cm}bool Json\+::\+Reader\+::parse (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{document, }
+\item[{{\bf Value} \&}]{root, }
+\item[{bool}]{collect\+Comments = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_json_1_1_reader_af1da6c976ad1e96c742804c3853eef94}
+
+
+Read a \doxyref{Value}{p.}{class_json_1_1_value} from a {\tt J\+S\+O\+N} document. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em document} & U\+T\+F-\/8 encoded string containing the document to read. \\
+\hline
+{\em root} & [out] Contains the root value of the document if it was successfully parsed. \\
+\hline
+{\em collect\+Comments} & {\ttfamily true} to collect comment and allow writing them back during serialization, {\ttfamily false} to discard comments. This parameter is ignored if \doxyref{Features\+::allow\+Comments\+\_\+}{p.}{class_json_1_1_features_a33afd389719624b6bdb23950b3c346c9} is {\ttfamily false}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if the document was successfully parsed, {\ttfamily false} if an error occurred. 
+\end{DoxyReturn}
+\index{Json\+::\+Reader@{Json\+::\+Reader}!parse@{parse}}
+\index{parse@{parse}!Json\+::\+Reader@{Json\+::\+Reader}}
+\subsubsection[{parse(const std\+::string \&document, Value \&root, bool collect\+Comments=true)}]{\setlength{\rightskip}{0pt plus 5cm}bool Json\+::\+Reader\+::parse (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{document, }
+\item[{{\bf Value} \&}]{root, }
+\item[{bool}]{collect\+Comments = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_json_1_1_reader_af1da6c976ad1e96c742804c3853eef94}
+
+
+Read a \doxyref{Value}{p.}{class_json_1_1_value} from a {\tt J\+S\+O\+N} document. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em document} & U\+T\+F-\/8 encoded string containing the document to read. \\
+\hline
+{\em root} & [out] Contains the root value of the document if it was successfully parsed. \\
+\hline
+{\em collect\+Comments} & {\ttfamily true} to collect comment and allow writing them back during serialization, {\ttfamily false} to discard comments. This parameter is ignored if \doxyref{Features\+::allow\+Comments\+\_\+}{p.}{class_json_1_1_features_a33afd389719624b6bdb23950b3c346c9} is {\ttfamily false}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if the document was successfully parsed, {\ttfamily false} if an error occurred. 
+\end{DoxyReturn}
+\index{Json\+::\+Reader@{Json\+::\+Reader}!parse@{parse}}
+\index{parse@{parse}!Json\+::\+Reader@{Json\+::\+Reader}}
+\subsubsection[{parse(const char $\ast$begin\+Doc, const char $\ast$end\+Doc, Value \&root, bool collect\+Comments=true)}]{\setlength{\rightskip}{0pt plus 5cm}bool Json\+::\+Reader\+::parse (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{begin\+Doc, }
+\item[{const char $\ast$}]{end\+Doc, }
+\item[{{\bf Value} \&}]{root, }
+\item[{bool}]{collect\+Comments = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_json_1_1_reader_ac71ef2b64c7c27b062052e692af3fb32}
+
+
+Read a \doxyref{Value}{p.}{class_json_1_1_value} from a {\tt J\+S\+O\+N} document. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em begin\+Doc} & Pointer on the beginning of the U\+T\+F-\/8 encoded string of the document to read. \\
+\hline
+{\em end\+Doc} & Pointer on the end of the U\+T\+F-\/8 encoded string of the document to read. Must be $>$= begin\+Doc. \\
+\hline
+{\em root} & [out] Contains the root value of the document if it was successfully parsed. \\
+\hline
+{\em collect\+Comments} & {\ttfamily true} to collect comment and allow writing them back during serialization, {\ttfamily false} to discard comments. This parameter is ignored if \doxyref{Features\+::allow\+Comments\+\_\+}{p.}{class_json_1_1_features_a33afd389719624b6bdb23950b3c346c9} is {\ttfamily false}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if the document was successfully parsed, {\ttfamily false} if an error occurred. 
+\end{DoxyReturn}
+\index{Json\+::\+Reader@{Json\+::\+Reader}!parse@{parse}}
+\index{parse@{parse}!Json\+::\+Reader@{Json\+::\+Reader}}
+\subsubsection[{parse(const char $\ast$begin\+Doc, const char $\ast$end\+Doc, Value \&root, bool collect\+Comments=true)}]{\setlength{\rightskip}{0pt plus 5cm}bool Json\+::\+Reader\+::parse (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{begin\+Doc, }
+\item[{const char $\ast$}]{end\+Doc, }
+\item[{{\bf Value} \&}]{root, }
+\item[{bool}]{collect\+Comments = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_json_1_1_reader_ac71ef2b64c7c27b062052e692af3fb32}
+
+
+Read a \doxyref{Value}{p.}{class_json_1_1_value} from a {\tt J\+S\+O\+N} document. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em begin\+Doc} & Pointer on the beginning of the U\+T\+F-\/8 encoded string of the document to read. \\
+\hline
+{\em end\+Doc} & Pointer on the end of the U\+T\+F-\/8 encoded string of the document to read. Must be $>$= begin\+Doc. \\
+\hline
+{\em root} & [out] Contains the root value of the document if it was successfully parsed. \\
+\hline
+{\em collect\+Comments} & {\ttfamily true} to collect comment and allow writing them back during serialization, {\ttfamily false} to discard comments. This parameter is ignored if \doxyref{Features\+::allow\+Comments\+\_\+}{p.}{class_json_1_1_features_a33afd389719624b6bdb23950b3c346c9} is {\ttfamily false}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if the document was successfully parsed, {\ttfamily false} if an error occurred. 
+\end{DoxyReturn}
+\index{Json\+::\+Reader@{Json\+::\+Reader}!parse@{parse}}
+\index{parse@{parse}!Json\+::\+Reader@{Json\+::\+Reader}}
+\subsubsection[{parse(const char $\ast$begin\+Doc, const char $\ast$end\+Doc, Value \&root, bool collect\+Comments=true)}]{\setlength{\rightskip}{0pt plus 5cm}bool Json\+::\+Reader\+::parse (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{begin\+Doc, }
+\item[{const char $\ast$}]{end\+Doc, }
+\item[{{\bf Value} \&}]{root, }
+\item[{bool}]{collect\+Comments = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_json_1_1_reader_ac71ef2b64c7c27b062052e692af3fb32}
+
+
+Read a \doxyref{Value}{p.}{class_json_1_1_value} from a {\tt J\+S\+O\+N} document. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em begin\+Doc} & Pointer on the beginning of the U\+T\+F-\/8 encoded string of the document to read. \\
+\hline
+{\em end\+Doc} & Pointer on the end of the U\+T\+F-\/8 encoded string of the document to read. Must be $>$= begin\+Doc. \\
+\hline
+{\em root} & [out] Contains the root value of the document if it was successfully parsed. \\
+\hline
+{\em collect\+Comments} & {\ttfamily true} to collect comment and allow writing them back during serialization, {\ttfamily false} to discard comments. This parameter is ignored if \doxyref{Features\+::allow\+Comments\+\_\+}{p.}{class_json_1_1_features_a33afd389719624b6bdb23950b3c346c9} is {\ttfamily false}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if the document was successfully parsed, {\ttfamily false} if an error occurred. 
+\end{DoxyReturn}
+\index{Json\+::\+Reader@{Json\+::\+Reader}!parse@{parse}}
+\index{parse@{parse}!Json\+::\+Reader@{Json\+::\+Reader}}
+\subsubsection[{parse(const char $\ast$begin\+Doc, const char $\ast$end\+Doc, Value \&root, bool collect\+Comments=true)}]{\setlength{\rightskip}{0pt plus 5cm}bool Json\+::\+Reader\+::parse (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{begin\+Doc, }
+\item[{const char $\ast$}]{end\+Doc, }
+\item[{{\bf Value} \&}]{root, }
+\item[{bool}]{collect\+Comments = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_json_1_1_reader_ac71ef2b64c7c27b062052e692af3fb32}
+
+
+Read a \doxyref{Value}{p.}{class_json_1_1_value} from a {\tt J\+S\+O\+N} document. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em begin\+Doc} & Pointer on the beginning of the U\+T\+F-\/8 encoded string of the document to read. \\
+\hline
+{\em end\+Doc} & Pointer on the end of the U\+T\+F-\/8 encoded string of the document to read. Must be $>$= begin\+Doc. \\
+\hline
+{\em root} & [out] Contains the root value of the document if it was successfully parsed. \\
+\hline
+{\em collect\+Comments} & {\ttfamily true} to collect comment and allow writing them back during serialization, {\ttfamily false} to discard comments. This parameter is ignored if \doxyref{Features\+::allow\+Comments\+\_\+}{p.}{class_json_1_1_features_a33afd389719624b6bdb23950b3c346c9} is {\ttfamily false}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if the document was successfully parsed, {\ttfamily false} if an error occurred. 
+\end{DoxyReturn}
+\index{Json\+::\+Reader@{Json\+::\+Reader}!parse@{parse}}
+\index{parse@{parse}!Json\+::\+Reader@{Json\+::\+Reader}}
+\subsubsection[{parse(std\+::istream \&is, Value \&root, bool collect\+Comments=true)}]{\setlength{\rightskip}{0pt plus 5cm}bool Json\+::\+Reader\+::parse (
+\begin{DoxyParamCaption}
+\item[{std\+::istream \&}]{is, }
+\item[{{\bf Value} \&}]{root, }
+\item[{bool}]{collect\+Comments = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_json_1_1_reader_a8d0347e6b47343e4bc68be7ecdb9c4e9}
+
+
+Parse from input stream. 
+
+\begin{DoxySeeAlso}{See also}
+\doxyref{Json\+::operator$>$$>$(std\+::istream\&, Json\+::\+Value\&)}{p.}{namespace_json_a4d245ef719cc0853e8e78eb5f99c16e5}. 
+\end{DoxySeeAlso}
+\index{Json\+::\+Reader@{Json\+::\+Reader}!parse@{parse}}
+\index{parse@{parse}!Json\+::\+Reader@{Json\+::\+Reader}}
+\subsubsection[{parse(std\+::istream \&is, Value \&root, bool collect\+Comments=true)}]{\setlength{\rightskip}{0pt plus 5cm}bool Json\+::\+Reader\+::parse (
+\begin{DoxyParamCaption}
+\item[{std\+::istream \&}]{is, }
+\item[{{\bf Value} \&}]{root, }
+\item[{bool}]{collect\+Comments = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_json_1_1_reader_a8d0347e6b47343e4bc68be7ecdb9c4e9}
+
+
+Parse from input stream. 
+
+\begin{DoxySeeAlso}{See also}
+\doxyref{Json\+::operator$>$$>$(std\+::istream\&, Json\+::\+Value\&)}{p.}{namespace_json_a4d245ef719cc0853e8e78eb5f99c16e5}. 
+\end{DoxySeeAlso}
+\index{Json\+::\+Reader@{Json\+::\+Reader}!parse@{parse}}
+\index{parse@{parse}!Json\+::\+Reader@{Json\+::\+Reader}}
+\subsubsection[{parse(std\+::istream \&is, Value \&root, bool collect\+Comments=true)}]{\setlength{\rightskip}{0pt plus 5cm}bool Json\+::\+Reader\+::parse (
+\begin{DoxyParamCaption}
+\item[{std\+::istream \&}]{is, }
+\item[{{\bf Value} \&}]{root, }
+\item[{bool}]{collect\+Comments = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_json_1_1_reader_a8d0347e6b47343e4bc68be7ecdb9c4e9}
+
+
+Parse from input stream. 
+
+\begin{DoxySeeAlso}{See also}
+\doxyref{Json\+::operator$>$$>$(std\+::istream\&, Json\+::\+Value\&)}{p.}{namespace_json_a4d245ef719cc0853e8e78eb5f99c16e5}. 
+\end{DoxySeeAlso}
+\index{Json\+::\+Reader@{Json\+::\+Reader}!parse@{parse}}
+\index{parse@{parse}!Json\+::\+Reader@{Json\+::\+Reader}}
+\subsubsection[{parse(std\+::istream \&is, Value \&root, bool collect\+Comments=true)}]{\setlength{\rightskip}{0pt plus 5cm}bool Json\+::\+Reader\+::parse (
+\begin{DoxyParamCaption}
+\item[{std\+::istream \&}]{is, }
+\item[{{\bf Value} \&}]{root, }
+\item[{bool}]{collect\+Comments = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_json_1_1_reader_a8d0347e6b47343e4bc68be7ecdb9c4e9}
+
+
+Parse from input stream. 
+
+\begin{DoxySeeAlso}{See also}
+\doxyref{Json\+::operator$>$$>$(std\+::istream\&, Json\+::\+Value\&)}{p.}{namespace_json_a4d245ef719cc0853e8e78eb5f99c16e5}. 
+\end{DoxySeeAlso}
+\index{Json\+::\+Reader@{Json\+::\+Reader}!push\+Error@{push\+Error}}
+\index{push\+Error@{push\+Error}!Json\+::\+Reader@{Json\+::\+Reader}}
+\subsubsection[{push\+Error(const Value \&value, const std\+::string \&message)}]{\setlength{\rightskip}{0pt plus 5cm}bool Json\+::\+Reader\+::push\+Error (
+\begin{DoxyParamCaption}
+\item[{const {\bf Value} \&}]{value, }
+\item[{const std\+::string \&}]{message}
+\end{DoxyParamCaption}
+)}\label{class_json_1_1_reader_ade6c28e0ef00d8f2e0aa2283f91c3e37}
+
+
+Add a semantic error message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & J\+S\+O\+N \doxyref{Value}{p.}{class_json_1_1_value} location associated with the error \\
+\hline
+{\em message} & The error message. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if the error was successfully added, {\ttfamily false} if the \doxyref{Value}{p.}{class_json_1_1_value} offset exceeds the document size. 
+\end{DoxyReturn}
+\index{Json\+::\+Reader@{Json\+::\+Reader}!push\+Error@{push\+Error}}
+\index{push\+Error@{push\+Error}!Json\+::\+Reader@{Json\+::\+Reader}}
+\subsubsection[{push\+Error(const Value \&value, const std\+::string \&message)}]{\setlength{\rightskip}{0pt plus 5cm}bool Json\+::\+Reader\+::push\+Error (
+\begin{DoxyParamCaption}
+\item[{const {\bf Value} \&}]{value, }
+\item[{const std\+::string \&}]{message}
+\end{DoxyParamCaption}
+)}\label{class_json_1_1_reader_ade6c28e0ef00d8f2e0aa2283f91c3e37}
+
+
+Add a semantic error message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & J\+S\+O\+N \doxyref{Value}{p.}{class_json_1_1_value} location associated with the error \\
+\hline
+{\em message} & The error message. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if the error was successfully added, {\ttfamily false} if the \doxyref{Value}{p.}{class_json_1_1_value} offset exceeds the document size. 
+\end{DoxyReturn}
+\index{Json\+::\+Reader@{Json\+::\+Reader}!push\+Error@{push\+Error}}
+\index{push\+Error@{push\+Error}!Json\+::\+Reader@{Json\+::\+Reader}}
+\subsubsection[{push\+Error(const Value \&value, const std\+::string \&message)}]{\setlength{\rightskip}{0pt plus 5cm}bool Json\+::\+Reader\+::push\+Error (
+\begin{DoxyParamCaption}
+\item[{const {\bf Value} \&}]{value, }
+\item[{const std\+::string \&}]{message}
+\end{DoxyParamCaption}
+)}\label{class_json_1_1_reader_ade6c28e0ef00d8f2e0aa2283f91c3e37}
+
+
+Add a semantic error message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & J\+S\+O\+N \doxyref{Value}{p.}{class_json_1_1_value} location associated with the error \\
+\hline
+{\em message} & The error message. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if the error was successfully added, {\ttfamily false} if the \doxyref{Value}{p.}{class_json_1_1_value} offset exceeds the document size. 
+\end{DoxyReturn}
+\index{Json\+::\+Reader@{Json\+::\+Reader}!push\+Error@{push\+Error}}
+\index{push\+Error@{push\+Error}!Json\+::\+Reader@{Json\+::\+Reader}}
+\subsubsection[{push\+Error(const Value \&value, const std\+::string \&message)}]{\setlength{\rightskip}{0pt plus 5cm}bool Json\+::\+Reader\+::push\+Error (
+\begin{DoxyParamCaption}
+\item[{const {\bf Value} \&}]{value, }
+\item[{const std\+::string \&}]{message}
+\end{DoxyParamCaption}
+)}\label{class_json_1_1_reader_ade6c28e0ef00d8f2e0aa2283f91c3e37}
+
+
+Add a semantic error message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & J\+S\+O\+N \doxyref{Value}{p.}{class_json_1_1_value} location associated with the error \\
+\hline
+{\em message} & The error message. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if the error was successfully added, {\ttfamily false} if the \doxyref{Value}{p.}{class_json_1_1_value} offset exceeds the document size. 
+\end{DoxyReturn}
+\index{Json\+::\+Reader@{Json\+::\+Reader}!push\+Error@{push\+Error}}
+\index{push\+Error@{push\+Error}!Json\+::\+Reader@{Json\+::\+Reader}}
+\subsubsection[{push\+Error(const Value \&value, const std\+::string \&message, const Value \&extra)}]{\setlength{\rightskip}{0pt plus 5cm}bool Json\+::\+Reader\+::push\+Error (
+\begin{DoxyParamCaption}
+\item[{const {\bf Value} \&}]{value, }
+\item[{const std\+::string \&}]{message, }
+\item[{const {\bf Value} \&}]{extra}
+\end{DoxyParamCaption}
+)}\label{class_json_1_1_reader_a9b474233c3a7c688e340e70665d45223}
+
+
+Add a semantic error message with extra context. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & J\+S\+O\+N \doxyref{Value}{p.}{class_json_1_1_value} location associated with the error \\
+\hline
+{\em message} & The error message. \\
+\hline
+{\em extra} & Additional J\+S\+O\+N \doxyref{Value}{p.}{class_json_1_1_value} location to contextualize the error \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if the error was successfully added, {\ttfamily false} if either \doxyref{Value}{p.}{class_json_1_1_value} offset exceeds the document size. 
+\end{DoxyReturn}
+\index{Json\+::\+Reader@{Json\+::\+Reader}!push\+Error@{push\+Error}}
+\index{push\+Error@{push\+Error}!Json\+::\+Reader@{Json\+::\+Reader}}
+\subsubsection[{push\+Error(const Value \&value, const std\+::string \&message, const Value \&extra)}]{\setlength{\rightskip}{0pt plus 5cm}bool Json\+::\+Reader\+::push\+Error (
+\begin{DoxyParamCaption}
+\item[{const {\bf Value} \&}]{value, }
+\item[{const std\+::string \&}]{message, }
+\item[{const {\bf Value} \&}]{extra}
+\end{DoxyParamCaption}
+)}\label{class_json_1_1_reader_a9b474233c3a7c688e340e70665d45223}
+
+
+Add a semantic error message with extra context. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & J\+S\+O\+N \doxyref{Value}{p.}{class_json_1_1_value} location associated with the error \\
+\hline
+{\em message} & The error message. \\
+\hline
+{\em extra} & Additional J\+S\+O\+N \doxyref{Value}{p.}{class_json_1_1_value} location to contextualize the error \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if the error was successfully added, {\ttfamily false} if either \doxyref{Value}{p.}{class_json_1_1_value} offset exceeds the document size. 
+\end{DoxyReturn}
+\index{Json\+::\+Reader@{Json\+::\+Reader}!push\+Error@{push\+Error}}
+\index{push\+Error@{push\+Error}!Json\+::\+Reader@{Json\+::\+Reader}}
+\subsubsection[{push\+Error(const Value \&value, const std\+::string \&message, const Value \&extra)}]{\setlength{\rightskip}{0pt plus 5cm}bool Json\+::\+Reader\+::push\+Error (
+\begin{DoxyParamCaption}
+\item[{const {\bf Value} \&}]{value, }
+\item[{const std\+::string \&}]{message, }
+\item[{const {\bf Value} \&}]{extra}
+\end{DoxyParamCaption}
+)}\label{class_json_1_1_reader_a9b474233c3a7c688e340e70665d45223}
+
+
+Add a semantic error message with extra context. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & J\+S\+O\+N \doxyref{Value}{p.}{class_json_1_1_value} location associated with the error \\
+\hline
+{\em message} & The error message. \\
+\hline
+{\em extra} & Additional J\+S\+O\+N \doxyref{Value}{p.}{class_json_1_1_value} location to contextualize the error \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if the error was successfully added, {\ttfamily false} if either \doxyref{Value}{p.}{class_json_1_1_value} offset exceeds the document size. 
+\end{DoxyReturn}
+\index{Json\+::\+Reader@{Json\+::\+Reader}!push\+Error@{push\+Error}}
+\index{push\+Error@{push\+Error}!Json\+::\+Reader@{Json\+::\+Reader}}
+\subsubsection[{push\+Error(const Value \&value, const std\+::string \&message, const Value \&extra)}]{\setlength{\rightskip}{0pt plus 5cm}bool Json\+::\+Reader\+::push\+Error (
+\begin{DoxyParamCaption}
+\item[{const {\bf Value} \&}]{value, }
+\item[{const std\+::string \&}]{message, }
+\item[{const {\bf Value} \&}]{extra}
+\end{DoxyParamCaption}
+)}\label{class_json_1_1_reader_a9b474233c3a7c688e340e70665d45223}
+
+
+Add a semantic error message with extra context. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & J\+S\+O\+N \doxyref{Value}{p.}{class_json_1_1_value} location associated with the error \\
+\hline
+{\em message} & The error message. \\
+\hline
+{\em extra} & Additional J\+S\+O\+N \doxyref{Value}{p.}{class_json_1_1_value} location to contextualize the error \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if the error was successfully added, {\ttfamily false} if either \doxyref{Value}{p.}{class_json_1_1_value} offset exceeds the document size. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/robin\+\_\+f/\+Programming/\+Git/\+C\+P\+P/\+Love\+Brains/api/lib/\+A\+N\+N\+Library/include/json/json.\+h\item 
+/home/robin\+\_\+f/\+Programming/\+Git/\+C\+P\+P/\+Love\+Brains/api/lib/\+A\+N\+N\+Library/src/json/jsoncpp.\+cc\end{DoxyCompactItemize}

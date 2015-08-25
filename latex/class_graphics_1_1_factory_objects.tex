@@ -1,0 +1,100 @@
+\section{Graphics\+:\+:Factory\+Objects Class Reference}
+\label{class_graphics_1_1_factory_objects}\index{Graphics\+::\+Factory\+Objects@{Graphics\+::\+Factory\+Objects}}
+
+
+Define a factory of objects that will fill the environment in term of the environment file.  
+
+
+
+
+{\ttfamily \#include $<$factory\+\_\+object.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Factory\+Objects} (void)\label{class_graphics_1_1_factory_objects_a60218384f3ca027d24937a9994966ea6}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+{\bf $\sim$\+Factory\+Objects} (void)\label{class_graphics_1_1_factory_objects_a89aec6a156872cf980aa49c42f25f2b5}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+{\bf I\+Object} $\ast$ {\bf Create} (std\+::string const \&key) const 
+\begin{DoxyCompactList}\small\item\em Create a new object of the given key. \end{DoxyCompactList}\item 
+bool {\bf Contains} (std\+::string const \&key) const 
+\begin{DoxyCompactList}\small\item\em Search if an object is contained in the factory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void {\bf Register} (std\+::string const \&key, {\bf I\+Object} $\ast$obj)
+\begin{DoxyCompactList}\small\item\em Register a new object in the factory. \end{DoxyCompactList}\item 
+static void {\bf Delete\+All} (void)\label{class_graphics_1_1_factory_objects_a356ff72e203670d4f42190fafd056ecf}
+
+\begin{DoxyCompactList}\small\item\em Delete all the objects that have been registered in the factory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Define a factory of objects that will fill the environment in term of the environment file. 
+
+\subsection{Member Function Documentation}
+\index{Graphics\+::\+Factory\+Objects@{Graphics\+::\+Factory\+Objects}!Contains@{Contains}}
+\index{Contains@{Contains}!Graphics\+::\+Factory\+Objects@{Graphics\+::\+Factory\+Objects}}
+\subsubsection[{Contains(std\+::string const \&key) const }]{\setlength{\rightskip}{0pt plus 5cm}bool Graphics\+::\+Factory\+Objects\+::\+Contains (
+\begin{DoxyParamCaption}
+\item[{std\+::string const \&}]{key}
+\end{DoxyParamCaption}
+) const}\label{class_graphics_1_1_factory_objects_ab9f2c874aefd60e10b3ef8833ae18212}
+
+
+Search if an object is contained in the factory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & \+: Contains the key of the object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true \+: if it\textquotesingle{}s contained. 
+
+false \+: if it\textquotesingle{}s not contained. 
+\end{DoxyReturn}
+\index{Graphics\+::\+Factory\+Objects@{Graphics\+::\+Factory\+Objects}!Create@{Create}}
+\index{Create@{Create}!Graphics\+::\+Factory\+Objects@{Graphics\+::\+Factory\+Objects}}
+\subsubsection[{Create(std\+::string const \&key) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+Object} $\ast$ Graphics\+::\+Factory\+Objects\+::\+Create (
+\begin{DoxyParamCaption}
+\item[{std\+::string const \&}]{key}
+\end{DoxyParamCaption}
+) const}\label{class_graphics_1_1_factory_objects_ac21b656d946c7f193f58a140ac6ba387}
+
+
+Create a new object of the given key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & \+: Contains the key of the object. \\
+\hline
+\end{DoxyParams}
+\index{Graphics\+::\+Factory\+Objects@{Graphics\+::\+Factory\+Objects}!Register@{Register}}
+\index{Register@{Register}!Graphics\+::\+Factory\+Objects@{Graphics\+::\+Factory\+Objects}}
+\subsubsection[{Register(std\+::string const \&key, I\+Object $\ast$obj)}]{\setlength{\rightskip}{0pt plus 5cm}void Graphics\+::\+Factory\+Objects\+::\+Register (
+\begin{DoxyParamCaption}
+\item[{std\+::string const \&}]{key, }
+\item[{{\bf I\+Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_graphics_1_1_factory_objects_ae48f9e48e34020b22a18b76642d721d6}
+
+
+Register a new object in the factory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & \+: Contains the key of the object. \\
+\hline
+{\em obj} & \+: Contains the object that will be cloned in order to create a new object. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/robin\+\_\+f/\+Programming/\+Git/\+C\+P\+P/\+Love\+Brains/include/\+Graphics/factory\+\_\+object.\+h\item 
+/home/robin\+\_\+f/\+Programming/\+Git/\+C\+P\+P/\+Love\+Brains/src/\+Graphics/factory\+\_\+object.\+cc\end{DoxyCompactItemize}
