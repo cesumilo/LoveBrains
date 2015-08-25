@@ -166,6 +166,19 @@ class Plugin : public Plugin::IPlugin
 };
 ```
 
+Be careful ! There is a function that will be needed by LoveBrains in order to create your plugin !
+
+```c++
+extern "C"
+{
+  Plugin::IPlugin	*CreatePlugin(void)
+  {
+	// Replace "PluginClass" by your plugin class name.
+    return (new PluginClass());
+  }
+}
+```
+
 ## Add a plugin in LoveBrains
 
 If you want to add your plugin in LoveBrains, it's very simple ! You have to copy your ".so" file at the root of the directory called **"mods"**.
