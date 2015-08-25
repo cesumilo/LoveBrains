@@ -5,7 +5,7 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Thu Jul 23 14:07:18 2015 Guillaume ROBIN
-// Last update Mon Aug 24 14:30:30 2015 Guillaume ROBIN
+// Last update Tue Aug 25 12:01:47 2015 Guillaume ROBIN
 //
 
 #include <stdexcept>
@@ -19,7 +19,8 @@ namespace Simulator
   /*
   ** Constructor & Destructor.
   */
-  SConfig::SConfig(void) throw(): _isTournament(false),
+  SConfig::SConfig(void) throw(): _display(SConfig::DisplayMode::ENVIRONMENT_2D),
+				  _isTournament(false),
 				  _crossing_rate(DEF_CROSSING_RATE),
 				  _mutation_rate(DEF_MUTATION_RATE),
 				  _selection_rate(DEF_SELECTION_RATE),
@@ -157,6 +158,11 @@ namespace Simulator
     _isTournament = isTournament;
   }
 
+  void	SConfig::setDisplayMode(SConfig::DisplayMode display) throw()
+  {
+    _display = display;
+  }
+
   /*
   ** Getters.
   */
@@ -240,11 +246,17 @@ namespace Simulator
     return (_isTournament);
   }
 
+  SConfig::DisplayMode	SConfig::getDisplayMode(void) const throw()
+  {
+    return (_display);
+  }
+
   /*
   ** Overload.
   */
   SConfig&	SConfig::operator=(SConfig const& config)
   {
+    _display = config.getDisplayMode();
     _isTournament = config.isTournament();
     _crossing_rate = config.getCrossingRate();
     _mutation_rate = config.getMutationRate();

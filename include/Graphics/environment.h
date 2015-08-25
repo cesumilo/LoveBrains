@@ -5,7 +5,7 @@
 ** Login   <robin_f@epitech.eu>
 ** 
 ** Started on  Thu Jul 23 11:39:20 2015 Guillaume ROBIN
-** Last update Mon Aug 24 14:06:12 2015 Guillaume ROBIN
+** Last update Tue Aug 25 12:13:20 2015 Guillaume ROBIN
 */
 
 #ifndef ENVIRONMENT_H_
@@ -28,23 +28,23 @@ namespace Graphics
    * \class Environment
    * \brief Define the graphic environment that will contain the objects defined by plugins.
   */
-  class Environment : public GA::AObservable
+  class Environment2D : public GA::AObservable
   {
   public:
     /*!
      * \brief Constructor.
      */
-    Environment(void);
+    Environment2D(void);
     /*!
      * \brief Constructor.
      * \param width : window's width
      * \param height : window's height.
      */
-    Environment(unsigned int width, unsigned int height);
+    Environment2D(unsigned int width, unsigned int height);
     /*!
      * \brief Destructor.
      */
-    ~Environment(void);
+    ~Environment2D(void);
 
     /*
     ** Getters.
@@ -90,11 +90,16 @@ namespace Graphics
      * \param isTournament : Contains the boolean that says if it's a tournament.
      */
     void	setIsTournament(bool isTournament);
+    /*!
+     * \brief Set if the environment has to create a window.
+     * \param display : (true) if the environment has to create a window.
+     */
+    void	setDisplay(bool display);
 
     /*
     ** Overload.
     */
-    Environment&	operator=(Environment const& env);
+    Environment2D&	operator=(Environment2D const& env);
 
     /*
     ** Methods.
@@ -116,6 +121,7 @@ namespace Graphics
     void	Run(std::list<GA::IDNA *>& brains);
 
   private:
+    bool				_display; /*!< Contains if the environment has to create a window. */
     bool				_isTournament; /*!< Contains the boolean that says if it's a tournament or not. */
     unsigned int			_num_epochs; /*!< Contains the current number of epochs */
     std::list<IObject *>		_env; /*!< Contains all the objects that inherit of Graphics::IObject */

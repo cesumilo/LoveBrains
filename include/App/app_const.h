@@ -5,7 +5,7 @@
 ** Login   <robin_f@epitech.eu>
 ** 
 ** Started on  Fri Jul 31 11:49:24 2015 Guillaume ROBIN
-** Last update Mon Aug 24 14:37:26 2015 Guillaume ROBIN
+** Last update Tue Aug 25 12:08:57 2015 Guillaume ROBIN
 */
 
 #ifndef APP_CONST_H_
@@ -27,7 +27,7 @@
 # define DEF_FUNCTION_SIGMOID	(const char *)"sigmoid"
 # define DEF_FUNCTION_THRESHOLD	(const char *)"threshold"
 # define DEF_DELIMITER_SIZE	(const char *)"x"
-# define DEF_MAX_GETTERS	(unsigned int)13
+# define DEF_MAX_GETTERS	(unsigned int)14
 # define DEF_GET_CROSSING_RATE	(const char *)"crossing_rate"
 # define DEF_GET_MUTATION_RATE	(const char *)"mutation_rate"
 # define DEF_GET_SELECTION_RATE	(const char *)"selection_rate"
@@ -41,6 +41,7 @@
 # define DEF_GET_OACTIVATION	(const char *)"outputs activation function"
 # define DEF_GET_ENVIRONMENT_S	(const char *)"environment size"
 # define DEF_GET_TOURNAMENT	(const char *)"tournament"
+# define DEF_GET_DISPLAYMODE	(const char *)"display mode"
 
 # define DEF_CONST_MINCHAR	(char)'a'
 # define DEF_CONST_MAXCHAR	(char)'z'
@@ -52,5 +53,9 @@
 # define DEF_CONST_UNDERSCHAR	(char)'_'
 # define DEF_CONST_MINNUMCHAR	(char)'0'
 # define DEF_CONST_MAXNUMCHAR	(char)'9'
+# define DEF_CONST_DMNONE	(const char *)"none"
+# define DEF_CONST_DM2D_1      	(const char *)"2D"
+# define DEF_CONST_DM2D_2      	(const char *)"2d"
+# define DEF_CONST_ISTOURNAMENT	(const char *)"true"
 
 #endif /* !APP_CONST_H_ */

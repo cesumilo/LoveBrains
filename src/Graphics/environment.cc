@@ -5,7 +5,7 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Thu Jul 23 11:41:41 2015 Guillaume ROBIN
-// Last update Mon Aug 24 15:10:01 2015 Guillaume ROBIN
+// Last update Tue Aug 25 12:32:13 2015 Guillaume ROBIN
 //
 
 #include <iostream>
@@ -26,12 +26,12 @@ namespace Graphics
   /*
   ** Static values.
   */
-  sf::RenderWindow	Environment::_window;
+  sf::RenderWindow	Environment2D::_window;
 
   /*
   ** Constructor & Destructor.
   */
-  Environment::Environment(void): _isTournament(false), _num_epochs(0)
+  Environment2D::Environment2D(void): _display(true), _isTournament(false), _num_epochs(0)
   {
     std::string	font_name("CODE Bold.otf");
     std::string	path(DEF_APP_FONTS);
@@ -55,12 +55,13 @@ namespace Graphics
     _window.setFramerateLimit(DEF_APP_FRAMER);
   }
 
-  Environment::Environment(unsigned int width, unsigned int height): Environment()
+  Environment2D::Environment2D(unsigned int width, unsigned int height): Environment2D()
   {
-    _window.create(sf::VideoMode(width, height), DEF_APP_TITLE, sf::Style::Default);
+    if (_display)
+      _window.create(sf::VideoMode(width, height), DEF_APP_TITLE, sf::Style::Default);
   }
 
-  Environment::~Environment(void)
+  Environment2D::~Environment2D(void)
   {
     for (std::list<IObject *>::iterator it = _env.begin(); it != _env.end(); ++it)
       delete(*it);
@@ -69,27 +70,27 @@ namespace Graphics
   /*
   ** Getters.
   */
-  std::list<IObject *> const&	Environment::getObjects(void) const
+  std::list<IObject *> const&	Environment2D::getObjects(void) const
   {
     return (_env);
   }
 
-  std::list<IObject *>&	Environment::getObjects(void)
+  std::list<IObject *>&	Environment2D::getObjects(void)
   {
     return (_env);
   }
 
-  Physics const&	Environment::getPhysics(void) const
+  Physics const&	Environment2D::getPhysics(void) const
   {
     return (_physics);
   }
 
-  Physics&		Environment::getPhysics(void)
+  Physics&		Environment2D::getPhysics(void)
   {
     return (_physics);
   }
 
-  sf::RenderWindow&	Environment::getWindow(void)
+  sf::RenderWindow&	Environment2D::getWindow(void)
   {
     return (_window);
   }
@@ -141,7 +142,7 @@ namespace Graphics
     return (num);
   }
 
-  void			Environment::LoadFromFile(const char *path)
+  void			Environment2D::LoadFromFile(const char *path)
   {
     std::ifstream      	file(path);
     std::string		line;
@@ -183,15 +184,20 @@ namespace Graphics
       std::cerr << ERR_ENV_INVALIDFILE << std::endl;
   }
 
-  void	Environment::setIsTournament(bool isTournament)
+  void	Environment2D::setIsTournament(bool isTournament)
   {
     _isTournament = isTournament;
+  }
+
+  void	Environment2D::setDisplay(bool display)
+  {
+    _display = display;
   }
 
   /*
   ** Overload.
   */
-  Environment&	Environment::operator=(Environment const& env)
+  Environment2D&	Environment2D::operator=(Environment2D const& env)
   {
     _env = env.getObjects();
     _physics = env.getPhysics();
@@ -201,7 +207,7 @@ namespace Graphics
   /*
   ** Methods.
   */
-  void		Environment::UpdateInfos(void)
+  void		Environment2D::UpdateInfos(void)
   {
     IBrain	*brain;
     double	fitness = 0;
@@ -223,7 +229,7 @@ namespace Graphics
     _epochs.setString(std::string(DEF_ENV_STREPOCHS) + std::to_string(_num_epochs));
   }
 
-  void	Environment::Update(sf::Time elapsed)
+  void	Environment2D::Update(sf::Time elapsed)
   {
     _physics.UpdateColliders(_env);
     _physics.UpdateSensors(_env);
@@ -238,7 +244,7 @@ namespace Graphics
     _physics.UpdateEnvironment(_env);
   }
 
-  void	Environment::Draw(void)
+  void	Environment2D::Draw(void)
   {
     _window.clear(sf::Color::White);
     for (std::list<IObject *>::iterator it = _env.begin(); it != _env.end(); ++it)
@@ -293,7 +299,7 @@ namespace Graphics
       }
   }
 
-  void		Environment::Run(std::list<GA::IDNA *>& brains)
+  void		Environment2D::Run(std::list<GA::IDNA *>& brains)
   {
     sf::Clock	clock;
     sf::Event	event;
@@ -302,7 +308,7 @@ namespace Graphics
       _physics.GenerateEnvironment(_env, brains);
     else
       _physics.GenerateTournament(_env, brains);
-    while (_window.isOpen() && countBrainAlive(_env) > 0)
+    while ((!_display || _window.isOpen()) && countBrainAlive(_env) > 0)
       {
 	while (_window.pollEvent(event))
 	  {
@@ -310,11 +316,12 @@ namespace Graphics
 	      _window.close();
 	  }
 	Update(clock.restart());
-	Draw();
+	if (_display)
+	  Draw();
       }
     UpdateInfos();
     ++_num_epochs;
-    if (!_window.isOpen() || _isTournament)
+    if ((_display && !_window.isOpen()) || _isTournament)
       Notify(GA::AObserver::States::QUIT);
     if (_isTournament)
       saveRanking(_env);

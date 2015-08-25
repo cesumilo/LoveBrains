@@ -5,7 +5,7 @@
 ** Login   <robin_f@epitech.eu>
 ** 
 ** Started on  Thu Jul 23 11:56:50 2015 Guillaume ROBIN
-** Last update Mon Aug 24 14:26:18 2015 Guillaume ROBIN
+** Last update Tue Aug 25 11:58:30 2015 Guillaume ROBIN
 */
 
 #ifndef SIMULATOR_H_
@@ -112,7 +112,7 @@ namespace Simulator
     static void	Evaluate(std::list<GA::IDNA *>& brains);
 
   private:
-    static Graphics::Environment	*_env; /*!< Contains the environment */
+    static Graphics::Environment2D	*_env; /*!< Contains the environment */
     GANN::GANNEngine			_engine; /*!< Contains the GANNEngine */
     GANN::ANNGenerator			_generator; /*!< Contains the ANN generator */
     GA::GAConfig			_config; /*!< Contains the configuration of the genetic algorithm engine */

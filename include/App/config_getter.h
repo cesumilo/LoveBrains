@@ -5,7 +5,7 @@
 ** Login   <robin_f@epitech.eu>
 ** 
 ** Started on  Fri Jul 31 12:05:11 2015 Guillaume ROBIN
-** Last update Mon Aug 24 14:38:43 2015 Guillaume ROBIN
+** Last update Tue Aug 25 12:05:17 2015 Guillaume ROBIN
 */
 
 #ifndef CONFIG_GETTER_H_
@@ -91,6 +91,10 @@ namespace App
    * \brief Get if it's a tournament from the configuration file.
    */
   void	config_getIsTournament(Simulator::SConfig& config, std::string const& value);
+  /*!
+   * \brief Get the display mode of the environment.
+   */
+  void	config_getDisplayMode(Simulator::SConfig& config, std::string const& value);
 }
 
 #endif /* !CONFIG_GETTER_H_ */

@@ -5,7 +5,7 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Thu Jul 23 12:19:26 2015 Guillaume ROBIN
-// Last update Mon Aug 24 14:34:33 2015 Guillaume ROBIN
+// Last update Tue Aug 25 12:39:20 2015 Guillaume ROBIN
 //
 
 #include <iostream>
@@ -18,7 +18,7 @@ namespace Simulator
   /*
   ** Static values.
   */
-  Graphics::Environment	*Simulator::_env;
+  Graphics::Environment2D	*Simulator::_env;
 
   /*
   ** Constructor & Destructor.
@@ -82,7 +82,18 @@ namespace Simulator
   */
   void	Simulator::InitEnvironment(SConfig const& config)
   {
-    _env = new Graphics::Environment(config.getEnvironmentWidth(), config.getEnvironmentHeight());
+    switch (config.getDisplayMode())
+      {
+      case SConfig::DisplayMode::NONE:
+	_env = new Graphics::Environment2D();
+	if (!_env)
+	  throw (SimulatorException(ERR_SIMULATOR_ENV));
+	_env->setDisplay(false);
+	break;
+      case SConfig::DisplayMode::ENVIRONMENT_2D:
+	_env = new Graphics::Environment2D(config.getEnvironmentWidth(), config.getEnvironmentHeight());
+	break;
+      }
     if (!_env)
       throw (SimulatorException(ERR_SIMULATOR_ENV));
     _env->addObserver(&(_engine.getGAEngine()));
@@ -105,6 +116,7 @@ namespace Simulator
 	_engine.getGAEngine().setPoolSize(config.getPoolSize());
 	_engine.getGAEngine().setReportInterval(config.getReportInterval());
 	_engine.getGAEngine().setExpectedFitness(config.getExpectedFitness());
+	_engine.getGAEngine().setMaxEpochs(config.getMaxEpochs());
       }
     catch (GA::GAEngineException const& e)
       {

@@ -5,7 +5,7 @@
 ** Login   <robin_f@epitech.eu>
 ** 
 ** Started on  Thu Jul 23 13:51:41 2015 Guillaume ROBIN
-** Last update Mon Aug 24 14:30:11 2015 Guillaume ROBIN
+** Last update Tue Aug 25 12:01:29 2015 Guillaume ROBIN
 */
 
 #ifndef SIMULATOR_CONFIG_H_
@@ -26,6 +26,10 @@ namespace Simulator
   class SConfig
   {
   public:
+    /*!
+     * \brief Contains several display options.
+     */
+    enum class DisplayMode { NONE, ENVIRONMENT_2D };
     /*!
      * \brief Constructor.
      */
@@ -117,6 +121,11 @@ namespace Simulator
      * \param isTournament : (true) if it's a tournament, (false) is it's not.
      */
     void	setIsTournament(bool isTournament) throw();
+    /*!
+     * \brief Set the display mode of the environment.
+     * \param display : Contains the display mode.
+     */
+    void	setDisplayMode(DisplayMode display) throw();
 
     /*
     ** Getters.
@@ -202,6 +211,11 @@ namespace Simulator
      * \return bool
      */
     bool	isTournament(void) const throw();
+    /*!
+     * \brief Get the current display mode of the environment.
+     * \return SConfig::DisplayMode
+     */
+    DisplayMode	getDisplayMode(void) const throw();
 
     /*
     ** Overlaod.
@@ -209,6 +223,7 @@ namespace Simulator
     SConfig&	operator=(SConfig const& config);
 
   private:
+    DisplayMode			_display; /*!< Contains the current display mode of the environment. */
     bool			_isTournament; /*!< Contains the boolean that says if it's a tournament. */
     double			_crossing_rate; /*!< Contains the crossing rate. */
     double			_mutation_rate; /*!< Contains the mutation rate. */

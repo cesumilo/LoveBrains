@@ -5,7 +5,7 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Sat Aug  1 12:35:21 2015 Guillaume ROBIN
-// Last update Mon Aug 24 15:39:38 2015 Guillaume ROBIN
+// Last update Tue Aug 25 12:41:13 2015 Guillaume ROBIN
 //
 
 #include <cmath>
@@ -218,22 +218,22 @@ void			BasicAI::Update(void)
   unsigned int		action = 0;
 
   // DEBUG
-  sf::Vector2f			velocity(0, 200);
-  sf::Vector2f			visionFieldLeft;
-  sf::Vector2f			visionFieldRight;
-  sf::Vector2f			p2;
-  sf::Vector2f			p3;
+  // sf::Vector2f			velocity(0, 200);
+  // sf::Vector2f			visionFieldLeft;
+  // sf::Vector2f			visionFieldRight;
+  // sf::Vector2f			p2;
+  // sf::Vector2f			p3;
 
-  velocity = Math::RotateVector2D(velocity, _angle);
-  visionFieldLeft = Math::RotateVector2D(velocity, -20);
-  visionFieldRight = Math::RotateVector2D(velocity, 20);
-  p2.x = _position.x + visionFieldLeft.x;
-  p2.y = _position.y + visionFieldLeft.y;
-  p3.x = _position.x + visionFieldRight.x;
-  p3.y = _position.y + visionFieldRight.y;
+  // velocity = Math::RotateVector2D(velocity, _angle);
+  // visionFieldLeft = Math::RotateVector2D(velocity, -20);
+  // visionFieldRight = Math::RotateVector2D(velocity, 20);
+  // p2.x = _position.x + visionFieldLeft.x;
+  // p2.y = _position.y + visionFieldLeft.y;
+  // p3.x = _position.x + visionFieldRight.x;
+  // p3.y = _position.y + visionFieldRight.y;
 
-  _vfield1.setPosition(p2);
-  _vfield2.setPosition(p3);
+  // _vfield1.setPosition(p2);
+  // _vfield2.setPosition(p3);
   // END DEBUG
 
   _time += _elapsed.asSeconds();

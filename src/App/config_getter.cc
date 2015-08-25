@@ -5,7 +5,7 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Fri Jul 31 12:09:39 2015 Guillaume ROBIN
-// Last update Mon Aug 24 14:50:24 2015 Guillaume ROBIN
+// Last update Tue Aug 25 12:20:49 2015 Guillaume ROBIN
 //
 
 #include <stdexcept>
@@ -215,9 +215,9 @@ namespace App
   {
     try
       {
-	if (value.find(DEF_FUNCTION_SIGMOID) != value.size())
+	if (value.find(DEF_FUNCTION_SIGMOID) != std::string::npos)
 	  config.setActivation(&GANN::Sigmoid, GANN::ANN::ActivationType::SIGMOID);
-	else if (value.find(DEF_FUNCTION_THRESHOLD) != value.size())
+	else if (value.find(DEF_FUNCTION_THRESHOLD) != std::string::npos)
 	  config.setActivation(&GANN::Threshold, GANN::ANN::ActivationType::THRESHOLD);
 	else
 	  config.setActivation(&GANN::Sigmoid, GANN::ANN::ActivationType::SIGMOID);
@@ -232,9 +232,9 @@ namespace App
   {
     try
       {
-	if (value.find(DEF_FUNCTION_SIGMOID) != value.size())
+	if (value.find(DEF_FUNCTION_SIGMOID) != std::string::npos)
 	  config.setOutputsActivation(&GANN::Sigmoid, GANN::ANN::ActivationType::SIGMOID);
-	else if (value.find(DEF_FUNCTION_THRESHOLD) != value.size())
+	else if (value.find(DEF_FUNCTION_THRESHOLD) != std::string::npos)
 	  config.setOutputsActivation(&GANN::Threshold, GANN::ANN::ActivationType::THRESHOLD);
 	else
 	  config.setOutputsActivation(&GANN::Sigmoid, GANN::ANN::ActivationType::SIGMOID);
@@ -279,12 +279,20 @@ namespace App
       }
   }
 
-  void	config_getIsTournament(Simulator::SConfig& config,
-			       std::string const& value)
+  void	config_getIsTournament(Simulator::SConfig& config, std::string const& value)
   {
-    if (value.find("true"))
+    if (value.find(DEF_CONST_ISTOURNAMENT) != std::string::npos)
       config.setIsTournament(true);
     else
       config.setIsTournament(false);
+  }
+
+  void	config_getDisplayMode(Simulator::SConfig& config, std::string const& value)
+  {
+    if (value.find(DEF_CONST_DMNONE) != std::string::npos)
+      config.setDisplayMode(Simulator::SConfig::DisplayMode::NONE);
+    else if (value.find(DEF_CONST_DM2D_1) != std::string::npos
+	     || value.find(DEF_CONST_DM2D_2) != std::string::npos)
+      config.setDisplayMode(Simulator::SConfig::DisplayMode::ENVIRONMENT_2D);
   }
 }
