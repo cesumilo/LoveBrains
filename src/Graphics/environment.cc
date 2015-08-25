@@ -5,7 +5,7 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Thu Jul 23 11:41:41 2015 Guillaume ROBIN
-// Last update Tue Aug 25 12:32:13 2015 Guillaume ROBIN
+// Last update Tue Aug 25 16:12:16 2015 Guillaume ROBIN
 //
 
 #include <iostream>
@@ -235,7 +235,7 @@ namespace Graphics
     _physics.UpdateSensors(_env);
     for (std::list<IObject *>::iterator it = _env.begin(); it != _env.end(); ++it)
       {
-	if (*it)
+	if (*it && !((*it)->isDead()))
 	  {
 	    (*it)->setElapsedTime(elapsed);
 	    (*it)->Update();

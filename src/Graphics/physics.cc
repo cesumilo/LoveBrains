@@ -5,7 +5,7 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Wed Jul 22 15:14:26 2015 Guillaume ROBIN
-// Last update Mon Aug 24 15:19:59 2015 Guillaume ROBIN
+// Last update Tue Aug 25 16:18:10 2015 Guillaume ROBIN
 //
 
 #include <iostream>
@@ -138,28 +138,29 @@ namespace Graphics
 	  {
 	    key = (*it)->getType();
 	    if ((*it)->isDead())
-	      _cur_settings[key]--;
+	      {
+		_cur_settings[key]--;
+		if (!((*it)->hasBrain()))
+		  {
+		    delete(*it);
+		    it = env.erase(it);
+		  }
+	      }
 	  }
       }
-    for (std::list<IObject *>::iterator it = env.begin(); it != env.end(); ++it)
+    for (std::map<std::string, int>::iterator it = _env_settings.begin();
+	 it != _env_settings.end(); ++it)
       {
-	if (*it)
+	if (it->second > _cur_settings[it->first] && _gen_settings[it->first])
 	  {
-	    key = (*it)->getType();
-	    if (!(*it)->hasBrain() && (*it)->isDead() && _cur_settings[key] < _env_settings[key])
+	    for (int i = _cur_settings[it->first]; i < it->second; ++i)
 	      {
-		it = env.erase(it);
-		if (_gen_settings[key])
+		if (!(ptr = _factory.Create(it->first)))
+		  std::cerr << ERR_PHYSICS_CREATE << std::endl;
+		else
 		  {
-		    ++it;
-		    if (!(ptr = _factory.Create(key)))
-		      std::cerr << ERR_PHYSICS_CREATE << std::endl;
-		    else
-		      {
-			env.insert(it, ptr);
-			++_cur_settings[key];
-		      }
-		    --it;
+		    env.push_back(ptr);
+		    ++_cur_settings[it->first];
 		  }
 	      }
 	  }
@@ -174,13 +175,16 @@ namespace Graphics
       {
 	for (std::list<IObject *>::iterator it2 = env.begin(); it2 != env.end(); ++it2)
 	  {
-	    for (unsigned int i = 0; i < _colls.size(); ++i)
+	    if (!((*it1)->isDead()) && !((*it2)->isDead()))
 	      {
-		if (_colls[i] && _colls[i]->isValid((*it1)->getType(), (*it2)->getType())
-		    && _colls[i]->isCollision(*it1, *it2) && (action = _colls[i]->getAction()))
+		for (unsigned int i = 0; i < _colls.size(); ++i)
 		  {
-		    action->Update(*it1);
-		    action->Update(*it2);
+		    if (_colls[i] && _colls[i]->isValid((*it1)->getType(), (*it2)->getType())
+			&& _colls[i]->isCollision(*it1, *it2) && (action = _colls[i]->getAction()))
+		      {
+			action->Update(*it1);
+			action->Update(*it2);
+		      }
 		  }
 	      }
 	  }
