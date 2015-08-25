@@ -27,7 +27,9 @@ The Makefile contains several methods :
 
 Programming :
 
-- C++
+- C++11
+
+- GCC (C++11)
 
 - Oriented Object Programming
 
