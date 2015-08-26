@@ -1,10 +1,319 @@
 \section*{Description}
 
-At the beginning, I have developed a little experiment with neural networks and genetic algorithms in order to make an artificial intelligence that will be able to survive in its environment. It works well then I decided to share my experiment and, maybe, improve it. The final result is this program. You will be able to create plugins to add a lot of objects in your simulation. You can add what ever you want, like new artificial intelligences.
+Love\+Brains is a simulator of artificial intelligence based on a plugin system. It provides an 2\+D environment that allows you to create any kind of simulation. The engine uses Artificial Neural Network and Genetic Algorithm with the aim of learning how to get the best score.
 
 \section*{Documentation}
 
 {\tt Love\+Brains documentation (doxygen)}
+
+\section*{Installation}
+
+In order to compile Love\+Brains, this is very simple \+: \begin{quote}
+\$$>$ make \&\& make clean \end{quote}
+
+
+The Makefile contains several methods \+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries make} \+: Compile Love\+Brains without removing the object files.
+\item {\bfseries make clean} \+: Remove all the object files.
+\item {\bfseries make fclean} \+: Remove the executable and the object files.
+\item {\bfseries make re} \+: Remove the executable and the object files and then compile Love\+Brains.
+\end{DoxyItemize}
+
+\section*{How to use Love\+Brains ?}
+
+\subsection*{Requirements}
+
+Programming \+:
+
+
+\begin{DoxyItemize}
+\item C++11
+\item G\+C\+C (C++11)
+\item Oriented Object Programming
+\item {\tt S\+F\+M\+L Library}
+\item {\tt Love\+Brains A\+P\+I}
+\end{DoxyItemize}
+
+Concept \+:
+
+
+\begin{DoxyItemize}
+\item {\tt Artificial Neural Network}
+\item {\tt Genetic Algorithm}
+\end{DoxyItemize}
+
+\subsection*{How to create a simulation ?}
+
+In order to create a simulation, you have to code a plugin. Each plugin must be stored at the root of the directory called \char`\"{}mods\char`\"{}. There is an A\+P\+I that allows you to create your own objects, colliders, behaviors and sensors. In fact, each simulation needs some objects. The objects can interact with the environment with the help of the colliders. Each collider has to have a behavior which will modify the object. If you create an object which has an artificial neural network you will need to create sensors. They will give informations about the environment to the neural network and help it to take a decision. A plugin is not simple, you have to think about it before coding it !
+
+\subsection*{Compile a plugin}
+
+This is an example of Makefile that compile the basic survival plugin \+:
+
+
+\begin{DoxyCode}
+1 CC  = g++
+2 
+3 RM  = rm -f
+4 
+5 NAME    = plugin\_name.so # Replace by your plugin name, ".so" is MANDATORY !
+6 
+7 CXXFLAGS    += -std=c++11
+8 
+9 CXXFLAGS    += -I ./include/ -I ./api/include/ -I ./api/lib/ANNLibrary/include/
+10 
+11 LDFLAGS = -lsfml-graphics -lsfml-window -lsfml-system -lm -lANN -L./api/lib/ANNLibrary/
+12 
+13 SRCS    += # Add sources here !
+14 
+15 OBJS    = $(SRCS:.cc=.o)
+16 
+17 
+18 all: lib $(NAME)
+19 
+20 lib:
+21     make -C ./api/lib/ANNLibrary/
+22 
+23 clib:
+24     make clean -C ./api/lib/ANNLibrary/
+25 
+26 flib:
+27     make fclean -C ./api/lib/ANNLibrary/
+28 
+29 %.o: %.cc
+30     $(CC) -fPIC $(CXXFLAGS) -c $< $(LDFLAGS) -o $@
+31 
+32 $(NAME): $(OBJS)
+33     $(CC) -shared $(CXXFLAGS) $(OBJS) -o $(NAME) -Wl,--whole-archive -lANN -L./api/lib/ANNLibrary
+       -Wl,--no-whole-archive
+34 
+35 clean: clib
+36     $(RM) $(OBJS)
+37 
+38 fclean: clean flib
+39     $(RM) $(NAME)
+40 
+41 re: fclean all
+42 
+43 .PHONY: all re clean fclean lib clib flib
+\end{DoxyCode}
+
+
+{\bfseries You can compile your own plugin with the same Makefile.}
+
+\subsection*{Create an object}
+
+When you want to code a plugin, you have to add some objects to the simulator. In order to create an object that will be compatible with Love\+Brains, it has to inherit from the interface called $\ast$$\ast$\char`\"{}\+I\+Object\char`\"{}$\ast$$\ast$ ({\tt What is the I\+Object interface ?}).
+
+If you want to create an artificial intelligence, the class has to inherit from the interface called $\ast$$\ast$\char`\"{}\+I\+Brain\char`\"{}$\ast$$\ast$ ({\tt What is the I\+Brain interface ?}).
+
+
+\begin{DoxyCode}
+1 \{c++\}
+2 // IObject example.
+3 class Food : public Graphics::IObject
+4 \{
+5     public:
+6         Food();
+7         ~Food();
+8 
+9         bool isDead() const;
+10         bool hasBrain() const;
+11         std::string getType() const;
+12 
+13         void setPosition(sf::Vector2f const& position);
+14         void setIsDead(bool isDead);
+15         void setElapsedTime(sf::Time& time);
+16 
+17         Graphics::IObject *Clone(void);
+18         void Update(void);
+19     private:
+20         bool \_dead;
+21         sf::Vector2f \_position;
+22 \};
+23 
+24 // IBrain example.
+25 class AIObject : public Graphics::IBrain
+26 \{
+27     public:
+28         AIObject();
+29         ~AIObject();
+30 
+31         // Graphics::IObject.
+32         bool isDead() const;
+33         bool hasBrain() const;
+34         std::string getType() const;
+35 
+36         // Graphics::IBrain.
+37         double getFitness() const;
+38 
+39         // Graphics::IObject.
+40         void setPosition(sf::Vector2f const& position);
+41         void setIsDead(bool isDead);
+42         void setElapsedTime(sf::Time& time);
+43 
+44         // Graphics::IBrain.
+45         void setFitness(double fitness);
+46         void setBrain(GANN::ANN const& brain);
+47         void setInput(unsigned int index, double value);
+48 
+49         Graphics::IObject *Clone(void);
+50         void Update(void);
+51     private:
+52         bool \_dead;
+53         double \_fitness;
+54         sf::Vector2f \_position;
+55         GANN::ANN \_brain;
+56 \};
+\end{DoxyCode}
+
+
+\subsection*{Create a plugin}
+
+The way to create a plugin is very simple. First you have to define a class that inherit from the interface called $\ast$$\ast$\char`\"{}\+I\+Plugin\char`\"{}$\ast$$\ast$ ({\tt What is the I\+Plugin interface ?}). The plugin will be able to add some objects, colliders and sensors to the objects factory of Love\+Brains.
+
+
+\begin{DoxyCode}
+1 \{c++\}
+2 // IPlugin example.
+3 class Plugin : public Plugin::IPlugin
+4 \{
+5     public:
+6         Plugin();
+7         ~Plugin();
+8 
+9         std::vector<Graphics::IObject *>& getObjects(void);
+10         std::vector<Graphics::ICollider *>& getColliders(void);
+11         std::vector<Graphics::ISensor *>& getSensors(void);
+12 
+13     private:
+14 \};
+\end{DoxyCode}
+
+
+Be careful ! There is a function that will be needed by Love\+Brains in order to create your plugin !
+
+
+\begin{DoxyCode}
+1 \{c++\}
+2 extern "C"
+3 \{
+4   Plugin::IPlugin   *CreatePlugin(void)
+5   \{
+6     // Replace "PluginClass" by your plugin class name.
+7     return (new PluginClass());
+8   \}
+9 \}
+\end{DoxyCode}
+
+
+\subsection*{Add a plugin in Love\+Brains}
+
+If you want to add your plugin in Love\+Brains, it\textquotesingle{}s very simple ! You have to copy your \char`\"{}.\+so\char`\"{} file at the root of the directory called $\ast$$\ast$\char`\"{}mods\char`\"{}$\ast$$\ast$.
+
+\subsection*{Set the simulator\textquotesingle{}s configurations}
+
+As you can see, there are two files with Love\+Brains. First, the simulator configurations file and then the environment configurations file. In this part, I will show you how to set the simulator with its file.
+
+
+\begin{DoxyCode}
+1 # Simulator Configuration file
+2 
+3 # The crossing rate is a characteristic of the genetic algorithm.
+4 # The range is between 0 and 1.
+5 # It will determine the percentage of parent's genes that will be add to the child.
+6 crossing\_rate: 0.7
+7 
+8 # The mutation rate is a characteristic of the genetic algortihm.
+9 # The range is between 0 and 1.
+10 # It will determine the percentage of chance that has the individual to mutate.
+11 mutation\_rate: 0.1
+12 
+13 # The selection rate is a characteristic of the genetic algorithm.
+14 # The range is between 0 and 1.
+15 # It will determine the percentage of individuals that will be removed in the next generation.
+16 selection\_rate: 0.9
+17 
+18 # It will determine the score that we want to reach.
+19 expected\_fitness: 10000
+20 
+21 # The tournament pool size is a characteristic of the genetic algorithm.
+22 # The range is between 1 and POPULATION\_SIZE.
+23 # It will determine the size of pool in the tournament. The tournament will randomly create a pool of
+       pool\_size individuals. The engine will take the best individual in this pool and add it to the parents. At the
+       end of the tournament, there is a list of parents that will be used to generate the childs for the next
+       generation.
+24 tournament pool\_size: 5
+25 
+26 # It will determine how many epochs that you want to do. -1 says to the engine that there is not maximum
+       epochs.
+27 max epochs: -1
+28 
+29 # It will determine the interval between each report of the population.
+30 report interval: 10
+31 
+32 # It will determine the size of the population. Be careful ! The size of the population means the number of
+       artificial intelligences in the environment. The size of the population has to be the same as the number of
+       artificial intelligences in the environment configurations.
+33 population size: 50
+34 
+35 # It will determine the topology of the neural network. Be careful about it, it's in relation with your
+       simulation.
+36 neural network: 2-2-5
+37 
+38 # It will determine if the simulator is in "tournament" mode or not.
+39 tournament: false
+40 
+41 # It will determine the display mode.
+42 # Values : NONE, 2D
+43 display mode: 2D
+44 
+45 # It will determine the activation function for the intern layers of the neural network.
+46 # Value : sigmoid, threshold
+47 activation function: sigmoid
+48 
+49 # It will determine the activation function for the output layer of the neural network.
+50 # Values : sigmoid, threshold
+51 outputs activation function: sigmoid
+52 
+53 # It will determine the size of the window.
+54 environment size: 1280x720
+\end{DoxyCode}
+
+
+\subsection*{Set the environment\textquotesingle{}s configurations}
+
+The environment configurations file provides the informations about the environment. You have to write the type of the object, the number of object in the environment and if it will be generated by the physics engine when one of them dies.
+
+
+\begin{DoxyCode}
+1 # This is a file that provides objets for the simulation
+2 
+3 # type, number of object, generation condition.
+4 basic\_food, 60, true # Object of type "basic\_food" is given in the basic survival plugin.
+5 basic\_survival\_ai, 50, false # Object of type "basic\_survival\_ai" is given in the basic survival plugin.
+\end{DoxyCode}
+
+
+\subsection*{Set the tournament mode}
+
+First you have to set the tournament mode in the simulator configurations file. The effect of this option is that Love\+Brains will generate some A\+I with the neural networks given at the root of the directory called $\ast$$\ast$\char`\"{}brains\char`\"{}$\ast$$\ast$. At the end of the simulation, it will create a file $\ast$$\ast$\char`\"{}tournament.\+txt\char`\"{}$\ast$$\ast$ which contains the score of each A\+I created with a file.
+
+
+\begin{DoxyCode}
+1 # Simulator configurations file.
+2 [...]
+3 tournament: true
+4 [...]
+\end{DoxyCode}
+
+
+\subsection*{Example}
+
+You will find an example of plugin in the directory $\ast$$\ast$\char`\"{}mods\char`\"{}$\ast$$\ast$ which is called $\ast$$\ast$\char`\"{}basic\+\_\+survival\char`\"{}$\ast$$\ast$. It is ready to be compiled and runned in the simulator. You have to move the file $\ast$\char`\"{}basic\+\_\+survival.\+so\char`\"{}$\ast$ at the root of the directory called $\ast$$\ast$\char`\"{}mods\char`\"{}$\ast$$\ast$.
 
 \section*{Licence}
 

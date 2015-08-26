@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>LoveBrains: LoveBrains</title>
+<title>LoveBrains: LoveBrains (Beta 1.0.0)</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -78,13 +78,245 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">LoveBrains </div>  </div>
+<div class="title">LoveBrains (Beta 1.0.0) </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><h1>Description</h1>
-<p>At the beginning, I have developed a little experiment with neural networks and genetic algorithms in order to make an artificial intelligence that will be able to survive in its environment. It works well then I decided to share my experiment and, maybe, improve it. The final result is this program. You will be able to create plugins to add a lot of objects in your simulation. You can add what ever you want, like new artificial intelligences.</p>
+<p>LoveBrains is a simulator of artificial intelligence based on a plugin system. It provides an 2D environment that allows you to create any kind of simulation. The engine uses Artificial Neural Network and Genetic Algorithm with the aim of learning how to get the best score.</p>
 <h1>Documentation</h1>
 <p><a href="http://cesumilo.github.io/LoveBrains">LoveBrains documentation (doxygen)</a></p>
+<h1>Installation</h1>
+<p>In order to compile LoveBrains, this is very simple : </p><blockquote class="doxtable">
+<p>$&gt; make &amp;&amp; make clean </p>
+</blockquote>
+<p>The Makefile contains several methods :</p>
+<ul>
+<li><b>make</b> : Compile LoveBrains without removing the object files.</li>
+<li><b>make clean</b> : Remove all the object files.</li>
+<li><b>make fclean</b> : Remove the executable and the object files.</li>
+<li><b>make re</b> : Remove the executable and the object files and then compile LoveBrains.</li>
+</ul>
+<h1>How to use LoveBrains ?</h1>
+<h2>Requirements</h2>
+<p>Programming :</p>
+<ul>
+<li>C++11</li>
+<li>GCC (C++11)</li>
+<li>Oriented Object Programming</li>
+<li><a href="http://www.sfml-dev.org/learn-fr.php">SFML Library</a></li>
+<li><a href="https://github.com/cesumilo/LoveBrains/tree/master/api">LoveBrains API</a></li>
+</ul>
+<p>Concept :</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Artificial_neural_network">Artificial Neural Network</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Genetic_algorithm">Genetic Algorithm</a></li>
+</ul>
+<h2>How to create a simulation ?</h2>
+<p>In order to create a simulation, you have to code a plugin. Each plugin must be stored at the root of the directory called "mods". There is an API that allows you to create your own objects, colliders, behaviors and sensors. In fact, each simulation needs some objects. The objects can interact with the environment with the help of the colliders. Each collider has to have a behavior which will modify the object. If you create an object which has an artificial neural network you will need to create sensors. They will give informations about the environment to the neural network and help it to take a decision. A plugin is not simple, you have to think about it before coding it !</p>
+<h2>Compile a plugin</h2>
+<p>This is an example of Makefile that compile the basic survival plugin :</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;CC  = g++</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;RM  = rm -f</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;NAME    = plugin_name.so # Replace by your plugin name, &quot;.so&quot; is MANDATORY !</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;CXXFLAGS    += -std=c++11</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;CXXFLAGS    += -I ./include/ -I ./api/include/ -I ./api/lib/ANNLibrary/include/</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;LDFLAGS = -lsfml-graphics -lsfml-window -lsfml-system -lm -lANN -L./api/lib/ANNLibrary/</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;SRCS    += # Add sources here !</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;OBJS    = $(SRCS:.cc=.o)</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;all: lib $(NAME)</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;lib:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    make -C ./api/lib/ANNLibrary/</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;clib:</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    make clean -C ./api/lib/ANNLibrary/</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;flib:</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    make fclean -C ./api/lib/ANNLibrary/</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;%.o: %.cc</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    $(CC) -fPIC $(CXXFLAGS) -c $&lt; $(LDFLAGS) -o $@</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;$(NAME): $(OBJS)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    $(CC) -shared $(CXXFLAGS) $(OBJS) -o $(NAME) -Wl,--whole-archive -lANN -L./api/lib/ANNLibrary -Wl,--no-whole-archive</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;clean: clib</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    $(RM) $(OBJS)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;fclean: clean flib</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    $(RM) $(NAME)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;re: fclean all</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;.PHONY: all re clean fclean lib clib flib</div>
+</div><!-- fragment --><p><b>You can compile your own plugin with the same Makefile.</b></p>
+<h2>Create an object</h2>
+<p>When you want to code a plugin, you have to add some objects to the simulator. In order to create an object that will be compatible with LoveBrains, it has to inherit from the interface called **"IObject"** (<a href="http://cesumilo.github.io/LoveBrains/class_graphics_1_1_i_object.html">What is the IObject interface ?</a>).</p>
+<p>If you want to create an artificial intelligence, the class has to inherit from the interface called **"IBrain"** (<a href="http://cesumilo.github.io/LoveBrains/class_graphics_1_1_i_brain.html">What is the IBrain interface ?</a>).</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;{c++}</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;// IObject example.</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;class Food : public Graphics::IObject</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    public:</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;        Food();</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;        ~Food();</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        bool isDead() const;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        bool hasBrain() const;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        std::string getType() const;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        void setPosition(sf::Vector2f const&amp; position);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        void setIsDead(bool isDead);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        void setElapsedTime(sf::Time&amp; time);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        Graphics::IObject *Clone(void);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        void Update(void);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    private:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        bool _dead;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        sf::Vector2f _position;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;};</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;// IBrain example.</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;class AIObject : public Graphics::IBrain</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    public:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        AIObject();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        ~AIObject();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        // Graphics::IObject.</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        bool isDead() const;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        bool hasBrain() const;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        std::string getType() const;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        // Graphics::IBrain.</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        double getFitness() const;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        // Graphics::IObject.</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        void setPosition(sf::Vector2f const&amp; position);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        void setIsDead(bool isDead);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        void setElapsedTime(sf::Time&amp; time);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        // Graphics::IBrain.</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        void setFitness(double fitness);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        void setBrain(GANN::ANN const&amp; brain);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        void setInput(unsigned int index, double value);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        Graphics::IObject *Clone(void);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        void Update(void);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    private:</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        bool _dead;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        double _fitness;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        sf::Vector2f _position;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        GANN::ANN _brain;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;};</div>
+</div><!-- fragment --><h2>Create a plugin</h2>
+<p>The way to create a plugin is very simple. First you have to define a class that inherit from the interface called **"IPlugin"** (<a href="http://cesumilo.github.io/LoveBrains/class_plugin_1_1_i_plugin.html">What is the IPlugin interface ?</a>). The plugin will be able to add some objects, colliders and sensors to the objects factory of LoveBrains.</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;{c++}</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;// IPlugin example.</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;class Plugin : public Plugin::IPlugin</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    public:</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;        Plugin();</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;        ~Plugin();</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        std::vector&lt;Graphics::IObject *&gt;&amp; getObjects(void);</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        std::vector&lt;Graphics::ICollider *&gt;&amp; getColliders(void);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        std::vector&lt;Graphics::ISensor *&gt;&amp; getSensors(void);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    private:</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;};</div>
+</div><!-- fragment --><p>Be careful ! There is a function that will be needed by LoveBrains in order to create your plugin !</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;{c++}</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;extern &quot;C&quot;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;{</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;  Plugin::IPlugin   *CreatePlugin(void)</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;  {</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    // Replace &quot;PluginClass&quot; by your plugin class name.</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    return (new PluginClass());</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  }</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;}</div>
+</div><!-- fragment --><h2>Add a plugin in LoveBrains</h2>
+<p>If you want to add your plugin in LoveBrains, it's very simple ! You have to copy your ".so" file at the root of the directory called **"mods"**.</p>
+<h2>Set the simulator's configurations</h2>
+<p>As you can see, there are two files with LoveBrains. First, the simulator configurations file and then the environment configurations file. In this part, I will show you how to set the simulator with its file.</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;# Simulator Configuration file</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;# The crossing rate is a characteristic of the genetic algorithm.</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;# The range is between 0 and 1.</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;# It will determine the percentage of parent&#39;s genes that will be add to the child.</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;crossing_rate: 0.7</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;# The mutation rate is a characteristic of the genetic algortihm.</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;# The range is between 0 and 1.</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;# It will determine the percentage of chance that has the individual to mutate.</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;mutation_rate: 0.1</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;# The selection rate is a characteristic of the genetic algorithm.</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;# The range is between 0 and 1.</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;# It will determine the percentage of individuals that will be removed in the next generation.</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;selection_rate: 0.9</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;# It will determine the score that we want to reach.</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;expected_fitness: 10000</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;# The tournament pool size is a characteristic of the genetic algorithm.</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;# The range is between 1 and POPULATION_SIZE.</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;# It will determine the size of pool in the tournament. The tournament will randomly create a pool of pool_size individuals. The engine will take the best individual in this pool and add it to the parents. At the end of the tournament, there is a list of parents that will be used to generate the childs for the next generation.</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;tournament pool_size: 5</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;# It will determine how many epochs that you want to do. -1 says to the engine that there is not maximum epochs.</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;max epochs: -1</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;# It will determine the interval between each report of the population.</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;report interval: 10</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;# It will determine the size of the population. Be careful ! The size of the population means the number of artificial intelligences in the environment. The size of the population has to be the same as the number of artificial intelligences in the environment configurations.</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;population size: 50</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;# It will determine the topology of the neural network. Be careful about it, it&#39;s in relation with your simulation.</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;neural network: 2-2-5</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;# It will determine if the simulator is in &quot;tournament&quot; mode or not.</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;tournament: false</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;# It will determine the display mode.</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;# Values : NONE, 2D</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;display mode: 2D</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;# It will determine the activation function for the intern layers of the neural network.</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;# Value : sigmoid, threshold</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;activation function: sigmoid</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;# It will determine the activation function for the output layer of the neural network.</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;# Values : sigmoid, threshold</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;outputs activation function: sigmoid</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;# It will determine the size of the window.</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;environment size: 1280x720</div>
+</div><!-- fragment --><h2>Set the environment's configurations</h2>
+<p>The environment configurations file provides the informations about the environment. You have to write the type of the object, the number of object in the environment and if it will be generated by the physics engine when one of them dies.</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;# This is a file that provides objets for the simulation</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;# type, number of object, generation condition.</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;basic_food, 60, true # Object of type &quot;basic_food&quot; is given in the basic survival plugin.</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;basic_survival_ai, 50, false # Object of type &quot;basic_survival_ai&quot; is given in the basic survival plugin.</div>
+</div><!-- fragment --><h2>Set the tournament mode</h2>
+<p>First you have to set the tournament mode in the simulator configurations file. The effect of this option is that LoveBrains will generate some AI with the neural networks given at the root of the directory called **"brains"**. At the end of the simulation, it will create a file **"tournament.txt"** which contains the score of each AI created with a file.</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;# Simulator configurations file.</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;[...]</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;tournament: true</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;[...]</div>
+</div><!-- fragment --><h2>Example</h2>
+<p>You will find an example of plugin in the directory **"mods"** which is called **"basic_survival"**. It is ready to be compiled and runned in the simulator. You have to move the file *"basic_survival.so"* at the root of the directory called **"mods"**.</p>
 <h1>Licence</h1>
 <p><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"></a><br />
 &lt;span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"&gt;LoveBrains by &lt;span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName"&gt;Robin Guillaume is licensed under a <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.<br />
@@ -92,7 +324,7 @@ Based on a work at &lt;a xmlns:dct="http://purl.org/dc/terms/" href="https://git
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 25 2015 12:42:41 for LoveBrains by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 26 2015 16:55:47 for LoveBrains by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>
