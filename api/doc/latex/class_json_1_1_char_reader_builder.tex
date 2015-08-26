@@ -1,0 +1,184 @@
+\hypertarget{class_json_1_1_char_reader_builder}{}\section{Json\+:\+:Char\+Reader\+Builder Class Reference}
+\label{class_json_1_1_char_reader_builder}\index{Json\+::\+Char\+Reader\+Builder@{Json\+::\+Char\+Reader\+Builder}}
+
+
+Build a \hyperlink{class_json_1_1_char_reader}{Char\+Reader} implementation.  
+
+
+
+
+{\ttfamily \#include $<$json.\+h$>$}
+
+Inheritance diagram for Json\+:\+:Char\+Reader\+Builder\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_json_1_1_char_reader_builder}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_json_1_1_char_reader}{Char\+Reader} $\ast$ \hyperlink{class_json_1_1_char_reader_builder_a3e3c9f4aeb07023ef0c5f6255003078a}{new\+Char\+Reader} () const 
+\begin{DoxyCompactList}\small\item\em Allocate a \hyperlink{class_json_1_1_char_reader}{Char\+Reader} via operator new(). \end{DoxyCompactList}\item 
+bool \hyperlink{class_json_1_1_char_reader_builder_a3d233735a1e4b3c9a2cb9c68f972c02a}{validate} (\hyperlink{class_json_1_1_value}{Json\+::\+Value} $\ast$invalid) const 
+\item 
+\hyperlink{class_json_1_1_value}{Value} \& \hyperlink{class_json_1_1_char_reader_builder_a324561448113b48eb7aa6e6a5ce3aa0d}{operator\mbox{[}$\,$\mbox{]}} (std\+::string key)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_json_1_1_char_reader_builder_a03ff031e06aabff989ab4addc87294ab}{set\+Defaults} (\hyperlink{class_json_1_1_value}{Json\+::\+Value} $\ast$settings)
+\item 
+static void \hyperlink{class_json_1_1_char_reader_builder_a9c19e3c5475f9072d527810d4bf56749}{strict\+Mode} (\hyperlink{class_json_1_1_value}{Json\+::\+Value} $\ast$settings)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_json_1_1_value}{Json\+::\+Value} \hyperlink{class_json_1_1_char_reader_builder_ac69b7911ad64c171c51ebaf2ea26d958}{settings\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Build a \hyperlink{class_json_1_1_char_reader}{Char\+Reader} implementation. 
+
+Usage\+: 
+\begin{DoxyCode}
+\textcolor{keyword}{using namespace }\hyperlink{namespace_json}{Json};
+\hyperlink{class_json_1_1_char_reader_builder}{CharReaderBuilder} builder;
+builder[\textcolor{stringliteral}{"collectComments"}] = \textcolor{keyword}{false};
+\hyperlink{class_json_1_1_value}{Value} value;
+std::string errs;
+\textcolor{keywordtype}{bool} ok = \hyperlink{namespace_json_acfebeaf759a841173ddce34c4da22486}{parseFromStream}(builder, std::cin, &value, &errs);
+\end{DoxyCode}
+ 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_json_1_1_char_reader_builder_a3e3c9f4aeb07023ef0c5f6255003078a}{}\index{Json\+::\+Char\+Reader\+Builder@{Json\+::\+Char\+Reader\+Builder}!new\+Char\+Reader@{new\+Char\+Reader}}
+\index{new\+Char\+Reader@{new\+Char\+Reader}!Json\+::\+Char\+Reader\+Builder@{Json\+::\+Char\+Reader\+Builder}}
+\subsubsection[{new\+Char\+Reader() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Char\+Reader} $\ast$ Json\+::\+Char\+Reader\+Builder\+::new\+Char\+Reader (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_json_1_1_char_reader_builder_a3e3c9f4aeb07023ef0c5f6255003078a}
+
+
+Allocate a \hyperlink{class_json_1_1_char_reader}{Char\+Reader} via operator new(). 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::exception} & if something goes wrong (e.\+g. invalid settings) \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{class_json_1_1_char_reader_1_1_factory_a497112c51f36a676aeb496c3a91d38d0}{Json\+::\+Char\+Reader\+::\+Factory}.
+
+\hypertarget{class_json_1_1_char_reader_builder_a324561448113b48eb7aa6e6a5ce3aa0d}{}\index{Json\+::\+Char\+Reader\+Builder@{Json\+::\+Char\+Reader\+Builder}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!Json\+::\+Char\+Reader\+Builder@{Json\+::\+Char\+Reader\+Builder}}
+\subsubsection[{operator[](std\+::string key)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Value} \& Json\+::\+Char\+Reader\+Builder\+::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{key}
+\end{DoxyParamCaption}
+)}\label{class_json_1_1_char_reader_builder_a324561448113b48eb7aa6e6a5ce3aa0d}
+A simple way to update a specific setting. \hypertarget{class_json_1_1_char_reader_builder_a03ff031e06aabff989ab4addc87294ab}{}\index{Json\+::\+Char\+Reader\+Builder@{Json\+::\+Char\+Reader\+Builder}!set\+Defaults@{set\+Defaults}}
+\index{set\+Defaults@{set\+Defaults}!Json\+::\+Char\+Reader\+Builder@{Json\+::\+Char\+Reader\+Builder}}
+\subsubsection[{set\+Defaults(\+Json\+::\+Value $\ast$settings)}]{\setlength{\rightskip}{0pt plus 5cm}void Json\+::\+Char\+Reader\+Builder\+::set\+Defaults (
+\begin{DoxyParamCaption}
+\item[{{\bf Json\+::\+Value} $\ast$}]{settings}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_json_1_1_char_reader_builder_a03ff031e06aabff989ab4addc87294ab}
+Called by ctor, but you can use this to reset settings\+\_\+. \begin{DoxyPrecond}{Precondition}
+\textquotesingle{}settings\textquotesingle{} != N\+U\+L\+L (but Json\+::null is fine) 
+\end{DoxyPrecond}
+\begin{DoxyRemark}{Remarks}
+Defaults\+: 
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+
+\end{DoxyRemark}
+\mbox{[}Char\+Reader\+Builder\+Defaults\mbox{]}
+
+\mbox{[}Char\+Reader\+Builder\+Defaults\mbox{]} \hypertarget{class_json_1_1_char_reader_builder_a9c19e3c5475f9072d527810d4bf56749}{}\index{Json\+::\+Char\+Reader\+Builder@{Json\+::\+Char\+Reader\+Builder}!strict\+Mode@{strict\+Mode}}
+\index{strict\+Mode@{strict\+Mode}!Json\+::\+Char\+Reader\+Builder@{Json\+::\+Char\+Reader\+Builder}}
+\subsubsection[{strict\+Mode(\+Json\+::\+Value $\ast$settings)}]{\setlength{\rightskip}{0pt plus 5cm}void Json\+::\+Char\+Reader\+Builder\+::strict\+Mode (
+\begin{DoxyParamCaption}
+\item[{{\bf Json\+::\+Value} $\ast$}]{settings}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_json_1_1_char_reader_builder_a9c19e3c5475f9072d527810d4bf56749}
+Same as old \hyperlink{class_json_1_1_features_ae23176c14b2e79e81fb61fb1a8ab58ee}{Features\+::strict\+Mode()}. \begin{DoxyPrecond}{Precondition}
+\textquotesingle{}settings\textquotesingle{} != N\+U\+L\+L (but Json\+::null is fine) 
+\end{DoxyPrecond}
+\begin{DoxyRemark}{Remarks}
+Defaults\+: 
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+
+\end{DoxyRemark}
+\mbox{[}Char\+Reader\+Builder\+Strict\+Mode\mbox{]}
+
+\mbox{[}Char\+Reader\+Builder\+Strict\+Mode\mbox{]} \hypertarget{class_json_1_1_char_reader_builder_a3d233735a1e4b3c9a2cb9c68f972c02a}{}\index{Json\+::\+Char\+Reader\+Builder@{Json\+::\+Char\+Reader\+Builder}!validate@{validate}}
+\index{validate@{validate}!Json\+::\+Char\+Reader\+Builder@{Json\+::\+Char\+Reader\+Builder}}
+\subsubsection[{validate(\+Json\+::\+Value $\ast$invalid) const }]{\setlength{\rightskip}{0pt plus 5cm}bool Json\+::\+Char\+Reader\+Builder\+::validate (
+\begin{DoxyParamCaption}
+\item[{{\bf Json\+::\+Value} $\ast$}]{invalid}
+\end{DoxyParamCaption}
+) const}\label{class_json_1_1_char_reader_builder_a3d233735a1e4b3c9a2cb9c68f972c02a}
+\begin{DoxyReturn}{Returns}
+true if \textquotesingle{}settings\textquotesingle{} are legal and consistent; otherwise, indicate bad settings via \textquotesingle{}invalid\textquotesingle{}. 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_json_1_1_char_reader_builder_ac69b7911ad64c171c51ebaf2ea26d958}{}\index{Json\+::\+Char\+Reader\+Builder@{Json\+::\+Char\+Reader\+Builder}!settings\+\_\+@{settings\+\_\+}}
+\index{settings\+\_\+@{settings\+\_\+}!Json\+::\+Char\+Reader\+Builder@{Json\+::\+Char\+Reader\+Builder}}
+\subsubsection[{settings\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Json\+::\+Value} Json\+::\+Char\+Reader\+Builder\+::settings\+\_\+}\label{class_json_1_1_char_reader_builder_ac69b7911ad64c171c51ebaf2ea26d958}
+Configuration of this builder. These are case-\/sensitive. Available settings (case-\/sensitive)\+:
+\begin{DoxyItemize}
+\item {\ttfamily \char`\"{}collect\+Comments\char`\"{}\+: false or true}
+\begin{DoxyItemize}
+\item true to collect comment and allow writing them back during serialization, false to discard comments. This parameter is ignored if allow\+Comments is false.
+\end{DoxyItemize}
+\item {\ttfamily \char`\"{}allow\+Comments\char`\"{}\+: false or true}
+\begin{DoxyItemize}
+\item true if comments are allowed.
+\end{DoxyItemize}
+\item {\ttfamily \char`\"{}strict\+Root\char`\"{}\+: false or true}
+\begin{DoxyItemize}
+\item true if root must be either an array or an object value
+\end{DoxyItemize}
+\item {\ttfamily \char`\"{}allow\+Dropped\+Null\+Placeholders\char`\"{}\+: false or true}
+\begin{DoxyItemize}
+\item true if dropped null placeholders are allowed. (See \hyperlink{class_json_1_1_stream_writer_builder}{Stream\+Writer\+Builder}.)
+\end{DoxyItemize}
+\item {\ttfamily \char`\"{}allow\+Numeric\+Keys\char`\"{}\+: false or true}
+\begin{DoxyItemize}
+\item true if numeric object keys are allowed.
+\end{DoxyItemize}
+\item {\ttfamily \char`\"{}allow\+Single\+Quotes\char`\"{}\+: false or true}
+\begin{DoxyItemize}
+\item true if \textquotesingle{}\textquotesingle{} are allowed for strings (both keys and values)
+\end{DoxyItemize}
+\item {\ttfamily \char`\"{}stack\+Limit\char`\"{}\+: integer}
+\begin{DoxyItemize}
+\item Exceeding stack\+Limit (recursive depth of {\ttfamily read\+Value()}) will cause an exception.
+\item This is a security issue (seg-\/faults caused by deeply nested J\+S\+O\+N), so the default is low.
+\end{DoxyItemize}
+\item {\ttfamily \char`\"{}fail\+If\+Extra\char`\"{}\+: false or true}
+\begin{DoxyItemize}
+\item If true, {\ttfamily parse()} returns false when extra non-\/whitespace trails the J\+S\+O\+N value in the input string.
+\end{DoxyItemize}
+\item {\ttfamily \char`\"{}reject\+Dup\+Keys\char`\"{}\+: false or true}
+\begin{DoxyItemize}
+\item If true, {\ttfamily parse()} returns false when a key is duplicated within an object.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+You can examine \textquotesingle{}settings\+\_\+` yourself to see the defaults. You can also write and read them just like any J\+S\+O\+N \hyperlink{class_json_1_1_value}{Value}. \begin{DoxySeeAlso}{See also}
+\hyperlink{class_json_1_1_char_reader_builder_a03ff031e06aabff989ab4addc87294ab}{set\+Defaults()} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/robin\+\_\+f/\+Programming/\+Git/\+C\+P\+P/\+Love\+Brains/api/lib/\+A\+N\+N\+Library/include/json/json.\+h\item 
+/home/robin\+\_\+f/\+Programming/\+Git/\+C\+P\+P/\+Love\+Brains/api/lib/\+A\+N\+N\+Library/src/json/jsoncpp.\+cc\end{DoxyCompactItemize}

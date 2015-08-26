@@ -1,0 +1,74 @@
+\hypertarget{class_json_1_1_stream_writer}{}\section{Json\+:\+:Stream\+Writer Class Reference}
+\label{class_json_1_1_stream_writer}\index{Json\+::\+Stream\+Writer@{Json\+::\+Stream\+Writer}}
+
+
+{\ttfamily \#include $<$json.\+h$>$}
+
+Inheritance diagram for Json\+:\+:Stream\+Writer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_json_1_1_stream_writer}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_json_1_1_stream_writer_1_1_factory}{Factory}
+\begin{DoxyCompactList}\small\item\em A simple abstract factory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual int \hyperlink{class_json_1_1_stream_writer_a237368cf13b41decc015640d25f176ab}{write} (\hyperlink{class_json_1_1_value}{Value} const \&root, std\+::ostream $\ast$sout)=0
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_json_1_1_stream_writer_ac087569ccd2b5a22348cae92ec2a8996}{}std\+::ostream $\ast$ {\bfseries sout\+\_\+}\label{class_json_1_1_stream_writer_ac087569ccd2b5a22348cae92ec2a8996}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Usage\+: 
+\begin{DoxyCode}
+\textcolor{keyword}{using namespace }\hyperlink{namespace_json}{Json};
+\textcolor{keywordtype}{void} writeToStdout(\hyperlink{class_json_1_1_stream_writer_1_1_factory}{StreamWriter::Factory} \textcolor{keyword}{const}& factory, 
+      \hyperlink{class_json_1_1_value}{Value} \textcolor{keyword}{const}& value) \{
+  std::unique\_ptr<StreamWriter> \textcolor{keyword}{const} writer(
+    factory.\hyperlink{class_json_1_1_stream_writer_1_1_factory_a0fca8d713eb8949ca3ebb35e67f23b1a}{newStreamWriter}());
+  writer->write(value, &std::cout);
+  std::cout << std::endl;  \textcolor{comment}{// add lf and flush}
+\}
+\end{DoxyCode}
+ 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_json_1_1_stream_writer_a237368cf13b41decc015640d25f176ab}{}\index{Json\+::\+Stream\+Writer@{Json\+::\+Stream\+Writer}!write@{write}}
+\index{write@{write}!Json\+::\+Stream\+Writer@{Json\+::\+Stream\+Writer}}
+\subsubsection[{write(\+Value const \&root, std\+::ostream $\ast$sout)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual int Json\+::\+Stream\+Writer\+::write (
+\begin{DoxyParamCaption}
+\item[{{\bf Value} const \&}]{root, }
+\item[{std\+::ostream $\ast$}]{sout}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_json_1_1_stream_writer_a237368cf13b41decc015640d25f176ab}
+Write \hyperlink{class_json_1_1_value}{Value} into document as configured in sub-\/class. Do not take ownership of sout, but maintain a reference during function. \begin{DoxyPrecond}{Precondition}
+sout != N\+U\+L\+L 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+zero on success (For now, we always return zero, so check the stream instead.) 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::exception} & possibly, depending on configuration \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \hyperlink{struct_json_1_1_built_styled_stream_writer_ab8810d938c35c8442cbffcd001628cd0}{Json\+::\+Built\+Styled\+Stream\+Writer}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/robin\+\_\+f/\+Programming/\+Git/\+C\+P\+P/\+Love\+Brains/api/lib/\+A\+N\+N\+Library/include/json/json.\+h\item 
+/home/robin\+\_\+f/\+Programming/\+Git/\+C\+P\+P/\+Love\+Brains/api/lib/\+A\+N\+N\+Library/src/json/jsoncpp.\+cc\end{DoxyCompactItemize}
