@@ -5,7 +5,7 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Thu Jul 23 11:41:41 2015 Guillaume ROBIN
-// Last update Tue Aug 25 16:56:42 2015 Guillaume ROBIN
+// Last update Wed Aug 26 13:48:53 2015 Guillaume ROBIN
 //
 
 #include <iostream>
@@ -111,7 +111,7 @@ namespace Graphics
 	  return (false);
 	i++;
       }
-    return (true);
+    return (line.size() > 0 && line[0] != '\n');
   }
 
   static std::string	getTypeFromLine(std::string& line)

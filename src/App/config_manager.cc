@@ -5,7 +5,7 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Fri Jul 31 11:43:33 2015 Guillaume ROBIN
-// Last update Tue Aug 25 12:04:24 2015 Guillaume ROBIN
+// Last update Wed Aug 26 13:49:37 2015 Guillaume ROBIN
 //
 
 #include <fstream>
@@ -68,7 +68,7 @@ namespace App
 	    && (line[i] < DEF_CONST_MINNUMCHAR || line[i] > DEF_CONST_MAXNUMCHAR))
 	  return (false);
       }
-    return (true);
+    return (line.size() > 0 && line[0] != '\n');
   }
 
   static void	getConfig(Simulator::SConfig& config, std::string& line)

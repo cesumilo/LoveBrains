@@ -5,13 +5,15 @@
 ** Login   <robin_f@epitech.eu>
 ** 
 ** Started on  Wed Aug 19 13:51:31 2015 Guillaume ROBIN
-** Last update Wed Aug 26 13:25:29 2015 Guillaume ROBIN
+** Last update Wed Aug 26 13:35:47 2015 Guillaume ROBIN
 */
 
 #ifndef ANN_CONST_H_
 # define ANN_CONST_H_
 
 # define DEF_CROSS_RATE		(double)0.7
+# define DEF_RAND_MIN		(double)-5
+# define DEF_RAND_MAX		(double)5
 
 # define DEF_ANN_ROWS	(const char *)"rows"
 # define DEF_ANN_COLS	(const char *)"cols"
