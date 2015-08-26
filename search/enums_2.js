@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['enum',['Enum',['../struct_json_1_1_comment_style.html#a51fc08f3518fd81eba12f340d19a3d0c',1,'Json::CommentStyle::Enum()'],['../struct_json_1_1_comment_style.html#a51fc08f3518fd81eba12f340d19a3d0c',1,'Json::CommentStyle::Enum()'],['../struct_json_1_1_comment_style.html#a51fc08f3518fd81eba12f340d19a3d0c',1,'Json::CommentStyle::Enum()']]]
+  ['displaymode',['DisplayMode',['../class_simulator_1_1_s_config.html#a8be687eeeccc7fb426e23009216a6b42',1,'Simulator::SConfig']]]
 ];

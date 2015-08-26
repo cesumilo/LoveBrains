@@ -120,19 +120,22 @@ Public Member Functions</h2></td></tr>
 const <a class="el" href="class_simulator_1_1_simulator.html">Simulator::Simulator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_app_1_1_app.html#a30784768b1a8ded72300c9253dfdd2e5">getSimulator</a> (void) const   throw ()</td></tr>
 <tr class="memdesc:a30784768b1a8ded72300c9253dfdd2e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the simulator object. <br /></td></tr>
 <tr class="separator:a30784768b1a8ded72300c9253dfdd2e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af14f16be969b39197295b668b86c6522"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_app_1_1_app.html#af14f16be969b39197295b668b86c6522">Run</a> (const char *simulator_file, const char *environment_file, const char *output_file)</td></tr>
-<tr class="memdesc:af14f16be969b39197295b668b86c6522"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run the application and launch the simulation.  <a href="#af14f16be969b39197295b668b86c6522">More...</a><br /></td></tr>
-<tr class="separator:af14f16be969b39197295b668b86c6522"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74082302dd04370d5a5968159da44913"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_app_1_1_app.html#a74082302dd04370d5a5968159da44913">Init</a> (const char *simulator_file, const char *environment_file)</td></tr>
+<tr class="memdesc:a74082302dd04370d5a5968159da44913"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the application.  <a href="#a74082302dd04370d5a5968159da44913">More...</a><br /></td></tr>
+<tr class="separator:a74082302dd04370d5a5968159da44913"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a766d9ed4639e0da5b5dc433c91365ed5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_app_1_1_app.html#a766d9ed4639e0da5b5dc433c91365ed5">Run</a> (const char *output_file)</td></tr>
+<tr class="memdesc:a766d9ed4639e0da5b5dc433c91365ed5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run the application and launch the simulation.  <a href="#a766d9ed4639e0da5b5dc433c91365ed5">More...</a><br /></td></tr>
+<tr class="separator:a766d9ed4639e0da5b5dc433c91365ed5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Manage all the stuff in order to run the simulation. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="af14f16be969b39197295b668b86c6522"></a>
+<a class="anchor" id="a74082302dd04370d5a5968159da44913"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void App::App::Run </td>
+          <td class="memname">void App::App::Init </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>simulator_file</em>, </td>
@@ -141,13 +144,7 @@ const <a class="el" href="class_simulator_1_1_simulator.html">Simulator::Simulat
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>environment_file</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>output_file</em>&#160;</td>
+          <td class="paramname"><em>environment_file</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -157,11 +154,35 @@ const <a class="el" href="class_simulator_1_1_simulator.html">Simulator::Simulat
       </table>
 </div><div class="memdoc">
 
-<p>Run the application and launch the simulation. </p>
+<p>Initialize the application. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">simulator_file</td><td>: the simulation file's path. </td></tr>
     <tr><td class="paramname">environment_file</td><td>: the environment file's path. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>error : <a class="el" href="class_app_1_1_app_exception.html" title="Define the exception for the App class. ">AppException</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a766d9ed4639e0da5b5dc433c91365ed5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void App::App::Run </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>output_file</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Run the application and launch the simulation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
     <tr><td class="paramname">output_file</td><td>: the output file's path. </td></tr>
   </table>
   </dd>
@@ -171,13 +192,13 @@ const <a class="el" href="class_simulator_1_1_simulator.html">Simulator::Simulat
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/App/<a class="el" href="app_8h_source.html">app.h</a></li>
-<li>src/App/app.cc</li>
+<li>/home/robin_f/Programming/Git/CPP/LoveBrains/include/App/<a class="el" href="app_8h_source.html">app.h</a></li>
+<li>/home/robin_f/Programming/Git/CPP/LoveBrains/src/App/app.cc</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 21 2015 23:53:00 for LoveBrains by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 26 2015 16:55:47 for LoveBrains by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>
