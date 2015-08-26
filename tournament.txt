@@ -1,3 +1,0 @@
-basic_survival_2_whaouu.json : 365.607724
-basic_survival_1.json : 403.379281
-test_brain.json : 366.607724

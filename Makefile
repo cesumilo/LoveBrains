@@ -5,10 +5,10 @@
 ## Login   <robin_f@epitech.eu>
 ## 
 ## Started on  Wed Jul 22 09:52:28 2015 Guillaume ROBIN
-## Last update Fri Jul 31 13:32:23 2015 Guillaume ROBIN
+## Last update Wed Aug 26 12:28:51 2015 Guillaume ROBIN
 ##
 
-CC	= g++ -g3
+CC	= g++
 
 RM	= rm -f
 

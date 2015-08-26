@@ -5,16 +5,16 @@
 ## Login   <robin_f@epitech.eu>
 ## 
 ## Started on  Tue Jul  7 16:36:25 2015 Guillaume ROBIN
-## Last update Thu Aug 20 13:45:42 2015 Guillaume ROBIN
+## Last update Tue Aug 25 17:22:35 2015 Guillaume ROBIN
 ##
 
-CC	= g++ -g3
+CC	= g++
 
 RM	= rm -f
 
 NAME	= libANN.a
 
-CXXFLAGS	+= -Werror -Wextra -Wall -pthread -std=c++11
+CXXFLAGS	+= -Werror -Wextra -Wall -std=c++11
 
 CXXFLAGS	+= -I ./include
 

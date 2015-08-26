@@ -5,7 +5,7 @@
 ** Login   <robin_f@epitech.eu>
 ** 
 ** Started on  Wed Jul  8 19:53:34 2015 Guillaume ROBIN
-** Last update Tue Jul 21 17:04:47 2015 Guillaume ROBIN
+** Last update Tue Aug 25 17:18:15 2015 Guillaume ROBIN
 */
 
 #ifndef GANN_ENGINE_H_
@@ -21,7 +21,7 @@ namespace GANN
   {
   public:
     GANNEngine(void) throw();
-    ~GANNEngine(void);
+    ~GANNEngine(void) throw();
 
     /*
     ** Initializer.

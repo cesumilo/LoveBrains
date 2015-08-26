@@ -5,7 +5,7 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Wed Jul 22 15:14:26 2015 Guillaume ROBIN
-// Last update Tue Aug 25 16:18:10 2015 Guillaume ROBIN
+// Last update Wed Aug 26 12:28:24 2015 Guillaume ROBIN
 //
 
 #include <iostream>
@@ -256,14 +256,15 @@ namespace Graphics
 	  {
 	    for (int i = 0; i < it->second; ++i)
 	      {
-		if ((ptr = _factory.Create(it->first)))
+		if ((ptr = _factory.Create(it->first)) && ptr->hasBrain()
+		    && dynamic_cast<IBrain *>(ptr) && br != brains.end())
 		  {
-		    if (ptr->hasBrain() && dynamic_cast<IBrain *>(ptr) && br != brains.end())
+		    brain = ((GANN::GANN *)(*br))->getGenes();
+		    if ((info = readdir(dir)))
 		      {
-			brain = ((GANN::GANN *)(*br))->getGenes();
-			if ((info = readdir(dir)))
+			passInvalidFile(dir, &info);
+			if (info)
 			  {
-			    passInvalidFile(dir, &info);
 			    path = std::string(DEF_APP_BRAINS) + std::string(info->d_name);
 			    try
 			      {
@@ -274,11 +275,11 @@ namespace Graphics
 				std::cerr << e.what() << std::endl;
 			      }
 			  }
-			((IBrain *)ptr)->setBrain(brain);
-			++br;
 		      }
-		    env.push_back(ptr);
+		    ((IBrain *)ptr)->setBrain(brain);
+		    ++br;
 		  }
+		env.push_back(ptr);
 	      }
 	  }
 	closedir(dir);
