@@ -5,7 +5,7 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Wed Jul  8 14:23:00 2015 Guillaume ROBIN
-// Last update Mon Aug 24 15:34:13 2015 Guillaume ROBIN
+// Last update Thu Aug 20 12:41:58 2015 Guillaume ROBIN
 //
 
 #include <cmath>

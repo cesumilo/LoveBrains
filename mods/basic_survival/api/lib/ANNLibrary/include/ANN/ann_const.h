@@ -5,7 +5,7 @@
 ** Login   <robin_f@epitech.eu>
 ** 
 ** Started on  Wed Aug 19 13:51:31 2015 Guillaume ROBIN
-** Last update Mon Aug 24 15:37:14 2015 Guillaume ROBIN
+** Last update Wed Aug 26 13:25:29 2015 Guillaume ROBIN
 */
 
 #ifndef ANN_CONST_H_
@@ -43,5 +43,8 @@
 # define ERR_ANN_OUTF	(const char *)"Error: ANN::setOutputsActivation(): function is null."
 # define ERR_ANN_SAVE	(const char *)"Error: ANN::Save(): cannot open the output file."
 # define ERR_ANN_LAYER	(const char *)"Error: ANN::SaveLayers() | ANN::LoadLayers(): layer is null."
+# define ERR_ANN_WEIGHT	(const char *)"Error: ANN::LoadLayers(): invalid weights matrix."
+# define ERR_ANN_BIAS	(const char *)"Error: ANN::LoadLayers(): invalid bias matrix."
+# define ERR_ANN_OUTPUT	(const char *)"Error: ANN::LoadLayers(): cannot create the outputs matrix."
 
 #endif /* !ANN_CONST_H_ */

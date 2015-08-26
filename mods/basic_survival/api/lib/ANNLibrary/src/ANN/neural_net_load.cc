@@ -5,7 +5,7 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Thu Aug 20 11:35:11 2015 Guillaume ROBIN
-// Last update Thu Aug 20 12:40:30 2015 Guillaume ROBIN
+// Last update Wed Aug 26 13:35:36 2015 Guillaume ROBIN
 //
 
 #include <string>
@@ -20,20 +20,35 @@ namespace GANN
   void	ANN::LoadInfos(Json::Value const& ann) throw()
   {
     _infos.clear();
-    for (unsigned int i = 0; i < ann[DEF_ANN_INFOS].size(); ++i)
-      _infos.push_back(ann[DEF_ANN_INFOS][i].asUInt());
+    if (ann[DEF_ANN_INFOS].type() != Json::ValueType::nullValue)
+      {
+	for (unsigned int i = 0; i < ann[DEF_ANN_INFOS].size(); ++i)
+	  _infos.push_back(ann[DEF_ANN_INFOS][i].asUInt());
+      }
   }
 
   void	ANN::LoadGenerateInfos(Json::Value const& ann) throw()
   {
-    _cross_rate = ann[DEF_ANN_CROSS].asDouble();
-    _rand_min = ann[DEF_ANN_RAND][DEF_ANN_RMIN].asDouble();
-    _rand_max = ann[DEF_ANN_RAND][DEF_ANN_RMAX].asDouble();
+    if (ann[DEF_ANN_CROSS].type() != Json::ValueType::nullValue)
+      _cross_rate = ann[DEF_ANN_CROSS].asDouble();
+    else
+      _cross_rate = DEF_CROSS_RATE;
+    if (ann[DEF_ANN_RAND].type() != Json::ValueType::nullValue
+	&& ann[DEF_ANN_RAND][DEF_ANN_RMIN].type() != Json::ValueType::nullValue)
+      _rand_min = ann[DEF_ANN_RAND][DEF_ANN_RMIN].asDouble();
+    else
+      _rand_min = DEF_RAND_MIN;
+    if (ann[DEF_ANN_RAND].type() != Json::ValueType::nullValue
+	&& ann[DEF_ANN_RAND][DEF_ANN_RMAX].type() != Json::ValueType::nullValue)
+      _rand_max = ann[DEF_ANN_RAND][DEF_ANN_RMAX].asDouble();
+    else
+      _rand_max = DEF_RAND_MAX;
   }
 
   void	ANN::LoadOutputActivation(Json::Value const& ann) throw()
   {
-    if (ann[DEF_ANN_OACT].asString().compare(DEF_ANN_THRES) == 0)
+    if (ann[DEF_ANN_OACT].type() != Json::ValueType::nullValue
+	&& ann[DEF_ANN_OACT].asString().compare(DEF_ANN_THRES) == 0)
       {
 	_out_activation = &Threshold;
 	_out_ftype = ANN::ActivationType::THRESHOLD;
@@ -47,7 +62,8 @@ namespace GANN
 
   void	ANN::LoadLayerActivation(Json::Value const& ann) throw()
   {
-    if (ann[DEF_ANN_LACT].asString().compare(DEF_ANN_THRES) == 0)
+    if (ann[DEF_ANN_LACT].type() != Json::ValueType::nullValue
+	&& ann[DEF_ANN_LACT].asString().compare(DEF_ANN_THRES) == 0)
       {
 	_layer_activation = &Threshold;
 	_layer_ftype = ANN::ActivationType::THRESHOLD;
@@ -70,18 +86,43 @@ namespace GANN
     _layers.clear();
     for (unsigned int i = 0; i < ann[DEF_ANN_LAYERS].size() && (layer = new ANNLayer()); ++i)
       {
-	weights = Matrix<double>(ann[DEF_ANN_LAYERS][i][DEF_ANN_WEIGHT][DEF_ANN_ROWS].asDouble(),
-				 ann[DEF_ANN_LAYERS][i][DEF_ANN_WEIGHT][DEF_ANN_COLS].asDouble(), 0);
-	bias = Matrix<double>(ann[DEF_ANN_LAYERS][i][DEF_ANN_BIAS][DEF_ANN_ROWS].asDouble(),
-			      ann[DEF_ANN_LAYERS][i][DEF_ANN_BIAS][DEF_ANN_COLS].asDouble(), 0);
+	if (ann[DEF_ANN_LAYERS][i][DEF_ANN_WEIGHT].type() != Json::ValueType::nullValue
+	    && ann[DEF_ANN_LAYERS][i][DEF_ANN_WEIGHT][DEF_ANN_ROWS].type() != Json::ValueType::nullValue
+	    && ann[DEF_ANN_LAYERS][i][DEF_ANN_WEIGHT][DEF_ANN_COLS].type() != Json::ValueType::nullValue)
+	  weights = Matrix<double>(ann[DEF_ANN_LAYERS][i][DEF_ANN_WEIGHT][DEF_ANN_ROWS].asDouble(),
+				   ann[DEF_ANN_LAYERS][i][DEF_ANN_WEIGHT][DEF_ANN_COLS].asDouble(),
+				   0);
+	else
+	  throw(ANNException(ERR_ANN_WEIGHT));
+	if (ann[DEF_ANN_LAYERS][i][DEF_ANN_BIAS].type() != Json::ValueType::nullValue
+	    && ann[DEF_ANN_LAYERS][i][DEF_ANN_BIAS][DEF_ANN_ROWS].type() != Json::ValueType::nullValue
+	    && ann[DEF_ANN_LAYERS][i][DEF_ANN_BIAS][DEF_ANN_COLS].type() != Json::ValueType::nullValue)
+	  bias = Matrix<double>(ann[DEF_ANN_LAYERS][i][DEF_ANN_BIAS][DEF_ANN_ROWS].asDouble(),
+				ann[DEF_ANN_LAYERS][i][DEF_ANN_BIAS][DEF_ANN_COLS].asDouble(), 0);
+	else
+	  throw(ANNException(ERR_ANN_BIAS));
 	for (unsigned int j = 0; j < weights.rows() * weights.cols(); ++j)
-	  weights[j] = ann[DEF_ANN_LAYERS][i][DEF_ANN_WEIGHT][DEF_ANN_VALUES][j].asDouble();
+	  {
+	    if (ann[DEF_ANN_LAYERS][i][DEF_ANN_WEIGHT][DEF_ANN_VALUES].type() != Json::ValueType::nullValue)
+	      weights[j] = ann[DEF_ANN_LAYERS][i][DEF_ANN_WEIGHT][DEF_ANN_VALUES][j].asDouble();
+	    else
+	      weights[j] = 0;
+	  }
 	for (unsigned int j = 0; j < bias.rows() * bias.cols(); ++j)
-	  bias[j] = ann[DEF_ANN_LAYERS][i][DEF_ANN_BIAS][DEF_ANN_VALUES][j].asDouble();
+	  {
+	    if (ann[DEF_ANN_LAYERS][i][DEF_ANN_BIAS][DEF_ANN_VALUES].type() != Json::ValueType::nullValue)
+	      bias[j] = ann[DEF_ANN_LAYERS][i][DEF_ANN_BIAS][DEF_ANN_VALUES][j].asDouble();
+	    else
+	      bias[j] = 0;
+	  }
 	layer->setWeights(weights);
 	layer->setBias(bias);
-	layer->setOutputs(Matrix<double>(ann[DEF_ANN_LAYERS][i][DEF_ANN_WEIGHT][DEF_ANN_ROWS].asDouble(),
-					 1, 0));
+	if (ann[DEF_ANN_LAYERS][i][DEF_ANN_WEIGHT].type() != Json::ValueType::nullValue
+	    && ann[DEF_ANN_LAYERS][i][DEF_ANN_WEIGHT][DEF_ANN_ROWS].type() != Json::ValueType::nullValue)
+	  layer->setOutputs(Matrix<double>(ann[DEF_ANN_LAYERS][i][DEF_ANN_WEIGHT][DEF_ANN_ROWS].asDouble(),
+					   1, 0));
+	else
+	  throw(ANNException(ERR_ANN_OUTPUT));
 	if (i == ann[DEF_ANN_LAYERS].size() - 1)
 	  layer->setActivationFunction(_out_activation);
 	else

@@ -5,7 +5,7 @@
 ** Login   <robin_f@epitech.eu>
 ** 
 ** Started on  Thu Jul 23 13:51:41 2015 Guillaume ROBIN
-** Last update Tue Aug 25 12:01:29 2015 Guillaume ROBIN
+** Last update Wed Aug 26 12:45:10 2015 Guillaume ROBIN
 */
 
 #ifndef SIMULATOR_CONFIG_H_
@@ -235,9 +235,9 @@ namespace Simulator
     unsigned int		_pop_size; /*!< Contains the population size. */
     unsigned int		_env_width; /*!< Contains the window's width. */
     unsigned int		_env_height; /*!< Contains the window's height. */
-    std::vector<unsigned int>	_infos; /*!< Contains the topology of the neural network. */
     GANN::ANNLayer::FActivate	_activation; /*!< Contains the activation function pointer for the intern layers. */
     GANN::ANNLayer::FActivate	_output_activation; /*!< Contains the activation function pointer for the output layer. */
+    std::vector<unsigned int>	_infos; /*!< Contains the topology of the neural network. */
     GANN::ANN::ActivationType	_layer_ftype; /*!< Contains the activation function type for the intern layers. */
     GANN::ANN::ActivationType	_out_ftype; /*!< Contains the activation function type for the output layer. */
   };

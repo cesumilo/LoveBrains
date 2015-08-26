@@ -5,7 +5,7 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Thu Jul 23 14:07:18 2015 Guillaume ROBIN
-// Last update Tue Aug 25 12:01:47 2015 Guillaume ROBIN
+// Last update Wed Aug 26 12:47:07 2015 Guillaume ROBIN
 //
 
 #include <stdexcept>
@@ -13,6 +13,7 @@
 #include "Simulator/simulator_config.h"
 #include "Simulator/simulator_const.h"
 #include "Graphics/graphics_const.h"
+#include "ANN/tools.h"
 
 namespace Simulator
 {
@@ -30,7 +31,8 @@ namespace Simulator
 				  _report_interval(DEF_REPORT_INTERVAL),
 				  _pop_size(DEF_POPULATION_SIZE),
 				  _env_width(DEF_APP_WIDTH),
-				  _env_height(DEF_APP_HEIGHT)
+				  _env_height(DEF_APP_HEIGHT),
+				  _activation(&GANN::Sigmoid), _output_activation(&GANN::Sigmoid)
   {
   }
 
