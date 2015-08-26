@@ -17,24 +17,10 @@ Configuration passed to reader and writer. This configuration object can be used
 \begin{DoxyCompactList}\small\item\em Initialize the configuration like Json\+Config\+::all\+Features;. \end{DoxyCompactList}\item 
 {\bf Features} ()\label{class_json_1_1_features_ad15a091cb61bb31323299a95970d2644}
 
-\begin{DoxyCompactList}\small\item\em Initialize the configuration like Json\+Config\+::all\+Features;. \end{DoxyCompactList}\item 
-{\bf Features} ()\label{class_json_1_1_features_ad15a091cb61bb31323299a95970d2644}
-
-\begin{DoxyCompactList}\small\item\em Initialize the configuration like Json\+Config\+::all\+Features;. \end{DoxyCompactList}\item 
-{\bf Features} ()\label{class_json_1_1_features_ad15a091cb61bb31323299a95970d2644}
-
 \begin{DoxyCompactList}\small\item\em Initialize the configuration like Json\+Config\+::all\+Features;. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static {\bf Features} {\bf all} ()
-\begin{DoxyCompactList}\small\item\em A configuration that allows all features and assumes all strings are U\+T\+F-\/8. \end{DoxyCompactList}\item 
-static {\bf Features} {\bf strict\+Mode} ()
-\begin{DoxyCompactList}\small\item\em A configuration that is strictly compatible with the J\+S\+O\+N specification. \end{DoxyCompactList}\item 
-static {\bf Features} {\bf all} ()
-\begin{DoxyCompactList}\small\item\em A configuration that allows all features and assumes all strings are U\+T\+F-\/8. \end{DoxyCompactList}\item 
-static {\bf Features} {\bf strict\+Mode} ()
-\begin{DoxyCompactList}\small\item\em A configuration that is strictly compatible with the J\+S\+O\+N specification. \end{DoxyCompactList}\item 
 static {\bf Features} {\bf all} ()
 \begin{DoxyCompactList}\small\item\em A configuration that allows all features and assumes all strings are U\+T\+F-\/8. \end{DoxyCompactList}\item 
 static {\bf Features} {\bf strict\+Mode} ()
@@ -95,37 +81,21 @@ A configuration that allows all features and assumes all strings are U\+T\+F-\/8
 \item C \& C++ comments are allowed
 \item Root object can be any J\+S\+O\+N value
 \item Assumes \doxyref{Value}{p.}{class_json_1_1_value} strings are encoded in U\+T\+F-\/8 
-\end{DoxyItemize}\index{Json\+::\+Features@{Json\+::\+Features}!all@{all}}
-\index{all@{all}!Json\+::\+Features@{Json\+::\+Features}}
-\subsubsection[{all()}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Features} Json\+::\+Features\+::all (
+\end{DoxyItemize}\index{Json\+::\+Features@{Json\+::\+Features}!strict\+Mode@{strict\+Mode}}
+\index{strict\+Mode@{strict\+Mode}!Json\+::\+Features@{Json\+::\+Features}}
+\subsubsection[{strict\+Mode()}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Features} Json\+::\+Features\+::strict\+Mode (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [static]}}\label{class_json_1_1_features_a9f17db1b4ebbef8c645825344959481b}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_json_1_1_features_aed3a2845df0cfd2ebe7338442361bd13}
 
 
-A configuration that allows all features and assumes all strings are U\+T\+F-\/8. 
-
-
-\begin{DoxyItemize}
-\item C \& C++ comments are allowed
-\item Root object can be any J\+S\+O\+N value
-\item Assumes \doxyref{Value}{p.}{class_json_1_1_value} strings are encoded in U\+T\+F-\/8 
-\end{DoxyItemize}\index{Json\+::\+Features@{Json\+::\+Features}!all@{all}}
-\index{all@{all}!Json\+::\+Features@{Json\+::\+Features}}
-\subsubsection[{all()}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Features} Json\+::\+Features\+::all (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [static]}}\label{class_json_1_1_features_a9f17db1b4ebbef8c645825344959481b}
-
-
-A configuration that allows all features and assumes all strings are U\+T\+F-\/8. 
+A configuration that is strictly compatible with the J\+S\+O\+N specification. 
 
 
 \begin{DoxyItemize}
-\item C \& C++ comments are allowed
-\item Root object can be any J\+S\+O\+N value
+\item Comments are forbidden.
+\item Root object must be either an array or an object value.
 \item Assumes \doxyref{Value}{p.}{class_json_1_1_value} strings are encoded in U\+T\+F-\/8 
 \end{DoxyItemize}\index{Json\+::\+Features@{Json\+::\+Features}!strict\+Mode@{strict\+Mode}}
 \index{strict\+Mode@{strict\+Mode}!Json\+::\+Features@{Json\+::\+Features}}
@@ -134,54 +104,6 @@ A configuration that allows all features and assumes all strings are U\+T\+F-\/8
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_json_1_1_features_ae23176c14b2e79e81fb61fb1a8ab58ee}
-
-
-A configuration that is strictly compatible with the J\+S\+O\+N specification. 
-
-
-\begin{DoxyItemize}
-\item Comments are forbidden.
-\item Root object must be either an array or an object value.
-\item Assumes \doxyref{Value}{p.}{class_json_1_1_value} strings are encoded in U\+T\+F-\/8 
-\end{DoxyItemize}\index{Json\+::\+Features@{Json\+::\+Features}!strict\+Mode@{strict\+Mode}}
-\index{strict\+Mode@{strict\+Mode}!Json\+::\+Features@{Json\+::\+Features}}
-\subsubsection[{strict\+Mode()}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Features} Json\+::\+Features\+::strict\+Mode (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [static]}}\label{class_json_1_1_features_aed3a2845df0cfd2ebe7338442361bd13}
-
-
-A configuration that is strictly compatible with the J\+S\+O\+N specification. 
-
-
-\begin{DoxyItemize}
-\item Comments are forbidden.
-\item Root object must be either an array or an object value.
-\item Assumes \doxyref{Value}{p.}{class_json_1_1_value} strings are encoded in U\+T\+F-\/8 
-\end{DoxyItemize}\index{Json\+::\+Features@{Json\+::\+Features}!strict\+Mode@{strict\+Mode}}
-\index{strict\+Mode@{strict\+Mode}!Json\+::\+Features@{Json\+::\+Features}}
-\subsubsection[{strict\+Mode()}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Features} Json\+::\+Features\+::strict\+Mode (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [static]}}\label{class_json_1_1_features_aed3a2845df0cfd2ebe7338442361bd13}
-
-
-A configuration that is strictly compatible with the J\+S\+O\+N specification. 
-
-
-\begin{DoxyItemize}
-\item Comments are forbidden.
-\item Root object must be either an array or an object value.
-\item Assumes \doxyref{Value}{p.}{class_json_1_1_value} strings are encoded in U\+T\+F-\/8 
-\end{DoxyItemize}\index{Json\+::\+Features@{Json\+::\+Features}!strict\+Mode@{strict\+Mode}}
-\index{strict\+Mode@{strict\+Mode}!Json\+::\+Features@{Json\+::\+Features}}
-\subsubsection[{strict\+Mode()}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Features} Json\+::\+Features\+::strict\+Mode (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [static]}}\label{class_json_1_1_features_aed3a2845df0cfd2ebe7338442361bd13}
 
 
 A configuration that is strictly compatible with the J\+S\+O\+N specification. 
@@ -201,5 +123,5 @@ A configuration that is strictly compatible with the J\+S\+O\+N specification.
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/robin\+\_\+f/\+Programming/\+Git/\+C\+P\+P/\+Love\+Brains/api/lib/\+A\+N\+N\+Library/include/json/json.\+h\item 
-/home/robin\+\_\+f/\+Programming/\+Git/\+C\+P\+P/\+Love\+Brains/api/lib/\+A\+N\+N\+Library/src/json/jsoncpp.\+cc\end{DoxyCompactItemize}
+/home/robin\+\_\+f/\+Programming/\+Git/\+C\+P\+P/\+Love\+Brains/include/json/json.\+h\item 
+/home/robin\+\_\+f/\+Programming/\+Git/\+C\+P\+P/\+Love\+Brains/lib/\+G\+A\+N\+N\+Engine/src/json/jsoncpp.\+cc\end{DoxyCompactItemize}

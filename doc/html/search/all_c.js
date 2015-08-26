@@ -8,7 +8,5 @@ var searchData=
   ['loadplugins',['LoadPlugins',['../class_plugin_1_1_plugin_manager.html#a690a2d3e142376e42719181a049a04b1',1,'Plugin::PluginManager']]],
   ['loadsensors',['LoadSensors',['../class_plugin_1_1_plugin_manager.html#aed33e3037fca968dc27af35b283fc3dc',1,'Plugin::PluginManager']]],
   ['logicerror',['LogicError',['../class_json_1_1_logic_error.html',1,'Json']]],
-  ['lovebrains_20_2d_20api_20description',['LoveBrains - API Description',['../md__home_robin_f__programming__git__c_p_p__love_brains_api__r_e_a_d_m_e.html',1,'']]],
-  ['lovebrains_20_2d_20api_20description',['LoveBrains - API Description',['../md__home_robin_f__programming__git__c_p_p__love_brains_mods_basic_survival_api__r_e_a_d_m_e.html',1,'']]],
   ['lovebrains_20_28beta_201_2e0_2e0_29',['LoveBrains (Beta 1.0.0)',['../md__home_robin_f__programming__git__c_p_p__love_brains__r_e_a_d_m_e.html',1,'']]]
 ];

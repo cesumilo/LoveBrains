@@ -24,8 +24,8 @@
 /boundy boundx boundaspect div def
 /xspacing 0 def
 /yspacing 0 def
-/rows 6 def
-/cols 8 def
+/rows 3 def
+/cols 4 def
 /scalefactor 0 def
 /boxfont /Times-Roman findfont fontheight scalefont def
 
@@ -176,20 +176,6 @@ boxfont setfont
 (Json::LogicError) cw
 (Json::Exception) cw
 (Json::Exception) cw
-(Json::Exception) cw
-(Json::Exception) cw
-(exception) cw
-(exception) cw
-(exception) cw
-(exception) cw
-(exception) cw
-(exception) cw
-(exception) cw
-(exception) cw
-(exception) cw
-(exception) cw
-(exception) cw
-(exception) cw
 (exception) cw
 (exception) cw
 (exception) cw
@@ -205,87 +191,37 @@ boundx scalefactor div boundy scalefactor div scale
 
 % ----- classes -----
 
- (Json::LogicError) 3.000000 0.000000 box
- (Json::Exception) 0.000000 1.000000 box
- (Json::Exception) 2.000000 1.000000 box
- (Json::Exception) 4.000000 1.000000 box
- (Json::Exception) 6.000000 1.000000 box
- (exception) 7.000000 2.000000 box
- (exception) 7.000000 3.000000 box
- (exception) 7.000000 4.000000 box
- (exception) 7.000000 5.000000 box
- (exception) 5.000000 2.000000 box
- (exception) 5.000000 3.000000 box
- (exception) 5.000000 4.000000 box
- (exception) 5.000000 5.000000 box
- (exception) 3.000000 2.000000 box
- (exception) 3.000000 3.000000 box
- (exception) 3.000000 4.000000 box
- (exception) 3.000000 5.000000 box
+ (Json::LogicError) 1.500000 0.000000 box
+ (Json::Exception) 0.500000 1.000000 box
+ (Json::Exception) 2.500000 1.000000 box
+ (exception) 0.000000 2.000000 box
  (exception) 1.000000 2.000000 box
- (exception) 1.000000 3.000000 box
- (exception) 1.000000 4.000000 box
- (exception) 1.000000 5.000000 box
+ (exception) 2.000000 2.000000 box
+ (exception) 3.000000 2.000000 box
 
 % ----- relations -----
 
 solid
-0 3.000000 0.000000 out
+0 1.500000 0.000000 out
 solid
-0.000000 6.000000 1.000000 conn
+0.500000 2.500000 1.000000 conn
 solid
-1 0.000000 1.000000 in
+1 0.500000 1.000000 in
 solid
-0 0.000000 1.000000 out
+0 0.500000 1.000000 out
 solid
-1 2.000000 1.000000 in
+0.000000 1.000000 2.000000 conn
 solid
-0 2.000000 1.000000 out
+1 2.500000 1.000000 in
 solid
-1 4.000000 1.000000 in
+0 2.500000 1.000000 out
 solid
-0 4.000000 1.000000 out
+2.000000 3.000000 2.000000 conn
 solid
-1 6.000000 1.000000 in
+1 0.000000 2.000000 in
 solid
-0 6.000000 1.000000 out
+1 1.000000 2.000000 in
 solid
-1 0.000000 2.500000 hedge
+1 2.000000 2.000000 in
 solid
-1 0.000000 3.500000 hedge
-solid
-1 0.000000 4.500000 hedge
-solid
-1 0.000000 5.500000 hedge
-solid
-0.000000 2.000000 5.500000 vedge
-solid
-1 2.000000 2.500000 hedge
-solid
-1 2.000000 3.500000 hedge
-solid
-1 2.000000 4.500000 hedge
-solid
-1 2.000000 5.500000 hedge
-solid
-2.000000 2.000000 5.500000 vedge
-solid
-1 4.000000 2.500000 hedge
-solid
-1 4.000000 3.500000 hedge
-solid
-1 4.000000 4.500000 hedge
-solid
-1 4.000000 5.500000 hedge
-solid
-4.000000 2.000000 5.500000 vedge
-solid
-1 6.000000 2.500000 hedge
-solid
-1 6.000000 3.500000 hedge
-solid
-1 6.000000 4.500000 hedge
-solid
-1 6.000000 5.500000 hedge
-solid
-6.000000 2.000000 5.500000 vedge
+1 3.000000 2.000000 in

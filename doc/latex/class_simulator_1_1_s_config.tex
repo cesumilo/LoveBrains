@@ -44,9 +44,9 @@ void {\bf set\+Population\+Size} (unsigned int size)
 \begin{DoxyCompactList}\small\item\em Set the population size of the G\+A\+Engine. \end{DoxyCompactList}\item 
 void {\bf set\+A\+N\+N\+Infos} (std\+::string infos)
 \begin{DoxyCompactList}\small\item\em Set the topology of the neural network used by the A\+I objects. \end{DoxyCompactList}\item 
-void {\bf set\+Activation} (G\+A\+N\+N\+::\+A\+N\+N\+Layer\+::\+F\+Activate function, G\+A\+N\+N\+::\+A\+N\+N\+::\+Activation\+Type type)
+void {\bf set\+Activation} ({\bf G\+A\+N\+N\+::\+A\+N\+N\+Layer\+::\+F\+Activate} function, {\bf G\+A\+N\+N\+::\+A\+N\+N\+::\+Activation\+Type} type)
 \begin{DoxyCompactList}\small\item\em Set the activation function for the intern layers of the neural network. \end{DoxyCompactList}\item 
-void {\bf set\+Outputs\+Activation} (G\+A\+N\+N\+::\+A\+N\+N\+Layer\+::\+F\+Activate function, G\+A\+N\+N\+::\+A\+N\+N\+::\+Activation\+Type type)
+void {\bf set\+Outputs\+Activation} ({\bf G\+A\+N\+N\+::\+A\+N\+N\+Layer\+::\+F\+Activate} function, {\bf G\+A\+N\+N\+::\+A\+N\+N\+::\+Activation\+Type} type)
 \begin{DoxyCompactList}\small\item\em Set the activation function for the output layer of the neural network. \end{DoxyCompactList}\item 
 void {\bf set\+Environment\+Size} (unsigned int width, unsigned int height)
 \begin{DoxyCompactList}\small\item\em Set the environment size (window size). \end{DoxyCompactList}\item 
@@ -72,17 +72,17 @@ unsigned int {\bf get\+Population\+Size} (void) const   throw ()
 \begin{DoxyCompactList}\small\item\em Get the population size member. \end{DoxyCompactList}\item 
 std\+::vector$<$ unsigned int $>$ const \& {\bf get\+A\+N\+N\+Infos} (void) const   throw ()
 \begin{DoxyCompactList}\small\item\em Get the neural network topology member. \end{DoxyCompactList}\item 
-G\+A\+N\+N\+::\+A\+N\+N\+Layer\+::\+F\+Activate {\bf get\+Activation} (void) const   throw ()
+{\bf G\+A\+N\+N\+::\+A\+N\+N\+Layer\+::\+F\+Activate} {\bf get\+Activation} (void) const   throw ()
 \begin{DoxyCompactList}\small\item\em Get the activation function pointer of the intern layers. \end{DoxyCompactList}\item 
-G\+A\+N\+N\+::\+A\+N\+N\+Layer\+::\+F\+Activate {\bf get\+Outputs\+Activation} (void) const   throw ()
+{\bf G\+A\+N\+N\+::\+A\+N\+N\+Layer\+::\+F\+Activate} {\bf get\+Outputs\+Activation} (void) const   throw ()
 \begin{DoxyCompactList}\small\item\em Get the activation function pointer of the output layer. \end{DoxyCompactList}\item 
 unsigned int {\bf get\+Environment\+Width} (void) const   throw ()
 \begin{DoxyCompactList}\small\item\em Get the window\textquotesingle{}s width. \end{DoxyCompactList}\item 
 unsigned int {\bf get\+Environment\+Height} (void) const   throw ()
 \begin{DoxyCompactList}\small\item\em Get the window\textquotesingle{}s height. \end{DoxyCompactList}\item 
-G\+A\+N\+N\+::\+A\+N\+N\+::\+Activation\+Type {\bf get\+Layer\+Activation\+Type} (void) const   throw ()
+{\bf G\+A\+N\+N\+::\+A\+N\+N\+::\+Activation\+Type} {\bf get\+Layer\+Activation\+Type} (void) const   throw ()
 \begin{DoxyCompactList}\small\item\em Get the type of the activation function pointer inside an intern layer. \end{DoxyCompactList}\item 
-G\+A\+N\+N\+::\+A\+N\+N\+::\+Activation\+Type {\bf get\+Output\+Activation\+Type} (void) const   throw ()
+{\bf G\+A\+N\+N\+::\+A\+N\+N\+::\+Activation\+Type} {\bf get\+Output\+Activation\+Type} (void) const   throw ()
 \begin{DoxyCompactList}\small\item\em Get the type of the activation function pointer inside the output layer. \end{DoxyCompactList}\item 
 bool {\bf is\+Tournament} (void) const   throw ()
 \begin{DoxyCompactList}\small\item\em Get the boolean that says if it\textquotesingle{}s a tournament. \end{DoxyCompactList}\item 
@@ -99,7 +99,7 @@ Manage the configuration of the simulator.
 \subsection{Member Function Documentation}
 \index{Simulator\+::\+S\+Config@{Simulator\+::\+S\+Config}!get\+Activation@{get\+Activation}}
 \index{get\+Activation@{get\+Activation}!Simulator\+::\+S\+Config@{Simulator\+::\+S\+Config}}
-\subsubsection[{get\+Activation(void) const }]{\setlength{\rightskip}{0pt plus 5cm}G\+A\+N\+N\+::\+A\+N\+N\+Layer\+::\+F\+Activate Simulator\+::\+S\+Config\+::get\+Activation (
+\subsubsection[{get\+Activation(void) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+A\+N\+N\+::\+A\+N\+N\+Layer\+::\+F\+Activate} Simulator\+::\+S\+Config\+::get\+Activation (
 \begin{DoxyParamCaption}
 \item[{void}]{}
 \end{DoxyParamCaption}
@@ -109,7 +109,7 @@ Manage the configuration of the simulator.
 Get the activation function pointer of the intern layers. 
 
 \begin{DoxyReturn}{Returns}
-G\+A\+N\+N\+::\+A\+N\+N\+Layer\+::\+F\+Activate 
+\doxyref{G\+A\+N\+N\+::\+A\+N\+N\+Layer\+::\+F\+Activate}{p.}{class_g_a_n_n_1_1_a_n_n_layer_abb160533dd36e791bd0e561ef244cbae} 
 \end{DoxyReturn}
 \index{Simulator\+::\+S\+Config@{Simulator\+::\+S\+Config}!get\+A\+N\+N\+Infos@{get\+A\+N\+N\+Infos}}
 \index{get\+A\+N\+N\+Infos@{get\+A\+N\+N\+Infos}!Simulator\+::\+S\+Config@{Simulator\+::\+S\+Config}}
@@ -197,7 +197,7 @@ double
 \end{DoxyReturn}
 \index{Simulator\+::\+S\+Config@{Simulator\+::\+S\+Config}!get\+Layer\+Activation\+Type@{get\+Layer\+Activation\+Type}}
 \index{get\+Layer\+Activation\+Type@{get\+Layer\+Activation\+Type}!Simulator\+::\+S\+Config@{Simulator\+::\+S\+Config}}
-\subsubsection[{get\+Layer\+Activation\+Type(void) const }]{\setlength{\rightskip}{0pt plus 5cm}G\+A\+N\+N\+::\+A\+N\+N\+::\+Activation\+Type Simulator\+::\+S\+Config\+::get\+Layer\+Activation\+Type (
+\subsubsection[{get\+Layer\+Activation\+Type(void) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+A\+N\+N\+::\+A\+N\+N\+::\+Activation\+Type} Simulator\+::\+S\+Config\+::get\+Layer\+Activation\+Type (
 \begin{DoxyParamCaption}
 \item[{void}]{}
 \end{DoxyParamCaption}
@@ -207,7 +207,7 @@ double
 Get the type of the activation function pointer inside an intern layer. 
 
 \begin{DoxyReturn}{Returns}
-G\+A\+N\+N\+::\+A\+N\+N\+::\+Activation\+Type 
+\doxyref{G\+A\+N\+N\+::\+A\+N\+N\+::\+Activation\+Type}{p.}{class_g_a_n_n_1_1_a_n_n_a09793a3b1a3e795aed773d1a74a373f9} 
 \end{DoxyReturn}
 \index{Simulator\+::\+S\+Config@{Simulator\+::\+S\+Config}!get\+Max\+Epochs@{get\+Max\+Epochs}}
 \index{get\+Max\+Epochs@{get\+Max\+Epochs}!Simulator\+::\+S\+Config@{Simulator\+::\+S\+Config}}
@@ -239,7 +239,7 @@ double
 \end{DoxyReturn}
 \index{Simulator\+::\+S\+Config@{Simulator\+::\+S\+Config}!get\+Output\+Activation\+Type@{get\+Output\+Activation\+Type}}
 \index{get\+Output\+Activation\+Type@{get\+Output\+Activation\+Type}!Simulator\+::\+S\+Config@{Simulator\+::\+S\+Config}}
-\subsubsection[{get\+Output\+Activation\+Type(void) const }]{\setlength{\rightskip}{0pt plus 5cm}G\+A\+N\+N\+::\+A\+N\+N\+::\+Activation\+Type Simulator\+::\+S\+Config\+::get\+Output\+Activation\+Type (
+\subsubsection[{get\+Output\+Activation\+Type(void) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+A\+N\+N\+::\+A\+N\+N\+::\+Activation\+Type} Simulator\+::\+S\+Config\+::get\+Output\+Activation\+Type (
 \begin{DoxyParamCaption}
 \item[{void}]{}
 \end{DoxyParamCaption}
@@ -249,11 +249,11 @@ double
 Get the type of the activation function pointer inside the output layer. 
 
 \begin{DoxyReturn}{Returns}
-G\+A\+N\+N\+::\+A\+N\+N\+::\+Activation\+Type 
+\doxyref{G\+A\+N\+N\+::\+A\+N\+N\+::\+Activation\+Type}{p.}{class_g_a_n_n_1_1_a_n_n_a09793a3b1a3e795aed773d1a74a373f9} 
 \end{DoxyReturn}
 \index{Simulator\+::\+S\+Config@{Simulator\+::\+S\+Config}!get\+Outputs\+Activation@{get\+Outputs\+Activation}}
 \index{get\+Outputs\+Activation@{get\+Outputs\+Activation}!Simulator\+::\+S\+Config@{Simulator\+::\+S\+Config}}
-\subsubsection[{get\+Outputs\+Activation(void) const }]{\setlength{\rightskip}{0pt plus 5cm}G\+A\+N\+N\+::\+A\+N\+N\+Layer\+::\+F\+Activate Simulator\+::\+S\+Config\+::get\+Outputs\+Activation (
+\subsubsection[{get\+Outputs\+Activation(void) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+A\+N\+N\+::\+A\+N\+N\+Layer\+::\+F\+Activate} Simulator\+::\+S\+Config\+::get\+Outputs\+Activation (
 \begin{DoxyParamCaption}
 \item[{void}]{}
 \end{DoxyParamCaption}
@@ -263,7 +263,7 @@ G\+A\+N\+N\+::\+A\+N\+N\+::\+Activation\+Type
 Get the activation function pointer of the output layer. 
 
 \begin{DoxyReturn}{Returns}
-G\+A\+N\+N\+::\+A\+N\+N\+Layer\+::\+F\+Activate 
+\doxyref{G\+A\+N\+N\+::\+A\+N\+N\+Layer\+::\+F\+Activate}{p.}{class_g_a_n_n_1_1_a_n_n_layer_abb160533dd36e791bd0e561ef244cbae} 
 \end{DoxyReturn}
 \index{Simulator\+::\+S\+Config@{Simulator\+::\+S\+Config}!get\+Pool\+Size@{get\+Pool\+Size}}
 \index{get\+Pool\+Size@{get\+Pool\+Size}!Simulator\+::\+S\+Config@{Simulator\+::\+S\+Config}}
@@ -339,8 +339,8 @@ bool
 \index{set\+Activation@{set\+Activation}!Simulator\+::\+S\+Config@{Simulator\+::\+S\+Config}}
 \subsubsection[{set\+Activation(\+G\+A\+N\+N\+::\+A\+N\+N\+Layer\+::\+F\+Activate function, G\+A\+N\+N\+::\+A\+N\+N\+::\+Activation\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+S\+Config\+::set\+Activation (
 \begin{DoxyParamCaption}
-\item[{G\+A\+N\+N\+::\+A\+N\+N\+Layer\+::\+F\+Activate}]{function, }
-\item[{G\+A\+N\+N\+::\+A\+N\+N\+::\+Activation\+Type}]{type}
+\item[{{\bf G\+A\+N\+N\+::\+A\+N\+N\+Layer\+::\+F\+Activate}}]{function, }
+\item[{{\bf G\+A\+N\+N\+::\+A\+N\+N\+::\+Activation\+Type}}]{type}
 \end{DoxyParamCaption}
 )}\label{class_simulator_1_1_s_config_a6fef74896677184cb1fdf023bde212ba}
 
@@ -504,8 +504,8 @@ error \+: \doxyref{Simulator\+Exception}{p.}{class_simulator_1_1_simulator_excep
 \index{set\+Outputs\+Activation@{set\+Outputs\+Activation}!Simulator\+::\+S\+Config@{Simulator\+::\+S\+Config}}
 \subsubsection[{set\+Outputs\+Activation(\+G\+A\+N\+N\+::\+A\+N\+N\+Layer\+::\+F\+Activate function, G\+A\+N\+N\+::\+A\+N\+N\+::\+Activation\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+S\+Config\+::set\+Outputs\+Activation (
 \begin{DoxyParamCaption}
-\item[{G\+A\+N\+N\+::\+A\+N\+N\+Layer\+::\+F\+Activate}]{function, }
-\item[{G\+A\+N\+N\+::\+A\+N\+N\+::\+Activation\+Type}]{type}
+\item[{{\bf G\+A\+N\+N\+::\+A\+N\+N\+Layer\+::\+F\+Activate}}]{function, }
+\item[{{\bf G\+A\+N\+N\+::\+A\+N\+N\+::\+Activation\+Type}}]{type}
 \end{DoxyParamCaption}
 )}\label{class_simulator_1_1_s_config_adea48b24ec797bb01ddecc1b149e544e}
 

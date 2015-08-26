@@ -103,8 +103,6 @@ Inheritance diagram for Json::BuiltStyledStreamWriter:</div>
   <img src="struct_json_1_1_built_styled_stream_writer.png" usemap="#Json::BuiltStyledStreamWriter_map" alt=""/>
   <map id="Json::BuiltStyledStreamWriter_map" name="Json::BuiltStyledStreamWriter_map">
 <area href="class_json_1_1_stream_writer.html" alt="Json::StreamWriter" shape="rect" coords="0,0,177,24"/>
-<area href="class_json_1_1_stream_writer.html" alt="Json::StreamWriter" shape="rect" coords="187,0,364,24"/>
-<area href="class_json_1_1_stream_writer.html" alt="Json::StreamWriter" shape="rect" coords="374,0,551,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -115,16 +113,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3c5c0a88ff6b04e1e94a001f82544c65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8810d938c35c8442cbffcd001628cd0"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_json_1_1_built_styled_stream_writer.html#ab8810d938c35c8442cbffcd001628cd0">write</a> (<a class="el" href="class_json_1_1_value.html">Value</a> const &amp;root, std::ostream *sout)</td></tr>
 <tr class="separator:ab8810d938c35c8442cbffcd001628cd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c5c0a88ff6b04e1e94a001f82544c65"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3c5c0a88ff6b04e1e94a001f82544c65"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>BuiltStyledStreamWriter</b> (std::string const &amp;indentation, <a class="el" href="struct_json_1_1_comment_style.html#a51fc08f3518fd81eba12f340d19a3d0c">CommentStyle::Enum</a> cs, std::string const &amp;colonSymbol, std::string const &amp;nullSymbol, std::string const &amp;endingLineFeedSymbol)</td></tr>
-<tr class="separator:a3c5c0a88ff6b04e1e94a001f82544c65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3af7e55185c8c0d503f6cf9baa2f844"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_json_1_1_built_styled_stream_writer.html#af3af7e55185c8c0d503f6cf9baa2f844">write</a> (<a class="el" href="class_json_1_1_value.html">Value</a> const &amp;root, std::ostream *sout)</td></tr>
-<tr class="separator:af3af7e55185c8c0d503f6cf9baa2f844"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c5c0a88ff6b04e1e94a001f82544c65"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3c5c0a88ff6b04e1e94a001f82544c65"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>BuiltStyledStreamWriter</b> (std::string const &amp;indentation, <a class="el" href="struct_json_1_1_comment_style.html#a51fc08f3518fd81eba12f340d19a3d0c">CommentStyle::Enum</a> cs, std::string const &amp;colonSymbol, std::string const &amp;nullSymbol, std::string const &amp;endingLineFeedSymbol)</td></tr>
-<tr class="separator:a3c5c0a88ff6b04e1e94a001f82544c65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3af7e55185c8c0d503f6cf9baa2f844"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_json_1_1_built_styled_stream_writer.html#af3af7e55185c8c0d503f6cf9baa2f844">write</a> (<a class="el" href="class_json_1_1_value.html">Value</a> const &amp;root, std::ostream *sout)</td></tr>
-<tr class="separator:af3af7e55185c8c0d503f6cf9baa2f844"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -178,101 +166,13 @@ std::ostream *&#160;</td><td class="memItemRight" valign="bottom"><b>sout_</b></
 
 </div>
 </div>
-<a class="anchor" id="af3af7e55185c8c0d503f6cf9baa2f844"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual int Json::BuiltStyledStreamWriter::write </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_json_1_1_value.html">Value</a> const &amp;&#160;</td>
-          <td class="paramname"><em>root</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::ostream *&#160;</td>
-          <td class="paramname"><em>sout</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Write <a class="el" href="class_json_1_1_value.html" title="Represents a JSON value. ">Value</a> into document as configured in sub-class. Do not take ownership of sout, but maintain a reference during function. </p><dl class="section pre"><dt>Precondition</dt><dd>sout != NULL </dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>zero on success (For now, we always return zero, so check the stream instead.) </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>possibly, depending on configuration </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Implements <a class="el" href="class_json_1_1_stream_writer.html#a237368cf13b41decc015640d25f176ab">Json::StreamWriter</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="af3af7e55185c8c0d503f6cf9baa2f844"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual int Json::BuiltStyledStreamWriter::write </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_json_1_1_value.html">Value</a> const &amp;&#160;</td>
-          <td class="paramname"><em>root</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::ostream *&#160;</td>
-          <td class="paramname"><em>sout</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Write <a class="el" href="class_json_1_1_value.html" title="Represents a JSON value. ">Value</a> into document as configured in sub-class. Do not take ownership of sout, but maintain a reference during function. </p><dl class="section pre"><dt>Precondition</dt><dd>sout != NULL </dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>zero on success (For now, we always return zero, so check the stream instead.) </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>possibly, depending on configuration </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Implements <a class="el" href="class_json_1_1_stream_writer.html#a237368cf13b41decc015640d25f176ab">Json::StreamWriter</a>.</p>
-
-</div>
-</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/robin_f/Programming/Git/CPP/LoveBrains/api/lib/ANNLibrary/src/json/jsoncpp.cc</li>
+<li>/home/robin_f/Programming/Git/CPP/LoveBrains/lib/GANNEngine/src/json/jsoncpp.cc</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 26 2015 16:55:49 for LoveBrains by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 26 2015 16:58:44 for LoveBrains by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

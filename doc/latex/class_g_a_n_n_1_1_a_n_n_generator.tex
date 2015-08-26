@@ -30,9 +30,9 @@ void {\bf init} (std\+::vector$<$ unsigned int $>$ const \&infos, double crossin
 \begin{DoxyCompactList}\small\item\em Initialize the generator. \end{DoxyCompactList}\item 
 void {\bf set\+Randomize} (double min, double max)  throw ()
 \begin{DoxyCompactList}\small\item\em Set the range of the randomization. \end{DoxyCompactList}\item 
-void {\bf set\+Activation\+Function} (A\+N\+N\+Layer\+::\+F\+Activate function, A\+N\+N\+::\+Activation\+Type type)  throw ()
+void {\bf set\+Activation\+Function} ({\bf A\+N\+N\+Layer\+::\+F\+Activate} function, {\bf A\+N\+N\+::\+Activation\+Type} type)  throw ()
 \begin{DoxyCompactList}\small\item\em Set the activation function of the intern layers. \end{DoxyCompactList}\item 
-void {\bf set\+Outputs\+Activation} (A\+N\+N\+Layer\+::\+F\+Activate function, A\+N\+N\+::\+Activation\+Type type)  throw ()
+void {\bf set\+Outputs\+Activation} ({\bf A\+N\+N\+Layer\+::\+F\+Activate} function, {\bf A\+N\+N\+::\+Activation\+Type} type)  throw ()
 \begin{DoxyCompactList}\small\item\em Set the activation function of the output layer. \end{DoxyCompactList}\item 
 std\+::vector$<$ unsigned int $>$ const \& {\bf get\+Infos} (void) const   throw ()
 \begin{DoxyCompactList}\small\item\em Get the topology of the neural network. \end{DoxyCompactList}\item 
@@ -42,13 +42,13 @@ double {\bf get\+Random\+Min} (void) const   throw ()
 \begin{DoxyCompactList}\small\item\em Get the minimum value of the randomization range. \end{DoxyCompactList}\item 
 double {\bf get\+Random\+Max} (void) const   throw ()
 \begin{DoxyCompactList}\small\item\em Get the maximum value of the randomization range. \end{DoxyCompactList}\item 
-A\+N\+N\+Layer\+::\+F\+Activate {\bf get\+Activation} (void) const   throw ()
+{\bf A\+N\+N\+Layer\+::\+F\+Activate} {\bf get\+Activation} (void) const   throw ()
 \begin{DoxyCompactList}\small\item\em Get the activation function pointer of the intern layers. \end{DoxyCompactList}\item 
-A\+N\+N\+Layer\+::\+F\+Activate {\bf get\+Outputs\+Activation} (void) const   throw ()
+{\bf A\+N\+N\+Layer\+::\+F\+Activate} {\bf get\+Outputs\+Activation} (void) const   throw ()
 \begin{DoxyCompactList}\small\item\em Get the activation function pointer of the output layer. \end{DoxyCompactList}\item 
-A\+N\+N\+::\+Activation\+Type {\bf get\+Output\+Type} (void) const   throw ()
+{\bf A\+N\+N\+::\+Activation\+Type} {\bf get\+Output\+Type} (void) const   throw ()
 \begin{DoxyCompactList}\small\item\em Get the activation function\textquotesingle{}s type of the intern layers. \end{DoxyCompactList}\item 
-A\+N\+N\+::\+Activation\+Type {\bf get\+Layer\+Type} (void) const   throw ()
+{\bf A\+N\+N\+::\+Activation\+Type} {\bf get\+Layer\+Type} (void) const   throw ()
 \begin{DoxyCompactList}\small\item\em Get the activaton function\textquotesingle{}s type of the output layer. \end{DoxyCompactList}\item 
 {\bf A\+N\+N\+Generator} \& {\bfseries operator=} ({\bf A\+N\+N\+Generator} const \&gen)  throw ()\label{class_g_a_n_n_1_1_a_n_n_generator_a6f61ed5962be9c83546b734edc0ad4d4}
 
@@ -64,10 +64,10 @@ void {\bfseries init} (std\+::vector$<$ unsigned int $>$ const \&infos, double c
 void {\bfseries set\+Randomize} (double min, double max)  throw ()\label{class_g_a_n_n_1_1_a_n_n_generator_a27a6812e33b66e7df61d6e2996d57b6b}
 
 \item 
-void {\bfseries set\+Activation\+Function} (A\+N\+N\+Layer\+::\+F\+Activate function, A\+N\+N\+::\+Activation\+Type type)  throw ()\label{class_g_a_n_n_1_1_a_n_n_generator_a685ccb6a24ecbb81eea69f3552338fab}
+void {\bfseries set\+Activation\+Function} ({\bf A\+N\+N\+Layer\+::\+F\+Activate} function, {\bf A\+N\+N\+::\+Activation\+Type} type)  throw ()\label{class_g_a_n_n_1_1_a_n_n_generator_a685ccb6a24ecbb81eea69f3552338fab}
 
 \item 
-void {\bfseries set\+Outputs\+Activation} (A\+N\+N\+Layer\+::\+F\+Activate function, A\+N\+N\+::\+Activation\+Type type)  throw ()\label{class_g_a_n_n_1_1_a_n_n_generator_a7731f13e7e3b9a27ccb0c95df389ac4c}
+void {\bfseries set\+Outputs\+Activation} ({\bf A\+N\+N\+Layer\+::\+F\+Activate} function, {\bf A\+N\+N\+::\+Activation\+Type} type)  throw ()\label{class_g_a_n_n_1_1_a_n_n_generator_a7731f13e7e3b9a27ccb0c95df389ac4c}
 
 \item 
 std\+::vector$<$ unsigned int $>$ const \& {\bfseries get\+Infos} (void) const   throw ()\label{class_g_a_n_n_1_1_a_n_n_generator_a7109368cc11dfd0b490bfc59a29520df}
@@ -82,16 +82,16 @@ double {\bfseries get\+Random\+Min} (void) const   throw ()\label{class_g_a_n_n_
 double {\bfseries get\+Random\+Max} (void) const   throw ()\label{class_g_a_n_n_1_1_a_n_n_generator_ad6a287d13c840c89abddfa11983392af}
 
 \item 
-A\+N\+N\+Layer\+::\+F\+Activate {\bfseries get\+Activation} (void) const   throw ()\label{class_g_a_n_n_1_1_a_n_n_generator_a7b632c6708c228d52a0b82a55e0f0759}
+{\bf A\+N\+N\+Layer\+::\+F\+Activate} {\bfseries get\+Activation} (void) const   throw ()\label{class_g_a_n_n_1_1_a_n_n_generator_a7b632c6708c228d52a0b82a55e0f0759}
 
 \item 
-A\+N\+N\+Layer\+::\+F\+Activate {\bfseries get\+Outputs\+Activation} (void) const   throw ()\label{class_g_a_n_n_1_1_a_n_n_generator_af336b38d6dacc9ee52489218058bc193}
+{\bf A\+N\+N\+Layer\+::\+F\+Activate} {\bfseries get\+Outputs\+Activation} (void) const   throw ()\label{class_g_a_n_n_1_1_a_n_n_generator_af336b38d6dacc9ee52489218058bc193}
 
 \item 
-A\+N\+N\+::\+Activation\+Type {\bfseries get\+Output\+Type} (void) const   throw ()\label{class_g_a_n_n_1_1_a_n_n_generator_a515efd311d411de4c063b66425468c4e}
+{\bf A\+N\+N\+::\+Activation\+Type} {\bfseries get\+Output\+Type} (void) const   throw ()\label{class_g_a_n_n_1_1_a_n_n_generator_a515efd311d411de4c063b66425468c4e}
 
 \item 
-A\+N\+N\+::\+Activation\+Type {\bfseries get\+Layer\+Type} (void) const   throw ()\label{class_g_a_n_n_1_1_a_n_n_generator_a83ffaaae45a8340d1f362534c1dc7b74}
+{\bf A\+N\+N\+::\+Activation\+Type} {\bfseries get\+Layer\+Type} (void) const   throw ()\label{class_g_a_n_n_1_1_a_n_n_generator_a83ffaaae45a8340d1f362534c1dc7b74}
 
 \item 
 {\bf A\+N\+N\+Generator} \& {\bfseries operator=} ({\bf A\+N\+N\+Generator} const \&gen)  throw ()\label{class_g_a_n_n_1_1_a_n_n_generator_a7998ae42ec91982bfdc7533b561ffd78}
@@ -165,7 +165,7 @@ Implements {\bf G\+A\+::\+I\+Generator} \doxyref{}{p.}{class_g_a_1_1_i_generator
 
 \index{G\+A\+N\+N\+::\+A\+N\+N\+Generator@{G\+A\+N\+N\+::\+A\+N\+N\+Generator}!get\+Activation@{get\+Activation}}
 \index{get\+Activation@{get\+Activation}!G\+A\+N\+N\+::\+A\+N\+N\+Generator@{G\+A\+N\+N\+::\+A\+N\+N\+Generator}}
-\subsubsection[{get\+Activation(void) const }]{\setlength{\rightskip}{0pt plus 5cm}A\+N\+N\+Layer\+::\+F\+Activate G\+A\+N\+N\+::\+A\+N\+N\+Generator\+::get\+Activation (
+\subsubsection[{get\+Activation(void) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf A\+N\+N\+Layer\+::\+F\+Activate} G\+A\+N\+N\+::\+A\+N\+N\+Generator\+::get\+Activation (
 \begin{DoxyParamCaption}
 \item[{void}]{}
 \end{DoxyParamCaption}
@@ -175,7 +175,7 @@ Implements {\bf G\+A\+::\+I\+Generator} \doxyref{}{p.}{class_g_a_1_1_i_generator
 Get the activation function pointer of the intern layers. 
 
 \begin{DoxyReturn}{Returns}
-A\+N\+N\+Layer\+::\+F\+Activate 
+\doxyref{A\+N\+N\+Layer\+::\+F\+Activate}{p.}{class_g_a_n_n_1_1_a_n_n_layer_abb160533dd36e791bd0e561ef244cbae} 
 \end{DoxyReturn}
 \index{G\+A\+N\+N\+::\+A\+N\+N\+Generator@{G\+A\+N\+N\+::\+A\+N\+N\+Generator}!get\+Crossing\+Rate@{get\+Crossing\+Rate}}
 \index{get\+Crossing\+Rate@{get\+Crossing\+Rate}!G\+A\+N\+N\+::\+A\+N\+N\+Generator@{G\+A\+N\+N\+::\+A\+N\+N\+Generator}}
@@ -207,7 +207,7 @@ std\+::vector$<$unsigned int$>$ const\&
 \end{DoxyReturn}
 \index{G\+A\+N\+N\+::\+A\+N\+N\+Generator@{G\+A\+N\+N\+::\+A\+N\+N\+Generator}!get\+Layer\+Type@{get\+Layer\+Type}}
 \index{get\+Layer\+Type@{get\+Layer\+Type}!G\+A\+N\+N\+::\+A\+N\+N\+Generator@{G\+A\+N\+N\+::\+A\+N\+N\+Generator}}
-\subsubsection[{get\+Layer\+Type(void) const }]{\setlength{\rightskip}{0pt plus 5cm}A\+N\+N\+::\+Activation\+Type G\+A\+N\+N\+::\+A\+N\+N\+Generator\+::get\+Layer\+Type (
+\subsubsection[{get\+Layer\+Type(void) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf A\+N\+N\+::\+Activation\+Type} G\+A\+N\+N\+::\+A\+N\+N\+Generator\+::get\+Layer\+Type (
 \begin{DoxyParamCaption}
 \item[{void}]{}
 \end{DoxyParamCaption}
@@ -217,11 +217,11 @@ std\+::vector$<$unsigned int$>$ const\&
 Get the activaton function\textquotesingle{}s type of the output layer. 
 
 \begin{DoxyReturn}{Returns}
-A\+N\+N\+::\+Activation\+Type 
+\doxyref{A\+N\+N\+::\+Activation\+Type}{p.}{class_g_a_n_n_1_1_a_n_n_a09793a3b1a3e795aed773d1a74a373f9} 
 \end{DoxyReturn}
 \index{G\+A\+N\+N\+::\+A\+N\+N\+Generator@{G\+A\+N\+N\+::\+A\+N\+N\+Generator}!get\+Outputs\+Activation@{get\+Outputs\+Activation}}
 \index{get\+Outputs\+Activation@{get\+Outputs\+Activation}!G\+A\+N\+N\+::\+A\+N\+N\+Generator@{G\+A\+N\+N\+::\+A\+N\+N\+Generator}}
-\subsubsection[{get\+Outputs\+Activation(void) const }]{\setlength{\rightskip}{0pt plus 5cm}A\+N\+N\+Layer\+::\+F\+Activate G\+A\+N\+N\+::\+A\+N\+N\+Generator\+::get\+Outputs\+Activation (
+\subsubsection[{get\+Outputs\+Activation(void) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf A\+N\+N\+Layer\+::\+F\+Activate} G\+A\+N\+N\+::\+A\+N\+N\+Generator\+::get\+Outputs\+Activation (
 \begin{DoxyParamCaption}
 \item[{void}]{}
 \end{DoxyParamCaption}
@@ -231,11 +231,11 @@ A\+N\+N\+::\+Activation\+Type
 Get the activation function pointer of the output layer. 
 
 \begin{DoxyReturn}{Returns}
-A\+N\+N\+Layer\+::\+F\+Activate 
+\doxyref{A\+N\+N\+Layer\+::\+F\+Activate}{p.}{class_g_a_n_n_1_1_a_n_n_layer_abb160533dd36e791bd0e561ef244cbae} 
 \end{DoxyReturn}
 \index{G\+A\+N\+N\+::\+A\+N\+N\+Generator@{G\+A\+N\+N\+::\+A\+N\+N\+Generator}!get\+Output\+Type@{get\+Output\+Type}}
 \index{get\+Output\+Type@{get\+Output\+Type}!G\+A\+N\+N\+::\+A\+N\+N\+Generator@{G\+A\+N\+N\+::\+A\+N\+N\+Generator}}
-\subsubsection[{get\+Output\+Type(void) const }]{\setlength{\rightskip}{0pt plus 5cm}A\+N\+N\+::\+Activation\+Type G\+A\+N\+N\+::\+A\+N\+N\+Generator\+::get\+Output\+Type (
+\subsubsection[{get\+Output\+Type(void) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf A\+N\+N\+::\+Activation\+Type} G\+A\+N\+N\+::\+A\+N\+N\+Generator\+::get\+Output\+Type (
 \begin{DoxyParamCaption}
 \item[{void}]{}
 \end{DoxyParamCaption}
@@ -245,7 +245,7 @@ A\+N\+N\+Layer\+::\+F\+Activate
 Get the activation function\textquotesingle{}s type of the intern layers. 
 
 \begin{DoxyReturn}{Returns}
-A\+N\+N\+::\+Activation\+Type 
+\doxyref{A\+N\+N\+::\+Activation\+Type}{p.}{class_g_a_n_n_1_1_a_n_n_a09793a3b1a3e795aed773d1a74a373f9} 
 \end{DoxyReturn}
 \index{G\+A\+N\+N\+::\+A\+N\+N\+Generator@{G\+A\+N\+N\+::\+A\+N\+N\+Generator}!get\+Random\+Max@{get\+Random\+Max}}
 \index{get\+Random\+Max@{get\+Random\+Max}!G\+A\+N\+N\+::\+A\+N\+N\+Generator@{G\+A\+N\+N\+::\+A\+N\+N\+Generator}}
@@ -298,8 +298,8 @@ Initialize the generator.
 \index{set\+Activation\+Function@{set\+Activation\+Function}!G\+A\+N\+N\+::\+A\+N\+N\+Generator@{G\+A\+N\+N\+::\+A\+N\+N\+Generator}}
 \subsubsection[{set\+Activation\+Function(\+A\+N\+N\+Layer\+::\+F\+Activate function, A\+N\+N\+::\+Activation\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}void G\+A\+N\+N\+::\+A\+N\+N\+Generator\+::set\+Activation\+Function (
 \begin{DoxyParamCaption}
-\item[{A\+N\+N\+Layer\+::\+F\+Activate}]{function, }
-\item[{A\+N\+N\+::\+Activation\+Type}]{type}
+\item[{{\bf A\+N\+N\+Layer\+::\+F\+Activate}}]{function, }
+\item[{{\bf A\+N\+N\+::\+Activation\+Type}}]{type}
 \end{DoxyParamCaption}
 ) throw  ) }\label{class_g_a_n_n_1_1_a_n_n_generator_a685ccb6a24ecbb81eea69f3552338fab}
 
@@ -317,8 +317,8 @@ Set the activation function of the intern layers.
 \index{set\+Outputs\+Activation@{set\+Outputs\+Activation}!G\+A\+N\+N\+::\+A\+N\+N\+Generator@{G\+A\+N\+N\+::\+A\+N\+N\+Generator}}
 \subsubsection[{set\+Outputs\+Activation(\+A\+N\+N\+Layer\+::\+F\+Activate function, A\+N\+N\+::\+Activation\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}void G\+A\+N\+N\+::\+A\+N\+N\+Generator\+::set\+Outputs\+Activation (
 \begin{DoxyParamCaption}
-\item[{A\+N\+N\+Layer\+::\+F\+Activate}]{function, }
-\item[{A\+N\+N\+::\+Activation\+Type}]{type}
+\item[{{\bf A\+N\+N\+Layer\+::\+F\+Activate}}]{function, }
+\item[{{\bf A\+N\+N\+::\+Activation\+Type}}]{type}
 \end{DoxyParamCaption}
 ) throw  ) }\label{class_g_a_n_n_1_1_a_n_n_generator_a7731f13e7e3b9a27ccb0c95df389ac4c}
 

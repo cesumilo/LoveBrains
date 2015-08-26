@@ -82,13 +82,13 @@ typedef U\+Int64 {\bfseries Largest\+U\+Int}\label{namespace_json_ae202ecad69725
 typedef unsigned int {\bfseries Array\+Index}\label{namespace_json_a8048e741f2177c3b5d9ede4a5b8c53c2}
 
 \item 
-typedef char {\bfseries U\+Int\+To\+String\+Buffer}[{\bf uint\+To\+String\+Buffer\+Size}]\label{namespace_json_a291f4e6429ef4a13891930e4b7ed0d23}
+typedef char {\bfseries U\+Int\+To\+String\+Buffer}[{\bf uint\+To\+String\+Buffer\+Size}]\label{namespace_json_a602bcf69c2042fb61c3b243cb16f04ca}
 
 \item 
-typedef std\+::auto\+\_\+ptr$<$ {\bf Char\+Reader} $>$ {\bfseries Char\+Reader\+Ptr}\label{namespace_json_a3074486d9d012969e6f0d5fda8aa7194}
+typedef std\+::auto\+\_\+ptr$<$ {\bf Char\+Reader} $>$ {\bfseries Char\+Reader\+Ptr}\label{namespace_json_a4724efb8d41614b47036cb8b54233837}
 
 \item 
-typedef std\+::auto\+\_\+ptr$<$ {\bf Stream\+Writer} $>$ {\bfseries Stream\+Writer\+Ptr}\label{namespace_json_af599e3549574d4d2474df5db7a0db74b}
+typedef std\+::auto\+\_\+ptr$<$ {\bf Stream\+Writer} $>$ {\bfseries Stream\+Writer\+Ptr}\label{namespace_json_a7132404aeebfc96d7c6ad2c66260afb5}
 
 \end{DoxyCompactItemize}
 \subsection*{Enumerations}
@@ -113,107 +113,10 @@ enum {\bf Value\+Type} \{ \\*
 {\bf string\+Value}, 
 {\bf boolean\+Value}, 
 {\bf array\+Value}, 
-{\bf object\+Value}, 
-\\*
-{\bf null\+Value} = 0, 
-{\bf int\+Value}, 
-{\bf uint\+Value}, 
-{\bf real\+Value}, 
-\\*
-{\bf string\+Value}, 
-{\bf boolean\+Value}, 
-{\bf array\+Value}, 
-{\bf object\+Value}, 
-\\*
-{\bf null\+Value} = 0, 
-{\bf int\+Value}, 
-{\bf uint\+Value}, 
-{\bf real\+Value}, 
-\\*
-{\bf string\+Value}, 
-{\bf boolean\+Value}, 
-{\bf array\+Value}, 
 {\bf object\+Value}
  \}\begin{DoxyCompactList}\small\item\em Type of the value held by a Value object. \end{DoxyCompactList}
 \item 
 enum {\bf Comment\+Placement} \{ \\*
-{\bf comment\+Before} = 0, 
-{\bf comment\+After\+On\+Same\+Line}, 
-{\bf comment\+After}, 
-{\bf number\+Of\+Comment\+Placement}, 
-\\*
-{\bf comment\+Before} = 0, 
-{\bf comment\+After\+On\+Same\+Line}, 
-{\bf comment\+After}, 
-{\bf number\+Of\+Comment\+Placement}, 
-\\*
-{\bf comment\+Before} = 0, 
-{\bf comment\+After\+On\+Same\+Line}, 
-{\bf comment\+After}, 
-{\bf number\+Of\+Comment\+Placement}, 
-\\*
-{\bf comment\+Before} = 0, 
-{\bf comment\+After\+On\+Same\+Line}, 
-{\bf comment\+After}, 
-{\bf number\+Of\+Comment\+Placement}
- \}
-\item 
-enum \{ {\bf uint\+To\+String\+Buffer\+Size} = 3 $\ast$ sizeof(Largest\+U\+Int) + 1
- \}
-\item 
-enum {\bf Value\+Type} \{ \\*
-{\bf null\+Value} = 0, 
-{\bf int\+Value}, 
-{\bf uint\+Value}, 
-{\bf real\+Value}, 
-\\*
-{\bf string\+Value}, 
-{\bf boolean\+Value}, 
-{\bf array\+Value}, 
-{\bf object\+Value}, 
-\\*
-{\bf null\+Value} = 0, 
-{\bf int\+Value}, 
-{\bf uint\+Value}, 
-{\bf real\+Value}, 
-\\*
-{\bf string\+Value}, 
-{\bf boolean\+Value}, 
-{\bf array\+Value}, 
-{\bf object\+Value}, 
-\\*
-{\bf null\+Value} = 0, 
-{\bf int\+Value}, 
-{\bf uint\+Value}, 
-{\bf real\+Value}, 
-\\*
-{\bf string\+Value}, 
-{\bf boolean\+Value}, 
-{\bf array\+Value}, 
-{\bf object\+Value}, 
-\\*
-{\bf null\+Value} = 0, 
-{\bf int\+Value}, 
-{\bf uint\+Value}, 
-{\bf real\+Value}, 
-\\*
-{\bf string\+Value}, 
-{\bf boolean\+Value}, 
-{\bf array\+Value}, 
-{\bf object\+Value}
- \}\begin{DoxyCompactList}\small\item\em Type of the value held by a Value object. \end{DoxyCompactList}
-\item 
-enum {\bf Comment\+Placement} \{ \\*
-{\bf comment\+Before} = 0, 
-{\bf comment\+After\+On\+Same\+Line}, 
-{\bf comment\+After}, 
-{\bf number\+Of\+Comment\+Placement}, 
-\\*
-{\bf comment\+Before} = 0, 
-{\bf comment\+After\+On\+Same\+Line}, 
-{\bf comment\+After}, 
-{\bf number\+Of\+Comment\+Placement}, 
-\\*
 {\bf comment\+Before} = 0, 
 {\bf comment\+After\+On\+Same\+Line}, 
 {\bf comment\+After}, 
@@ -244,107 +147,10 @@ enum {\bf Value\+Type} \{ \\*
 {\bf string\+Value}, 
 {\bf boolean\+Value}, 
 {\bf array\+Value}, 
-{\bf object\+Value}, 
-\\*
-{\bf null\+Value} = 0, 
-{\bf int\+Value}, 
-{\bf uint\+Value}, 
-{\bf real\+Value}, 
-\\*
-{\bf string\+Value}, 
-{\bf boolean\+Value}, 
-{\bf array\+Value}, 
-{\bf object\+Value}, 
-\\*
-{\bf null\+Value} = 0, 
-{\bf int\+Value}, 
-{\bf uint\+Value}, 
-{\bf real\+Value}, 
-\\*
-{\bf string\+Value}, 
-{\bf boolean\+Value}, 
-{\bf array\+Value}, 
 {\bf object\+Value}
  \}\begin{DoxyCompactList}\small\item\em Type of the value held by a Value object. \end{DoxyCompactList}
 \item 
 enum {\bf Comment\+Placement} \{ \\*
-{\bf comment\+Before} = 0, 
-{\bf comment\+After\+On\+Same\+Line}, 
-{\bf comment\+After}, 
-{\bf number\+Of\+Comment\+Placement}, 
-\\*
-{\bf comment\+Before} = 0, 
-{\bf comment\+After\+On\+Same\+Line}, 
-{\bf comment\+After}, 
-{\bf number\+Of\+Comment\+Placement}, 
-\\*
-{\bf comment\+Before} = 0, 
-{\bf comment\+After\+On\+Same\+Line}, 
-{\bf comment\+After}, 
-{\bf number\+Of\+Comment\+Placement}, 
-\\*
-{\bf comment\+Before} = 0, 
-{\bf comment\+After\+On\+Same\+Line}, 
-{\bf comment\+After}, 
-{\bf number\+Of\+Comment\+Placement}
- \}
-\item 
-enum \{ {\bf uint\+To\+String\+Buffer\+Size} = 3 $\ast$ sizeof(Largest\+U\+Int) + 1
- \}
-\item 
-enum {\bf Value\+Type} \{ \\*
-{\bf null\+Value} = 0, 
-{\bf int\+Value}, 
-{\bf uint\+Value}, 
-{\bf real\+Value}, 
-\\*
-{\bf string\+Value}, 
-{\bf boolean\+Value}, 
-{\bf array\+Value}, 
-{\bf object\+Value}, 
-\\*
-{\bf null\+Value} = 0, 
-{\bf int\+Value}, 
-{\bf uint\+Value}, 
-{\bf real\+Value}, 
-\\*
-{\bf string\+Value}, 
-{\bf boolean\+Value}, 
-{\bf array\+Value}, 
-{\bf object\+Value}, 
-\\*
-{\bf null\+Value} = 0, 
-{\bf int\+Value}, 
-{\bf uint\+Value}, 
-{\bf real\+Value}, 
-\\*
-{\bf string\+Value}, 
-{\bf boolean\+Value}, 
-{\bf array\+Value}, 
-{\bf object\+Value}, 
-\\*
-{\bf null\+Value} = 0, 
-{\bf int\+Value}, 
-{\bf uint\+Value}, 
-{\bf real\+Value}, 
-\\*
-{\bf string\+Value}, 
-{\bf boolean\+Value}, 
-{\bf array\+Value}, 
-{\bf object\+Value}
- \}\begin{DoxyCompactList}\small\item\em Type of the value held by a Value object. \end{DoxyCompactList}
-\item 
-enum {\bf Comment\+Placement} \{ \\*
-{\bf comment\+Before} = 0, 
-{\bf comment\+After\+On\+Same\+Line}, 
-{\bf comment\+After}, 
-{\bf number\+Of\+Comment\+Placement}, 
-\\*
-{\bf comment\+Before} = 0, 
-{\bf comment\+After\+On\+Same\+Line}, 
-{\bf comment\+After}, 
-{\bf number\+Of\+Comment\+Placement}, 
-\\*
 {\bf comment\+Before} = 0, 
 {\bf comment\+After\+On\+Same\+Line}, 
 {\bf comment\+After}, 
@@ -398,13 +204,13 @@ std\+::string J\+S\+O\+N\+\_\+\+A\+P\+I {\bfseries value\+To\+Quoted\+String} (c
 \item 
 J\+S\+O\+N\+\_\+\+A\+P\+I std\+::ostream \& {\bf operator$<$$<$} (std\+::ostream \&, const {\bf Value} \&root)
 \begin{DoxyCompactList}\small\item\em Output using the \doxyref{Styled\+Stream\+Writer}{p.}{class_json_1_1_styled_stream_writer}. \end{DoxyCompactList}\item 
-std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&sout, {\bf Value} const \&root)\label{namespace_json_a98511d3cc44ed22d4c6e2c99438aaf30}
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&sout, {\bf Value} const \&root)\label{namespace_json_af64fba09a9679b8b8cb50dd3e85f6fd5}
 
 \end{DoxyCompactItemize}
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-const unsigned char \& {\bfseries k\+Null\+Ref} = k\+Null[0]\label{namespace_json_a0900b743ececb1d875718f2d885e059a}
+const unsigned char \& {\bfseries k\+Null\+Ref} = k\+Null[0]\label{namespace_json_ab30055b4bbd82aecaca57ccecd63bbe6}
 
 \end{DoxyCompactItemize}
 
@@ -413,28 +219,12 @@ const unsigned char \& {\bfseries k\+Null\+Ref} = k\+Null[0]\label{namespace_jso
 J\+S\+O\+N (Java\+Script Object Notation). 
 
 \subsection{Enumeration Type Documentation}
-\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{namespace_json_a652fba4c259b706dfcd6527f77a5232f}
+\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{namespace_json_aaadda4b3969b65336128f046fccf90a7}
 \begin{Desc}
 \item[Enumerator]\par
 \begin{description}
 \index{uint\+To\+String\+Buffer\+Size@{uint\+To\+String\+Buffer\+Size}!Json@{Json}}\index{Json@{Json}!uint\+To\+String\+Buffer\+Size@{uint\+To\+String\+Buffer\+Size}}\item[{\em 
-uint\+To\+String\+Buffer\+Size\label{namespace_json_a652fba4c259b706dfcd6527f77a5232fa9b698ddb2b446e8a8f8d4068f2283495}
-}]Constant that specify the size of the buffer that must be passed to uint\+To\+String. \end{description}
-\end{Desc}
-\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{namespace_json_a2aacab54ef6fc18e833fbd4982a0a23a}
-\begin{Desc}
-\item[Enumerator]\par
-\begin{description}
-\index{uint\+To\+String\+Buffer\+Size@{uint\+To\+String\+Buffer\+Size}!Json@{Json}}\index{Json@{Json}!uint\+To\+String\+Buffer\+Size@{uint\+To\+String\+Buffer\+Size}}\item[{\em 
-uint\+To\+String\+Buffer\+Size\label{namespace_json_a652fba4c259b706dfcd6527f77a5232fa9b698ddb2b446e8a8f8d4068f2283495}
-}]Constant that specify the size of the buffer that must be passed to uint\+To\+String. \end{description}
-\end{Desc}
-\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{namespace_json_aaa9f7061e4fdf0b9e5cff387a3981cd2}
-\begin{Desc}
-\item[Enumerator]\par
-\begin{description}
-\index{uint\+To\+String\+Buffer\+Size@{uint\+To\+String\+Buffer\+Size}!Json@{Json}}\index{Json@{Json}!uint\+To\+String\+Buffer\+Size@{uint\+To\+String\+Buffer\+Size}}\item[{\em 
-uint\+To\+String\+Buffer\+Size\label{namespace_json_a652fba4c259b706dfcd6527f77a5232fa9b698ddb2b446e8a8f8d4068f2283495}
+uint\+To\+String\+Buffer\+Size\label{namespace_json_aaadda4b3969b65336128f046fccf90a7ae4f2008c7919f20d81286121d1374424}
 }]Constant that specify the size of the buffer that must be passed to uint\+To\+String. \end{description}
 \end{Desc}
 \index{Json@{Json}!Comment\+Placement@{Comment\+Placement}}
@@ -459,22 +249,6 @@ comment\+After\+On\+Same\+Line\label{namespace_json_a4fc417c23905b2ae9e2c47d197a
 comment\+After\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a845090604f098147b393b79ba0ec8cae}
 }]a comment on the line after a value (only make sense for \index{number\+Of\+Comment\+Placement@{number\+Of\+Comment\+Placement}!Json@{Json}}\index{Json@{Json}!number\+Of\+Comment\+Placement@{number\+Of\+Comment\+Placement}}\item[{\em 
 number\+Of\+Comment\+Placement\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a965a468bcc29e6c2194fe8f06aa81ddf}
-}]root value) \index{comment\+Before@{comment\+Before}!Json@{Json}}\index{Json@{Json}!comment\+Before@{comment\+Before}}\item[{\em 
-comment\+Before\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a905a40030122d5eae76adad4d754856c}
-}]a comment placed on the line before a value \index{comment\+After\+On\+Same\+Line@{comment\+After\+On\+Same\+Line}!Json@{Json}}\index{Json@{Json}!comment\+After\+On\+Same\+Line@{comment\+After\+On\+Same\+Line}}\item[{\em 
-comment\+After\+On\+Same\+Line\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a9683052ec0f29ecb3c0eb65c90d54849}
-}]a comment just after a value on the same line \index{comment\+After@{comment\+After}!Json@{Json}}\index{Json@{Json}!comment\+After@{comment\+After}}\item[{\em 
-comment\+After\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a845090604f098147b393b79ba0ec8cae}
-}]a comment on the line after a value (only make sense for \index{number\+Of\+Comment\+Placement@{number\+Of\+Comment\+Placement}!Json@{Json}}\index{Json@{Json}!number\+Of\+Comment\+Placement@{number\+Of\+Comment\+Placement}}\item[{\em 
-number\+Of\+Comment\+Placement\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a965a468bcc29e6c2194fe8f06aa81ddf}
-}]root value) \index{comment\+Before@{comment\+Before}!Json@{Json}}\index{Json@{Json}!comment\+Before@{comment\+Before}}\item[{\em 
-comment\+Before\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a905a40030122d5eae76adad4d754856c}
-}]a comment placed on the line before a value \index{comment\+After\+On\+Same\+Line@{comment\+After\+On\+Same\+Line}!Json@{Json}}\index{Json@{Json}!comment\+After\+On\+Same\+Line@{comment\+After\+On\+Same\+Line}}\item[{\em 
-comment\+After\+On\+Same\+Line\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a9683052ec0f29ecb3c0eb65c90d54849}
-}]a comment just after a value on the same line \index{comment\+After@{comment\+After}!Json@{Json}}\index{Json@{Json}!comment\+After@{comment\+After}}\item[{\em 
-comment\+After\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a845090604f098147b393b79ba0ec8cae}
-}]a comment on the line after a value (only make sense for \index{number\+Of\+Comment\+Placement@{number\+Of\+Comment\+Placement}!Json@{Json}}\index{Json@{Json}!number\+Of\+Comment\+Placement@{number\+Of\+Comment\+Placement}}\item[{\em 
-number\+Of\+Comment\+Placement\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a965a468bcc29e6c2194fe8f06aa81ddf}
 }]root value) \end{description}
 \end{Desc}
 \index{Json@{Json}!Comment\+Placement@{Comment\+Placement}}
@@ -484,102 +258,6 @@ number\+Of\+Comment\+Placement\label{namespace_json_a4fc417c23905b2ae9e2c47d197a
 \item[Enumerator]\par
 \begin{description}
 \index{comment\+Before@{comment\+Before}!Json@{Json}}\index{Json@{Json}!comment\+Before@{comment\+Before}}\item[{\em 
-comment\+Before\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a905a40030122d5eae76adad4d754856c}
-}]a comment placed on the line before a value \index{comment\+After\+On\+Same\+Line@{comment\+After\+On\+Same\+Line}!Json@{Json}}\index{Json@{Json}!comment\+After\+On\+Same\+Line@{comment\+After\+On\+Same\+Line}}\item[{\em 
-comment\+After\+On\+Same\+Line\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a9683052ec0f29ecb3c0eb65c90d54849}
-}]a comment just after a value on the same line \index{comment\+After@{comment\+After}!Json@{Json}}\index{Json@{Json}!comment\+After@{comment\+After}}\item[{\em 
-comment\+After\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a845090604f098147b393b79ba0ec8cae}
-}]a comment on the line after a value (only make sense for \index{number\+Of\+Comment\+Placement@{number\+Of\+Comment\+Placement}!Json@{Json}}\index{Json@{Json}!number\+Of\+Comment\+Placement@{number\+Of\+Comment\+Placement}}\item[{\em 
-number\+Of\+Comment\+Placement\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a965a468bcc29e6c2194fe8f06aa81ddf}
-}]root value) \index{comment\+Before@{comment\+Before}!Json@{Json}}\index{Json@{Json}!comment\+Before@{comment\+Before}}\item[{\em 
-comment\+Before\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a905a40030122d5eae76adad4d754856c}
-}]a comment placed on the line before a value \index{comment\+After\+On\+Same\+Line@{comment\+After\+On\+Same\+Line}!Json@{Json}}\index{Json@{Json}!comment\+After\+On\+Same\+Line@{comment\+After\+On\+Same\+Line}}\item[{\em 
-comment\+After\+On\+Same\+Line\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a9683052ec0f29ecb3c0eb65c90d54849}
-}]a comment just after a value on the same line \index{comment\+After@{comment\+After}!Json@{Json}}\index{Json@{Json}!comment\+After@{comment\+After}}\item[{\em 
-comment\+After\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a845090604f098147b393b79ba0ec8cae}
-}]a comment on the line after a value (only make sense for \index{number\+Of\+Comment\+Placement@{number\+Of\+Comment\+Placement}!Json@{Json}}\index{Json@{Json}!number\+Of\+Comment\+Placement@{number\+Of\+Comment\+Placement}}\item[{\em 
-number\+Of\+Comment\+Placement\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a965a468bcc29e6c2194fe8f06aa81ddf}
-}]root value) \index{comment\+Before@{comment\+Before}!Json@{Json}}\index{Json@{Json}!comment\+Before@{comment\+Before}}\item[{\em 
-comment\+Before\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a905a40030122d5eae76adad4d754856c}
-}]a comment placed on the line before a value \index{comment\+After\+On\+Same\+Line@{comment\+After\+On\+Same\+Line}!Json@{Json}}\index{Json@{Json}!comment\+After\+On\+Same\+Line@{comment\+After\+On\+Same\+Line}}\item[{\em 
-comment\+After\+On\+Same\+Line\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a9683052ec0f29ecb3c0eb65c90d54849}
-}]a comment just after a value on the same line \index{comment\+After@{comment\+After}!Json@{Json}}\index{Json@{Json}!comment\+After@{comment\+After}}\item[{\em 
-comment\+After\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a845090604f098147b393b79ba0ec8cae}
-}]a comment on the line after a value (only make sense for \index{number\+Of\+Comment\+Placement@{number\+Of\+Comment\+Placement}!Json@{Json}}\index{Json@{Json}!number\+Of\+Comment\+Placement@{number\+Of\+Comment\+Placement}}\item[{\em 
-number\+Of\+Comment\+Placement\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a965a468bcc29e6c2194fe8f06aa81ddf}
-}]root value) \index{comment\+Before@{comment\+Before}!Json@{Json}}\index{Json@{Json}!comment\+Before@{comment\+Before}}\item[{\em 
-comment\+Before\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a905a40030122d5eae76adad4d754856c}
-}]a comment placed on the line before a value \index{comment\+After\+On\+Same\+Line@{comment\+After\+On\+Same\+Line}!Json@{Json}}\index{Json@{Json}!comment\+After\+On\+Same\+Line@{comment\+After\+On\+Same\+Line}}\item[{\em 
-comment\+After\+On\+Same\+Line\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a9683052ec0f29ecb3c0eb65c90d54849}
-}]a comment just after a value on the same line \index{comment\+After@{comment\+After}!Json@{Json}}\index{Json@{Json}!comment\+After@{comment\+After}}\item[{\em 
-comment\+After\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a845090604f098147b393b79ba0ec8cae}
-}]a comment on the line after a value (only make sense for \index{number\+Of\+Comment\+Placement@{number\+Of\+Comment\+Placement}!Json@{Json}}\index{Json@{Json}!number\+Of\+Comment\+Placement@{number\+Of\+Comment\+Placement}}\item[{\em 
-number\+Of\+Comment\+Placement\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a965a468bcc29e6c2194fe8f06aa81ddf}
-}]root value) \end{description}
-\end{Desc}
-\index{Json@{Json}!Comment\+Placement@{Comment\+Placement}}
-\index{Comment\+Placement@{Comment\+Placement}!Json@{Json}}
-\subsubsection[{Comment\+Placement}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Json\+::\+Comment\+Placement}}\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351}
-\begin{Desc}
-\item[Enumerator]\par
-\begin{description}
-\index{comment\+Before@{comment\+Before}!Json@{Json}}\index{Json@{Json}!comment\+Before@{comment\+Before}}\item[{\em 
-comment\+Before\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a905a40030122d5eae76adad4d754856c}
-}]a comment placed on the line before a value \index{comment\+After\+On\+Same\+Line@{comment\+After\+On\+Same\+Line}!Json@{Json}}\index{Json@{Json}!comment\+After\+On\+Same\+Line@{comment\+After\+On\+Same\+Line}}\item[{\em 
-comment\+After\+On\+Same\+Line\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a9683052ec0f29ecb3c0eb65c90d54849}
-}]a comment just after a value on the same line \index{comment\+After@{comment\+After}!Json@{Json}}\index{Json@{Json}!comment\+After@{comment\+After}}\item[{\em 
-comment\+After\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a845090604f098147b393b79ba0ec8cae}
-}]a comment on the line after a value (only make sense for \index{number\+Of\+Comment\+Placement@{number\+Of\+Comment\+Placement}!Json@{Json}}\index{Json@{Json}!number\+Of\+Comment\+Placement@{number\+Of\+Comment\+Placement}}\item[{\em 
-number\+Of\+Comment\+Placement\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a965a468bcc29e6c2194fe8f06aa81ddf}
-}]root value) \index{comment\+Before@{comment\+Before}!Json@{Json}}\index{Json@{Json}!comment\+Before@{comment\+Before}}\item[{\em 
-comment\+Before\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a905a40030122d5eae76adad4d754856c}
-}]a comment placed on the line before a value \index{comment\+After\+On\+Same\+Line@{comment\+After\+On\+Same\+Line}!Json@{Json}}\index{Json@{Json}!comment\+After\+On\+Same\+Line@{comment\+After\+On\+Same\+Line}}\item[{\em 
-comment\+After\+On\+Same\+Line\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a9683052ec0f29ecb3c0eb65c90d54849}
-}]a comment just after a value on the same line \index{comment\+After@{comment\+After}!Json@{Json}}\index{Json@{Json}!comment\+After@{comment\+After}}\item[{\em 
-comment\+After\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a845090604f098147b393b79ba0ec8cae}
-}]a comment on the line after a value (only make sense for \index{number\+Of\+Comment\+Placement@{number\+Of\+Comment\+Placement}!Json@{Json}}\index{Json@{Json}!number\+Of\+Comment\+Placement@{number\+Of\+Comment\+Placement}}\item[{\em 
-number\+Of\+Comment\+Placement\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a965a468bcc29e6c2194fe8f06aa81ddf}
-}]root value) \index{comment\+Before@{comment\+Before}!Json@{Json}}\index{Json@{Json}!comment\+Before@{comment\+Before}}\item[{\em 
-comment\+Before\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a905a40030122d5eae76adad4d754856c}
-}]a comment placed on the line before a value \index{comment\+After\+On\+Same\+Line@{comment\+After\+On\+Same\+Line}!Json@{Json}}\index{Json@{Json}!comment\+After\+On\+Same\+Line@{comment\+After\+On\+Same\+Line}}\item[{\em 
-comment\+After\+On\+Same\+Line\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a9683052ec0f29ecb3c0eb65c90d54849}
-}]a comment just after a value on the same line \index{comment\+After@{comment\+After}!Json@{Json}}\index{Json@{Json}!comment\+After@{comment\+After}}\item[{\em 
-comment\+After\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a845090604f098147b393b79ba0ec8cae}
-}]a comment on the line after a value (only make sense for \index{number\+Of\+Comment\+Placement@{number\+Of\+Comment\+Placement}!Json@{Json}}\index{Json@{Json}!number\+Of\+Comment\+Placement@{number\+Of\+Comment\+Placement}}\item[{\em 
-number\+Of\+Comment\+Placement\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a965a468bcc29e6c2194fe8f06aa81ddf}
-}]root value) \index{comment\+Before@{comment\+Before}!Json@{Json}}\index{Json@{Json}!comment\+Before@{comment\+Before}}\item[{\em 
-comment\+Before\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a905a40030122d5eae76adad4d754856c}
-}]a comment placed on the line before a value \index{comment\+After\+On\+Same\+Line@{comment\+After\+On\+Same\+Line}!Json@{Json}}\index{Json@{Json}!comment\+After\+On\+Same\+Line@{comment\+After\+On\+Same\+Line}}\item[{\em 
-comment\+After\+On\+Same\+Line\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a9683052ec0f29ecb3c0eb65c90d54849}
-}]a comment just after a value on the same line \index{comment\+After@{comment\+After}!Json@{Json}}\index{Json@{Json}!comment\+After@{comment\+After}}\item[{\em 
-comment\+After\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a845090604f098147b393b79ba0ec8cae}
-}]a comment on the line after a value (only make sense for \index{number\+Of\+Comment\+Placement@{number\+Of\+Comment\+Placement}!Json@{Json}}\index{Json@{Json}!number\+Of\+Comment\+Placement@{number\+Of\+Comment\+Placement}}\item[{\em 
-number\+Of\+Comment\+Placement\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a965a468bcc29e6c2194fe8f06aa81ddf}
-}]root value) \end{description}
-\end{Desc}
-\index{Json@{Json}!Comment\+Placement@{Comment\+Placement}}
-\index{Comment\+Placement@{Comment\+Placement}!Json@{Json}}
-\subsubsection[{Comment\+Placement}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Json\+::\+Comment\+Placement}}\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351}
-\begin{Desc}
-\item[Enumerator]\par
-\begin{description}
-\index{comment\+Before@{comment\+Before}!Json@{Json}}\index{Json@{Json}!comment\+Before@{comment\+Before}}\item[{\em 
-comment\+Before\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a905a40030122d5eae76adad4d754856c}
-}]a comment placed on the line before a value \index{comment\+After\+On\+Same\+Line@{comment\+After\+On\+Same\+Line}!Json@{Json}}\index{Json@{Json}!comment\+After\+On\+Same\+Line@{comment\+After\+On\+Same\+Line}}\item[{\em 
-comment\+After\+On\+Same\+Line\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a9683052ec0f29ecb3c0eb65c90d54849}
-}]a comment just after a value on the same line \index{comment\+After@{comment\+After}!Json@{Json}}\index{Json@{Json}!comment\+After@{comment\+After}}\item[{\em 
-comment\+After\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a845090604f098147b393b79ba0ec8cae}
-}]a comment on the line after a value (only make sense for \index{number\+Of\+Comment\+Placement@{number\+Of\+Comment\+Placement}!Json@{Json}}\index{Json@{Json}!number\+Of\+Comment\+Placement@{number\+Of\+Comment\+Placement}}\item[{\em 
-number\+Of\+Comment\+Placement\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a965a468bcc29e6c2194fe8f06aa81ddf}
-}]root value) \index{comment\+Before@{comment\+Before}!Json@{Json}}\index{Json@{Json}!comment\+Before@{comment\+Before}}\item[{\em 
-comment\+Before\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a905a40030122d5eae76adad4d754856c}
-}]a comment placed on the line before a value \index{comment\+After\+On\+Same\+Line@{comment\+After\+On\+Same\+Line}!Json@{Json}}\index{Json@{Json}!comment\+After\+On\+Same\+Line@{comment\+After\+On\+Same\+Line}}\item[{\em 
-comment\+After\+On\+Same\+Line\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a9683052ec0f29ecb3c0eb65c90d54849}
-}]a comment just after a value on the same line \index{comment\+After@{comment\+After}!Json@{Json}}\index{Json@{Json}!comment\+After@{comment\+After}}\item[{\em 
-comment\+After\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a845090604f098147b393b79ba0ec8cae}
-}]a comment on the line after a value (only make sense for \index{number\+Of\+Comment\+Placement@{number\+Of\+Comment\+Placement}!Json@{Json}}\index{Json@{Json}!number\+Of\+Comment\+Placement@{number\+Of\+Comment\+Placement}}\item[{\em 
-number\+Of\+Comment\+Placement\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a965a468bcc29e6c2194fe8f06aa81ddf}
-}]root value) \index{comment\+Before@{comment\+Before}!Json@{Json}}\index{Json@{Json}!comment\+Before@{comment\+Before}}\item[{\em 
 comment\+Before\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a905a40030122d5eae76adad4d754856c}
 }]a comment placed on the line before a value \index{comment\+After\+On\+Same\+Line@{comment\+After\+On\+Same\+Line}!Json@{Json}}\index{Json@{Json}!comment\+After\+On\+Same\+Line@{comment\+After\+On\+Same\+Line}}\item[{\em 
 comment\+After\+On\+Same\+Line\label{namespace_json_a4fc417c23905b2ae9e2c47d197a45351a9683052ec0f29ecb3c0eb65c90d54849}
@@ -608,38 +286,6 @@ Type of the value held by a \doxyref{Value}{p.}{class_json_1_1_value} object.
 \item[Enumerator]\par
 \begin{description}
 \index{null\+Value@{null\+Value}!Json@{Json}}\index{Json@{Json}!null\+Value@{null\+Value}}\item[{\em 
-null\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea99922f3ccd58446e80e6055a7119b640}
-}]\textquotesingle{}null\textquotesingle{} value \index{int\+Value@{int\+Value}!Json@{Json}}\index{Json@{Json}!int\+Value@{int\+Value}}\item[{\em 
-int\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea4855d2a19dcefbd60f49f529dfad8941}
-}]signed integer value \index{uint\+Value@{uint\+Value}!Json@{Json}}\index{Json@{Json}!uint\+Value@{uint\+Value}}\item[{\em 
-uint\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4eada2011b7373e8847770afe4d20d9390a}
-}]unsigned integer value \index{real\+Value@{real\+Value}!Json@{Json}}\index{Json@{Json}!real\+Value@{real\+Value}}\item[{\em 
-real\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea490e707ae253ccde7c901590416d08be}
-}]double value \index{string\+Value@{string\+Value}!Json@{Json}}\index{Json@{Json}!string\+Value@{string\+Value}}\item[{\em 
-string\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea8376d6395b33f22c7ec18b3fa016bb1c}
-}]U\+T\+F-\/8 string value. \index{boolean\+Value@{boolean\+Value}!Json@{Json}}\index{Json@{Json}!boolean\+Value@{boolean\+Value}}\item[{\em 
-boolean\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea36cbd8ff0078df0156c8efc0b2aee919}
-}]bool value \index{array\+Value@{array\+Value}!Json@{Json}}\index{Json@{Json}!array\+Value@{array\+Value}}\item[{\em 
-array\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4eaa3025bfd271ef0b0c7c030c9118f8be7}
-}]array value (ordered list) \index{object\+Value@{object\+Value}!Json@{Json}}\index{Json@{Json}!object\+Value@{object\+Value}}\item[{\em 
-object\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea6ca35c0a30ea3d1b8ec95c2d1e41a1a8}
-}]object value (collection of name/value pairs). \index{null\+Value@{null\+Value}!Json@{Json}}\index{Json@{Json}!null\+Value@{null\+Value}}\item[{\em 
-null\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea99922f3ccd58446e80e6055a7119b640}
-}]\textquotesingle{}null\textquotesingle{} value \index{int\+Value@{int\+Value}!Json@{Json}}\index{Json@{Json}!int\+Value@{int\+Value}}\item[{\em 
-int\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea4855d2a19dcefbd60f49f529dfad8941}
-}]signed integer value \index{uint\+Value@{uint\+Value}!Json@{Json}}\index{Json@{Json}!uint\+Value@{uint\+Value}}\item[{\em 
-uint\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4eada2011b7373e8847770afe4d20d9390a}
-}]unsigned integer value \index{real\+Value@{real\+Value}!Json@{Json}}\index{Json@{Json}!real\+Value@{real\+Value}}\item[{\em 
-real\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea490e707ae253ccde7c901590416d08be}
-}]double value \index{string\+Value@{string\+Value}!Json@{Json}}\index{Json@{Json}!string\+Value@{string\+Value}}\item[{\em 
-string\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea8376d6395b33f22c7ec18b3fa016bb1c}
-}]U\+T\+F-\/8 string value. \index{boolean\+Value@{boolean\+Value}!Json@{Json}}\index{Json@{Json}!boolean\+Value@{boolean\+Value}}\item[{\em 
-boolean\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea36cbd8ff0078df0156c8efc0b2aee919}
-}]bool value \index{array\+Value@{array\+Value}!Json@{Json}}\index{Json@{Json}!array\+Value@{array\+Value}}\item[{\em 
-array\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4eaa3025bfd271ef0b0c7c030c9118f8be7}
-}]array value (ordered list) \index{object\+Value@{object\+Value}!Json@{Json}}\index{Json@{Json}!object\+Value@{object\+Value}}\item[{\em 
-object\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea6ca35c0a30ea3d1b8ec95c2d1e41a1a8}
-}]object value (collection of name/value pairs). \index{null\+Value@{null\+Value}!Json@{Json}}\index{Json@{Json}!null\+Value@{null\+Value}}\item[{\em 
 null\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea99922f3ccd58446e80e6055a7119b640}
 }]\textquotesingle{}null\textquotesingle{} value \index{int\+Value@{int\+Value}!Json@{Json}}\index{Json@{Json}!int\+Value@{int\+Value}}\item[{\em 
 int\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea4855d2a19dcefbd60f49f529dfad8941}
@@ -684,190 +330,6 @@ Type of the value held by a \doxyref{Value}{p.}{class_json_1_1_value} object.
 \item[Enumerator]\par
 \begin{description}
 \index{null\+Value@{null\+Value}!Json@{Json}}\index{Json@{Json}!null\+Value@{null\+Value}}\item[{\em 
-null\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea99922f3ccd58446e80e6055a7119b640}
-}]\textquotesingle{}null\textquotesingle{} value \index{int\+Value@{int\+Value}!Json@{Json}}\index{Json@{Json}!int\+Value@{int\+Value}}\item[{\em 
-int\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea4855d2a19dcefbd60f49f529dfad8941}
-}]signed integer value \index{uint\+Value@{uint\+Value}!Json@{Json}}\index{Json@{Json}!uint\+Value@{uint\+Value}}\item[{\em 
-uint\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4eada2011b7373e8847770afe4d20d9390a}
-}]unsigned integer value \index{real\+Value@{real\+Value}!Json@{Json}}\index{Json@{Json}!real\+Value@{real\+Value}}\item[{\em 
-real\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea490e707ae253ccde7c901590416d08be}
-}]double value \index{string\+Value@{string\+Value}!Json@{Json}}\index{Json@{Json}!string\+Value@{string\+Value}}\item[{\em 
-string\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea8376d6395b33f22c7ec18b3fa016bb1c}
-}]U\+T\+F-\/8 string value. \index{boolean\+Value@{boolean\+Value}!Json@{Json}}\index{Json@{Json}!boolean\+Value@{boolean\+Value}}\item[{\em 
-boolean\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea36cbd8ff0078df0156c8efc0b2aee919}
-}]bool value \index{array\+Value@{array\+Value}!Json@{Json}}\index{Json@{Json}!array\+Value@{array\+Value}}\item[{\em 
-array\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4eaa3025bfd271ef0b0c7c030c9118f8be7}
-}]array value (ordered list) \index{object\+Value@{object\+Value}!Json@{Json}}\index{Json@{Json}!object\+Value@{object\+Value}}\item[{\em 
-object\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea6ca35c0a30ea3d1b8ec95c2d1e41a1a8}
-}]object value (collection of name/value pairs). \index{null\+Value@{null\+Value}!Json@{Json}}\index{Json@{Json}!null\+Value@{null\+Value}}\item[{\em 
-null\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea99922f3ccd58446e80e6055a7119b640}
-}]\textquotesingle{}null\textquotesingle{} value \index{int\+Value@{int\+Value}!Json@{Json}}\index{Json@{Json}!int\+Value@{int\+Value}}\item[{\em 
-int\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea4855d2a19dcefbd60f49f529dfad8941}
-}]signed integer value \index{uint\+Value@{uint\+Value}!Json@{Json}}\index{Json@{Json}!uint\+Value@{uint\+Value}}\item[{\em 
-uint\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4eada2011b7373e8847770afe4d20d9390a}
-}]unsigned integer value \index{real\+Value@{real\+Value}!Json@{Json}}\index{Json@{Json}!real\+Value@{real\+Value}}\item[{\em 
-real\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea490e707ae253ccde7c901590416d08be}
-}]double value \index{string\+Value@{string\+Value}!Json@{Json}}\index{Json@{Json}!string\+Value@{string\+Value}}\item[{\em 
-string\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea8376d6395b33f22c7ec18b3fa016bb1c}
-}]U\+T\+F-\/8 string value. \index{boolean\+Value@{boolean\+Value}!Json@{Json}}\index{Json@{Json}!boolean\+Value@{boolean\+Value}}\item[{\em 
-boolean\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea36cbd8ff0078df0156c8efc0b2aee919}
-}]bool value \index{array\+Value@{array\+Value}!Json@{Json}}\index{Json@{Json}!array\+Value@{array\+Value}}\item[{\em 
-array\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4eaa3025bfd271ef0b0c7c030c9118f8be7}
-}]array value (ordered list) \index{object\+Value@{object\+Value}!Json@{Json}}\index{Json@{Json}!object\+Value@{object\+Value}}\item[{\em 
-object\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea6ca35c0a30ea3d1b8ec95c2d1e41a1a8}
-}]object value (collection of name/value pairs). \index{null\+Value@{null\+Value}!Json@{Json}}\index{Json@{Json}!null\+Value@{null\+Value}}\item[{\em 
-null\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea99922f3ccd58446e80e6055a7119b640}
-}]\textquotesingle{}null\textquotesingle{} value \index{int\+Value@{int\+Value}!Json@{Json}}\index{Json@{Json}!int\+Value@{int\+Value}}\item[{\em 
-int\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea4855d2a19dcefbd60f49f529dfad8941}
-}]signed integer value \index{uint\+Value@{uint\+Value}!Json@{Json}}\index{Json@{Json}!uint\+Value@{uint\+Value}}\item[{\em 
-uint\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4eada2011b7373e8847770afe4d20d9390a}
-}]unsigned integer value \index{real\+Value@{real\+Value}!Json@{Json}}\index{Json@{Json}!real\+Value@{real\+Value}}\item[{\em 
-real\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea490e707ae253ccde7c901590416d08be}
-}]double value \index{string\+Value@{string\+Value}!Json@{Json}}\index{Json@{Json}!string\+Value@{string\+Value}}\item[{\em 
-string\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea8376d6395b33f22c7ec18b3fa016bb1c}
-}]U\+T\+F-\/8 string value. \index{boolean\+Value@{boolean\+Value}!Json@{Json}}\index{Json@{Json}!boolean\+Value@{boolean\+Value}}\item[{\em 
-boolean\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea36cbd8ff0078df0156c8efc0b2aee919}
-}]bool value \index{array\+Value@{array\+Value}!Json@{Json}}\index{Json@{Json}!array\+Value@{array\+Value}}\item[{\em 
-array\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4eaa3025bfd271ef0b0c7c030c9118f8be7}
-}]array value (ordered list) \index{object\+Value@{object\+Value}!Json@{Json}}\index{Json@{Json}!object\+Value@{object\+Value}}\item[{\em 
-object\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea6ca35c0a30ea3d1b8ec95c2d1e41a1a8}
-}]object value (collection of name/value pairs). \index{null\+Value@{null\+Value}!Json@{Json}}\index{Json@{Json}!null\+Value@{null\+Value}}\item[{\em 
-null\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea99922f3ccd58446e80e6055a7119b640}
-}]\textquotesingle{}null\textquotesingle{} value \index{int\+Value@{int\+Value}!Json@{Json}}\index{Json@{Json}!int\+Value@{int\+Value}}\item[{\em 
-int\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea4855d2a19dcefbd60f49f529dfad8941}
-}]signed integer value \index{uint\+Value@{uint\+Value}!Json@{Json}}\index{Json@{Json}!uint\+Value@{uint\+Value}}\item[{\em 
-uint\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4eada2011b7373e8847770afe4d20d9390a}
-}]unsigned integer value \index{real\+Value@{real\+Value}!Json@{Json}}\index{Json@{Json}!real\+Value@{real\+Value}}\item[{\em 
-real\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea490e707ae253ccde7c901590416d08be}
-}]double value \index{string\+Value@{string\+Value}!Json@{Json}}\index{Json@{Json}!string\+Value@{string\+Value}}\item[{\em 
-string\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea8376d6395b33f22c7ec18b3fa016bb1c}
-}]U\+T\+F-\/8 string value. \index{boolean\+Value@{boolean\+Value}!Json@{Json}}\index{Json@{Json}!boolean\+Value@{boolean\+Value}}\item[{\em 
-boolean\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea36cbd8ff0078df0156c8efc0b2aee919}
-}]bool value \index{array\+Value@{array\+Value}!Json@{Json}}\index{Json@{Json}!array\+Value@{array\+Value}}\item[{\em 
-array\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4eaa3025bfd271ef0b0c7c030c9118f8be7}
-}]array value (ordered list) \index{object\+Value@{object\+Value}!Json@{Json}}\index{Json@{Json}!object\+Value@{object\+Value}}\item[{\em 
-object\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea6ca35c0a30ea3d1b8ec95c2d1e41a1a8}
-}]object value (collection of name/value pairs). \end{description}
-\end{Desc}
-\index{Json@{Json}!Value\+Type@{Value\+Type}}
-\index{Value\+Type@{Value\+Type}!Json@{Json}}
-\subsubsection[{Value\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Json\+::\+Value\+Type}}\label{namespace_json_a7d654b75c16a57007925868e38212b4e}
-
-
-Type of the value held by a \doxyref{Value}{p.}{class_json_1_1_value} object. 
-
-\begin{Desc}
-\item[Enumerator]\par
-\begin{description}
-\index{null\+Value@{null\+Value}!Json@{Json}}\index{Json@{Json}!null\+Value@{null\+Value}}\item[{\em 
-null\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea99922f3ccd58446e80e6055a7119b640}
-}]\textquotesingle{}null\textquotesingle{} value \index{int\+Value@{int\+Value}!Json@{Json}}\index{Json@{Json}!int\+Value@{int\+Value}}\item[{\em 
-int\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea4855d2a19dcefbd60f49f529dfad8941}
-}]signed integer value \index{uint\+Value@{uint\+Value}!Json@{Json}}\index{Json@{Json}!uint\+Value@{uint\+Value}}\item[{\em 
-uint\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4eada2011b7373e8847770afe4d20d9390a}
-}]unsigned integer value \index{real\+Value@{real\+Value}!Json@{Json}}\index{Json@{Json}!real\+Value@{real\+Value}}\item[{\em 
-real\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea490e707ae253ccde7c901590416d08be}
-}]double value \index{string\+Value@{string\+Value}!Json@{Json}}\index{Json@{Json}!string\+Value@{string\+Value}}\item[{\em 
-string\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea8376d6395b33f22c7ec18b3fa016bb1c}
-}]U\+T\+F-\/8 string value. \index{boolean\+Value@{boolean\+Value}!Json@{Json}}\index{Json@{Json}!boolean\+Value@{boolean\+Value}}\item[{\em 
-boolean\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea36cbd8ff0078df0156c8efc0b2aee919}
-}]bool value \index{array\+Value@{array\+Value}!Json@{Json}}\index{Json@{Json}!array\+Value@{array\+Value}}\item[{\em 
-array\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4eaa3025bfd271ef0b0c7c030c9118f8be7}
-}]array value (ordered list) \index{object\+Value@{object\+Value}!Json@{Json}}\index{Json@{Json}!object\+Value@{object\+Value}}\item[{\em 
-object\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea6ca35c0a30ea3d1b8ec95c2d1e41a1a8}
-}]object value (collection of name/value pairs). \index{null\+Value@{null\+Value}!Json@{Json}}\index{Json@{Json}!null\+Value@{null\+Value}}\item[{\em 
-null\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea99922f3ccd58446e80e6055a7119b640}
-}]\textquotesingle{}null\textquotesingle{} value \index{int\+Value@{int\+Value}!Json@{Json}}\index{Json@{Json}!int\+Value@{int\+Value}}\item[{\em 
-int\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea4855d2a19dcefbd60f49f529dfad8941}
-}]signed integer value \index{uint\+Value@{uint\+Value}!Json@{Json}}\index{Json@{Json}!uint\+Value@{uint\+Value}}\item[{\em 
-uint\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4eada2011b7373e8847770afe4d20d9390a}
-}]unsigned integer value \index{real\+Value@{real\+Value}!Json@{Json}}\index{Json@{Json}!real\+Value@{real\+Value}}\item[{\em 
-real\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea490e707ae253ccde7c901590416d08be}
-}]double value \index{string\+Value@{string\+Value}!Json@{Json}}\index{Json@{Json}!string\+Value@{string\+Value}}\item[{\em 
-string\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea8376d6395b33f22c7ec18b3fa016bb1c}
-}]U\+T\+F-\/8 string value. \index{boolean\+Value@{boolean\+Value}!Json@{Json}}\index{Json@{Json}!boolean\+Value@{boolean\+Value}}\item[{\em 
-boolean\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea36cbd8ff0078df0156c8efc0b2aee919}
-}]bool value \index{array\+Value@{array\+Value}!Json@{Json}}\index{Json@{Json}!array\+Value@{array\+Value}}\item[{\em 
-array\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4eaa3025bfd271ef0b0c7c030c9118f8be7}
-}]array value (ordered list) \index{object\+Value@{object\+Value}!Json@{Json}}\index{Json@{Json}!object\+Value@{object\+Value}}\item[{\em 
-object\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea6ca35c0a30ea3d1b8ec95c2d1e41a1a8}
-}]object value (collection of name/value pairs). \index{null\+Value@{null\+Value}!Json@{Json}}\index{Json@{Json}!null\+Value@{null\+Value}}\item[{\em 
-null\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea99922f3ccd58446e80e6055a7119b640}
-}]\textquotesingle{}null\textquotesingle{} value \index{int\+Value@{int\+Value}!Json@{Json}}\index{Json@{Json}!int\+Value@{int\+Value}}\item[{\em 
-int\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea4855d2a19dcefbd60f49f529dfad8941}
-}]signed integer value \index{uint\+Value@{uint\+Value}!Json@{Json}}\index{Json@{Json}!uint\+Value@{uint\+Value}}\item[{\em 
-uint\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4eada2011b7373e8847770afe4d20d9390a}
-}]unsigned integer value \index{real\+Value@{real\+Value}!Json@{Json}}\index{Json@{Json}!real\+Value@{real\+Value}}\item[{\em 
-real\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea490e707ae253ccde7c901590416d08be}
-}]double value \index{string\+Value@{string\+Value}!Json@{Json}}\index{Json@{Json}!string\+Value@{string\+Value}}\item[{\em 
-string\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea8376d6395b33f22c7ec18b3fa016bb1c}
-}]U\+T\+F-\/8 string value. \index{boolean\+Value@{boolean\+Value}!Json@{Json}}\index{Json@{Json}!boolean\+Value@{boolean\+Value}}\item[{\em 
-boolean\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea36cbd8ff0078df0156c8efc0b2aee919}
-}]bool value \index{array\+Value@{array\+Value}!Json@{Json}}\index{Json@{Json}!array\+Value@{array\+Value}}\item[{\em 
-array\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4eaa3025bfd271ef0b0c7c030c9118f8be7}
-}]array value (ordered list) \index{object\+Value@{object\+Value}!Json@{Json}}\index{Json@{Json}!object\+Value@{object\+Value}}\item[{\em 
-object\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea6ca35c0a30ea3d1b8ec95c2d1e41a1a8}
-}]object value (collection of name/value pairs). \index{null\+Value@{null\+Value}!Json@{Json}}\index{Json@{Json}!null\+Value@{null\+Value}}\item[{\em 
-null\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea99922f3ccd58446e80e6055a7119b640}
-}]\textquotesingle{}null\textquotesingle{} value \index{int\+Value@{int\+Value}!Json@{Json}}\index{Json@{Json}!int\+Value@{int\+Value}}\item[{\em 
-int\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea4855d2a19dcefbd60f49f529dfad8941}
-}]signed integer value \index{uint\+Value@{uint\+Value}!Json@{Json}}\index{Json@{Json}!uint\+Value@{uint\+Value}}\item[{\em 
-uint\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4eada2011b7373e8847770afe4d20d9390a}
-}]unsigned integer value \index{real\+Value@{real\+Value}!Json@{Json}}\index{Json@{Json}!real\+Value@{real\+Value}}\item[{\em 
-real\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea490e707ae253ccde7c901590416d08be}
-}]double value \index{string\+Value@{string\+Value}!Json@{Json}}\index{Json@{Json}!string\+Value@{string\+Value}}\item[{\em 
-string\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea8376d6395b33f22c7ec18b3fa016bb1c}
-}]U\+T\+F-\/8 string value. \index{boolean\+Value@{boolean\+Value}!Json@{Json}}\index{Json@{Json}!boolean\+Value@{boolean\+Value}}\item[{\em 
-boolean\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea36cbd8ff0078df0156c8efc0b2aee919}
-}]bool value \index{array\+Value@{array\+Value}!Json@{Json}}\index{Json@{Json}!array\+Value@{array\+Value}}\item[{\em 
-array\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4eaa3025bfd271ef0b0c7c030c9118f8be7}
-}]array value (ordered list) \index{object\+Value@{object\+Value}!Json@{Json}}\index{Json@{Json}!object\+Value@{object\+Value}}\item[{\em 
-object\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea6ca35c0a30ea3d1b8ec95c2d1e41a1a8}
-}]object value (collection of name/value pairs). \end{description}
-\end{Desc}
-\index{Json@{Json}!Value\+Type@{Value\+Type}}
-\index{Value\+Type@{Value\+Type}!Json@{Json}}
-\subsubsection[{Value\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Json\+::\+Value\+Type}}\label{namespace_json_a7d654b75c16a57007925868e38212b4e}
-
-
-Type of the value held by a \doxyref{Value}{p.}{class_json_1_1_value} object. 
-
-\begin{Desc}
-\item[Enumerator]\par
-\begin{description}
-\index{null\+Value@{null\+Value}!Json@{Json}}\index{Json@{Json}!null\+Value@{null\+Value}}\item[{\em 
-null\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea99922f3ccd58446e80e6055a7119b640}
-}]\textquotesingle{}null\textquotesingle{} value \index{int\+Value@{int\+Value}!Json@{Json}}\index{Json@{Json}!int\+Value@{int\+Value}}\item[{\em 
-int\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea4855d2a19dcefbd60f49f529dfad8941}
-}]signed integer value \index{uint\+Value@{uint\+Value}!Json@{Json}}\index{Json@{Json}!uint\+Value@{uint\+Value}}\item[{\em 
-uint\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4eada2011b7373e8847770afe4d20d9390a}
-}]unsigned integer value \index{real\+Value@{real\+Value}!Json@{Json}}\index{Json@{Json}!real\+Value@{real\+Value}}\item[{\em 
-real\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea490e707ae253ccde7c901590416d08be}
-}]double value \index{string\+Value@{string\+Value}!Json@{Json}}\index{Json@{Json}!string\+Value@{string\+Value}}\item[{\em 
-string\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea8376d6395b33f22c7ec18b3fa016bb1c}
-}]U\+T\+F-\/8 string value. \index{boolean\+Value@{boolean\+Value}!Json@{Json}}\index{Json@{Json}!boolean\+Value@{boolean\+Value}}\item[{\em 
-boolean\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea36cbd8ff0078df0156c8efc0b2aee919}
-}]bool value \index{array\+Value@{array\+Value}!Json@{Json}}\index{Json@{Json}!array\+Value@{array\+Value}}\item[{\em 
-array\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4eaa3025bfd271ef0b0c7c030c9118f8be7}
-}]array value (ordered list) \index{object\+Value@{object\+Value}!Json@{Json}}\index{Json@{Json}!object\+Value@{object\+Value}}\item[{\em 
-object\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea6ca35c0a30ea3d1b8ec95c2d1e41a1a8}
-}]object value (collection of name/value pairs). \index{null\+Value@{null\+Value}!Json@{Json}}\index{Json@{Json}!null\+Value@{null\+Value}}\item[{\em 
-null\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea99922f3ccd58446e80e6055a7119b640}
-}]\textquotesingle{}null\textquotesingle{} value \index{int\+Value@{int\+Value}!Json@{Json}}\index{Json@{Json}!int\+Value@{int\+Value}}\item[{\em 
-int\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea4855d2a19dcefbd60f49f529dfad8941}
-}]signed integer value \index{uint\+Value@{uint\+Value}!Json@{Json}}\index{Json@{Json}!uint\+Value@{uint\+Value}}\item[{\em 
-uint\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4eada2011b7373e8847770afe4d20d9390a}
-}]unsigned integer value \index{real\+Value@{real\+Value}!Json@{Json}}\index{Json@{Json}!real\+Value@{real\+Value}}\item[{\em 
-real\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea490e707ae253ccde7c901590416d08be}
-}]double value \index{string\+Value@{string\+Value}!Json@{Json}}\index{Json@{Json}!string\+Value@{string\+Value}}\item[{\em 
-string\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea8376d6395b33f22c7ec18b3fa016bb1c}
-}]U\+T\+F-\/8 string value. \index{boolean\+Value@{boolean\+Value}!Json@{Json}}\index{Json@{Json}!boolean\+Value@{boolean\+Value}}\item[{\em 
-boolean\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea36cbd8ff0078df0156c8efc0b2aee919}
-}]bool value \index{array\+Value@{array\+Value}!Json@{Json}}\index{Json@{Json}!array\+Value@{array\+Value}}\item[{\em 
-array\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4eaa3025bfd271ef0b0c7c030c9118f8be7}
-}]array value (ordered list) \index{object\+Value@{object\+Value}!Json@{Json}}\index{Json@{Json}!object\+Value@{object\+Value}}\item[{\em 
-object\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea6ca35c0a30ea3d1b8ec95c2d1e41a1a8}
-}]object value (collection of name/value pairs). \index{null\+Value@{null\+Value}!Json@{Json}}\index{Json@{Json}!null\+Value@{null\+Value}}\item[{\em 
 null\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea99922f3ccd58446e80e6055a7119b640}
 }]\textquotesingle{}null\textquotesingle{} value \index{int\+Value@{int\+Value}!Json@{Json}}\index{Json@{Json}!int\+Value@{int\+Value}}\item[{\em 
 int\+Value\label{namespace_json_a7d654b75c16a57007925868e38212b4ea4855d2a19dcefbd60f49f529dfad8941}
