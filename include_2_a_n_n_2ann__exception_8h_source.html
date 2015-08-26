@@ -105,27 +105,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor"># include &lt;exception&gt;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_g_a_n_n.html">GANN</a></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="namespace_g_a_n_n.html">   16</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_g_a_n_n.html">GANN</a></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keyword">class </span>ANNException : <span class="keyword">public</span> std::exception</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_g_a_n_n_1_1_a_n_n_exception.html">   22</a></span>&#160;  <span class="keyword">class </span><a class="code" href="class_g_a_n_n_1_1_a_n_n_exception.html">ANNException</a> : <span class="keyword">public</span> std::exception</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  {</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    ANNException(<span class="keyword">const</span> <span class="keywordtype">char</span> *message) <span class="keywordflow">throw</span>();</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    ~ANNException(<span class="keywordtype">void</span>) throw();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="class_g_a_n_n_1_1_a_n_n_exception.html#ab5cf645781b58f0b3d58c3839012dd4a">ANNException</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *message) <span class="keywordflow">throw</span>();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="class_g_a_n_n_1_1_a_n_n_exception.html#a6332573e3b4b0f08a951fd47de1098aa">~ANNException</a>(<span class="keywordtype">void</span>) <span class="keywordflow">throw</span>();</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    const <span class="keywordtype">char</span>  *what(<span class="keywordtype">void</span>) const throw();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>  *<a class="code" href="class_g_a_n_n_1_1_a_n_n_exception.html#ac2f2ed402eaf48a7703f845155382d92">what</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span> <span class="keywordflow">throw</span>();</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  private:</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">char</span>    *_msg; </div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  };</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* !ANN_EXCEPTION_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="class_g_a_n_n_1_1_a_n_n_exception_html_a6332573e3b4b0f08a951fd47de1098aa"><div class="ttname"><a href="class_g_a_n_n_1_1_a_n_n_exception.html#a6332573e3b4b0f08a951fd47de1098aa">GANN::ANNException::~ANNException</a></div><div class="ttdeci">~ANNException(void)</div><div class="ttdoc">Destructor. </div><div class="ttdef"><b>Definition:</b> ann_exception.cc:23</div></div>
+<div class="ttc" id="class_g_a_n_n_1_1_a_n_n_exception_html"><div class="ttname"><a href="class_g_a_n_n_1_1_a_n_n_exception.html">GANN::ANNException</a></div><div class="ttdoc">Define the exception that will be used by the GANN::ANN class. </div><div class="ttdef"><b>Definition:</b> ann_exception.h:22</div></div>
+<div class="ttc" id="class_g_a_n_n_1_1_a_n_n_exception_html_ac2f2ed402eaf48a7703f845155382d92"><div class="ttname"><a href="class_g_a_n_n_1_1_a_n_n_exception.html#ac2f2ed402eaf48a7703f845155382d92">GANN::ANNException::what</a></div><div class="ttdeci">const char * what(void) const </div><div class="ttdoc">Return the error message. </div><div class="ttdef"><b>Definition:</b> ann_exception.cc:30</div></div>
+<div class="ttc" id="class_g_a_n_n_1_1_a_n_n_exception_html_ab5cf645781b58f0b3d58c3839012dd4a"><div class="ttname"><a href="class_g_a_n_n_1_1_a_n_n_exception.html#ab5cf645781b58f0b3d58c3839012dd4a">GANN::ANNException::ANNException</a></div><div class="ttdeci">ANNException(const char *message)</div><div class="ttdoc">Constructor. </div><div class="ttdef"><b>Definition:</b> ann_exception.cc:18</div></div>
 <div class="ttc" id="namespace_g_a_n_n_html"><div class="ttname"><a href="namespace_g_a_n_n.html">GANN</a></div><div class="ttdoc">Contains all the objects that provide the management for the genetic algorithm with neural networks...</div><div class="ttdef"><b>Definition:</b> ann_exception.h:16</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 26 2015 16:55:46 for LoveBrains by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 26 2015 16:58:42 for LoveBrains by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

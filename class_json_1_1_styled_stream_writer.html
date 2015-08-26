@@ -100,22 +100,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>Writes a <a class="el" href="class_json_1_1_value.html" title="Represents a JSON value. ">Value</a> in <a href="http://www.json.org">JSON</a> format in a human friendly way, to a stream rather than to a string.  
  <a href="class_json_1_1_styled_stream_writer.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="api_2lib_2_a_n_n_library_2include_2json_2json_8h_source.html">json.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="include_2json_2json_8h_source.html">json.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae87567a08de865b6dc84d7218a3001df"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae87567a08de865b6dc84d7218a3001df"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>StyledStreamWriter</b> (std::string indentation=&quot;\t&quot;)</td></tr>
-<tr class="separator:ae87567a08de865b6dc84d7218a3001df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07807741c6c43ecd35885a87234d0805"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_styled_stream_writer.html#a07807741c6c43ecd35885a87234d0805">write</a> (std::ostream &amp;out, const <a class="el" href="class_json_1_1_value.html">Value</a> &amp;root)</td></tr>
-<tr class="memdesc:a07807741c6c43ecd35885a87234d0805"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize a <a class="el" href="class_json_1_1_value.html" title="Represents a JSON value. ">Value</a> in <a href="http://www.json.org">JSON</a> format.  <a href="#a07807741c6c43ecd35885a87234d0805">More...</a><br /></td></tr>
-<tr class="separator:a07807741c6c43ecd35885a87234d0805"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae87567a08de865b6dc84d7218a3001df"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae87567a08de865b6dc84d7218a3001df"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>StyledStreamWriter</b> (std::string indentation=&quot;\t&quot;)</td></tr>
-<tr class="separator:ae87567a08de865b6dc84d7218a3001df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07807741c6c43ecd35885a87234d0805"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_json_1_1_styled_stream_writer.html#a07807741c6c43ecd35885a87234d0805">write</a> (std::ostream &amp;out, const <a class="el" href="class_json_1_1_value.html">Value</a> &amp;root)</td></tr>
-<tr class="memdesc:a07807741c6c43ecd35885a87234d0805"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize a <a class="el" href="class_json_1_1_value.html" title="Represents a JSON value. ">Value</a> in <a href="http://www.json.org">JSON</a> format.  <a href="#a07807741c6c43ecd35885a87234d0805">More...</a><br /></td></tr>
-<tr class="separator:a07807741c6c43ecd35885a87234d0805"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae87567a08de865b6dc84d7218a3001df"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae87567a08de865b6dc84d7218a3001df"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>StyledStreamWriter</b> (std::string indentation=&quot;\t&quot;)</td></tr>
 <tr class="separator:ae87567a08de865b6dc84d7218a3001df"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -175,50 +163,6 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="class_json_1_1_reader.html" title="Unserialize a JSON document into a Value. ">Reader</a>, <a class="el" href="class_json_1_1_value.html" title="Represents a JSON value. ">Value</a>, <a class="el" href="class_json_1_1_value.html#a29f3a30f7e5d3af6f38d57999bf5b480">Value::setComment()</a> </dd></dl>
 <dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000020">Deprecated:</a></b></dt><dd>Use <a class="el" href="class_json_1_1_stream_writer_builder.html" title="Build a StreamWriter implementation. ">StreamWriterBuilder</a>. </dd></dl>
-<p>The rules for line break and indent are as follow:</p><ul>
-<li>Object value:<ul>
-<li>if empty then print {} without indent and line break</li>
-<li>if not empty the print '{', line break &amp; indent, print one value per line and then unindent and line break and print '}'.</li>
-</ul>
-</li>
-<li>Array value:<ul>
-<li>if empty then print [] without indent and line break</li>
-<li>if the array contains no object value, empty array or some other value types, and all the values fit on one lines, then print the array on a single line.</li>
-<li>otherwise, it the values do not fit on one line, or the array contains object or non empty array, then print one value per line.</li>
-</ul>
-</li>
-</ul>
-<p>If the <a class="el" href="class_json_1_1_value.html" title="Represents a JSON value. ">Value</a> have comments then they are outputed according to their <a class="el" href="namespace_json.html#a4fc417c23905b2ae9e2c47d197a45351">CommentPlacement</a>.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">indentation</td><td>Each level will be indented by this amount extra. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_json_1_1_reader.html" title="Unserialize a JSON document into a Value. ">Reader</a>, <a class="el" href="class_json_1_1_value.html" title="Represents a JSON value. ">Value</a>, <a class="el" href="class_json_1_1_value.html#a29f3a30f7e5d3af6f38d57999bf5b480">Value::setComment()</a> </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000030">Deprecated:</a></b></dt><dd>Use <a class="el" href="class_json_1_1_stream_writer_builder.html" title="Build a StreamWriter implementation. ">StreamWriterBuilder</a>. </dd></dl>
-<p>The rules for line break and indent are as follow:</p><ul>
-<li>Object value:<ul>
-<li>if empty then print {} without indent and line break</li>
-<li>if not empty the print '{', line break &amp; indent, print one value per line and then unindent and line break and print '}'.</li>
-</ul>
-</li>
-<li>Array value:<ul>
-<li>if empty then print [] without indent and line break</li>
-<li>if the array contains no object value, empty array or some other value types, and all the values fit on one lines, then print the array on a single line.</li>
-<li>otherwise, it the values do not fit on one line, or the array contains object or non empty array, then print one value per line.</li>
-</ul>
-</li>
-</ul>
-<p>If the <a class="el" href="class_json_1_1_value.html" title="Represents a JSON value. ">Value</a> have comments then they are outputed according to their <a class="el" href="namespace_json.html#a4fc417c23905b2ae9e2c47d197a45351">CommentPlacement</a>.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">indentation</td><td>Each level will be indented by this amount extra. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_json_1_1_reader.html" title="Unserialize a JSON document into a Value. ">Reader</a>, <a class="el" href="class_json_1_1_value.html" title="Represents a JSON value. ">Value</a>, <a class="el" href="class_json_1_1_value.html#a29f3a30f7e5d3af6f38d57999bf5b480">Value::setComment()</a> </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000040">Deprecated:</a></b></dt><dd>Use <a class="el" href="class_json_1_1_stream_writer_builder.html" title="Build a StreamWriter implementation. ">StreamWriterBuilder</a>. </dd></dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a07807741c6c43ecd35885a87234d0805"></a>
 <div class="memitem">
@@ -292,86 +236,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a07807741c6c43ecd35885a87234d0805"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Json::StyledStreamWriter::write </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname"><em>out</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="class_json_1_1_value.html">Value</a> &amp;&#160;</td>
-          <td class="paramname"><em>root</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Serialize a <a class="el" href="class_json_1_1_value.html" title="Represents a JSON value. ">Value</a> in <a href="http://www.json.org">JSON</a> format. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">out</td><td>Stream to write to. (Can be ostringstream, e.g.) </td></tr>
-    <tr><td class="paramname">root</td><td><a class="el" href="class_json_1_1_value.html" title="Represents a JSON value. ">Value</a> to serialize. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>There is no point in deriving from <a class="el" href="class_json_1_1_writer.html" title="Abstract class for writers. ">Writer</a>, since <a class="el" href="class_json_1_1_styled_stream_writer.html#a07807741c6c43ecd35885a87234d0805" title="Serialize a Value in JSON format. ">write()</a> should not return a value. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a07807741c6c43ecd35885a87234d0805"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Json::StyledStreamWriter::write </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname"><em>out</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="class_json_1_1_value.html">Value</a> &amp;&#160;</td>
-          <td class="paramname"><em>root</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Serialize a <a class="el" href="class_json_1_1_value.html" title="Represents a JSON value. ">Value</a> in <a href="http://www.json.org">JSON</a> format. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">out</td><td>Stream to write to. (Can be ostringstream, e.g.) </td></tr>
-    <tr><td class="paramname">root</td><td><a class="el" href="class_json_1_1_value.html" title="Represents a JSON value. ">Value</a> to serialize. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>There is no point in deriving from <a class="el" href="class_json_1_1_writer.html" title="Abstract class for writers. ">Writer</a>, since <a class="el" href="class_json_1_1_styled_stream_writer.html#a07807741c6c43ecd35885a87234d0805" title="Serialize a Value in JSON format. ">write()</a> should not return a value. </dd></dl>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/robin_f/Programming/Git/CPP/LoveBrains/api/lib/ANNLibrary/include/json/<a class="el" href="api_2lib_2_a_n_n_library_2include_2json_2json_8h_source.html">json.h</a></li>
-<li>/home/robin_f/Programming/Git/CPP/LoveBrains/api/lib/ANNLibrary/src/json/jsoncpp.cc</li>
+<li>/home/robin_f/Programming/Git/CPP/LoveBrains/include/json/<a class="el" href="include_2json_2json_8h_source.html">json.h</a></li>
+<li>/home/robin_f/Programming/Git/CPP/LoveBrains/lib/GANNEngine/src/json/jsoncpp.cc</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 26 2015 16:55:51 for LoveBrains by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 26 2015 16:58:45 for LoveBrains by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

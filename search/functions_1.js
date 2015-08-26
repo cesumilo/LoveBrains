@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['clear',['clear',['../class_json_1_1_value.html#a501a4d67e6c875255c2ecc03ccd2019b',1,'Json::Value::clear()'],['../class_json_1_1_value.html#a501a4d67e6c875255c2ecc03ccd2019b',1,'Json::Value::clear()'],['../class_json_1_1_value.html#a501a4d67e6c875255c2ecc03ccd2019b',1,'Json::Value::clear()'],['../class_json_1_1_value.html#a501a4d67e6c875255c2ecc03ccd2019b',1,'Json::Value::clear()']]],
+  ['clear',['clear',['../class_json_1_1_value.html#a501a4d67e6c875255c2ecc03ccd2019b',1,'Json::Value::clear()'],['../class_json_1_1_value.html#a501a4d67e6c875255c2ecc03ccd2019b',1,'Json::Value::clear()']]],
   ['clone',['Clone',['../class_graphics_1_1_i_object.html#a1f863b90e0b37e462c487731cc218fdd',1,'Graphics::IObject']]],
   ['closeplugins',['ClosePlugins',['../class_plugin_1_1_plugin_manager.html#a30b977f5930e31293da31ddf7517f166',1,'Plugin::PluginManager']]],
   ['config_5fgetactivation',['config_getActivation',['../namespace_app.html#a954dff4faa80392055a9de880f1fb254',1,'App']]],
