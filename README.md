@@ -288,7 +288,7 @@ tournament: true
 
 You will find an example of plugin in the directory **"mods"** which is called **"basic_survival"**. It is ready to be compiled and runned in the simulator. You have to move the file *"basic_survival.so"* at the root of the directory called **"mods"**.
 
-I have coded the **basic suvival plugin** in streaming : <a href="https://www.livecoding.tv/cesumilo/videos/">click here</a>
+I have coded the **basic survival plugin** in streaming : <a href="https://www.livecoding.tv/cesumilo/videos/">click here</a>
 
 # Licence
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">LoveBrains</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Robin Guillaume</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/cesumilo/LoveBrains" rel="dct:source">https://github.com/cesumilo/LoveBrains</a>.
