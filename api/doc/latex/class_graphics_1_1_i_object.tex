@@ -1,5 +1,14 @@
 \hypertarget{class_graphics_1_1_i_object}{}\section{Graphics\+:\+:I\+Object Class Reference}
 \label{class_graphics_1_1_i_object}\index{Graphics\+::\+I\+Object@{Graphics\+::\+I\+Object}}
+
+
+Define the interface of an object.  
+
+
+
+
+{\ttfamily \#include $<$i\+\_\+object.\+h$>$}
+
 Inheritance diagram for Graphics\+:\+:I\+Object\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,36 +18,182 @@ Inheritance diagram for Graphics\+:\+:I\+Object\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_graphics_1_1_i_object_a8efbdb791e3a99d697e5c74a1531d2c8}{}virtual bool {\bfseries is\+Dead} (void) const  =0\label{class_graphics_1_1_i_object_a8efbdb791e3a99d697e5c74a1531d2c8}
+\hypertarget{class_graphics_1_1_i_object_a754738cfd4e41113f438a3e0fbed8e08}{}virtual \hyperlink{class_graphics_1_1_i_object_a754738cfd4e41113f438a3e0fbed8e08}{$\sim$\+I\+Object} (void)\label{class_graphics_1_1_i_object_a754738cfd4e41113f438a3e0fbed8e08}
 
-\item 
-\hypertarget{class_graphics_1_1_i_object_a2915106368247427dcff04c5eec2190c}{}virtual bool {\bfseries has\+Brain} (void) const  =0\label{class_graphics_1_1_i_object_a2915106368247427dcff04c5eec2190c}
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_graphics_1_1_i_object_a8efbdb791e3a99d697e5c74a1531d2c8}{is\+Dead} (void) const  =0
+\begin{DoxyCompactList}\small\item\em Verify if the object is dead (not be able to draw). \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_graphics_1_1_i_object_a2915106368247427dcff04c5eec2190c}{has\+Brain} (void) const  =0
+\begin{DoxyCompactList}\small\item\em Verify if the object contains a neural network. \end{DoxyCompactList}\item 
+virtual std\+::string \hyperlink{class_graphics_1_1_i_object_a9ca3ca5527c0c565d06396efe80ba243}{get\+Type} (void) const  =0
+\begin{DoxyCompactList}\small\item\em Get the key (type) of the object in the environment. \end{DoxyCompactList}\item 
+virtual sf\+::\+Vector2f const \& \hyperlink{class_graphics_1_1_i_object_a273d70f469dc4cda00cb19cd6b65395a}{get\+Position} (void) const  =0
+\begin{DoxyCompactList}\small\item\em Get the position of the current object. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_graphics_1_1_i_object_acb10bc8924396f1e9a8aa510e96ec0c2}{set\+Position} (sf\+::\+Vector2f const \&position)=0
+\begin{DoxyCompactList}\small\item\em Set the current position of the object. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_graphics_1_1_i_object_a55f6f70a2c0c2690b6b6a78a75ece3fb}{set\+Is\+Dead} (bool condition)=0
+\begin{DoxyCompactList}\small\item\em Set the current state of the object. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_graphics_1_1_i_object_af8866f1765a721c230556bfa391d0299}{set\+Elapsed\+Time} (sf\+::\+Time \&time)=0
+\begin{DoxyCompactList}\small\item\em Set the elapsed time between the previous and the current update. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_graphics_1_1_i_object}{I\+Object} $\ast$ \hyperlink{class_graphics_1_1_i_object_a1f863b90e0b37e462c487731cc218fdd}{Clone} (void)=0
+\begin{DoxyCompactList}\small\item\em Clone the current object. \end{DoxyCompactList}\item 
+\hypertarget{class_graphics_1_1_i_object_a45b5308a10381dd4f41faeef2d06f46c}{}virtual void \hyperlink{class_graphics_1_1_i_object_a45b5308a10381dd4f41faeef2d06f46c}{Update} (void)=0\label{class_graphics_1_1_i_object_a45b5308a10381dd4f41faeef2d06f46c}
 
-\item 
-\hypertarget{class_graphics_1_1_i_object_a9ca3ca5527c0c565d06396efe80ba243}{}virtual std\+::string {\bfseries get\+Type} (void) const  =0\label{class_graphics_1_1_i_object_a9ca3ca5527c0c565d06396efe80ba243}
-
-\item 
-\hypertarget{class_graphics_1_1_i_object_acb10bc8924396f1e9a8aa510e96ec0c2}{}virtual void {\bfseries set\+Position} (sf\+::\+Vector2f const \&position)=0\label{class_graphics_1_1_i_object_acb10bc8924396f1e9a8aa510e96ec0c2}
-
-\item 
-\hypertarget{class_graphics_1_1_i_object_a55f6f70a2c0c2690b6b6a78a75ece3fb}{}virtual void {\bfseries set\+Is\+Dead} (bool condition)=0\label{class_graphics_1_1_i_object_a55f6f70a2c0c2690b6b6a78a75ece3fb}
-
-\item 
-\hypertarget{class_graphics_1_1_i_object_af8866f1765a721c230556bfa391d0299}{}virtual void {\bfseries set\+Elapsed\+Time} (sf\+::\+Time \&time)=0\label{class_graphics_1_1_i_object_af8866f1765a721c230556bfa391d0299}
-
-\item 
-\hypertarget{class_graphics_1_1_i_object_a1f863b90e0b37e462c487731cc218fdd}{}virtual \hyperlink{class_graphics_1_1_i_object}{I\+Object} $\ast$ {\bfseries Clone} (void)=0\label{class_graphics_1_1_i_object_a1f863b90e0b37e462c487731cc218fdd}
-
-\item 
-\hypertarget{class_graphics_1_1_i_object_a45b5308a10381dd4f41faeef2d06f46c}{}virtual void {\bfseries Update} (void)=0\label{class_graphics_1_1_i_object_a45b5308a10381dd4f41faeef2d06f46c}
-
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Update the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_graphics_1_1_i_object_a1bbb236da76f9cff3750afb768be6260}{}virtual void {\bfseries draw} (sf\+::\+Render\+Target \&target, sf\+::\+Render\+States states) const  =0\label{class_graphics_1_1_i_object_a1bbb236da76f9cff3750afb768be6260}
+virtual void \hyperlink{class_graphics_1_1_i_object_a1bbb236da76f9cff3750afb768be6260}{draw} (sf\+::\+Render\+Target \&target, sf\+::\+Render\+States states) const  =0
+\begin{DoxyCompactList}\small\item\em Allow the object to be drawn on the window. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
-\end{DoxyCompactItemize}
+
+\subsection{Detailed Description}
+Define the interface of an object. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_graphics_1_1_i_object_a1f863b90e0b37e462c487731cc218fdd}{}\index{Graphics\+::\+I\+Object@{Graphics\+::\+I\+Object}!Clone@{Clone}}
+\index{Clone@{Clone}!Graphics\+::\+I\+Object@{Graphics\+::\+I\+Object}}
+\subsubsection[{Clone(void)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf I\+Object}$\ast$ Graphics\+::\+I\+Object\+::\+Clone (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_graphics_1_1_i_object_a1f863b90e0b37e462c487731cc218fdd}
+
+
+Clone the current object. 
+
+\begin{DoxyReturn}{Returns}
+success \+: \hyperlink{class_graphics_1_1_i_object}{I\+Object} 
+
+error \+: N\+U\+L\+L 
+\end{DoxyReturn}
+\hypertarget{class_graphics_1_1_i_object_a1bbb236da76f9cff3750afb768be6260}{}\index{Graphics\+::\+I\+Object@{Graphics\+::\+I\+Object}!draw@{draw}}
+\index{draw@{draw}!Graphics\+::\+I\+Object@{Graphics\+::\+I\+Object}}
+\subsubsection[{draw(sf\+::\+Render\+Target \&target, sf\+::\+Render\+States states) const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Graphics\+::\+I\+Object\+::draw (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Target \&}]{target, }
+\item[{sf\+::\+Render\+States}]{states}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\label{class_graphics_1_1_i_object_a1bbb236da76f9cff3750afb768be6260}
+
+
+Allow the object to be drawn on the window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & \+: Contains the render target. \\
+\hline
+{\em states} & \+: Contains the current state of the render target. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_graphics_1_1_i_object_a273d70f469dc4cda00cb19cd6b65395a}{}\index{Graphics\+::\+I\+Object@{Graphics\+::\+I\+Object}!get\+Position@{get\+Position}}
+\index{get\+Position@{get\+Position}!Graphics\+::\+I\+Object@{Graphics\+::\+I\+Object}}
+\subsubsection[{get\+Position(void) const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual sf\+::\+Vector2f const\& Graphics\+::\+I\+Object\+::get\+Position (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_graphics_1_1_i_object_a273d70f469dc4cda00cb19cd6b65395a}
+
+
+Get the position of the current object. 
+
+\begin{DoxyReturn}{Returns}
+sf\+::\+Vector2f const\& 
+\end{DoxyReturn}
+\hypertarget{class_graphics_1_1_i_object_a9ca3ca5527c0c565d06396efe80ba243}{}\index{Graphics\+::\+I\+Object@{Graphics\+::\+I\+Object}!get\+Type@{get\+Type}}
+\index{get\+Type@{get\+Type}!Graphics\+::\+I\+Object@{Graphics\+::\+I\+Object}}
+\subsubsection[{get\+Type(void) const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\+::string Graphics\+::\+I\+Object\+::get\+Type (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_graphics_1_1_i_object_a9ca3ca5527c0c565d06396efe80ba243}
+
+
+Get the key (type) of the object in the environment. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string 
+\end{DoxyReturn}
+\hypertarget{class_graphics_1_1_i_object_a2915106368247427dcff04c5eec2190c}{}\index{Graphics\+::\+I\+Object@{Graphics\+::\+I\+Object}!has\+Brain@{has\+Brain}}
+\index{has\+Brain@{has\+Brain}!Graphics\+::\+I\+Object@{Graphics\+::\+I\+Object}}
+\subsubsection[{has\+Brain(void) const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Graphics\+::\+I\+Object\+::has\+Brain (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_graphics_1_1_i_object_a2915106368247427dcff04c5eec2190c}
+
+
+Verify if the object contains a neural network. 
+
+\begin{DoxyReturn}{Returns}
+true \+: if the object has a neural network. 
+
+false \+: if the object doesn\textquotesingle{}t have not a neural netowrk. 
+\end{DoxyReturn}
+\hypertarget{class_graphics_1_1_i_object_a8efbdb791e3a99d697e5c74a1531d2c8}{}\index{Graphics\+::\+I\+Object@{Graphics\+::\+I\+Object}!is\+Dead@{is\+Dead}}
+\index{is\+Dead@{is\+Dead}!Graphics\+::\+I\+Object@{Graphics\+::\+I\+Object}}
+\subsubsection[{is\+Dead(void) const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Graphics\+::\+I\+Object\+::is\+Dead (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_graphics_1_1_i_object_a8efbdb791e3a99d697e5c74a1531d2c8}
+
+
+Verify if the object is dead (not be able to draw). 
+
+\begin{DoxyReturn}{Returns}
+true \+: if the object is dead. 
+
+false \+: if the object is not dead. 
+\end{DoxyReturn}
+\hypertarget{class_graphics_1_1_i_object_af8866f1765a721c230556bfa391d0299}{}\index{Graphics\+::\+I\+Object@{Graphics\+::\+I\+Object}!set\+Elapsed\+Time@{set\+Elapsed\+Time}}
+\index{set\+Elapsed\+Time@{set\+Elapsed\+Time}!Graphics\+::\+I\+Object@{Graphics\+::\+I\+Object}}
+\subsubsection[{set\+Elapsed\+Time(sf\+::\+Time \&time)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Graphics\+::\+I\+Object\+::set\+Elapsed\+Time (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Time \&}]{time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_graphics_1_1_i_object_af8866f1765a721c230556bfa391d0299}
+
+
+Set the elapsed time between the previous and the current update. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & \+: Contains the delta time. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_graphics_1_1_i_object_a55f6f70a2c0c2690b6b6a78a75ece3fb}{}\index{Graphics\+::\+I\+Object@{Graphics\+::\+I\+Object}!set\+Is\+Dead@{set\+Is\+Dead}}
+\index{set\+Is\+Dead@{set\+Is\+Dead}!Graphics\+::\+I\+Object@{Graphics\+::\+I\+Object}}
+\subsubsection[{set\+Is\+Dead(bool condition)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Graphics\+::\+I\+Object\+::set\+Is\+Dead (
+\begin{DoxyParamCaption}
+\item[{bool}]{condition}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_graphics_1_1_i_object_a55f6f70a2c0c2690b6b6a78a75ece3fb}
+
+
+Set the current state of the object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em condition} & \+: Contains if the object is dead or not. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_graphics_1_1_i_object_acb10bc8924396f1e9a8aa510e96ec0c2}{}\index{Graphics\+::\+I\+Object@{Graphics\+::\+I\+Object}!set\+Position@{set\+Position}}
+\index{set\+Position@{set\+Position}!Graphics\+::\+I\+Object@{Graphics\+::\+I\+Object}}
+\subsubsection[{set\+Position(sf\+::\+Vector2f const \&position)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Graphics\+::\+I\+Object\+::set\+Position (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Vector2f const \&}]{position}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_graphics_1_1_i_object_acb10bc8924396f1e9a8aa510e96ec0c2}
+
+
+Set the current position of the object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & \+: Contains the new position of the object. \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

@@ -5,11 +5,10 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Thu Jul 23 11:41:41 2015 Guillaume ROBIN
-// Last update Wed Aug 26 13:48:53 2015 Guillaume ROBIN
+// Last update Wed Sep  2 13:23:08 2015 Guillaume ROBIN
 //
 
 #include <iostream>
-#include <fstream>
 #include <string>
 #include <sys/types.h>
 #include <dirent.h>
@@ -31,7 +30,8 @@ namespace Graphics
   /*
   ** Constructor & Destructor.
   */
-  Environment2D::Environment2D(void): _display(true), _isTournament(false), _num_epochs(0)
+  Environment2D::Environment2D(std::string const& log): _log_path(log), _display(true),
+							_isTournament(false), _num_epochs(0)
   {
     std::string	font_name("CODE Bold.otf");
     std::string	path(DEF_APP_FONTS);
@@ -53,9 +53,21 @@ namespace Graphics
     _epochs.setPosition(sf::Vector2f(10, 10));
     _epochs.setFont(_font);
     _window.setFramerateLimit(DEF_APP_FRAMER);
+    if (log.size() > 0)
+      {
+	try
+	  {
+	    _log_stream.open(log, std::ofstream::out);
+	  }
+	catch (std::ofstream::failure e)
+	  {
+	    std::cerr << e.what() << std::endl;
+	  }
+      }
   }
 
-  Environment2D::Environment2D(unsigned int width, unsigned int height): Environment2D()
+  Environment2D::Environment2D(std::string const& log, unsigned int width,
+			       unsigned int height): Environment2D(log)
   {
     if (_display)
       _window.create(sf::VideoMode(width, height), DEF_APP_TITLE, sf::Style::Default);
@@ -65,6 +77,14 @@ namespace Graphics
   {
     for (std::list<IObject *>::iterator it = _env.begin(); it != _env.end(); ++it)
       delete(*it);
+    try
+      {
+	_log_stream.close();
+      }
+    catch (std::ofstream::failure e)
+      {
+	std::cerr << e.what() << std::endl;
+      }
   }
 
   /*
@@ -229,7 +249,7 @@ namespace Graphics
     _epochs.setString(std::string(DEF_ENV_STREPOCHS) + std::to_string(_num_epochs));
   }
 
-  void	Environment2D::Update(sf::Time elapsed)
+  void			Environment2D::Update(sf::Time elapsed)
   {
     _physics.UpdateColliders(_env);
     _physics.UpdateSensors(_env);
@@ -238,6 +258,9 @@ namespace Graphics
 	if (*it && !((*it)->isDead()))
 	  {
 	    (*it)->setElapsedTime(elapsed);
+	    if (_log_stream.is_open())
+	      _log_stream << (*it)->getType() << "," << (*it)->getPosition().x << ","
+			  << (*it)->getPosition().y << std::endl;
 	    (*it)->Update();
 	  }
       }

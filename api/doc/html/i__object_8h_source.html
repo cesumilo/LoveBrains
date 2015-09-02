@@ -97,7 +97,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">** Login   &lt;robin_f@epitech.eu&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">** </span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">** Started on  Wed Jul 22 12:05:50 2015 Guillaume ROBIN</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">** Last update Mon Aug  3 18:17:41 2015 Guillaume ROBIN</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">** Last update Wed Sep  2 12:31:36 2015 Guillaume ROBIN</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">*/</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef I_OBJECT_H_</span></div>
@@ -109,44 +109,58 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_graphics.html">Graphics</a></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_graphics_1_1_i_object.html">   20</a></span>&#160;  <span class="keyword">class </span><a class="code" href="class_graphics_1_1_i_object.html">IObject</a> : <span class="keyword">public</span> sf::Drawable</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="class_graphics_1_1_i_object.html">IObject</a>(<span class="keywordtype">void</span>) { }</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="comment">/*</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">    ** Getters.</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span>            isDead(<span class="keywordtype">void</span>) <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span>        hasBrain(<span class="keywordtype">void</span>) <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">virtual</span> std::string     getType(<span class="keywordtype">void</span>) <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="comment">//virtual sf::Vector2f const&amp;   getPosition(void) const = 0;</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment">/*</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">    ** Setters.</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>    setPosition(sf::Vector2f <span class="keyword">const</span>&amp; position) = 0;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>    setIsDead(<span class="keywordtype">bool</span> condition) = 0;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>    setElapsedTime(sf::Time&amp; time) = 0;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="comment">/*</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">    ** Methods.</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_graphics_1_1_i_object.html">IObject</a> *Clone(<span class="keywordtype">void</span>) = 0;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>    Update(<span class="keywordtype">void</span>) = 0;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>    draw(sf::RenderTarget&amp; target, sf::RenderStates states) <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  };</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* !A_OBJECT_H_ */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="class_graphics_1_1_i_object_html"><div class="ttname"><a href="class_graphics_1_1_i_object.html">Graphics::IObject</a></div><div class="ttdef"><b>Definition:</b> i_object.h:20</div></div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_graphics_1_1_i_object.html">   24</a></span>&#160;  <span class="keyword">class </span><a class="code" href="class_graphics_1_1_i_object.html">IObject</a> : <span class="keyword">public</span> sf::Drawable</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_graphics_1_1_i_object.html#a754738cfd4e41113f438a3e0fbed8e08">   30</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_graphics_1_1_i_object.html#a754738cfd4e41113f438a3e0fbed8e08">~IObject</a>(<span class="keywordtype">void</span>) { }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">    ** Getters.</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span>            <a class="code" href="class_graphics_1_1_i_object.html#a8efbdb791e3a99d697e5c74a1531d2c8">isDead</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span>        <a class="code" href="class_graphics_1_1_i_object.html#a2915106368247427dcff04c5eec2190c">hasBrain</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">virtual</span> std::string     <a class="code" href="class_graphics_1_1_i_object.html#a9ca3ca5527c0c565d06396efe80ba243">getType</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">virtual</span> sf::Vector2f <span class="keyword">const</span>&amp; <a class="code" href="class_graphics_1_1_i_object.html#a273d70f469dc4cda00cb19cd6b65395a">getPosition</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">    ** Setters.</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="class_graphics_1_1_i_object.html#acb10bc8924396f1e9a8aa510e96ec0c2">setPosition</a>(sf::Vector2f <span class="keyword">const</span>&amp; position) = 0;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="class_graphics_1_1_i_object.html#a55f6f70a2c0c2690b6b6a78a75ece3fb">setIsDead</a>(<span class="keywordtype">bool</span> condition) = 0;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="class_graphics_1_1_i_object.html#af8866f1765a721c230556bfa391d0299">setElapsedTime</a>(sf::Time&amp; time) = 0;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">    ** Methods.</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_graphics_1_1_i_object.html">IObject</a> *<a class="code" href="class_graphics_1_1_i_object.html#a1f863b90e0b37e462c487731cc218fdd">Clone</a>(<span class="keywordtype">void</span>) = 0;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="class_graphics_1_1_i_object.html#a45b5308a10381dd4f41faeef2d06f46c">Update</a>(<span class="keywordtype">void</span>) = 0;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="class_graphics_1_1_i_object.html#a1bbb236da76f9cff3750afb768be6260">draw</a>(sf::RenderTarget&amp; target, sf::RenderStates states) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  };</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;}</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* !A_OBJECT_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="class_graphics_1_1_i_object_html_acb10bc8924396f1e9a8aa510e96ec0c2"><div class="ttname"><a href="class_graphics_1_1_i_object.html#acb10bc8924396f1e9a8aa510e96ec0c2">Graphics::IObject::setPosition</a></div><div class="ttdeci">virtual void setPosition(sf::Vector2f const &amp;position)=0</div><div class="ttdoc">Set the current position of the object. </div></div>
+<div class="ttc" id="class_graphics_1_1_i_object_html_af8866f1765a721c230556bfa391d0299"><div class="ttname"><a href="class_graphics_1_1_i_object.html#af8866f1765a721c230556bfa391d0299">Graphics::IObject::setElapsedTime</a></div><div class="ttdeci">virtual void setElapsedTime(sf::Time &amp;time)=0</div><div class="ttdoc">Set the elapsed time between the previous and the current update. </div></div>
+<div class="ttc" id="class_graphics_1_1_i_object_html_a1bbb236da76f9cff3750afb768be6260"><div class="ttname"><a href="class_graphics_1_1_i_object.html#a1bbb236da76f9cff3750afb768be6260">Graphics::IObject::draw</a></div><div class="ttdeci">virtual void draw(sf::RenderTarget &amp;target, sf::RenderStates states) const  =0</div><div class="ttdoc">Allow the object to be drawn on the window. </div></div>
+<div class="ttc" id="class_graphics_1_1_i_object_html"><div class="ttname"><a href="class_graphics_1_1_i_object.html">Graphics::IObject</a></div><div class="ttdoc">Define the interface of an object. </div><div class="ttdef"><b>Definition:</b> i_object.h:24</div></div>
+<div class="ttc" id="class_graphics_1_1_i_object_html_a9ca3ca5527c0c565d06396efe80ba243"><div class="ttname"><a href="class_graphics_1_1_i_object.html#a9ca3ca5527c0c565d06396efe80ba243">Graphics::IObject::getType</a></div><div class="ttdeci">virtual std::string getType(void) const  =0</div><div class="ttdoc">Get the key (type) of the object in the environment. </div></div>
+<div class="ttc" id="class_graphics_1_1_i_object_html_a273d70f469dc4cda00cb19cd6b65395a"><div class="ttname"><a href="class_graphics_1_1_i_object.html#a273d70f469dc4cda00cb19cd6b65395a">Graphics::IObject::getPosition</a></div><div class="ttdeci">virtual sf::Vector2f const &amp; getPosition(void) const  =0</div><div class="ttdoc">Get the position of the current object. </div></div>
+<div class="ttc" id="class_graphics_1_1_i_object_html_a1f863b90e0b37e462c487731cc218fdd"><div class="ttname"><a href="class_graphics_1_1_i_object.html#a1f863b90e0b37e462c487731cc218fdd">Graphics::IObject::Clone</a></div><div class="ttdeci">virtual IObject * Clone(void)=0</div><div class="ttdoc">Clone the current object. </div></div>
+<div class="ttc" id="class_graphics_1_1_i_object_html_a754738cfd4e41113f438a3e0fbed8e08"><div class="ttname"><a href="class_graphics_1_1_i_object.html#a754738cfd4e41113f438a3e0fbed8e08">Graphics::IObject::~IObject</a></div><div class="ttdeci">virtual ~IObject(void)</div><div class="ttdoc">Destructor. </div><div class="ttdef"><b>Definition:</b> i_object.h:30</div></div>
+<div class="ttc" id="class_graphics_1_1_i_object_html_a45b5308a10381dd4f41faeef2d06f46c"><div class="ttname"><a href="class_graphics_1_1_i_object.html#a45b5308a10381dd4f41faeef2d06f46c">Graphics::IObject::Update</a></div><div class="ttdeci">virtual void Update(void)=0</div><div class="ttdoc">Update the object. </div></div>
 <div class="ttc" id="namespace_graphics_html"><div class="ttname"><a href="namespace_graphics.html">Graphics</a></div><div class="ttdef"><b>Definition:</b> i_behavior.h:16</div></div>
+<div class="ttc" id="class_graphics_1_1_i_object_html_a8efbdb791e3a99d697e5c74a1531d2c8"><div class="ttname"><a href="class_graphics_1_1_i_object.html#a8efbdb791e3a99d697e5c74a1531d2c8">Graphics::IObject::isDead</a></div><div class="ttdeci">virtual bool isDead(void) const  =0</div><div class="ttdoc">Verify if the object is dead (not be able to draw). </div></div>
+<div class="ttc" id="class_graphics_1_1_i_object_html_a55f6f70a2c0c2690b6b6a78a75ece3fb"><div class="ttname"><a href="class_graphics_1_1_i_object.html#a55f6f70a2c0c2690b6b6a78a75ece3fb">Graphics::IObject::setIsDead</a></div><div class="ttdeci">virtual void setIsDead(bool condition)=0</div><div class="ttdoc">Set the current state of the object. </div></div>
+<div class="ttc" id="class_graphics_1_1_i_object_html_a2915106368247427dcff04c5eec2190c"><div class="ttname"><a href="class_graphics_1_1_i_object.html#a2915106368247427dcff04c5eec2190c">Graphics::IObject::hasBrain</a></div><div class="ttdeci">virtual bool hasBrain(void) const  =0</div><div class="ttdoc">Verify if the object contains a neural network. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 26 2015 17:14:48 for LoveBrains API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 2 2015 16:24:52 for LoveBrains API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

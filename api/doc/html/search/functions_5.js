@@ -5,7 +5,9 @@ var searchData=
   ['getformatederrormessages',['getFormatedErrorMessages',['../class_json_1_1_reader.html#afa4a59e962d23c4d1c38b433fc95eefa',1,'Json::Reader']]],
   ['getformattederrormessages',['getFormattedErrorMessages',['../class_json_1_1_reader.html#a95ab50aa789132e9dee0fc1475c85acf',1,'Json::Reader']]],
   ['getmembernames',['getMemberNames',['../class_json_1_1_value.html#a30fa08af88f2d0a038b22ba9f4e88b2a',1,'Json::Value']]],
+  ['getposition',['getPosition',['../class_graphics_1_1_i_object.html#a273d70f469dc4cda00cb19cd6b65395a',1,'Graphics::IObject']]],
   ['getstring',['getString',['../class_json_1_1_value.html#a1e0263113ae247a632afac43ebc4149f',1,'Json::Value']]],
   ['getstructurederrors',['getStructuredErrors',['../class_json_1_1_reader.html#a08c2ea5ffc7d2a9c9e35020835624f0b',1,'Json::Reader']]],
+  ['gettype',['getType',['../class_graphics_1_1_i_object.html#a9ca3ca5527c0c565d06396efe80ba243',1,'Graphics::IObject']]],
   ['good',['good',['../class_json_1_1_reader.html#a06b52dcc656549506b1ae6f05167ecf4',1,'Json::Reader']]]
 ];

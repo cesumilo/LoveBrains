@@ -5,7 +5,7 @@
 ** Login   <robin_f@epitech.eu>
 ** 
 ** Started on  Fri Jul 31 11:49:24 2015 Guillaume ROBIN
-** Last update Tue Aug 25 12:08:57 2015 Guillaume ROBIN
+** Last update Wed Sep  2 13:40:52 2015 Guillaume ROBIN
 */
 
 #ifndef APP_CONST_H_
@@ -27,7 +27,7 @@
 # define DEF_FUNCTION_SIGMOID	(const char *)"sigmoid"
 # define DEF_FUNCTION_THRESHOLD	(const char *)"threshold"
 # define DEF_DELIMITER_SIZE	(const char *)"x"
-# define DEF_MAX_GETTERS	(unsigned int)14
+# define DEF_MAX_GETTERS	(unsigned int)15
 # define DEF_GET_CROSSING_RATE	(const char *)"crossing_rate"
 # define DEF_GET_MUTATION_RATE	(const char *)"mutation_rate"
 # define DEF_GET_SELECTION_RATE	(const char *)"selection_rate"
@@ -42,11 +42,15 @@
 # define DEF_GET_ENVIRONMENT_S	(const char *)"environment size"
 # define DEF_GET_TOURNAMENT	(const char *)"tournament"
 # define DEF_GET_DISPLAYMODE	(const char *)"display mode"
+# define DEF_GET_LOGPATH	(const char *)"log path"
 
 # define DEF_CONST_MINCHAR	(char)'a'
 # define DEF_CONST_MAXCHAR	(char)'z'
+# define DEF_CONST_MMINCHAR	(char)'A'
+# define DEF_CONST_MMAXCHAR	(char)'Z'
 # define DEF_CONST_SPCHAR	(char)' '
 # define DEF_CONST_DELIMCHAR	(char)':'
+# define DEF_CONST_POINTCHAR	(char)'.'
 # define DEF_CONST_DELIMSTR	(const char *)":"
 # define DEF_CONST_SPACESTR	(const char *)" "
 # define DEF_CONST_DASHCHAR	(char)'-'

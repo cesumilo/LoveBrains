@@ -5,7 +5,7 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Fri Jul 31 12:09:39 2015 Guillaume ROBIN
-// Last update Tue Aug 25 12:20:49 2015 Guillaume ROBIN
+// Last update Wed Sep  2 16:00:55 2015 Guillaume ROBIN
 //
 
 #include <stdexcept>
@@ -294,5 +294,26 @@ namespace App
     else if (value.find(DEF_CONST_DM2D_1) != std::string::npos
 	     || value.find(DEF_CONST_DM2D_2) != std::string::npos)
       config.setDisplayMode(Simulator::SConfig::DisplayMode::ENVIRONMENT_2D);
+  }
+
+  void			config_getLogPath(Simulator::SConfig& config, std::string const& value)
+  {
+    unsigned int	i = 0;
+    unsigned int	begin;
+    unsigned int	end;
+    std::string		data = value;
+
+    while (i < data.size())
+      {
+	i = 0;
+	while (i < data.size() && data[i] != ' ')
+	  ++i;
+	begin = i;
+	while (i < data.size() && data[i] == ' ')
+	  ++i;
+        end = i;
+	data.erase(begin, end);
+      }
+    config.setLogPath(data);
   }
 }

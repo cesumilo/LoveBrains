@@ -5,7 +5,7 @@
 ** Login   <robin_f@epitech.eu>
 ** 
 ** Started on  Wed Jul 22 12:05:50 2015 Guillaume ROBIN
-** Last update Fri Aug 21 15:18:36 2015 Guillaume ROBIN
+** Last update Wed Sep  2 12:31:36 2015 Guillaume ROBIN
 */
 
 #ifndef I_OBJECT_H_
@@ -46,10 +46,15 @@ namespace Graphics
      */
     virtual bool		hasBrain(void) const = 0;
     /*!
-     * \brief Get the ky (type) of the object in the environment.
+     * \brief Get the key (type) of the object in the environment.
      * \return std::string
      */
     virtual std::string		getType(void) const = 0;
+    /*!
+     * \brief Get the position of the current object.
+     * \return sf::Vector2f const&
+     */
+    virtual sf::Vector2f const&	getPosition(void) const = 0;
 
     /*
     ** Setters.

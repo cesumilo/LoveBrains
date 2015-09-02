@@ -5,7 +5,7 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Fri Jul 31 11:43:33 2015 Guillaume ROBIN
-// Last update Wed Aug 26 13:49:37 2015 Guillaume ROBIN
+// Last update Wed Sep  2 16:01:03 2015 Guillaume ROBIN
 //
 
 #include <fstream>
@@ -33,7 +33,8 @@ namespace App
     {std::string(DEF_GET_OACTIVATION), config_getOutputsActivation},
     {std::string(DEF_GET_ENVIRONMENT_S), &config_getEnvironmentSize},
     {std::string(DEF_GET_TOURNAMENT), &config_getIsTournament},
-    {std::string(DEF_GET_DISPLAYMODE), &config_getDisplayMode}
+    {std::string(DEF_GET_DISPLAYMODE), &config_getDisplayMode},
+    {std::string(DEF_GET_LOGPATH), &config_getLogPath}
   };
 
   /*
@@ -65,7 +66,9 @@ namespace App
 	if ((line[i] < DEF_CONST_MINCHAR || line[i] > DEF_CONST_MAXCHAR)
 	    && line[i] != DEF_CONST_DELIMCHAR && line[i] != DEF_CONST_SPCHAR
 	    && line[i] != DEF_CONST_UNDERSCHAR && line[i] != DEF_CONST_DASHCHAR
-	    && (line[i] < DEF_CONST_MINNUMCHAR || line[i] > DEF_CONST_MAXNUMCHAR))
+	    && line[i] != DEF_CONST_POINTCHAR
+	    && (line[i] < DEF_CONST_MINNUMCHAR || line[i] > DEF_CONST_MAXNUMCHAR)
+	    && (line[i] < DEF_CONST_MMINCHAR || line[i] > DEF_CONST_MMAXCHAR))
 	  return (false);
       }
     return (line.size() > 0 && line[0] != '\n');

@@ -5,7 +5,7 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Thu Jul 23 14:07:18 2015 Guillaume ROBIN
-// Last update Wed Aug 26 12:47:07 2015 Guillaume ROBIN
+// Last update Wed Sep  2 13:23:28 2015 Guillaume ROBIN
 //
 
 #include <stdexcept>
@@ -32,7 +32,8 @@ namespace Simulator
 				  _pop_size(DEF_POPULATION_SIZE),
 				  _env_width(DEF_APP_WIDTH),
 				  _env_height(DEF_APP_HEIGHT),
-				  _activation(&GANN::Sigmoid), _output_activation(&GANN::Sigmoid)
+				  _activation(&GANN::Sigmoid), _output_activation(&GANN::Sigmoid),
+    _log_path(std::string(""))
   {
   }
 
@@ -165,6 +166,11 @@ namespace Simulator
     _display = display;
   }
 
+  void	SConfig::setLogPath(std::string const& path) throw()
+  {
+    _log_path = path;
+  }
+
   /*
   ** Getters.
   */
@@ -253,6 +259,11 @@ namespace Simulator
     return (_display);
   }
 
+  std::string const&	SConfig::getLogPath(void) const throw()
+  {
+    return (_log_path);
+  }
+
   /*
   ** Overload.
   */
@@ -275,6 +286,7 @@ namespace Simulator
     _env_height = config.getEnvironmentHeight();
     _layer_ftype = config.getLayerActivationType();
     _out_ftype = config.getOutputActivationType();
+    _log_path = config.getLogPath();
     return (*this);
   }
 }

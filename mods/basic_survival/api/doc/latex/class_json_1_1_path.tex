@@ -1,0 +1,55 @@
+\hypertarget{class_json_1_1_path}{}\section{Json\+:\+:Path Class Reference}
+\label{class_json_1_1_path}\index{Json\+::\+Path@{Json\+::\+Path}}
+
+
+Experimental and untested\+: represents a \char`\"{}path\char`\"{} to access a node.  
+
+
+
+
+{\ttfamily \#include $<$json.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_json_1_1_path_aaa37a99650e770d0cd680bf53585ec99}{}{\bfseries Path} (const std\+::string \&path, const \hyperlink{class_json_1_1_path_argument}{Path\+Argument} \&a1=\hyperlink{class_json_1_1_path_argument}{Path\+Argument}(), const \hyperlink{class_json_1_1_path_argument}{Path\+Argument} \&a2=\hyperlink{class_json_1_1_path_argument}{Path\+Argument}(), const \hyperlink{class_json_1_1_path_argument}{Path\+Argument} \&a3=\hyperlink{class_json_1_1_path_argument}{Path\+Argument}(), const \hyperlink{class_json_1_1_path_argument}{Path\+Argument} \&a4=\hyperlink{class_json_1_1_path_argument}{Path\+Argument}(), const \hyperlink{class_json_1_1_path_argument}{Path\+Argument} \&a5=\hyperlink{class_json_1_1_path_argument}{Path\+Argument}())\label{class_json_1_1_path_aaa37a99650e770d0cd680bf53585ec99}
+
+\item 
+\hypertarget{class_json_1_1_path_ae1d05fa985a6ee3c57f2b8ed186b5982}{}const \hyperlink{class_json_1_1_value}{Value} \& {\bfseries resolve} (const \hyperlink{class_json_1_1_value}{Value} \&root) const \label{class_json_1_1_path_ae1d05fa985a6ee3c57f2b8ed186b5982}
+
+\item 
+\hypertarget{class_json_1_1_path_a33d1749770a4cf74e9a3de419bc7febe}{}\hyperlink{class_json_1_1_value}{Value} {\bfseries resolve} (const \hyperlink{class_json_1_1_value}{Value} \&root, const \hyperlink{class_json_1_1_value}{Value} \&default\+Value) const \label{class_json_1_1_path_a33d1749770a4cf74e9a3de419bc7febe}
+
+\item 
+\hyperlink{class_json_1_1_value}{Value} \& \hyperlink{class_json_1_1_path_a5289901fc58ad1fdca1de7fb5a0b620c}{make} (\hyperlink{class_json_1_1_value}{Value} \&root) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Experimental and untested\+: represents a \char`\"{}path\char`\"{} to access a node. 
+
+Syntax\+:
+\begin{DoxyItemize}
+\item \char`\"{}.\char`\"{} =$>$ root node
+\item \char`\"{}.\mbox{[}n\mbox{]}\char`\"{} =$>$ elements at index \textquotesingle{}n\textquotesingle{} of root node (an array value)
+\item \char`\"{}.\+name\char`\"{} =$>$ member named \textquotesingle{}name\textquotesingle{} of root node (an object value)
+\item \char`\"{}.\+name1.\+name2.\+name3\char`\"{}
+\item \char`\"{}.\mbox{[}0\mbox{]}\mbox{[}1\mbox{]}\mbox{[}2\mbox{]}.\+name1\mbox{[}3\mbox{]}\char`\"{}
+\item \char`\"{}.\%\char`\"{} =$>$ member name is provided as parameter
+\item \char`\"{}.\mbox{[}\%\mbox{]}\char`\"{} =$>$ index is provied as parameter 
+\end{DoxyItemize}
+
+\subsection{Member Function Documentation}
+\hypertarget{class_json_1_1_path_a5289901fc58ad1fdca1de7fb5a0b620c}{}\index{Json\+::\+Path@{Json\+::\+Path}!make@{make}}
+\index{make@{make}!Json\+::\+Path@{Json\+::\+Path}}
+\subsubsection[{make(\+Value \&root) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Value} \& Json\+::\+Path\+::make (
+\begin{DoxyParamCaption}
+\item[{{\bf Value} \&}]{root}
+\end{DoxyParamCaption}
+) const}\label{class_json_1_1_path_a5289901fc58ad1fdca1de7fb5a0b620c}
+Creates the \char`\"{}path\char`\"{} to access the specified node and returns a reference on the node. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/robin\+\_\+f/\+Programming/\+Git/\+C\+P\+P/\+Love\+Brains/api/lib/\+A\+N\+N\+Library/include/json/json.\+h\item 
+/home/robin\+\_\+f/\+Programming/\+Git/\+C\+P\+P/\+Love\+Brains/api/lib/\+A\+N\+N\+Library/src/json/jsoncpp.\+cc\end{DoxyCompactItemize}

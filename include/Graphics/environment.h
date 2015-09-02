@@ -5,13 +5,15 @@
 ** Login   <robin_f@epitech.eu>
 ** 
 ** Started on  Thu Jul 23 11:39:20 2015 Guillaume ROBIN
-** Last update Tue Aug 25 12:13:20 2015 Guillaume ROBIN
+** Last update Wed Sep  2 13:14:47 2015 Guillaume ROBIN
 */
 
 #ifndef ENVIRONMENT_H_
 # define ENVIRONMENT_H_
 
 # include <SFML/Graphics.hpp>
+# include <string>
+# include <fstream>
 
 # include "Graphics/i_object.h"
 # include "Graphics/i_brain.h"
@@ -34,13 +36,13 @@ namespace Graphics
     /*!
      * \brief Constructor.
      */
-    Environment2D(void);
+    Environment2D(std::string const& log);
     /*!
      * \brief Constructor.
      * \param width : window's width
      * \param height : window's height.
      */
-    Environment2D(unsigned int width, unsigned int height);
+    Environment2D(std::string const& log, unsigned int width, unsigned int height);
     /*!
      * \brief Destructor.
      */
@@ -121,6 +123,7 @@ namespace Graphics
     void	Run(std::list<GA::IDNA *>& brains);
 
   private:
+    std::string				_log_path; /*!< Contains the log file path */
     bool				_display; /*!< Contains if the environment has to create a window. */
     bool				_isTournament; /*!< Contains the boolean that says if it's a tournament or not. */
     unsigned int			_num_epochs; /*!< Contains the current number of epochs */
@@ -131,6 +134,7 @@ namespace Graphics
     sf::Text				_epochs; /*!< Contains the current state of the number of epochs. */
     Physics				_physics; /*!< Contains the physics engine. */
     static sf::RenderWindow		_window; /*!< Contains the window that will be used to display the objects on the screen. */
+    std::ofstream			_log_stream; /*!< Contains the log stream for the online visualisation */
 
     /*!
      * \brief Update the informations about the simulation.

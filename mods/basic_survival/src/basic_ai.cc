@@ -5,7 +5,7 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Sat Aug  1 12:35:21 2015 Guillaume ROBIN
-// Last update Tue Aug 25 16:21:07 2015 Guillaume ROBIN
+// Last update Fri Aug 28 23:32:09 2015 Guillaume ROBIN
 //
 
 #include <cmath>
@@ -24,10 +24,10 @@ BasicAI::BasicAI(void): _dead(false), _fitness(0), _angle(0), _time(0),
   _shape.setPosition(_position);
   _shape.setRadius(DEF_AI_RADIUS);
   _shape.setFillColor(sf::Color::Cyan);
-  _vfield1.setRadius(DEF_AI_VISION_RADIUS);
-  _vfield2.setRadius(DEF_AI_VISION_RADIUS);
-  _vfield1.setFillColor(sf::Color::Red);
-  _vfield2.setFillColor(sf::Color::Red);
+  // _vfield1.setRadius(DEF_AI_VISION_RADIUS);
+  // _vfield2.setRadius(DEF_AI_VISION_RADIUS);
+  // _vfield1.setFillColor(sf::Color::Red);
+  // _vfield2.setFillColor(sf::Color::Red);
   _inputs = GANN::Matrix<double>(1, 1, 0);
 }
 
@@ -286,7 +286,7 @@ void	BasicAI::draw(sf::RenderTarget& target, sf::RenderStates states) const
   if (!_dead)
     {
       target.draw(_shape, states);
-      target.draw(_vfield1, states);
-      target.draw(_vfield2, states);
+      // target.draw(_vfield1, states);
+      // target.draw(_vfield2, states);
     }
 }

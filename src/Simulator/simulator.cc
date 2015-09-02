@@ -5,7 +5,7 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Thu Jul 23 12:19:26 2015 Guillaume ROBIN
-// Last update Tue Aug 25 12:39:20 2015 Guillaume ROBIN
+// Last update Wed Sep  2 12:57:35 2015 Guillaume ROBIN
 //
 
 #include <iostream>
@@ -85,13 +85,14 @@ namespace Simulator
     switch (config.getDisplayMode())
       {
       case SConfig::DisplayMode::NONE:
-	_env = new Graphics::Environment2D();
+	_env = new Graphics::Environment2D(config.getLogPath());
 	if (!_env)
 	  throw (SimulatorException(ERR_SIMULATOR_ENV));
 	_env->setDisplay(false);
 	break;
       case SConfig::DisplayMode::ENVIRONMENT_2D:
-	_env = new Graphics::Environment2D(config.getEnvironmentWidth(), config.getEnvironmentHeight());
+	_env = new Graphics::Environment2D(config.getLogPath(), config.getEnvironmentWidth(),
+					   config.getEnvironmentHeight());
 	break;
       }
     if (!_env)

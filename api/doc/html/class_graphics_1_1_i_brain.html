@@ -102,7 +102,7 @@ Inheritance diagram for Graphics::IBrain:</div>
  <div class="center">
   <img src="class_graphics_1_1_i_brain.png" usemap="#Graphics::IBrain_map" alt=""/>
   <map id="Graphics::IBrain_map" name="Graphics::IBrain_map">
-<area href="class_graphics_1_1_i_object.html" alt="Graphics::IObject" shape="rect" coords="0,56,109,80"/>
+<area href="class_graphics_1_1_i_object.html" title="Define the interface of an object. " alt="Graphics::IObject" shape="rect" coords="0,56,109,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -121,36 +121,44 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setBrain</b> 
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setInput</b> (unsigned int index, double value)=0</td></tr>
 <tr class="separator:a768f7a2e586cafbbc7c4c2ae846a52be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_graphics_1_1_i_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_graphics_1_1_i_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_graphics_1_1_i_object.html">Graphics::IObject</a></td></tr>
-<tr class="memitem:a8efbdb791e3a99d697e5c74a1531d2c8 inherit pub_methods_class_graphics_1_1_i_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8efbdb791e3a99d697e5c74a1531d2c8"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>isDead</b> (void) const  =0</td></tr>
+<tr class="memitem:a754738cfd4e41113f438a3e0fbed8e08 inherit pub_methods_class_graphics_1_1_i_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a754738cfd4e41113f438a3e0fbed8e08"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics_1_1_i_object.html#a754738cfd4e41113f438a3e0fbed8e08">~IObject</a> (void)</td></tr>
+<tr class="memdesc:a754738cfd4e41113f438a3e0fbed8e08 inherit pub_methods_class_graphics_1_1_i_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
+<tr class="separator:a754738cfd4e41113f438a3e0fbed8e08 inherit pub_methods_class_graphics_1_1_i_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8efbdb791e3a99d697e5c74a1531d2c8 inherit pub_methods_class_graphics_1_1_i_object"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics_1_1_i_object.html#a8efbdb791e3a99d697e5c74a1531d2c8">isDead</a> (void) const  =0</td></tr>
+<tr class="memdesc:a8efbdb791e3a99d697e5c74a1531d2c8 inherit pub_methods_class_graphics_1_1_i_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify if the object is dead (not be able to draw).  <a href="#a8efbdb791e3a99d697e5c74a1531d2c8">More...</a><br /></td></tr>
 <tr class="separator:a8efbdb791e3a99d697e5c74a1531d2c8 inherit pub_methods_class_graphics_1_1_i_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2915106368247427dcff04c5eec2190c inherit pub_methods_class_graphics_1_1_i_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2915106368247427dcff04c5eec2190c"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>hasBrain</b> (void) const  =0</td></tr>
+<tr class="memitem:a2915106368247427dcff04c5eec2190c inherit pub_methods_class_graphics_1_1_i_object"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics_1_1_i_object.html#a2915106368247427dcff04c5eec2190c">hasBrain</a> (void) const  =0</td></tr>
+<tr class="memdesc:a2915106368247427dcff04c5eec2190c inherit pub_methods_class_graphics_1_1_i_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify if the object contains a neural network.  <a href="#a2915106368247427dcff04c5eec2190c">More...</a><br /></td></tr>
 <tr class="separator:a2915106368247427dcff04c5eec2190c inherit pub_methods_class_graphics_1_1_i_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ca3ca5527c0c565d06396efe80ba243 inherit pub_methods_class_graphics_1_1_i_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9ca3ca5527c0c565d06396efe80ba243"></a>
-virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getType</b> (void) const  =0</td></tr>
+<tr class="memitem:a9ca3ca5527c0c565d06396efe80ba243 inherit pub_methods_class_graphics_1_1_i_object"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics_1_1_i_object.html#a9ca3ca5527c0c565d06396efe80ba243">getType</a> (void) const  =0</td></tr>
+<tr class="memdesc:a9ca3ca5527c0c565d06396efe80ba243 inherit pub_methods_class_graphics_1_1_i_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the key (type) of the object in the environment.  <a href="#a9ca3ca5527c0c565d06396efe80ba243">More...</a><br /></td></tr>
 <tr class="separator:a9ca3ca5527c0c565d06396efe80ba243 inherit pub_methods_class_graphics_1_1_i_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb10bc8924396f1e9a8aa510e96ec0c2 inherit pub_methods_class_graphics_1_1_i_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acb10bc8924396f1e9a8aa510e96ec0c2"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setPosition</b> (sf::Vector2f const &amp;position)=0</td></tr>
+<tr class="memitem:a273d70f469dc4cda00cb19cd6b65395a inherit pub_methods_class_graphics_1_1_i_object"><td class="memItemLeft" align="right" valign="top">virtual sf::Vector2f const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics_1_1_i_object.html#a273d70f469dc4cda00cb19cd6b65395a">getPosition</a> (void) const  =0</td></tr>
+<tr class="memdesc:a273d70f469dc4cda00cb19cd6b65395a inherit pub_methods_class_graphics_1_1_i_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the position of the current object.  <a href="#a273d70f469dc4cda00cb19cd6b65395a">More...</a><br /></td></tr>
+<tr class="separator:a273d70f469dc4cda00cb19cd6b65395a inherit pub_methods_class_graphics_1_1_i_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb10bc8924396f1e9a8aa510e96ec0c2 inherit pub_methods_class_graphics_1_1_i_object"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics_1_1_i_object.html#acb10bc8924396f1e9a8aa510e96ec0c2">setPosition</a> (sf::Vector2f const &amp;position)=0</td></tr>
+<tr class="memdesc:acb10bc8924396f1e9a8aa510e96ec0c2 inherit pub_methods_class_graphics_1_1_i_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the current position of the object.  <a href="#acb10bc8924396f1e9a8aa510e96ec0c2">More...</a><br /></td></tr>
 <tr class="separator:acb10bc8924396f1e9a8aa510e96ec0c2 inherit pub_methods_class_graphics_1_1_i_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55f6f70a2c0c2690b6b6a78a75ece3fb inherit pub_methods_class_graphics_1_1_i_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a55f6f70a2c0c2690b6b6a78a75ece3fb"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setIsDead</b> (bool condition)=0</td></tr>
+<tr class="memitem:a55f6f70a2c0c2690b6b6a78a75ece3fb inherit pub_methods_class_graphics_1_1_i_object"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics_1_1_i_object.html#a55f6f70a2c0c2690b6b6a78a75ece3fb">setIsDead</a> (bool condition)=0</td></tr>
+<tr class="memdesc:a55f6f70a2c0c2690b6b6a78a75ece3fb inherit pub_methods_class_graphics_1_1_i_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the current state of the object.  <a href="#a55f6f70a2c0c2690b6b6a78a75ece3fb">More...</a><br /></td></tr>
 <tr class="separator:a55f6f70a2c0c2690b6b6a78a75ece3fb inherit pub_methods_class_graphics_1_1_i_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8866f1765a721c230556bfa391d0299 inherit pub_methods_class_graphics_1_1_i_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af8866f1765a721c230556bfa391d0299"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setElapsedTime</b> (sf::Time &amp;time)=0</td></tr>
+<tr class="memitem:af8866f1765a721c230556bfa391d0299 inherit pub_methods_class_graphics_1_1_i_object"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics_1_1_i_object.html#af8866f1765a721c230556bfa391d0299">setElapsedTime</a> (sf::Time &amp;time)=0</td></tr>
+<tr class="memdesc:af8866f1765a721c230556bfa391d0299 inherit pub_methods_class_graphics_1_1_i_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the elapsed time between the previous and the current update.  <a href="#af8866f1765a721c230556bfa391d0299">More...</a><br /></td></tr>
 <tr class="separator:af8866f1765a721c230556bfa391d0299 inherit pub_methods_class_graphics_1_1_i_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f863b90e0b37e462c487731cc218fdd inherit pub_methods_class_graphics_1_1_i_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1f863b90e0b37e462c487731cc218fdd"></a>
-virtual <a class="el" href="class_graphics_1_1_i_object.html">IObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>Clone</b> (void)=0</td></tr>
+<tr class="memitem:a1f863b90e0b37e462c487731cc218fdd inherit pub_methods_class_graphics_1_1_i_object"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_graphics_1_1_i_object.html">IObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics_1_1_i_object.html#a1f863b90e0b37e462c487731cc218fdd">Clone</a> (void)=0</td></tr>
+<tr class="memdesc:a1f863b90e0b37e462c487731cc218fdd inherit pub_methods_class_graphics_1_1_i_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clone the current object.  <a href="#a1f863b90e0b37e462c487731cc218fdd">More...</a><br /></td></tr>
 <tr class="separator:a1f863b90e0b37e462c487731cc218fdd inherit pub_methods_class_graphics_1_1_i_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45b5308a10381dd4f41faeef2d06f46c inherit pub_methods_class_graphics_1_1_i_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a45b5308a10381dd4f41faeef2d06f46c"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Update</b> (void)=0</td></tr>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics_1_1_i_object.html#a45b5308a10381dd4f41faeef2d06f46c">Update</a> (void)=0</td></tr>
+<tr class="memdesc:a45b5308a10381dd4f41faeef2d06f46c inherit pub_methods_class_graphics_1_1_i_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the object. <br /></td></tr>
 <tr class="separator:a45b5308a10381dd4f41faeef2d06f46c inherit pub_methods_class_graphics_1_1_i_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_class_graphics_1_1_i_object"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_graphics_1_1_i_object')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_graphics_1_1_i_object.html">Graphics::IObject</a></td></tr>
-<tr class="memitem:a1bbb236da76f9cff3750afb768be6260 inherit pro_methods_class_graphics_1_1_i_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1bbb236da76f9cff3750afb768be6260"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> (sf::RenderTarget &amp;target, sf::RenderStates states) const  =0</td></tr>
+<tr class="memitem:a1bbb236da76f9cff3750afb768be6260 inherit pro_methods_class_graphics_1_1_i_object"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics_1_1_i_object.html#a1bbb236da76f9cff3750afb768be6260">draw</a> (sf::RenderTarget &amp;target, sf::RenderStates states) const  =0</td></tr>
+<tr class="memdesc:a1bbb236da76f9cff3750afb768be6260 inherit pro_methods_class_graphics_1_1_i_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow the object to be drawn on the window.  <a href="#a1bbb236da76f9cff3750afb768be6260">More...</a><br /></td></tr>
 <tr class="separator:a1bbb236da76f9cff3750afb768be6260 inherit pro_methods_class_graphics_1_1_i_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following file:<ul>
@@ -159,7 +167,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> (sf:
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 26 2015 17:14:48 for LoveBrains API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 2 2015 16:24:52 for LoveBrains API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

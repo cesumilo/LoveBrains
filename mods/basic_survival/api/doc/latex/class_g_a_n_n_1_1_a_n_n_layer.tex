@@ -1,0 +1,59 @@
+\hypertarget{class_g_a_n_n_1_1_a_n_n_layer}{}\section{G\+A\+N\+N\+:\+:A\+N\+N\+Layer Class Reference}
+\label{class_g_a_n_n_1_1_a_n_n_layer}\index{G\+A\+N\+N\+::\+A\+N\+N\+Layer@{G\+A\+N\+N\+::\+A\+N\+N\+Layer}}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_g_a_n_n_1_1_a_n_n_layer_abb160533dd36e791bd0e561ef244cbae}{}typedef double($\ast$ {\bfseries F\+Activate}) (double)\label{class_g_a_n_n_1_1_a_n_n_layer_abb160533dd36e791bd0e561ef244cbae}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_g_a_n_n_1_1_a_n_n_layer_a98a15401495eddad363a75c2ab9c5773}{}{\bfseries A\+N\+N\+Layer} (unsigned int num\+\_\+inputs, unsigned int num\+\_\+neurons, double min, double max, F\+Activate activation)\label{class_g_a_n_n_1_1_a_n_n_layer_a98a15401495eddad363a75c2ab9c5773}
+
+\item 
+\hypertarget{class_g_a_n_n_1_1_a_n_n_layer_a89236bd33096986ab0efa417d4cbcb1c}{}{\bfseries A\+N\+N\+Layer} (\hyperlink{class_g_a_n_n_1_1_a_n_n_layer}{A\+N\+N\+Layer} const \&copy)\label{class_g_a_n_n_1_1_a_n_n_layer_a89236bd33096986ab0efa417d4cbcb1c}
+
+\item 
+\hypertarget{class_g_a_n_n_1_1_a_n_n_layer_a53907cae383f48d74ec7377665d99748}{}\hyperlink{class_g_a_n_n_1_1_matrix}{Matrix}$<$ double $>$ const \& {\bfseries get\+Weights} (void) const \label{class_g_a_n_n_1_1_a_n_n_layer_a53907cae383f48d74ec7377665d99748}
+
+\item 
+\hypertarget{class_g_a_n_n_1_1_a_n_n_layer_ae91b6f9960dfea801080512dc5d9b224}{}\hyperlink{class_g_a_n_n_1_1_matrix}{Matrix}$<$ double $>$ \& {\bfseries get\+Weights} (void)\label{class_g_a_n_n_1_1_a_n_n_layer_ae91b6f9960dfea801080512dc5d9b224}
+
+\item 
+\hypertarget{class_g_a_n_n_1_1_a_n_n_layer_a73e68bd212308c07f0e189cac0ce1f78}{}\hyperlink{class_g_a_n_n_1_1_matrix}{Matrix}$<$ double $>$ const \& {\bfseries get\+Outputs} (void) const \label{class_g_a_n_n_1_1_a_n_n_layer_a73e68bd212308c07f0e189cac0ce1f78}
+
+\item 
+\hypertarget{class_g_a_n_n_1_1_a_n_n_layer_a667dafc7ab40773bbd6bc32553bd4cb0}{}\hyperlink{class_g_a_n_n_1_1_matrix}{Matrix}$<$ double $>$ const \& {\bfseries get\+Bias} (void) const \label{class_g_a_n_n_1_1_a_n_n_layer_a667dafc7ab40773bbd6bc32553bd4cb0}
+
+\item 
+\hypertarget{class_g_a_n_n_1_1_a_n_n_layer_a35de727d75d940dd9614ecdf0f1327ca}{}\hyperlink{class_g_a_n_n_1_1_matrix}{Matrix}$<$ double $>$ \& {\bfseries get\+Bias} (void)\label{class_g_a_n_n_1_1_a_n_n_layer_a35de727d75d940dd9614ecdf0f1327ca}
+
+\item 
+\hypertarget{class_g_a_n_n_1_1_a_n_n_layer_ac6177070fe7bb18aeed82980b70894e1}{}F\+Activate {\bfseries get\+Activation\+Function} (void) const \label{class_g_a_n_n_1_1_a_n_n_layer_ac6177070fe7bb18aeed82980b70894e1}
+
+\item 
+\hypertarget{class_g_a_n_n_1_1_a_n_n_layer_a99b44245e660160e6431f4bd8b7cf8ed}{}void {\bfseries set\+Weights} (\hyperlink{class_g_a_n_n_1_1_matrix}{Matrix}$<$ double $>$ const \&weights)\label{class_g_a_n_n_1_1_a_n_n_layer_a99b44245e660160e6431f4bd8b7cf8ed}
+
+\item 
+\hypertarget{class_g_a_n_n_1_1_a_n_n_layer_a33b17fa33318cc5ab3060025ccf90faf}{}void {\bfseries set\+Bias} (\hyperlink{class_g_a_n_n_1_1_matrix}{Matrix}$<$ double $>$ const \&bias)\label{class_g_a_n_n_1_1_a_n_n_layer_a33b17fa33318cc5ab3060025ccf90faf}
+
+\item 
+\hypertarget{class_g_a_n_n_1_1_a_n_n_layer_a7249be13922695f54aa3ed0b888584b8}{}void {\bfseries set\+Outputs} (\hyperlink{class_g_a_n_n_1_1_matrix}{Matrix}$<$ double $>$ const \&outputs)\label{class_g_a_n_n_1_1_a_n_n_layer_a7249be13922695f54aa3ed0b888584b8}
+
+\item 
+\hypertarget{class_g_a_n_n_1_1_a_n_n_layer_afee60047b0ccb6d2b92f75d4b55febdc}{}void {\bfseries set\+Activation\+Function} (F\+Activate f)\label{class_g_a_n_n_1_1_a_n_n_layer_afee60047b0ccb6d2b92f75d4b55febdc}
+
+\item 
+\hypertarget{class_g_a_n_n_1_1_a_n_n_layer_af0143b0bacad70f0fc69969e31f60abb}{}\hyperlink{class_g_a_n_n_1_1_a_n_n_layer}{A\+N\+N\+Layer} \& {\bfseries operator=} (\hyperlink{class_g_a_n_n_1_1_a_n_n_layer}{A\+N\+N\+Layer} const \&layer)\label{class_g_a_n_n_1_1_a_n_n_layer_af0143b0bacad70f0fc69969e31f60abb}
+
+\item 
+\hypertarget{class_g_a_n_n_1_1_a_n_n_layer_aa8388e643e0916ad8366bb8abc227331}{}void {\bfseries Activate} (\hyperlink{class_g_a_n_n_1_1_matrix}{Matrix}$<$ double $>$ const \&inputs)\label{class_g_a_n_n_1_1_a_n_n_layer_aa8388e643e0916ad8366bb8abc227331}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/robin\+\_\+f/\+Programming/\+Git/\+C\+P\+P/\+Love\+Brains/api/lib/\+A\+N\+N\+Library/include/\+A\+N\+N/ann\+\_\+layer.\+h\item 
+/home/robin\+\_\+f/\+Programming/\+Git/\+C\+P\+P/\+Love\+Brains/api/lib/\+A\+N\+N\+Library/src/\+A\+N\+N/ann\+\_\+layer.\+cc\end{DoxyCompactItemize}

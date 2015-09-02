@@ -5,7 +5,7 @@
 ** Login   <robin_f@epitech.eu>
 ** 
 ** Started on  Thu Jul 23 13:51:41 2015 Guillaume ROBIN
-** Last update Wed Aug 26 12:45:10 2015 Guillaume ROBIN
+** Last update Wed Sep  2 12:47:17 2015 Guillaume ROBIN
 */
 
 #ifndef SIMULATOR_CONFIG_H_
@@ -126,6 +126,11 @@ namespace Simulator
      * \param display : Contains the display mode.
      */
     void	setDisplayMode(DisplayMode display) throw();
+    /*!
+     * \brief Set the log path.
+     * \param path : Contains the path of the log file.
+     */
+    void	setLogPath(std::string const& path) throw();
 
     /*
     ** Getters.
@@ -216,6 +221,11 @@ namespace Simulator
      * \return SConfig::DisplayMode
      */
     DisplayMode	getDisplayMode(void) const throw();
+    /*!
+     * \brief Get the log file path.
+     * \return std::string const&
+     */
+    std::string const&	getLogPath(void) const throw();
 
     /*
     ** Overlaod.
@@ -240,6 +250,7 @@ namespace Simulator
     std::vector<unsigned int>	_infos; /*!< Contains the topology of the neural network. */
     GANN::ANN::ActivationType	_layer_ftype; /*!< Contains the activation function type for the intern layers. */
     GANN::ANN::ActivationType	_out_ftype; /*!< Contains the activation function type for the output layer. */
+    std::string			_log_path; /*!< Contains the log file path. */
   };
 }
 
