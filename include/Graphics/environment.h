@@ -5,7 +5,7 @@
 ** Login   <robin_f@epitech.eu>
 ** 
 ** Started on  Thu Jul 23 11:39:20 2015 Guillaume ROBIN
-** Last update Wed Sep  2 13:14:47 2015 Guillaume ROBIN
+** Last update Thu Sep  3 15:55:30 2015 Guillaume ROBIN
 */
 
 #ifndef ENVIRONMENT_H_
@@ -133,7 +133,7 @@ namespace Graphics
     sf::Text				_avg_fitness; /*!< Contains the current state of the average fitness. */
     sf::Text				_epochs; /*!< Contains the current state of the number of epochs. */
     Physics				_physics; /*!< Contains the physics engine. */
-    static sf::RenderWindow		_window; /*!< Contains the window that will be used to display the objects on the screen. */
+    sf::RenderWindow			_window; /*!< Contains the window that will be used to display the objects on the screen. */
     std::ofstream			_log_stream; /*!< Contains the log stream for the online visualisation */
 
     /*!

@@ -5,7 +5,7 @@
 ** Login   <robin_f@epitech.eu>
 ** 
 ** Started on  Sat Aug  1 12:30:15 2015 Guillaume ROBIN
-** Last update Wed Aug 19 12:11:22 2015 Guillaume ROBIN
+** Last update Sat Nov 28 16:53:56 2015 Guillaume ROBIN
 */
 
 #ifndef BASIC_IA_H_
@@ -73,11 +73,14 @@ class BasicAI : public Graphics::IBrain
   sf::Vector2f		_position;
   sf::Time		_elapsed;
   sf::CircleShape	_shape;
+  sf::Texture		_texture;
   GANN::ANN		_brain;
   GANN::Matrix<double>	_inputs;
 
   sf::CircleShape	_vfield1;
   sf::CircleShape	_vfield2;
+  sf::RectangleShape	_field1;
+  sf::RectangleShape	_field2;
 
   void	draw(sf::RenderTarget& target, sf::RenderStates states) const;
 };

@@ -5,7 +5,7 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Sat Aug  1 12:07:53 2015 Guillaume ROBIN
-// Last update Wed Aug 19 12:12:59 2015 Guillaume ROBIN
+// Last update Sat Nov 28 22:01:54 2015 Guillaume ROBIN
 //
 
 #include <iostream>
@@ -21,7 +21,10 @@ BasicFood::BasicFood(void): _dead(false), _time(0)
   // TODO: Generate random position.
   _shape.setPosition(sf::Vector2f(GANN::RandomDouble(10, 1270), GANN::RandomDouble(10, 710)));
   _shape.setRadius(GANN::RandomDouble(5, 15));
-  _shape.setFillColor(sf::Color::Green);
+  if (_texture.loadFromFile("resources/basic_survival/food.png"))
+    _shape.setTexture(&_texture);
+  else
+    _shape.setFillColor(sf::Color::Green);
 }
 
 BasicFood::~BasicFood(void)

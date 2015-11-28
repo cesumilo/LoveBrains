@@ -5,7 +5,7 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Sat Aug  1 12:35:21 2015 Guillaume ROBIN
-// Last update Fri Aug 28 23:32:09 2015 Guillaume ROBIN
+// Last update Sat Nov 28 22:01:44 2015 Guillaume ROBIN
 //
 
 #include <cmath>
@@ -23,11 +23,16 @@ BasicAI::BasicAI(void): _dead(false), _fitness(0), _angle(0), _time(0),
   _position = sf::Vector2f(GANN::RandomDouble(10, 1270), GANN::RandomDouble(10, 710));
   _shape.setPosition(_position);
   _shape.setRadius(DEF_AI_RADIUS);
-  _shape.setFillColor(sf::Color::Cyan);
-  // _vfield1.setRadius(DEF_AI_VISION_RADIUS);
-  // _vfield2.setRadius(DEF_AI_VISION_RADIUS);
-  // _vfield1.setFillColor(sf::Color::Red);
-  // _vfield2.setFillColor(sf::Color::Red);
+  if (_texture.loadFromFile("resources/basic_survival/character.png"))
+    _shape.setTexture(&_texture);
+  else
+    _shape.setFillColor(sf::Color::Cyan);
+  _field1.setSize(sf::Vector2f(1, 200));
+  _field1.setFillColor(sf::Color::Red);
+  _field1.rotate(-20);
+  _field2.setSize(sf::Vector2f(1, 200));
+  _field2.setFillColor(sf::Color::Red);
+  _field2.rotate(20);
   _inputs = GANN::Matrix<double>(1, 1, 0);
 }
 
@@ -41,8 +46,6 @@ BasicAI::BasicAI(BasicAI const& brain)
   _position = sf::Vector2f(GANN::RandomDouble(10, 1270), GANN::RandomDouble(10, 710));
   _shape = brain.getShape();
   _shape.setPosition(_position);
-  _vfield1.setRadius(DEF_AI_VISION_RADIUS);
-  _vfield2.setRadius(DEF_AI_VISION_RADIUS);
   _brain = brain.getBrain();
   _inputs = GANN::Matrix<double>(_brain.getInfos()[0], 1, 0);
 }
@@ -217,25 +220,6 @@ void			BasicAI::Update(void)
   GANN::Matrix<double>	outputs;
   unsigned int		action = 0;
 
-  // DEBUG
-  // sf::Vector2f			velocity(0, 200);
-  // sf::Vector2f			visionFieldLeft;
-  // sf::Vector2f			visionFieldRight;
-  // sf::Vector2f			p2;
-  // sf::Vector2f			p3;
-
-  // velocity = Math::RotateVector2D(velocity, _angle);
-  // visionFieldLeft = Math::RotateVector2D(velocity, -20);
-  // visionFieldRight = Math::RotateVector2D(velocity, 20);
-  // p2.x = _position.x + visionFieldLeft.x;
-  // p2.y = _position.y + visionFieldLeft.y;
-  // p3.x = _position.x + visionFieldRight.x;
-  // p3.y = _position.y + visionFieldRight.y;
-
-  // _vfield1.setPosition(p2);
-  // _vfield2.setPosition(p3);
-  // END DEBUG
-
   _time += _elapsed.asSeconds();
   _fitness += _time;
   // Update Life.
@@ -250,7 +234,6 @@ void			BasicAI::Update(void)
     _shape.setFillColor(sf::Color::Cyan);
 
   getStateLife(_inputs, _life); // Get life state and put it into neural net.
-
   // TODO: Animation.
   _brain.Activate(_inputs); // The sensors will stimulate neurons inside the network.
   outputs = _brain.getOutputs(); // Getting the outputs of the network.
@@ -259,16 +242,24 @@ void			BasicAI::Update(void)
     {
     case 1:
       --_angle;
+      _field1.rotate(-1);
+      _field2.rotate(-1);
       break;
     case 2:
       ++_angle;
+      _field1.rotate(1);
+      _field2.rotate(1);
       break;
     case 3:
       move.y = 2;
+      _field1.rotate(-1);
+      _field2.rotate(-1);
       --_angle;
       break;
     case 4:
       move.y = 2;
+      _field1.rotate(1);
+      _field2.rotate(1);
       ++_angle;
       break;
     default:
@@ -278,7 +269,21 @@ void			BasicAI::Update(void)
   move = Math::RotateVector2D(move, _angle);
   _shape.move(move);
   _position = _shape.getPosition();
+  if (_position.x < 0)
+    _position = sf::Vector2f(1279, _position.y);
+  else if (_position.x > 1280)
+    _position = sf::Vector2f(1, _position.y);
+  if (_position.y < 0)
+    _position = sf::Vector2f(_position.x, 719);
+  else if (_position.y > 720)
+    _position = sf::Vector2f(_position.x, 1);
+  _shape.setPosition(_position);
   _inputs = GANN::Matrix<double>(_brain.getInfos()[0], 1, 0);
+  _field1.setPosition(sf::Vector2f(_position.x + this->getShape().getRadius(),
+				   _position.y + this->getShape().getRadius()));
+  _field2.setPosition(sf::Vector2f(_position.x + this->getShape().getRadius(),
+				   _position.y + this->getShape().getRadius()));
+
 }
 
 void	BasicAI::draw(sf::RenderTarget& target, sf::RenderStates states) const
@@ -286,7 +291,7 @@ void	BasicAI::draw(sf::RenderTarget& target, sf::RenderStates states) const
   if (!_dead)
     {
       target.draw(_shape, states);
-      // target.draw(_vfield1, states);
-      // target.draw(_vfield2, states);
+      target.draw(_field1, states);
+      target.draw(_field2, states);
     }
 }

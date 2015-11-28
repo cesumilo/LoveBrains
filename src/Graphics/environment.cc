@@ -5,7 +5,7 @@
 // Login   <robin_f@epitech.eu>
 // 
 // Started on  Thu Jul 23 11:41:41 2015 Guillaume ROBIN
-// Last update Wed Sep  2 13:23:08 2015 Guillaume ROBIN
+// Last update Thu Sep  3 15:55:34 2015 Guillaume ROBIN
 //
 
 #include <iostream>
@@ -22,11 +22,6 @@
 
 namespace Graphics
 {
-  /*
-  ** Static values.
-  */
-  sf::RenderWindow	Environment2D::_window;
-
   /*
   ** Constructor & Destructor.
   */

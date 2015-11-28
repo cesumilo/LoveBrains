@@ -5,7 +5,7 @@
 ## Login   <robin_f@epitech.eu>
 ## 
 ## Started on  Thu Jul 30 16:03:56 2015 Guillaume ROBIN
-## Last update Tue Aug 25 13:50:31 2015 Guillaume ROBIN
+## Last update Sat Nov 28 13:55:55 2015 Guillaume ROBIN
 ##
 
 CC	= g++
@@ -27,7 +27,8 @@ SRCS	+= src/plugin.cc \
 	   src/ai_food_collider.cc \
 	   src/ai_food_collision.cc \
 	   src/math.cc \
-	   src/ai_vision_field.cc
+	   src/ai_vision_field.cc \
+	   src/background.cc
 
 OBJS	= $(SRCS:.cc=.o)
 
