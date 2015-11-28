@@ -3,6 +3,9 @@
 # Description
 LoveBrains is a simulator of artificial intelligence based on a plugin system. It provides an 2D environment that allows you to create any kind of simulation. The engine uses Artificial Neural Network and Genetic Algorithm with the aim of learning how to get the best score.
 
+##Basic survival plugin: Preview
+<img src="https://github.com/cesumilo/LoveBrains/blob/master/resources/basic_survival/preview_basic_survival_.png" />
+
 # Documentation
 <a href="http://cesumilo.github.io/LoveBrains">LoveBrains documentation (doxygen)</a>
 
