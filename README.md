@@ -1,4 +1,4 @@
-# LoveBrains (Alpha 1.0.0)
+# LoveBrains (v0.1.0)
 
 # Description
 LoveBrains is a simulator of artificial intelligence based on a plugin system. It provides an 2D environment that allows you to create any kind of simulation. The engine uses Artificial Neural Network and Genetic Algorithm with the aim of learning how to get the best score.
