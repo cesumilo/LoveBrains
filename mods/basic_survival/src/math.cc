@@ -8,8 +8,7 @@
 // Last update Tue Aug 18 13:38:31 2015 Guillaume ROBIN
 //
 
-// #include <cmath>
-
+#include <cmath>
 #include "math_plugin.h"
 
 /*

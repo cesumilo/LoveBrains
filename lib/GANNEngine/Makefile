@@ -8,7 +8,7 @@
 ## Last update Tue Aug 25 16:57:02 2015 Guillaume ROBIN
 ##
 
-CC	= g++
+CC	= clang++
 
 RM	= rm -f
 
@@ -18,7 +18,7 @@ CXXFLAGS	+= -Werror -Wextra -Wall -pthread -std=c++11
 
 CXXFLAGS	+= -I ./include
 
-LDFLAGS	= -lm
+LDFLAGS	=
 
 SRCS	+= src/ANN/ann_layer.cc \
 	   src/ANN/neural_net.cc \

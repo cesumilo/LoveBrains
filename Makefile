@@ -8,13 +8,13 @@
 ## Last update Wed Aug 26 12:42:01 2015 Guillaume ROBIN
 ##
 
-CC	= g++ -g3
+CC	= clang++
 
 RM	= rm -f
 
 NAME	= LoveBrains
 
-CXXFLAGS	+= -Werror -Wall -Wextra -pthread -std=c++11
+CXXFLAGS	+= -Werror -Wall -Wextra -std=c++11
 
 CXXFLAGS	+= -I ./include/
 

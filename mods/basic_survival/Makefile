@@ -8,7 +8,7 @@
 ## Last update Sat Nov 28 13:55:55 2015 Guillaume ROBIN
 ##
 
-CC	= g++
+CC	= clang++
 
 RM	= rm -f
 
@@ -18,7 +18,7 @@ CXXFLAGS	+= -std=c++11
 
 CXXFLAGS	+= -I ./include/ -I ./api/include/ -I ./api/lib/ANNLibrary/include/
 
-LDFLAGS	= -lsfml-graphics -lsfml-window -lsfml-system -lm -lANN -L./api/lib/ANNLibrary/
+LDFLAGS	=  -lsfml-graphics -lsfml-window -lsfml-system -lANN -L ./api/lib/ANNLibrary/
 
 # Add sources below.
 SRCS	+= src/plugin.cc \
@@ -45,10 +45,10 @@ flib:
 	make fclean -C ./api/lib/ANNLibrary/
 
 %.o: %.cc
-	$(CC) -fPIC $(CXXFLAGS) -c $< $(LDFLAGS) -o $@
+	$(CC) -fPIC $(CXXFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
-	$(CC) -shared $(CXXFLAGS) $(OBJS) -o $(NAME) -Wl,--whole-archive -lANN -L./api/lib/ANNLibrary -Wl,--no-whole-archive
+	$(CC) -shared $(CXXFLAGS) $(LDFLAGS) $(OBJS) -o $(NAME)
 
 clean: clib
 	$(RM) $(OBJS)
