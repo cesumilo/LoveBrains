@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *.a
 *.o
 *.so
@@ -5,3 +6,10 @@
 brains/
 build/
 .DS_Store
+=======
+*.so
+*.o
+*.json
+*.txt
+*.a
+>>>>>>> Adding .
