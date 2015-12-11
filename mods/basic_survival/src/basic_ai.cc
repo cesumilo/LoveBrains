@@ -266,7 +266,7 @@ void			BasicAI::Update(void)
       move.y = 2;
       break;
     }
-  move = Math::RotateVector2D(move, _angle);
+  move = Math::RotateVector2D(move, _angle) * (_elapsed.asSeconds() * 1);
   _shape.move(move);
   _position = _shape.getPosition();
   if (_position.x < 0)
