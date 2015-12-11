@@ -3,4 +3,5 @@
 *.json
 *.txt
 *.a
+*.conf
 brains/
