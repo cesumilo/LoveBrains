@@ -251,22 +251,22 @@ void			BasicAI::Update(void)
       _field2.rotate(1);
       break;
     case 3:
-      move.y = 2;
+      move.y = 100;
       _field1.rotate(-1);
       _field2.rotate(-1);
       --_angle;
       break;
     case 4:
-      move.y = 2;
+      move.y = 100;
       _field1.rotate(1);
       _field2.rotate(1);
       ++_angle;
       break;
     default:
-      move.y = 2;
+      move.y = 100;
       break;
     }
-  move = Math::RotateVector2D(move, _angle);
+  move = Math::RotateVector2D(move, _angle) * (_elapsed.asSeconds() * 1);
   _shape.move(move);
   _position = _shape.getPosition();
   if (_position.x < 0)
