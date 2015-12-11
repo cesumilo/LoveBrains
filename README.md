@@ -55,19 +55,20 @@ In order to create a simulation, you have to code a plugin. Each plugin must be 
 This is an example of Makefile that compile the basic survival plugin :
 
 ```make
-CC	= g++
+CC	= clang++
 
 RM	= rm -f
 
-NAME	= plugin_name.so # Replace by your plugin name, ".so" is MANDATORY !
+NAME	= basic_survival.so
 
 CXXFLAGS	+= -std=c++11
 
 CXXFLAGS	+= -I ./include/ -I ./api/include/ -I ./api/lib/ANNLibrary/include/
 
-LDFLAGS	= -lsfml-graphics -lsfml-window -lsfml-system -lm -lANN -L./api/lib/ANNLibrary/
+LDFLAGS	=  -lsfml-graphics -lsfml-window -lsfml-system -lANN -L ./api/lib/ANNLibrary/
 
-SRCS	+= # Add sources here !
+# Add sources below.
+SRCS	+=
 
 OBJS	= $(SRCS:.cc=.o)
 
@@ -84,10 +85,10 @@ flib:
 	make fclean -C ./api/lib/ANNLibrary/
 
 %.o: %.cc
-	$(CC) -fPIC $(CXXFLAGS) -c $< $(LDFLAGS) -o $@
+	$(CC) -fPIC $(CXXFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
-	$(CC) -shared $(CXXFLAGS) $(OBJS) -o $(NAME) -Wl,--whole-archive -lANN -L./api/lib/ANNLibrary -Wl,--no-whole-archive
+	$(CC) -shared $(CXXFLAGS) $(LDFLAGS) $(OBJS) -o $(NAME)
 
 clean: clib
 	$(RM) $(OBJS)
@@ -142,15 +143,15 @@ class AIObject : public Graphics::IBrain
 		bool isDead() const;
 		bool hasBrain() const;
 		std::string getType() const;
-		
+
 		// Graphics::IBrain.
 		double getFitness() const;
-		
+
 		// Graphics::IObject.
 		void setPosition(sf::Vector2f const& position);
 		void setIsDead(bool isDead);
 		void setElapsedTime(sf::Time& time);
-		
+
 		// Graphics::IBrain.
 		void setFitness(double fitness);
 		void setBrain(GANN::ANN const& brain);
