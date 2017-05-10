@@ -11,10 +11,17 @@
 #include <iostream>
 #include <string>
 #include <sys/types.h>
-#include <dirent.h>
+
+#if defined(WIN32) && !defined(UNIX)
+# include "compatibility/dirent.h"
+# include "compatibility/dlfcn.h"
+#elif defined(UNIX) && !defined(WIN32)
+# include <dirent.h>
+# include <dlfcn.h>
+#endif
+
 #include <string.h>
 #include <stdlib.h>
-#include <dlfcn.h>
 
 #include "Graphics/environment.h"
 #include "Graphics/factory_object.h"
