@@ -11,10 +11,16 @@
 #include <iostream>
 
 #include <sys/types.h>
-#include <dirent.h>
 #include <string.h>
 #include <stdlib.h>
-#include <dlfcn.h>
+
+#if defined(WIN32) && !defined(UNIX)
+# include "compatibility/dirent.h"
+# include "compatibility/dlfcn.h"
+#elif defined(UNIX) && !defined(WIN32)
+# include <dirent.h>
+# include <dlfcn.h>
+#endif
 
 #include "Plugin/plugin_manager.h"
 #include "Plugin/plugin_const.h"
