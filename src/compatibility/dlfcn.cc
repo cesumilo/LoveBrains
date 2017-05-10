@@ -31,6 +31,7 @@
 #ifdef SHARED
 #define DLFCN_WIN32_EXPORTS
 #endif
+
 #include "compatibility/dlfcn.h"
 
 #if ((defined(_WIN32) || defined(WIN32)) && (defined(_MSC_VER)) )
