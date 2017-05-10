@@ -11,8 +11,6 @@
 #include <iostream>
 #include <string>
 #include <sys/types.h>
-#include <string.h>
-#include <stdlib.h>
 
 #if defined(WIN32) && !defined(UNIX)
 # include "compatibility/dirent.h"
@@ -21,6 +19,9 @@
 # include <dirent.h>
 # include <dlfcn.h>
 #endif
+
+#include <string.h>
+#include <stdlib.h>
 
 #include "Graphics/environment.h"
 #include "Graphics/factory_object.h"
