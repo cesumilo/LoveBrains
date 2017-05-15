@@ -8,7 +8,7 @@
 ## Last update Tue Aug 25 17:22:35 2015 Guillaume ROBIN
 ##
 
-CC	= g++
+CC	= clang++
 
 RM	= rm -f
 
@@ -18,7 +18,7 @@ CXXFLAGS	+= -Werror -Wextra -Wall -std=c++11
 
 CXXFLAGS	+= -I ./include
 
-LDFLAGS	= -lm
+LDFLAGS	=
 
 SRCS	+= src/ANN/ann_layer.cc \
 	   src/ANN/ann_exception.cc \
