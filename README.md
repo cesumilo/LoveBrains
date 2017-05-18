@@ -82,7 +82,7 @@ endif()
 target_link_libraries(${PROJECT_NAME} ${CMAKE_CURRENT_SOURCE_DIR}/../../lib/GANNEngine/libGANNEngine.a)
 ```
 
-**You can compile your own plugin with the same Makefile.**
+**You can compile your own plugin with the same CMakelists.txt.**
 
 ## Create an object
 
