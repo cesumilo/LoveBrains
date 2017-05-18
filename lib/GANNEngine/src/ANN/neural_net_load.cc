@@ -37,12 +37,12 @@ namespace GANN
 	&& ann[DEF_ANN_RAND][DEF_ANN_RMIN].type() != Json::ValueType::nullValue)
       _rand_min = ann[DEF_ANN_RAND][DEF_ANN_RMIN].asDouble();
     else
-      _rand_min = DEF_RAND_MIN;
+      _rand_min = -5;
     if (ann[DEF_ANN_RAND].type() != Json::ValueType::nullValue
 	&& ann[DEF_ANN_RAND][DEF_ANN_RMAX].type() != Json::ValueType::nullValue)
       _rand_max = ann[DEF_ANN_RAND][DEF_ANN_RMAX].asDouble();
     else
-      _rand_max = DEF_RAND_MAX;
+      _rand_max = 5;
   }
 
   void	ANN::LoadOutputActivation(Json::Value const& ann) throw()
@@ -93,14 +93,14 @@ namespace GANN
 				   ann[DEF_ANN_LAYERS][i][DEF_ANN_WEIGHT][DEF_ANN_COLS].asDouble(),
 				   0);
 	else
-	  throw(ANNException(ERR_ANN_WEIGHT));
+	  throw(ANNException(""));
 	if (ann[DEF_ANN_LAYERS][i][DEF_ANN_BIAS].type() != Json::ValueType::nullValue
 	    && ann[DEF_ANN_LAYERS][i][DEF_ANN_BIAS][DEF_ANN_ROWS].type() != Json::ValueType::nullValue
 	    && ann[DEF_ANN_LAYERS][i][DEF_ANN_BIAS][DEF_ANN_COLS].type() != Json::ValueType::nullValue)
 	  bias = Matrix<double>(ann[DEF_ANN_LAYERS][i][DEF_ANN_BIAS][DEF_ANN_ROWS].asDouble(),
 				ann[DEF_ANN_LAYERS][i][DEF_ANN_BIAS][DEF_ANN_COLS].asDouble(), 0);
 	else
-	  throw(ANNException(ERR_ANN_BIAS));
+	  throw(ANNException(""));
 	for (unsigned int j = 0; j < weights.rows() * weights.cols(); ++j)
 	  {
 	    if (ann[DEF_ANN_LAYERS][i][DEF_ANN_WEIGHT][DEF_ANN_VALUES].type() != Json::ValueType::nullValue)
@@ -122,7 +122,7 @@ namespace GANN
 	  layer->setOutputs(Matrix<double>(ann[DEF_ANN_LAYERS][i][DEF_ANN_WEIGHT][DEF_ANN_ROWS].asDouble(),
 					   1, 0));
 	else
-	  throw(ANNException(ERR_ANN_OUTPUT));
+	  throw(ANNException(""));
 	if (i == ann[DEF_ANN_LAYERS].size() - 1)
 	  layer->setActivationFunction(_out_activation);
 	else

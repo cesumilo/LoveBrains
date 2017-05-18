@@ -17,7 +17,7 @@
 #if defined(WIN32) && !defined(UNIX)
 # include "compatibility/dirent.h"
 # include "compatibility/dlfcn.h"
-#elif defined(UNIX) && !defined(WIN32)
+#else
 # include <dirent.h>
 # include <dlfcn.h>
 #endif
@@ -176,14 +176,18 @@ namespace Graphics
 
     if (file)
       {
+	std::cerr << "File is opened!" << std::endl;
         while (std::getline(file, line))
 	  {
+            std::cerr << "Line: " << line << std::endl;
 	    if (!lineIsValid(line))
 	      continue ;
 	    type = getTypeFromLine(line);
 	    if (factory.Contains(type))
 	      {
+		std::cerr << "Factory contains object of type \"" << type << "\"." << std::endl;
 		num = getNumObjectsFromLine(line);
+		std::cerr << "Desired number of objects : " << num << std::endl;
 		found = line.find(DEF_ENV_BOOLEAN);
 		if (found < line.size())
 		  generate = true;
@@ -191,8 +195,13 @@ namespace Graphics
 		  generate = false;
 		for (unsigned int i = 0; i < num; ++i)
 		  {
+	            std::cerr << "Generated " << i + 1 << "/" << num << " objects!" << std::endl;
 		    if ((ptr = factory.Create(type)))
+		    {
+		      std::cerr << "Object of type \"" << type << "\" generated." << std::endl;
+		      std::cerr << "Object has brain: " << (ptr->hasBrain() ? "true" : "false") << std::endl;
 		      _env.push_back(ptr);
+		    }
 		    _physics.addGenerationSetting(type, generate);
 		  }
 	      }

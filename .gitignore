@@ -3,3 +3,5 @@
 *.so
 *.conf
 brains/
+build/
+.DS_Store

@@ -17,7 +17,7 @@
 #if defined(WIN32) && !defined(UNIX)
 # include "compatibility/dirent.h"
 # include "compatibility/dlfcn.h"
-#elif defined(UNIX) && !defined(WIN32)
+#else
 # include <dirent.h>
 # include <dlfcn.h>
 #endif
@@ -85,6 +85,7 @@ namespace Plugin
 		  }
 		if (!(ptr = (*create)()))
 		  throw (PluginException(ERR_PLUGIN_INVALID));
+		std::cerr << "Found one plugin!" << std::endl;
 		_plugs.push_back(ptr);
 		_handlers.push_back(handler);
 	      }
@@ -105,8 +106,11 @@ namespace Plugin
 	if (_plugs[i])
 	  {
 	    objs = _plugs[i]->getObjects();
+	    std::cerr << "Number of objects: " << objs.size() << std::endl;
 	    for (unsigned int j = 0; j < objs.size(); ++j)
 	      {
+		std::cerr << "Object[" << j << "] type: " << objs[j]->getType() << std::endl;
+		std::cerr << "Object[" << j << "] hasBrain: " << (objs[j]->hasBrain() ? "true" : "false") << std::endl;
 		if (objs[j])
 		  Graphics::FactoryObjects::Register(objs[j]->getType(), objs[j]);
 	      }

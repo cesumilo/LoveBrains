@@ -18,7 +18,7 @@ namespace GA
   /*
   ** Constructor & Destructor.
   */
-  GAEngine::GAEngine(void): _evaluate(NULL), _max_epochs(DEF_MAX_EPOCHS),
+  GAEngine::GAEngine(void) throw(): _evaluate(NULL), _max_epochs(DEF_MAX_EPOCHS),
 			    _report_interval(DEF_INT_REPORT), _nb_threads(DEF_NUM_THREAD),
 			    _expected_fitness(DEF_EXPEC_FIT)
   {
@@ -27,7 +27,7 @@ namespace GA
     setId();
   }
 
-  GAEngine::~GAEngine(void)
+  GAEngine::~GAEngine(void) throw()
   {
   }
 

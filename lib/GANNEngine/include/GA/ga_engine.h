@@ -23,8 +23,8 @@ namespace GA
     /*
     ** Constructor & Destructor.
     */
-    GAEngine(void);
-    ~GAEngine(void);
+    GAEngine(void) throw();
+    ~GAEngine(void) throw();
 
     /*
     ** Getters.

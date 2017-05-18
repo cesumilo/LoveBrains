@@ -1,6 +1,10 @@
 #Change this if you need to target a specific CMake version
 cmake_minimum_required(VERSION 2.6)
 
+# Enable C++ 11
+set (CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_FLAGS "-std=c++11 -stdlib=libc++")
+
 # Enable debug symbols by default
 # must be done before project() statement
 if(NOT CMAKE_BUILD_TYPE)
@@ -11,17 +15,18 @@ endif()
 project("LoveBrains")
 
 # Set version information in a config.h file
-set(myproject_VERSION_MAJOR 1)
-set(myproject_VERSION_MINOR 0)
+set(LoveBrains_VERSION_MAJOR 1)
+set(LoveBrains_VERSION_MINOR 0)
 include_directories("${PROJECT_BINARY_DIR}")
 
 # Addings sources to project
 set(SOURCES_DIR src/)
 set(HEADERS_DIR include/)
+set(LIB_SOURCES_DIR lib/GANNEngine/src/)
+set(LIB_HEADERS_DIR lib/GANNEngine/include/)
 
-include_directories(${HEADERS_DIR})
+include_directories(${HEADERS_DIR} ${LIB_HEADERS_DIR})
 set(SOURCES	${SOURCES_DIR}/main.cc
-		${SOURCES_DIR}/compatibility/dlfcn.cc
 		${SOURCES_DIR}/App/app.cc
 		${SOURCES_DIR}/App/app_exception.cc
 		${SOURCES_DIR}/App/config_getter.cc
@@ -33,7 +38,32 @@ set(SOURCES	${SOURCES_DIR}/main.cc
 		${SOURCES_DIR}/Plugin/plugin_manager.cc
 		${SOURCES_DIR}/Simulator/simulator.cc
 		${SOURCES_DIR}/Simulator/simulator_config.cc
-		${SOURCES_DIR}/Simulator/simulator_exception.cc)
+		${SOURCES_DIR}/Simulator/simulator_exception.cc
+		${LIB_SOURCES_DIR}/ANN/neural_net.cc
+		${LIB_SOURCES_DIR}/ANN/ann_layer.cc
+		${LIB_SOURCES_DIR}/ANN/tools.cc
+		${LIB_SOURCES_DIR}/ANN/ann_generator.cc
+		${LIB_SOURCES_DIR}/ANN/neural_net_save.cc
+		${LIB_SOURCES_DIR}/ANN/neural_net_load.cc
+		${LIB_SOURCES_DIR}/ANN/ann_exception.cc
+		${LIB_SOURCES_DIR}/GA/population.cc
+		${LIB_SOURCES_DIR}/GA/population_exception.cc
+		${LIB_SOURCES_DIR}/GA/ga_engine.cc
+		${LIB_SOURCES_DIR}/GA/ga_engine_exception.cc
+		${LIB_SOURCES_DIR}/GA/ga_config.cc
+		${LIB_SOURCES_DIR}/GA/a_observer.cc
+		${LIB_SOURCES_DIR}/GA/a_observable.cc
+		${LIB_SOURCES_DIR}/GA/i_dna.cc
+		${LIB_SOURCES_DIR}/GA/i_generator.cc
+		${LIB_SOURCES_DIR}/GANN/gann.cc
+		${LIB_SOURCES_DIR}/GANN/gann_engine.cc
+		${LIB_SOURCES_DIR}/GANN/gann_exception.cc
+		${LIB_SOURCES_DIR}/GANN/gann_crossover.cc
+		${LIB_SOURCES_DIR}/json/jsoncpp.cc)
+
+IF (WIN32)
+  set(SOURCES ${SOURCES} ${SOURCES_DIR}/compatibility/dlfcn.cc)
+ENDIF()
 
 # Define sources and executable
 set(EXECUTABLE_NAME "lovebrains")

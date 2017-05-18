@@ -1,0 +1,38 @@
+cmake_minimum_required(VERSION 2.6)
+
+# Enable C++ 11
+set (CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_FLAGS "-std=c++11 -stdlib=libc++")
+
+project ("basic_survival")
+if(NOT CMAKE_BUILD_TYPE)
+  set(CMAKE_BUILD_TYPE Debug CACHE STRING "Choose the type of build (Debug or Release)" FORCE)
+endif()
+
+set(API_HEADERS_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../../api/include/)
+set(ANNLIB_HEADERS_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../../api/lib/ANNLibrary/include/)
+
+set(SOURCES_DIR src/)
+set(SOURCES	${SOURCES_DIR}/plugin.cc
+		${SOURCES_DIR}/food.cc
+		${SOURCES_DIR}/basic_ai.cc
+		${SOURCES_DIR}/ai_food_collider.cc
+		${SOURCES_DIR}/ai_food_collision.cc
+		${SOURCES_DIR}/math.cc
+		${SOURCES_DIR}/ai_vision_field.cc
+		${SOURCES_DIR}/background.cc)
+
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include ${API_HEADERS_DIR} ${ANNLIB_HEADERS_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/../../lib/GANNEngine/include/)
+add_library(${PROJECT_NAME} MODULE ${SOURCES})
+
+# Detect and add SFML
+set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake_modules" ${CMAKE_MODULE_PATH})
+#Find any version 2.X of SFML
+#See the FindSFML.cmake file for additional details and instructions
+find_package(SFML 2 REQUIRED network audio graphics window system)
+if(SFML_FOUND)
+  include_directories(${SFML_INCLUDE_DIR})
+  target_link_libraries(${PROJECT_NAME} ${SFML_LIBRARIES} ${SFML_DEPENDENCIES})
+endif()
+
+target_link_libraries(${PROJECT_NAME} ${CMAKE_CURRENT_SOURCE_DIR}/../../lib/GANNEngine/libGANNEngine.a)

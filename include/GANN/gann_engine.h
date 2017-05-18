@@ -32,7 +32,7 @@ namespace GANN
      * \brief Destructor.
      * \return error : GANNException
      */
-    ~GANNEngine(void);
+    ~GANNEngine(void) throw();
 
     /*
     ** Initializer.

@@ -18,7 +18,7 @@
 #if defined(WIN32) && !defined(UNIX)
 # include "compatibility/dirent.h"
 # include "compatibility/dlfcn.h"
-#elif defined(UNIX) && !defined(WIN32)
+#else
 # include <dirent.h>
 # include <dlfcn.h>
 #endif

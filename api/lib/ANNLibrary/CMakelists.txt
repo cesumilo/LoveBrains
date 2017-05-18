@@ -1,0 +1,22 @@
+cmake_minimum_required(VERSION 2.6)
+
+# Enable C++ 11
+set (CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_FLAGS "-std=c++11 -stdlib=libc++")
+
+project ("ANN")
+if(NOT CMAKE_BUILD_TYPE)
+  set(CMAKE_BUILD_TYPE Debug CACHE STRING "Choose the type of build (Debug or Release)" FORCE)
+endif()
+
+set(SOURCES_DIR src/)
+set(SOURCES	${SOURCES_DIR}/ANN/ann_layer.cc
+		${SOURCES_DIR}/ANN/ann_exception.cc
+		${SOURCES_DIR}/ANN/neural_net.cc
+		${SOURCES_DIR}/ANN/neural_net_load.cc
+		${SOURCES_DIR}/ANN/neural_net_save.cc
+		${SOURCES_DIR}/ANN/tools.cc
+		${SOURCES_DIR}/json/jsoncpp.cc)
+
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
+add_library(${PROJECT_NAME} STATIC ${SOURCES})

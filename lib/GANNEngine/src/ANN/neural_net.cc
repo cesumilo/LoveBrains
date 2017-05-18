@@ -201,7 +201,7 @@ namespace GANN
 	  }
       }
     else
-      throw (ANNException(ERR_ANN_INVALIDINPUT));
+      throw (ANNException(""));
   }
 
   void	       	ANN::Create(std::vector<unsigned int> const& infos)
