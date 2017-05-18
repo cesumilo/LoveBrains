@@ -12,17 +12,9 @@ LoveBrains is a simulator of artificial intelligence based on a plugin system. I
 # Installation
 
 In order to compile LoveBrains, this is very simple :
-> $> make && make clean
-
-The Makefile contains several methods :
-
-- **make** : Compile LoveBrains without removing the object files.
-
-- **make clean** : Remove all the object files.
-
-- **make fclean** : Remove the executable and the object files.
-
-- **make re** : Remove the executable and the object files and then compile LoveBrains.
+> $ mkdir build
+> $ cd build
+> $ cmake .. && make
 
 # How to use LoveBrains ?
 
@@ -54,50 +46,38 @@ In order to create a simulation, you have to code a plugin. Each plugin must be 
 
 This is an example of Makefile that compile the basic survival plugin :
 
-```make
-CC	= g++
+```cmake
+cmake_minimum_required(VERSION 2.6)
 
-RM	= rm -f
+# Enable C++ 11
+set (CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_FLAGS "-std=c++11 -stdlib=libc++")
 
-NAME	= plugin_name.so # Replace by your plugin name, ".so" is MANDATORY !
+project ("basic_survival")
+if(NOT CMAKE_BUILD_TYPE)
+  set(CMAKE_BUILD_TYPE Debug CACHE STRING "Choose the type of build (Debug or Release)" FORCE)
+endif()
 
-CXXFLAGS	+= -std=c++11
+set(API_HEADERS_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../../api/include/)
+set(ANNLIB_HEADERS_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../../api/lib/ANNLibrary/include/)
 
-CXXFLAGS	+= -I ./include/ -I ./api/include/ -I ./api/lib/ANNLibrary/include/
+set(SOURCES_DIR src/)
+set(SOURCES	${SOURCES_DIR}/exemple.cc)
 
-LDFLAGS	= -lsfml-graphics -lsfml-window -lsfml-system -lm -lANN -L./api/lib/ANNLibrary/
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include ${API_HEADERS_DIR} ${ANNLIB_HEADERS_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/../../lib/GANNEngine/include/)
+add_library(${PROJECT_NAME} MODULE ${SOURCES})
 
-SRCS	+= # Add sources here !
+# Detect and add SFML
+set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake_modules" ${CMAKE_MODULE_PATH})
+#Find any version 2.X of SFML
+#See the FindSFML.cmake file for additional details and instructions
+find_package(SFML 2 REQUIRED network audio graphics window system)
+if(SFML_FOUND)
+  include_directories(${SFML_INCLUDE_DIR})
+  target_link_libraries(${PROJECT_NAME} ${SFML_LIBRARIES} ${SFML_DEPENDENCIES})
+endif()
 
-OBJS	= $(SRCS:.cc=.o)
-
-
-all: lib $(NAME)
-
-lib:
-	make -C ./api/lib/ANNLibrary/
-
-clib:
-	make clean -C ./api/lib/ANNLibrary/
-
-flib:
-	make fclean -C ./api/lib/ANNLibrary/
-
-%.o: %.cc
-	$(CC) -fPIC $(CXXFLAGS) -c $< $(LDFLAGS) -o $@
-
-$(NAME): $(OBJS)
-	$(CC) -shared $(CXXFLAGS) $(OBJS) -o $(NAME) -Wl,--whole-archive -lANN -L./api/lib/ANNLibrary -Wl,--no-whole-archive
-
-clean: clib
-	$(RM) $(OBJS)
-
-fclean: clean flib
-	$(RM) $(NAME)
-
-re: fclean all
-
-.PHONY: all re clean fclean lib clib flib
+target_link_libraries(${PROJECT_NAME} ${CMAKE_CURRENT_SOURCE_DIR}/../../lib/GANNEngine/libGANNEngine.a)
 ```
 
 **You can compile your own plugin with the same Makefile.**
@@ -272,8 +252,10 @@ The environment configurations file provides the informations about the environm
 # This is a file that provides objets for the simulation
 
 # type, number of object, generation condition.
-basic_food, 60, true # Object of type "basic_food" is given in the basic survival plugin.
-basic_survival_ai, 50, false # Object of type "basic_survival_ai" is given in the basic survival plugin.
+# Object of type "basic_food" is given in the basic survival plugin.
+basic_food, 60, true 
+# Object of type "basic_survival_ai" is given in the basic survival plugin.
+basic_survival_ai, 50, false 
 ```
 
 ## Set the tournament mode
