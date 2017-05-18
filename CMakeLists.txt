@@ -38,28 +38,7 @@ set(SOURCES	${SOURCES_DIR}/main.cc
 		${SOURCES_DIR}/Plugin/plugin_manager.cc
 		${SOURCES_DIR}/Simulator/simulator.cc
 		${SOURCES_DIR}/Simulator/simulator_config.cc
-		${SOURCES_DIR}/Simulator/simulator_exception.cc
-		${LIB_SOURCES_DIR}/ANN/neural_net.cc
-		${LIB_SOURCES_DIR}/ANN/ann_layer.cc
-		${LIB_SOURCES_DIR}/ANN/tools.cc
-		${LIB_SOURCES_DIR}/ANN/ann_generator.cc
-		${LIB_SOURCES_DIR}/ANN/neural_net_save.cc
-		${LIB_SOURCES_DIR}/ANN/neural_net_load.cc
-		${LIB_SOURCES_DIR}/ANN/ann_exception.cc
-		${LIB_SOURCES_DIR}/GA/population.cc
-		${LIB_SOURCES_DIR}/GA/population_exception.cc
-		${LIB_SOURCES_DIR}/GA/ga_engine.cc
-		${LIB_SOURCES_DIR}/GA/ga_engine_exception.cc
-		${LIB_SOURCES_DIR}/GA/ga_config.cc
-		${LIB_SOURCES_DIR}/GA/a_observer.cc
-		${LIB_SOURCES_DIR}/GA/a_observable.cc
-		${LIB_SOURCES_DIR}/GA/i_dna.cc
-		${LIB_SOURCES_DIR}/GA/i_generator.cc
-		${LIB_SOURCES_DIR}/GANN/gann.cc
-		${LIB_SOURCES_DIR}/GANN/gann_engine.cc
-		${LIB_SOURCES_DIR}/GANN/gann_exception.cc
-		${LIB_SOURCES_DIR}/GANN/gann_crossover.cc
-		${LIB_SOURCES_DIR}/json/jsoncpp.cc)
+		${SOURCES_DIR}/Simulator/simulator_exception.cc)
 
 IF (WIN32)
   set(SOURCES ${SOURCES} ${SOURCES_DIR}/compatibility/dlfcn.cc)
@@ -78,6 +57,8 @@ if(SFML_FOUND)
   include_directories(${SFML_INCLUDE_DIR})
   target_link_libraries(${EXECUTABLE_NAME} ${SFML_LIBRARIES} ${SFML_DEPENDENCIES})
 endif()
+
+target_link_libraries(${EXECUTABLE_NAME} ${CMAKE_CURRENT_SOURCE_DIR}/lib/GANNEngine/build/libGANNEngine.a)
 
 # Install target
 install(TARGETS ${EXECUTABLE_NAME} DESTINATION bin)
