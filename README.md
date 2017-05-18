@@ -12,9 +12,11 @@ LoveBrains is a simulator of artificial intelligence based on a plugin system. I
 # Installation
 
 In order to compile LoveBrains, this is very simple :
-> $ mkdir build
-> $ cd build
-> $ cmake .. && make
+```
+$ mkdir build
+$ cd build
+$ cmake .. && make
+```
 
 # How to use LoveBrains ?
 
